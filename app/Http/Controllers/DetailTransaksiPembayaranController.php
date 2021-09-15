@@ -1,0 +1,85 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Pemohon;
+use App\Models\TransaksiPembayaran;
+use App\Models\Ruangan;
+
+class DetailTransaksiPembayaranController extends Controller
+{
+    public function index()
+    {
+        $detail_transaksi_pembayaran = DetailTransaksiPembayaran::latest()->paginate(5);
+        
+        return view('detail-transaksipembayaran.index',compact('detail_transaksi_pembayaran'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function create()
+    {
+        $ruangan        = Ruangan::all();
+        $pemohon        = Pemohon::all();
+
+        return view('detail-transaksipembayaran.create',compact('ruangan', 'pemohon'));
+    }
+    public function store(Request $request)
+    {
+        $request -> validate([
+            'bulan'     => 'required',
+            'tahun'     => 'required',
+            'harga'     => 'required',
+        ]);
+
+        DetailTransaksiPembayaran::create($request->all());
+
+        return redirect()->route('detail-transaksipembayaran.index')->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
+    }
+
+    public function show( $id)
+    {
+
+        return view('detail-transaksipembayaran.show', [
+            'detail_transaksi_pembayaran' => DetailTransaksiPembayaran::findOrFail($id)]);
+    }
+    
+    public function edit($id)
+    {
+        $detiail_transaksi_pembayaran = TransaksiPembayaran::findOrFail($id);
+        $pemohon = Pemohon::all();
+
+        return view('detail-transaksipembayaran.edit',compact('detail_transaksi_pembayaran', 'pemohon'));
+    }
+  
+    public function update(Request $request, TransaksiPembayaran $transaksi_pembayaran)
+    {
+        $request->validate([
+            'bulan'     => 'required',
+            'tahun'     => 'required',
+            'harga'     => 'required',
+        ]);
+         
+        $transaksi_pembayaran->update($request->all());
+         
+        return redirect()->route('detail-transaksipembayaran.index')
+                        ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
+    }
+  
+    public function destroy($id)
+    {
+        $detail_transaksi_pembayaran = DetailTransaksiPembayaran::destroy($id);
+  
+        return redirect()->route('detail-transaksipembayaran.index')
+                        ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
+    }
+
+    public function pemohon_show()
+    {
+        $transaksi_pembayaran = TransaksiPembayaran::where('id_transaksi_pembayaran',Auth::user()->id)->first();
+        $detail_transaksi_pembayaran = DetailTransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->get();
+        
+        return view('detail-transaksipembayaran.pemohon_index', compact('detail_transaksi_pembayaran'));
+    }
+}
+

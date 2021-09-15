@@ -1,0 +1,86 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Role;
+use Illuminate\Support\Facades\Hash;
+
+
+class UserController extends Controller
+{    
+    public function index()
+    {
+        $user = User::latest()->paginate(5);
+        
+        return view('user.index',compact('user'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+
+    public function create()
+    {
+        $role = Role::all();
+        return view('user.create',compact('role'));
+    }
+
+    public function store(Request $request)
+    {
+        $request -> validate([
+            'nama_user'     => 'required',
+            'username'      => 'required',
+            'email'         => 'required',
+            'password'      => 'required',
+            'id_role'       => 'required'
+        ]);
+
+        $input = $request->all();
+        $input['password'] = Hash::make($request['password']);
+        User::create($input);
+        
+        return redirect()->route('user.index')->with('success','Post created successfully');
+    }
+
+    public function show(User $user)
+    {
+        return view('user.show',compact('user'));
+    }
+    
+    public function edit(User $user)
+    {
+        return view('user.edit',compact('user'));
+    }
+  
+    public function update(Request $request, User $user)
+    {
+        $request->validate([
+            'nama_user'     => 'required',
+            'username'      => 'required'
+        ]);
+         
+        $user->update($request->all());
+         
+        return redirect()->route('user.index')
+                        ->with('success','Data user berhasil diubah!');
+    }
+  
+    public function destroy(User $user)
+    {
+        $user->delete();
+  
+        return redirect()->route('user.index')
+                        ->with('success','Data user berhasil dihapus!');
+    }
+    public function reset($id)
+    {
+
+        $user = User::findOrFail($id);
+        $user->password = Hash::make('12345');
+        $user->update();
+
+        return redirect()->route('user.index')
+                        ->with('success','Data user berhasil diubah!');
+    }
+
+    
+}
