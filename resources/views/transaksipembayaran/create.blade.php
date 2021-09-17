@@ -219,8 +219,6 @@
                 $(`#nama_kepala_keluarga`).val(response.data.nama_kepala_keluarga)
                 $(`#id_pemohon`).val(response.data.id_pemohon)
            }
-        //    $(`#harga${id}`).text(`Rp. ${response.data.harga_ruangan}`)
-        //    $(`#id_ruangan${id}`).val(`${response.data.id_ruangan}`)
           })
           .catch(function (error) {
             console.log(error);

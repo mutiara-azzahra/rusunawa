@@ -90,6 +90,7 @@ Route::get('detail-transaksipembayaran_user', [DetailTransaksiPembayaranControll
 Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.ruangan');
 Route::get('/api/pemohon/{id}', [PemohonController::class,'api'])->name('api.pemohon');
 Route::get('/api/lantai/{id}', [LantaiController::class,'api'])->name('api.lantai');
+Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.ruangan');
 
 Route::get('register/create', [LoginController::class, 'formRegister'])->name('regsiter.create');
 Route::post('register/create', [LoginController::class, 'RegsiterStore'])->name('register.store');

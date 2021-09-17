@@ -72,6 +72,7 @@ class LantaiController extends Controller
     public function api($id){
 
         $data = Lantai::where('id_gedung', $id)->get();
+        
         return json_encode($data);
     }
 }

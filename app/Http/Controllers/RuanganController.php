@@ -11,10 +11,9 @@ class RuanganController extends Controller
 {    
     public function index()
     {
-        $ruangan = Ruangan::latest()->paginate(5);
+        $ruangan = Ruangan::latest()->get();
         
-        return view('ruangan.index',compact('ruangan'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('ruangan.index',compact('ruangan'));
     }
 
     public function create()
@@ -56,10 +55,10 @@ class RuanganController extends Controller
     public function update(Request $request, Ruangan $ruangan)
     {
         $request->validate([
-            'no_ruangan' => 'required',
-            'id_lantai' => 'required',
-            'harga_ruangan' => 'required',
-            'status_ruangan' => 'required',
+            'no_ruangan'        => 'required',
+            'id_lantai'         => 'required',
+            'harga_ruangan'     => 'required',
+            'status_ruangan'    => 'required',
         ]);
          
         $ruangan->update($request->all());
@@ -78,7 +77,8 @@ class RuanganController extends Controller
 
     public function api($id)
     {
-        $data = Ruangan::findOrFail($id);
-        return $data;
+        $data = Ruangan::where('id_lantai', $id)->get();
+
+        return json_encode($data);
     }
 }

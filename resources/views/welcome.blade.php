@@ -325,24 +325,24 @@
           </div>
           <div class="col">
                 @foreach ($posts as $p)
-                <div class="accordion pb-3" id="accordion">
-                  <div class="card">
+                <div class="accordion" id="accordion">
+                  <div class="card mb-2 card-outline">
                     <div class="card-header" id="heading">
                       <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{ $p->id }}" aria-expanded="true" aria-controls="collapse">
                           {{ $p->title }}
                         </button>
                       </h2>
                     </div>
                 
-                    <div id="collapse" class="collapse " aria-labelledby="heading" data-parent="#accordion">
+                    <div id="collapse{{ $p->id }}" class="collapse border-2" aria-labelledby="heading" data-parent="#accordion">
                       <div class="card-body">
                         {{ $p->content}}
                       </div>
                     </div>
                   </div>
                 </div>
-                @endforeach  
+                @endforeach
             </div>
           </div>
         </div>

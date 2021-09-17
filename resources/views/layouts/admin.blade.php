@@ -33,8 +33,6 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-
-  <!-- Navbar -->
   <nav class="main-header navbar navbar-fixed navbar-expand" style="background-color: #192841">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -55,10 +53,8 @@
       </li>
     </ul>
   </nav>
-  <!-- /.navbar -->
-
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-light elevation-4">
+  <aside class="main-sidebar sidebar-light">
     <!-- Brand Logo -->
     <a href="" class="brand-link" style="background-color: #192841">
       <img src="{{ asset('admin-template/dist/img/logo.png') }}" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -78,7 +74,7 @@
       </div>
 
       <!-- Sidebar Menu -->
-          <nav class="mt-2">
+        <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               @if(Auth::user()->id_role == 1)
               <li class="nav-item">
@@ -224,17 +220,13 @@
             </a>
           </li>
         @endif
-            </ul>            
-          </nav>
-
-             
+          </ul>            
+        </nav>
     </div>
   </aside>
-
   <div class="content-wrapper">
     @yield('content')
   </div>
-
 </div>
 <!-- ./wrapper -->
 
@@ -293,8 +285,6 @@ $(function () {
       theme: 'bootstrap4'
     })
 })
-
-$('ul').Treeview(options)
 
 </script>
 
