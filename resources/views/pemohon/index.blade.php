@@ -57,7 +57,7 @@
             </table>
     </div>
  
-    {!! $pemohon->links() !!}
+    {!! $pemohon->links('pagination::bootstrap-4') !!}
 </div>
  
 @endsection

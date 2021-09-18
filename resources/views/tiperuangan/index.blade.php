@@ -53,7 +53,9 @@
         @endforeach            
         </tbody>
     </table>
-    {!! $tipe_ruangan->links() !!}
+
+    {!! $tipe_ruangan->links('pagination::bootstrap-4') !!}
+
 </div>
 
 </div>

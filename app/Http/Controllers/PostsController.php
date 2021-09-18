@@ -38,10 +38,11 @@ class PostsController extends Controller
         return view('posts.show',compact('posts'));
     }
     
-    public function edit(Posts $post)
+    public function edit($id)
     {
+        $posts = Posts::findOrFail($id);
 
-        return view('posts.edit',compact('posts'));
+        return view('ruangan.edit',compact('ruangan', 'lantai'));
     }
   
     public function update(Request $request, Post $post)

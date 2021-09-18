@@ -61,6 +61,9 @@
         @endforeach    
         </tbody>   
     </table>
+
+    {!! $ruangan->links('pagination::bootstrap-4') !!}
+
 </div>
 
 </div> 

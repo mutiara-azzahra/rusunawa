@@ -8,7 +8,7 @@
                 <h2>Data FAQ</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('posts.create') }}"> Tambah</a>
+                <a class="btn btn-success" href="{{ route('posts.create') }}"><i class="fas fa-plus"></i> Tambah Data</a>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-hover table-sm bg-light" id="dataTable">
+    <table class="table table-bordered table-hover table-sm bg-light" id="dataTable">
         <thead>
             <tr>
             <th width="20px" class="text-center">No</th>
@@ -54,7 +54,7 @@
         
     </table>
  
-    {!! $posts->links() !!}
+    {!! $posts->links('pagination::bootstrap-4') !!}
 </div>
 
 </div>

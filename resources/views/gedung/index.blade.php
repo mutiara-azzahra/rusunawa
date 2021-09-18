@@ -63,6 +63,8 @@
                 </tbody>
                 @endforeach
             </table>
+
+            {!! $gedung->links('pagination::bootstrap-4') !!}
     </div>
 </div>
     

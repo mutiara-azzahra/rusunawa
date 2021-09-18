@@ -55,6 +55,9 @@
             @endforeach
             </tbody>
         </table>
+        {!! $kota->links('pagination::bootstrap-4') !!}
+
+        
 </div>
  
 </div>

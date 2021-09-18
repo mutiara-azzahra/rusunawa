@@ -84,8 +84,11 @@ class TransaksiPembayaranController extends Controller
 
     public function pemohon_show()
     {
-        $pemohon = Pemohon::where('id_user',Auth::user()->id)->first();
-        // $transaksi_pembayaran = TransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->get();
+        $user_id = Auth::id();
+        $pemohon = Pemohon::where('id_user', $user_id)->first();
+        // $pemohon = Pemohon::where('id_user',$user->id)->first();
+        $transaksi_pembayaran = TransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->paginate(10);
+
         return view('transaksipembayaran.pemohon_index', compact('transaksi_pembayaran'));
     }
 }

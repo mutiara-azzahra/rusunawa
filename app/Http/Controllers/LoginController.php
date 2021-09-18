@@ -78,6 +78,12 @@ class LoginController extends Controller
         $posts = Posts::all();
         return view('welcome', compact('gedung', 'posts'));
     }
+    public function faq(){
+        $posts = Posts::lastest()->paginate(5);
+
+        return view('welcome',compact('posts'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
     public function detailgedung($id)
     {
         $gedung = Gedung::findOrFail($id);

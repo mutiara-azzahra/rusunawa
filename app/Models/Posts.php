@@ -10,6 +10,6 @@ class Posts extends Model
     use HasFactory;
 
     protected $fillable = [
-        'pertanyaan', 'jawaban'
+        'title', 'content', 'created_at', 'updated_at'
     ];
 }

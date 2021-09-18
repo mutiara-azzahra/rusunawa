@@ -8,7 +8,7 @@
                 <h2>Tambah FAQ</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('posts.index') }}"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('posts.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -24,27 +24,32 @@
         </div>
     @endif
      
-    <form action="{{ route('posts.store') }}" method="POST">
-        @csrf
-     
-         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Pertanyaan</strong><br>
-                    <input type="text" name="title" class="form-control" placeholder="Title"><br>
+    <div class="card" style="padding: 20px;">
+        <form action="{{ route('posts.store') }}" method="POST">
+            @csrf
+        
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Pertanyaan</strong><br>
+                        <input type="text" name="title" class="form-control" placeholder="Tambahkan Pertanyaan"><br>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Jawaban</strong><br>
+                        <textarea class="form-control" style="height:150px" name="content" placeholder="Tambahkan Jawaban"></textarea><br>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Jawaban</strong><br>
-                    <textarea class="form-control" style="height:150px" name="content" placeholder="Content"></textarea><br>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Tambah</button>
-            </div>
-        </div>
-     
-    </form>
+        
+        </form>    
+    </div>
+
 </div>
 @endsection

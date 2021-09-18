@@ -8,7 +8,7 @@
                 <h2>Data Kelurahan</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('kelurahan.create') }}"> Tambah Kelurahan</a>
+                <a class="btn btn-success" href="{{ route('kelurahan.create') }}"><i class="fas fa-plus"></i> Tambah Kelurahan</a>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
                 <th width="20px" class="text-center">No</th>
                 <th width="20px" class="text-center">Nama Kelurahan</th>
                 <th width="20px" class="text-center">Kecamatan</th>
-                <th width="150px"class="text-center">Action</th>
+                <th width="150px"class="text-center">Aksi</th>
             </tr>
             </thead>
             <tbody>
@@ -55,6 +55,7 @@
             @endforeach
             </tbody>
         </table>
+        {!! $kelurahan->links('pagination::bootstrap-4') !!}
 </div>
     
  

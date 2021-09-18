@@ -56,7 +56,7 @@
         
     </table>
  
-    {!! $fasilitas->links() !!}
+    {!! $fasilitas->links('pagination::bootstrap-4') !!}
 </div>
     
 

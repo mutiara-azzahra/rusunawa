@@ -63,142 +63,141 @@
 
                     </div>
                 </div>
-            </div>    
-    </div>
 
-    <div class="card" style="padding: 30px;">
-        <div class="col pb-4">
-            <h4>Pembayaran</h4>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Harga/bulan</strong>
-                <input type="text" name="harga" id="harga_ruangan" class="form-control" placeholder="" readonly>
-            </div>
-        </div>
-    
-        <div class="col">
-            <div class="row">
-                {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="col pb-4">
+                    <h4>Pembayaran</h4>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Dari</strong><br>
-                        <input id="startInput" type="month" name="awal" lang="id-ID" />
+                        <strong>Harga/bulan</strong>
+                        <input type="text" name="harga" id="harga_ruangan" class="form-control" placeholder="" readonly>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                    <div class="form-group">
-                        <strong>Ke</strong><br>
-                        <input id="endInput" type="month" name="akhir" lang="id-ID" />
+            
+                {{-- <div class="col">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group">
+                                <strong>Dari</strong><br>
+                                <input id="startInput" type="month" name="awal" lang="id-ID" />
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group">
+                                <strong>Ke</strong><br>
+                                <input id="endInput" type="month" name="akhir" lang="id-ID" />
+                            </div>
+                        </div>
                     </div>
                 </div> --}}
-            </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="form-group">
-                    <strong>Bulan Bayar</strong>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="januari" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Januari
-                                </label>
+                <div class="col-lg-12">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
+                            <strong>Bulan Bayar</strong>
+                            <div class="row">
+                            
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="januari" id="januari">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Januari
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="februari" id="februari" >
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Februari
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="maret" id="maret">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Maret
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="april" id="april" >
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        April
+                                        </label>
+                                    </div>                                                      
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="mei" id="mei">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Mei
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="juni" id="juni" >
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Juni
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="juli" id="juli">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Juli
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="agustus" id="agustus" >
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Agustus
+                                        </label>
+                                    </div>                            
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="september" id="september">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        September
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="oktober" id="oktober">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Oktober
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="november" id="november">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        November
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="bulan[]" type="checkbox" value="desember" id="desember" >
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Desember
+                                        </label>
+                                    </div>                            
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="februari" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Februari
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="maret" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Maret
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="april" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault">
-                                April
-                                </label>
-                            </div>                                                      
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="mei" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Mei
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="juni" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Juni
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="juli" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Juli
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="agustus" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Agustus
-                                </label>
-                            </div>                            
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="september" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                September
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="oktober" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Oktober
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="november" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                November
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="bulan[]" type="checkbox" value="desember" id="flexCheckDefault" >
-                                <label class="form-check-label" for="flexCheckDefault">
-                                Desember
-                                </label>
-                            </div>                            
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-group">
-                        <strong>Telah Diterima Oleh</strong>
-                        <input type="text" value=" {{ $user->id_user }} " name="id_user" class="form-control" readonly>
-                    </div>
-                </div>                   
-        </div>
-    
-        <div class="col">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                <div class="float-right">
-                    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i>  Simpan Data</button>
+                <div class="col">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <strong>Telah Diterima Oleh</strong>
+                                <input type="text" value=" {{ $user->id_user }} " name="id_user" class="form-control" readonly>
+                            </div>
+                        </div>                   
                 </div>
-            </div>                    
-        </div>
-    
+            
+                <div class="col">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-success"><i class="fas fa-save"></i>  Simpan Data</button>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </form>
     </div>
-    </form>
+    
 </div>
 
 
@@ -210,14 +209,28 @@
        axios.get('/api/pemohon/'+ id_ruangan)
           .then(function (response){
             console.log(response);
-           if(response.data == '0')
+           if(response.data.data == '0')
            {
                alert('data pemohon tidak ada')
            }else{
                console.log(response.data)
-                $(`#harga_ruangan`).val(response.data.ruangan.harga_ruangan)
-                $(`#nama_kepala_keluarga`).val(response.data.nama_kepala_keluarga)
-                $(`#id_pemohon`).val(response.data.id_pemohon)
+               $('#januari').prop('checked', false);
+               $('#februari').prop('checked', false);
+               $('#maret').prop('checked', false);
+               $('#april').prop('checked', false);
+               $('#mei').prop('checked', false);
+               $('#juni').prop('checked', false);
+               $('#juli').prop('checked', false);
+               $('#agustus').prop('checked', false);
+               $('#september').prop('checked', false);
+               $('#oktober').prop('checked', false);
+               $('#november').prop('checked', false);
+               $('#desember').prop('checked', false);
+
+                $(`#harga_ruangan`).val(response.data.data.ruangan.harga_ruangan)
+                $(`#nama_kepala_keluarga`).val(response.data.data.nama_kepala_keluarga)
+                $(`#id_pemohon`).val(response.data.data.id_pemohon)
+                response.data.detail.map(bulan => $('#' + bulan).prop('disabled', true));
            }
           })
           .catch(function (error) {

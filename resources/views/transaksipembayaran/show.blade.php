@@ -108,7 +108,7 @@
                     @php
                     $no=1;
                     @endphp
-                    @foreach ($detail_transaksi_pembayaran as $d)
+                  @foreach ($detail_transaksi_pembayaran as $d)
                   <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $d->bulan }}</td>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Pemohon;
 use App\Models\TransaksiPembayaran;
+use App\Models\DetailTransaksiPembayaran;
 use App\Models\Ruangan;
 use App\Models\Gedung;
 use App\Models\Lantai;
@@ -191,7 +192,13 @@ class PemohonController extends Controller
         $data = Pemohon::with('ruangan')->where('id_ruangan', $id)->first();
         if($data)
         {
-            return $data;
+            
+            $transaksi_pembayaran = TransaksiPembayaran::whereIdPemohon($data->id_pemohon)->first();
+            $detail_transaksi_pembayaran = DetailTransaksiPembayaran::whereIdTransaksiPembayaran($transaksi_pembayaran->id_transaksi_pembayaran)->get()->pluck('bulan');
+          
+
+            return ['data' => $data, 'detail' => $detail_transaksi_pembayaran];
+
         }else{
             return '0';
         }

@@ -20,13 +20,13 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-hover table-sm table-responsive bg-light" id="dataTable">
+    <table class="table table-hover table-bordered table-sm table-responsive bg-light" id="dataTable">
         <thead>
         <tr>
             <th width="20px" class="text-center">No</th>
-            <th>Nama Penghuni</th>
-            <th>Gedung</th>
-            <th>Ruangan</th>
+            <th width="250px" class="text-center">Nama Penghuni</th>
+            <th width="250px" class="text-center">Ruangan</th>
+            <th width="150px" class="text-center">Gedung</th>
             <th width="250px"class="text-center">Aksi</th>
         </tr>            
         </thead>
@@ -59,7 +59,8 @@
 
     </table>
  
-    {!! $transaksi_pembayaran->links() !!}    
+    {!! $transaksi_pembayaran->links('pagination::bootstrap-4') !!}
+   
 </div>
 
 </div>
