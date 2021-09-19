@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Gedung;
 use App\Models\Ruangan;
 use App\Models\Lantai;
+use App\Models\Fasilitas;
 use App\Models\Pemohon;
 use App\Models\User;
 use App\Models\Posts;
@@ -74,9 +75,10 @@ class LoginController extends Controller
     }
     public function Beranda()
     {
+        $fasilitas = Fasilitas::all();
         $gedung = Gedung::all();
         $posts = Posts::all();
-        return view('welcome', compact('gedung', 'posts'));
+        return view('welcome', compact('gedung', 'posts', 'fasilitas'));
     }
     public function faq(){
         $posts = Posts::lastest()->paginate(5);

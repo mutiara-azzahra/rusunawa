@@ -24,7 +24,6 @@
             <th>Gedung</th>
             <th>Ruangan</th>
             <th>Nama Penghuni</th>
-            <th>Status Pembayaran</th>
             <th width="250px"class="text-center">Aksi</th>
         </tr>            
         </thead>
@@ -35,21 +34,13 @@
         @foreach ($transaksi_pembayaran as $tp)
         <tr>
             <td class="text-center">{{ $no++ }}</td>
-            <td>{{ $tp->id_gedung }}</td>
-            <td>{{ $tp->id_ruangan }}</td>
-            <td>{{ $tp->id_pemohon }}</td>
-            <td></td>         
+            <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }}</td>
+            <td>Nomor {{ $tp->ruangan->no_ruangan }}</td>
+            <td>{{ $tp->pemohon->nama_kepala_keluarga }}</td>   
             <td class="text-center">
                 <form action="{{ route('transaksipembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Tampil</a>
- 
-                    <a class="btn btn-primary btn-sm" href="{{ route('transaksipembayaran.edit',$tp->id_transaksi_pembayaran) }}">Ubah</a>
- 
-                    @csrf
-                    @method('DELETE')
- 
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+                    <a class="btn btn-info btn-sm" href="{{ route('transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Detail Pembayaran</a> 
                 </form>
             </td>
         </tr>
@@ -58,7 +49,7 @@
 
     </table>
  
-    {!! $transaksi_pembayaran->links() !!}    
+    {!! $transaksi_pembayaran->links('pagination::bootstrap-4') !!}    
 </div>
 
 </div>
