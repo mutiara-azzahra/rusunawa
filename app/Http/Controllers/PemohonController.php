@@ -187,15 +187,21 @@ class PemohonController extends Controller
         return view('pemohon.pilihruangan', compact('gedung', 'lantai'));        
     }
 
-    public function api($id){
+    public function api($id, $tahun){
 
         $data = Pemohon::with('ruangan')->where('id_ruangan', $id)->first();
         if($data)
         {
             
-            $transaksi_pembayaran = TransaksiPembayaran::whereIdPemohon($data->id_pemohon)->first();
-            $detail_transaksi_pembayaran = DetailTransaksiPembayaran::whereIdTransaksiPembayaran($transaksi_pembayaran->id_transaksi_pembayaran)->get()->pluck('bulan');
-          
+            // $transaksi_pembayaran = TransaksiPembayaran::whereIdPemohon($data->id_pemohon)->first();
+            // $detail_transaksi_pembayaran = DetailTransaksiPembayaran::whereIdTransaksiPembayaran($transaksi_pembayaran->id_transaksi_pembayaran)->get()->pluck('bulan');
+
+            $transaksi_pembayaran = TransaksiPembayaran::whereIdPemohon($data->id_pemohon)
+                                                        ->where('tahun',$tahun)
+                                                        ->get()
+                                                        ->pluck('id_transaksi_pembayaran');
+
+            $detail_transaksi_pembayaran = DetailTransaksiPembayaran::whereIn('id_transaksi_pembayaran',$transaksi_pembayaran)->get()->pluck('bulan');
 
             return ['data' => $data, 'detail' => $detail_transaksi_pembayaran];
 

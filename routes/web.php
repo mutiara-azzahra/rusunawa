@@ -88,7 +88,7 @@ Route::get('transaksipembayaran_user', [TransaksiPembayaranController::class, 'p
 Route::get('detail-transaksipembayaran_user', [DetailTransaksiPembayaranController::class, 'pemohon_show'])->name('detail-transaksipembayaran_user.show');
 
 Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.ruangan');
-Route::get('/api/pemohon/{id}', [PemohonController::class,'api'])->name('api.pemohon');
+Route::get('/api/pemohon/{id}/{tahun}', [PemohonController::class,'api'])->name('api.pemohon');
 Route::get('/api/lantai/{id}', [LantaiController::class,'api'])->name('api.lantai');
 Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.ruangan');
 

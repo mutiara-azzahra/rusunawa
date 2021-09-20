@@ -57,7 +57,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="form-group">
                                 <strong>Tahun Pembayaran</strong>
-                                <input type="number" name="tahun" id="" value="{{ Carbon\carbon::now()->format('Y') }}" class="form-control" placeholder="">
+                                <input type="number" name="tahun" id="tahun" value="{{ Carbon\carbon::now()->format('Y') }}" class="form-control" placeholder="">
                             </div>
                         </div>
 
@@ -206,7 +206,10 @@
     let getPemohon = () => {
        let id_ruangan =  $('#id_ruangan').val();
 
-       axios.get('/api/pemohon/'+ id_ruangan)
+       let tahun =  $('#tahun').val();
+
+
+       axios.get('/api/pemohon/'+ id_ruangan +'/'+ tahun)
           .then(function (response){
             console.log(response);
            if(response.data.data == '0')

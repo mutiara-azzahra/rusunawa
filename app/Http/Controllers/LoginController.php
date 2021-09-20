@@ -77,7 +77,8 @@ class LoginController extends Controller
     {
         $fasilitas = Fasilitas::all();
         $gedung = Gedung::all();
-        $posts = Posts::all();
+        $posts = Posts::paginate(5);
+
         return view('welcome', compact('gedung', 'posts', 'fasilitas'));
     }
     public function faq(){

@@ -37,7 +37,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Tanggal Pembayaran</strong><br>
-                    {{-- {{ Carbon\carbon::parse($detail_transaksi_pembayaran->created_at)->format('d F Y') }} --}}
+                    {{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->format('d F Y') }}
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -59,12 +59,15 @@
         <div class="invoice p-3 mb-3">
             <!-- title row -->
             <div class="row">
-              <div class="col-12">
-                <h4>
+              <div class="col-8">
+                <h5>
                   Detail Transaksi Pembayaran
-                  <small class="float-right">Tanggal Pembayaran : {{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->format('d F Y') }}</small>
-                </h4>
+                </h5>
               </div>
+              <div class="col-4">
+                <small class="">Tanggal Pembayaran : {{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->format('d F Y') }}</small>
+              </div>
+
               <!-- /.col -->
             </div>
             <!-- info row -->
