@@ -8,7 +8,7 @@
                 <h2>Data Detail Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('transaksipembayaran.create') }}"> Tambah</a>
+                <a class="btn btn-success" href="{{ route('transaksipembayaran.create') }}"><i class="fas fa-plus"></i> Tambah Data</a>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
                 <h2>Informasi Ruangan</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="">Kembali</a>
+                <a class="btn btn-success" href=""><i class="fas fa-arrow-left"></i>Kembali</a>
             </div>
         </div>
     </div>

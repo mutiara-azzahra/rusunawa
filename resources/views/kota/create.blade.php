@@ -8,7 +8,7 @@
                 <h2>Daftar Kota</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('kota.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-success" href="{{ route('kota.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -32,11 +32,11 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Kota</strong>
-                        <input type="text" name="nama_kota" class="form-control" placeholder="kota">
+                        <input type="text" name="nama_kota" class="form-control" placeholder="Nama Kota">
                     </div>
                 </div> 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Data</button>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
                 </div>
             </div>
         

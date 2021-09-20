@@ -5,10 +5,10 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Data Kelurahan</h2>
+                <h2>Kota</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('kelurahan.create') }}"> Tambah Kelurahan</a>
+                <a class="btn btn-success" href="{{ route('kelurahan.create') }}"><i class="fas fa-plus"> Tambah Kota</a>
             </div>
         </div>
     </div>
@@ -24,31 +24,29 @@
             <thead>
             <tr>
                 <th width="20px" class="text-center">No</th>
-                <th width="20px" class="text-center">Nama Kelurahan</th>
-                <th width="20px" class="text-center">Kecamatan</th>
-                <th width="150px"class="text-center">Action</th>
+                <th width="20px" class="text-center">Kota</th>
+                <th width="150px"class="text-center">Aksi</th>
             </tr>
             </thead>
             <tbody>
             @php
             $no=1;
             @endphp
-            @foreach ($kelurahan as $kl)
+            @foreach ($kota as $k)
             <tr>
                 <td class="text-center">{{ $no++ }}</td>
-                <td>{{ $kl->nama_kelurahan }}</td>
-                <td>{{ $kl->kecamatan->nama_kecamatan }}</td>
+                <td>{{ $k->nama_kota }}</td>
                 <td class="text-center">
                     <form action="{{ route('kelurahan.destroy',$kl->id_kelurahan) }}" method="POST" id="form_delete">
     
-                        <a class="btn btn-info btn-sm" href="{{ route('kelurahan.show',$kl->id_kelurahan) }}"> Tampil</a>
+                        <a class="btn btn-info btn-sm" href="{{ route('kota.show',$kl->id_kota) }}"> Tampil</a>
     
-                        <a class="btn btn-primary btn-sm" href="{{ route('kelurahan.edit',$kl->id_kelurahan) }}"> Ubah</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$kl->id_kota) }}"> Ubah</a>
     
                         @csrf
                         @method('DELETE')
                         
-                        <button class="btn btn-danger btn-sm" onclick="Hapus('{{$kl->id_kelurahan}}')"> Hapus</button>
+                        <button class="btn btn-danger btn-sm" onclick="Hapus('{{$kl->id_kota}}')"> Hapus</button>
                     </form>
                 </td>
             </tr>

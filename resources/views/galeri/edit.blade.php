@@ -8,7 +8,7 @@
                 <h2>Ubah Galeri</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('galeri.index') }}"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('galeri.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -42,7 +42,10 @@
             </div>
         </div>       
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-primary"> Ubah</button>
+            <div class="float-right">
+                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>                
+            </div>
+
         </div>
     </div>
     </form>

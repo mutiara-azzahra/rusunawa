@@ -10,7 +10,7 @@
                     <h2> Fasilitas</h2>
                 </div>
                 <div class="float-right">
-                    <a class="btn btn-success" href="{{ route('fasilitas.index') }}"> Kembali</a>
+                    <a class="btn btn-success" href="{{ route('fasilitas.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
                 </div>
             </div>
         </div>

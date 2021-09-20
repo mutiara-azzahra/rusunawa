@@ -9,7 +9,7 @@
                 <h2>Daftar Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success btn-secondary" href="{{ route('transaksipembayaran.index') }}"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('transaksipembayaran.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>

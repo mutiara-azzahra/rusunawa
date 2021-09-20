@@ -8,7 +8,7 @@
                 <h2>Data Fasilitas</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('fasilitas.create') }}"> Tambah Fasilitas Umum</a>
+                <a class="btn btn-success" href="{{ route('fasilitas.create') }}"><i class="fas fa-plus"></i> Tambah Fasilitas Umum</a>
             </div>
         </div>
     </div>

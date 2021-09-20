@@ -8,7 +8,7 @@
                 <h2>Ubah Kecamatan</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('kecamatan.index') }}"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('kecamatan.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary"> Ubah</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
             </div>
         </div>
     </form>

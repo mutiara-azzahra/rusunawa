@@ -59,7 +59,7 @@
                 </div>              
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <div class="float-right">
-                        <button type="submit" class="btn btn-success btn-primary"> Ubah Data</button>                        
+                        <button type="submit" class="btn btn-success btn-success"><i class="fas fa-save"></i> Simpan Data</button>                        
                     </div>
                 </div>
             </div>        

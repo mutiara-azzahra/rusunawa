@@ -9,7 +9,7 @@
                     <h2>Ubah Gedung</h2>
                 </div>
                 <div class="float-right">
-                    <a class="btn btn-success btn-secondary" href="{{ route('lantai.index') }}"> Kembali</a>
+                    <a class="btn btn-success" href="{{ route('lantai.index') }}"><i class="fas fa-arrow-left"> Kembali</a>
                 </div>
             </div>
         </div>        
@@ -71,7 +71,7 @@
             </div>  
                     
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-success btn-primary"> Ubah Data</button>
+            <button type="submit" class="btn btn-success"><i class="fas fa-save"> Simpan Data</button>
         </div>
     </div>
  

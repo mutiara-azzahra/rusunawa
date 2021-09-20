@@ -8,7 +8,7 @@
                 <h2>Ubah Kelurahan</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('kelurahan.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-success" href="{{ route('kelurahan.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
