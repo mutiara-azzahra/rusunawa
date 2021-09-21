@@ -355,12 +355,23 @@
         <div class="text"><h4><b>UPT Rusunawa Kota Banjarmasin</b></h4>
         </div>
         <div class="text">
-          <h5><b>Rusunawa Mantuil</b></h5>
-          <p>Jl. Tembus Mantuil, Kelayan Sel., Kec. Banjarmasin 
-          Sel., Kota Banjarmasin, Kalimantan Selatan 70233</p>
+          <h5><b>Rusunawa Teluk Kelayan</b></h5>
+          <p>Jl. Tembus Mantuil, Kelayan Selatan, Kecamatan Banjarmasin 
+          Selatan, Kota Banjarmasin, Kalimantan Selatan 70233</p>
           <h5><b>Rusunawa Kelayan</b></h5>
-          <p>Kelayan Bar., Kec. Banjarmasin Sel., 
-          Kota Banjarmasin, Kalimantan Selatan</p>
+        </div>
+        <div class="text">
+          <div class="row">
+            <div class="col-1">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="col-11" style="padding: 0 !important">
+              <b>Jam Operasional:</b></h5><br>
+              <p class="font-weight-light">Senin - Minggu<br>
+                Pukul 08.00 - 20.00 WITA</p>
+            </div>
+          </div>
+          
         </div>
       </div>
       <div class="col-lg-3 col-sm-12">
@@ -373,7 +384,7 @@
   </div>
   <div class="container">
     <div class="row">
-    <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin</div>
+    <div class="col-lg-12 text-center" style="font-size: 15px; color:white"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
     </div>
   </div>
 </footer> 
