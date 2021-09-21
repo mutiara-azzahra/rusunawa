@@ -38,7 +38,7 @@
         @endphp
         @foreach ($lantai as $l)
         <tr>
-            <td class="text-center">{{ $l->lantai }}</td>
+            <td>Lantai {{ $l->lantai }}</td>
             <td >{{ $l->gedung->nama_gedung }}</td>
             <td class="text-center">
                 <form action="{{ route('lantai.destroy',$l->id_lantai) }}" method="POST" id="form_delete">

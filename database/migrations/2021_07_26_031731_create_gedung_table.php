@@ -19,6 +19,7 @@ class CreateGedungTable extends Migration
             $table->string('alamat_gedung');
             $table->Integer('jumlah_ruangan');
             $table->string('status_gedung');
+            $table->Integer('id_tipe_ruangan');
             $table->timestamps();
         });
     }

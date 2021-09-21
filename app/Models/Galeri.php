@@ -16,8 +16,8 @@ class Galeri extends Model
         'kategori',
         'foto',
         'id_gedung',
-        'update_at',
-        'create_at'
+        'updated_at',
+        'created_at'
     ];
 
     public function gedung(){

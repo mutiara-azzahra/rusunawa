@@ -75,13 +75,7 @@
                     </select>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Galeri</strong>
-                    <input type="text" name="id_galeri" class="form-control" placeholder="Masukkan id galeri">
-                </div>
-            </div>     
+            </div> 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <div class="float-right">
                     <button type="submit" class="btn btn-success btn-primary"><i class="fas fa-save"></i> Simpan Data</button>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFasilitas extends Migration
+class CreateFasilitasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,7 @@ class CreateFasilitas extends Migration
     public function up()
     {
         Schema::create('fasilitas', function (Blueprint $table) {
-            $table->bigIncrements('id_fasilitas_umum');
-            $table->string('nama_fasilitas_umum');
-            $table->Integer('jumlah');
-            $table->string('status_fasilitas_umum');
-            $table->Integer('id_gedung')->nullable();
+            $table->id();
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ class CreateFasilitas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fasilitas_umum');
+        Schema::dropIfExists('fasilitas');
     }
 }

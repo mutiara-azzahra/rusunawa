@@ -14,7 +14,11 @@ class Lantai extends Model
     protected $primaryKey = 'id_lantai';
 
     protected $fillable = [
-        'id_lantai', 'lantai', 'harga', 'id_gedung', 'created_at', 'updated_at'
+        'id_lantai',
+        'lantai',
+        'id_gedung',
+        'created_at',
+        'updated_at'
     ];
 
     public function gedung(){

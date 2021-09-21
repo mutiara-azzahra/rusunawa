@@ -14,6 +14,7 @@ class Gedung extends Model
 
     protected $fillable = [
         'nama_gedung',
+        'id_tipe_ruangan',
         'alamat_gedung',
         'jumlah_ruangan',
         'status_gedung',
@@ -26,7 +27,7 @@ class Gedung extends Model
     }
 
     public function tipe_ruangan(){
-        return $this->hasMany(TipeRuangan::class, 'id_gedung');
+        return $this->hasOne(TipeRuangan::class, 'id_gedung', 'id_gedung');
     }
 
     public function fasilitas_umum(){

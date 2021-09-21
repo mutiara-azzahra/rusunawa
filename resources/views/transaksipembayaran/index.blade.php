@@ -20,14 +20,14 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-hover table-bordered table-sm table-responsive bg-light" id="dataTable">
+    <table class="table table-responsive bg-light" id="dataTable">
         <thead>
         <tr>
-            <th width="20px" class="text-center">No</th>
-            <th width="250px" class="text-center">Nama Penghuni</th>
-            <th width="250px" class="text-center">Ruangan</th>
-            <th width="150px" class="text-center">Gedung</th>
-            <th width="250px"class="text-center">Aksi</th>
+            <th>No</th>
+            <th>Nama Penghuni</th>
+            <th>Ruangan</th>
+            <th>Gedung</th>
+            <th>Aksi</th>
         </tr>            
         </thead>
         <tbody>

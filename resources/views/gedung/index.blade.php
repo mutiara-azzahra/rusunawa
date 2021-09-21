@@ -39,12 +39,7 @@
                 <tr>
                     <td class="text-center">{{ $no++ }}</td>
                     <td>{{ $g->nama_gedung }}</td>
-                    {{-- <td>{{$g->tipe_ruangan}}</td> --}}
-                    <td>
-                        @foreach ($g->tipe_ruangan as $item)
-                            {{ $item->tipe_ruangan }}
-                        @endforeach
-                    </td>
+                    <td>{{ $g->tipe_ruangan }}</td>
                     <td>{{ $g->jumlah_ruangan }}</td>
                     <td>{{ $g->status_gedung }}</td>
                     <td class="text-center">

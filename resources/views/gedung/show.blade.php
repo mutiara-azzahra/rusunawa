@@ -114,7 +114,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                                 <div class="form-group">
                                     <strong>Gedung</strong>
-                                    <input type="text" value=" {{ $gedung->nama_gedung }} " name="id_gedung" class="form-control" readonly>
+                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                     <h2>Fasilitas Gedung</h2>
                 </div>
                 <div class="float-right">
-                    <a class="btn btn-success" href="" data-toggle="modal"  data-target="#fasilitas" id="fasilitas"><i class="fas fa-plus"></i>  Tambah Fasilitas Gedung</a>
+                    <a class="btn btn-success" href="" data-toggle="modal"  data-target="#fasilitas" id=""><i class="fas fa-plus"></i>  Tambah Fasilitas Gedung</a>
                 </div>
             </div>
         </div>

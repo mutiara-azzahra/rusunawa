@@ -13,7 +13,11 @@ class Kelurahan extends Model
     protected $primaryKey = 'id_kelurahan';
 
     protected $fillable =[
-        'nama_kelurahan', 'id_kecamatan', 'update_at', 'create_at'
+        'nama_kelurahan',
+        'id_kecamatan',
+        'id_kota',
+        'update_at',
+        'create_at'
     ];
     public function kecamatan(){
         return $this->belongsTo(Kecamatan::class, 'id_kecamatan', 'id_kecamatan');

@@ -14,8 +14,6 @@ class Kota extends Model
 
     protected $fillable =[
         'nama_kota',
-        'id_kecamatan',
-        'id_kelurahan',
         'update_at',
         'create_at'
     ];

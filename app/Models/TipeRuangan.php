@@ -26,6 +26,6 @@ class TipeRuangan extends Model
         return $this->hasMany(Ruangan::class, 'id_fasilitas_ruangan', 'id_fasilitas_ruangan');
     }
     public function gedung(){
-        return $this->belongsTo(Gedung::class, 'id_gedung', 'id_gedung');
+        return $this->hasMany(Gedung::class, 'id_gedung', 'id_gedung');
     }
 }

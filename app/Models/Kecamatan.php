@@ -13,7 +13,9 @@ class Kecamatan extends Model
     protected $primaryKey = 'id_kecamatan';
 
     protected $fillable =[
-        'nama_kecamatan', 'update_at', 'create_at'
+        'nama_kecamatan',
+        'update_at',
+        'create_at'
     ];
     public function kelurahan()
     {

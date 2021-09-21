@@ -35,7 +35,7 @@
         @foreach ($tipe_ruangan as $tr)
         <tr>
             <td class="text-center">{{ $no++ }}</td>
-            <td>{{ $tr->tipe_ruangan }}</td>
+            <td>Tipe {{ $tr->tipe_ruangan }}</td>
             <td class="text-center">
                 <form action="{{ route('tiperuangan.destroy',$tr->id_tipe_ruangan) }}" method="POST" id="form_delete">
  

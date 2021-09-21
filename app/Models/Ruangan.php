@@ -17,7 +17,6 @@ class Ruangan extends Model
         'id_tipe_ruangan',
         'harga_ruangan',
         'status_ruangan',
-        'blok',
         'id_lantai',
         'update_at',
         'create_at'
