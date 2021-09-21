@@ -17,14 +17,15 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-hover table-sm table-responsive bg-light" id="dataTable">
+   <div class="card-body">
+    <table class="table table-hover bg-light" id="dataTable">
         <thead>
         <tr>
-            <th width="20px" class="text-center">No</th>
+            <th>No</th>
             <th>Gedung</th>
             <th>Ruangan</th>
             <th>Nama Penghuni</th>
-            <th width="250px"class="text-center">Aksi</th>
+            <th class="text-center">Aksi</th>
         </tr>            
         </thead>
         <tbody>
@@ -37,11 +38,8 @@
             <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }}</td>
             <td>Nomor {{ $tp->ruangan->no_ruangan }}</td>
             <td>{{ $tp->pemohon->nama_kepala_keluarga }}</td>   
-            <td class="text-center">
-                <form action="{{ route('transaksipembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST">
- 
-                    <a class="btn btn-info btn-sm" href="{{ route('transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Detail Pembayaran</a> 
-                </form>
+            <td class="text-center"> 
+                <a class="btn btn-info btn-sm" href="{{ route('detail-transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Detail Pembayaran</a> 
             </td>
         </tr>
         @endforeach            
@@ -50,6 +48,7 @@
     </table>
  
     {!! $transaksi_pembayaran->links('pagination::bootstrap-4') !!}    
+   </div>
 </div>
 
 </div>

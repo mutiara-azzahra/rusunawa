@@ -166,7 +166,7 @@
                         <div class="col-lg-12">
                             <div class="float-right">
                                 @if($pemohon->foto_akta_nikah == null )
-                                <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_akta_nikah)}}" class="btn btn-success btn-sm" ><i class="fas fa-paperclip"></i> Lengkapi Dokumen</a>  
+                                <a class="btn btn-success" href="" data-toggle="modal"  data-target="#dokumen"><i class="fas fa-paperclip"></i> Lengkapi Dokumen</a>  
 
                                 @else
                                 @endif                                 
@@ -182,7 +182,7 @@
                                     </div>
 
                                     <div class="card m-3" style="padding:10px;">
-                                        <form action="" method="POST">
+                                        <form action="{{ route('pemohon_user.update', $pemohon->id_pemohon)}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         
                                         <div class="row">

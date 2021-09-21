@@ -167,7 +167,7 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" style="padding-right: 10px; margin: 0 !important">
                     <div class="float-right">
-                        <button type="submit" class="btn btn-success">Simpan Permohonan</button>
+                        <button type="submit" class="btn btn-success"> Simpan Permohonan</button>
                     </div>
                 </div>
             </div>

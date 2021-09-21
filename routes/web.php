@@ -37,6 +37,7 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', [LoginController::class,'Beranda'])->name('Beranda');
+Route::get('/tanya-jawab', [LoginController::class,'faq'])->name('tanya-jawab');
 
 Route::get('/login', [LoginController::class, 'formLogin'])->name('loginPage');
 Route::post('/login', [LoginController::class, 'LoginStore'])->name('login');
@@ -79,6 +80,7 @@ Route::get('pemohon_user/pilih-gedung', [PemohonController::class, 'pilihgedung'
 Route::get('pemohon_user/pilih-ruangan/{id_gedung}', [PemohonController::class, 'pilihruangan'])->name('pemohon.pilihruangan');
 Route::get('pemohon_user/create', [PemohonController::class, 'create'])->name('pemohon_user.create');
 Route::get('pemohon_user/{id}', [PemohonController::class, 'show'])->name('pemohon_user.show');
+Route::post('pemohon_user/{id}', [PemohonController::class, 'update'])->name('pemohon_user.update');
 Route::post('pemohon_user/create', [PemohonController::class, 'store'])->name('pemohon_user.store');
 
 Route::get('/create/permohonan', [PemohonController::class,'create_halaman_depan'])->name('create.permohonan');

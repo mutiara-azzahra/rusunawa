@@ -133,24 +133,44 @@ class PemohonController extends Controller
         return view('pemohon.edit',compact('pemohon'));
     }
   
-    public function update(Request $request, Pemohon $pemohon)
+    public function update(Request $request, $id)
     {
+        $pemohon = Pemohon::findOrFail($id);
+        
         $request->validate([
-            'nama_kepala_keluarga'      => 'required',
-            'nik_kepala_keluarga'       => 'required',
-            'pekerjaan_kepala_keluarga' => 'required',
-            'nama_kepala_keluarga'      => 'required',
-            'alamat'                    => 'required',
-            'jumlah_anggota_keluarga'   => 'required',
-            'tanggal_pengajuan'         => 'required',
-            'status_pengajuan'          => 'required',
-            'foto_ktp'                          => 'required',
-            'foto_akta_nikah'                   => 'required',
-            'foto_surat_keterangan_penghasilan' => 'required',
-            'foto_anggota_keluarga'             => 'required',
+            'foto_ktp'                          => 'required|mimes:jpg,png,jpeg',
+            'foto_akta_nikah'                   => 'required|mimes:jpg,png,jpeg',
+            'foto_surat_keterangan_penghasilan' => 'required|mimes:jpg,png,jpeg',
+            'foto_anggota_keluarga'             => 'required|mimes:jpg,png,jpeg',
         ]);
 
-        $pemohon->update($request->all());
+        $input = $request->all();
+
+        if($request->foto_ktp){
+            $nama_ktp = $pemohon->nama_kepala_keluarga.'_'.$request->foto_ktp->getClientOriginalName();
+            $input['foto_ktp']= $nama_ktp;
+            $request->file('foto_ktp')->move('storage/lampiran_pemohon/', $nama_ktp);
+        }
+
+        if($request->foto_akta_nikah){
+            $nama_akta_nikah = $pemohon->nama_kepala_keluarga.'_'.$request->foto_akta_nikah->getClientOriginalName();
+            $input['foto_akta_nikah']= $nama_akta_nikah;
+            $request->file('foto_akta_nikah')->move('storage/lampiran_pemohon/', $nama_akta_nikah);            
+        }
+
+        if($request->foto_surat_keterangan_penghasilan){
+            $nama_surat_keterangan_penghasilan = $pemohon->nama_kepala_keluarga.'_'.$request->foto_ktp->getClientOriginalName();
+            $input['foto_surat_keterangan_penghasilan']= $nama_surat_keterangan_penghasilan;
+            $request->file('foto_surat_keterangan_penghasilan')->move('storage/lampiran_pemohon/', $nama_surat_keterangan_penghasilan);            
+        }
+
+        if($request->foto_anggota_keluarga){
+            $nama_anggota_keluarga = $pemohon->nama_kepala_keluarga.'_'.$request->foto_anggota_keluarga->getClientOriginalName();
+            $input['foto_anggota_keluarga']= $nama_anggota_keluarga;
+            $request->file('foto_anggota_keluarga')->move('storage/lampiran_pemohon/', $nama_anggota_keluarga);            
+        }
+
+        $pemohon->update($input);
          
         return redirect()->route('pemohon.index')
                         ->with('success','Data pemohon berhasil ditambahkan!');

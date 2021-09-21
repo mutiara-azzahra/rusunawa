@@ -81,11 +81,12 @@ class LoginController extends Controller
 
         return view('welcome', compact('gedung', 'posts', 'fasilitas'));
     }
-    public function faq(){
-        $posts = Posts::lastest()->paginate(5);
 
-        return view('welcome',compact('posts'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+    public function faq()
+    {
+        $posts = Posts::paginate(5);
+
+        return view('tanya-jawab',compact('posts'));
     }
     public function detailgedung($id)
     {

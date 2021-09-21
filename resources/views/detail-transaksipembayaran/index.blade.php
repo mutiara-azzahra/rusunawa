@@ -23,12 +23,12 @@
     <table class="table table-hover table-sm table-responsive bg-light" id="dataTable">
         <thead>
         <tr>
-            <th width="20px" class="text-center">No</th>
+            <th>No</th>
             <th>Nama Penghuni</th>
             <th>Bulan</th>
             <th>Tahun</th>
             <th>Harga</th>
-            <th width="250px"class="text-center">Aksi</th>
+            <th>Aksi</th>
         </tr>            
         </thead>
         <tbody>

@@ -59,6 +59,9 @@
   margin: 0 auto; /* Added */
   float: none; /* Added */
 }
+.card-header{
+  background-color: none;
+}
 .form-login{
   padding-top: 30px;
   font-family: 'quicksand', sans-serif;
@@ -115,6 +118,12 @@
   color: #fff;
   background-color: #C54F00;
   border-style: none;
+}
+.btn-link{
+  color: #a34100;
+}
+.bawah{
+  border-bottom: 1px solid rgba(0,0,0,.125);
 }
 .btn-primary:hover {
   color: black;

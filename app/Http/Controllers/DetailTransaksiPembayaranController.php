@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pemohon;
 use App\Models\TransaksiPembayaran;
+use App\Models\DetailTransaksiPembayaran;
 use App\Models\Ruangan;
 
 class DetailTransaksiPembayaranController extends Controller
@@ -39,9 +40,11 @@ class DetailTransaksiPembayaranController extends Controller
 
     public function show( $id)
     {
+        $transaksi_pembayaran = TransaksiPembayaran::findOrFail($id);
+        $detail_transaksi_pembayaran = DetailTransaksiPembayaran::where('id_transaksi_pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran)->get();
 
-        return view('detail-transaksipembayaran.show', [
-            'detail_transaksi_pembayaran' => DetailTransaksiPembayaran::findOrFail($id)]);
+
+        return view('detail-transaksipembayaran.show', compact('transaksi_pembayaran', 'detail_transaksi_pembayaran'));
     }
     
     public function edit($id)
