@@ -13,7 +13,7 @@ class TipeRuanganController extends Controller
         $tipe_ruangan = TipeRuangan::latest()->paginate(5);
         
         return view('tiperuangan.index',compact('tipe_ruangan'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+                                ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -35,7 +35,7 @@ class TipeRuanganController extends Controller
     public function show( $id)
     {
         return view('tiperuangan.show', [
-            'tipe_ruangan' => TipeRuangan::findOrFail($id)]);
+                    'tipe_ruangan' => TipeRuangan::findOrFail($id)]);
     }
     
     public function edit( $id)

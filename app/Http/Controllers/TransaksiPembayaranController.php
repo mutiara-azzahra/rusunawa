@@ -53,15 +53,15 @@ class TransaksiPembayaranController extends Controller
 
     public function show( $id)
     {
-        $transaksi_pembayaran = TransaksiPembayaran::findOrFail($id);
-        $detail_transaksi_pembayaran = DetailTransaksiPembayaran::where('id_transaksi_pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran)->get();
+        $transaksi_pembayaran           = TransaksiPembayaran::findOrFail($id);
+        $detail_transaksi_pembayaran    = DetailTransaksiPembayaran::where('id_transaksi_pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran)->get();
         return view('transaksipembayaran.show', compact('transaksi_pembayaran', 'detail_transaksi_pembayaran'));
     }
     
     public function edit($id)
     {
-        $transaksi_pembayaran = TransaksiPembayaran::findOrFail($id);
-        $pemohon = Pemohon::all();
+        $transaksi_pembayaran   = TransaksiPembayaran::findOrFail($id);
+        $pemohon                = Pemohon::all();
 
         return view('transaksipembayaran.edit',compact('transaksi_pembayaran', 'pemohon'));
     }
@@ -84,10 +84,9 @@ class TransaksiPembayaranController extends Controller
 
     public function pemohon_show()
     {
-        $user_id = Auth::id();
-        $pemohon = Pemohon::where('id_user', $user_id)->first();
-        // $pemohon = Pemohon::where('id_user',$user->id)->first();
-        $transaksi_pembayaran = TransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->paginate(10);
+        $user_id                = Auth::id();
+        $pemohon                = Pemohon::where('id_user', $user_id)->first();
+        $transaksi_pembayaran   = TransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->paginate(10);
 
         return view('transaksipembayaran.pemohon_index', compact('transaksi_pembayaran'));
     }

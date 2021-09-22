@@ -13,6 +13,7 @@ use App\Http\Controllers\FasilitasRuanganController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KecamatanController;
+use App\Http\Controllers\KotaController;
 use App\Http\Controllers\PemohonController;
 use App\Http\Controllers\TransaksiPembayaranController;
 use App\Http\Controllers\DetailTransaksiPembayaranController;
@@ -57,6 +58,7 @@ Route::resource('fasilitasruangan', FasilitasRuanganController::class);
 Route::resource('fasilitas', FasilitasController::class);
 Route::resource('kelurahan', KelurahanController::class);
 Route::resource('kecamatan', KecamatanController::class);
+Route::resource('kota', KotaController::class);
 Route::resource('galeri', GaleriController::class);
 Route::resource('pemohon', PemohonController::class);
 Route::resource('transaksipembayaran', TransaksiPembayaranController::class);
@@ -81,7 +83,7 @@ Route::get('pemohon_user/pilih-ruangan/{id_gedung}', [PemohonController::class, 
 Route::get('pemohon_user/create', [PemohonController::class, 'create'])->name('pemohon_user.create');
 Route::get('pemohon_user/{id}', [PemohonController::class, 'show'])->name('pemohon_user.show');
 Route::post('pemohon_user/{id}', [PemohonController::class, 'update'])->name('pemohon_user.update');
-Route::post('pemohon_user/create', [PemohonController::class, 'store'])->name('pemohon_user.store');
+Route::post('pemohon_userss/create', [PemohonController::class, 'store'])->name('pemohon_user.store');
 
 Route::get('/create/permohonan', [PemohonController::class,'create_halaman_depan'])->name('create.permohonan');
 Route::get('/create/permohonan_user', [PemohonController::class,'create_halaman_depan'])->name('create.permohonan');
@@ -93,6 +95,8 @@ Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.rua
 Route::get('/api/pemohon/{id}/{tahun}', [PemohonController::class,'api'])->name('api.pemohon');
 Route::get('/api/lantai/{id}', [LantaiController::class,'api'])->name('api.lantai');
 Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.ruangan');
+Route::get('/api/kecamatan/{id}', [KecamatanController::class,'api'])->name('api.kecamatan');
+
 
 Route::get('register/create', [LoginController::class, 'formRegister'])->name('regsiter.create');
 Route::post('register/create', [LoginController::class, 'RegsiterStore'])->name('register.store');

@@ -13,7 +13,7 @@ class RegisterController extends Controller
         $pemohon = Register::latest()->paginate(5);
         
         return view('register.index',compact('pemohon'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+                            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -24,14 +24,14 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $request -> validate([
-            'nama_kepala_keluarga' => 'required',
-            'nik_kepala_keluarga' => 'required',
+            'nama_kepala_keluarga'      => 'required',
+            'nik_kepala_keluarga'       => 'required',
             'pekerjaan_kepala_keluarga' => 'required',
-            'no_kartu_keluarga' => 'required',
-            'nama_kepala_keluarga' => 'required',
-            'alamat' => 'required',
-            'jumlah_anggota_keluarga' => 'required',
-            'tanggal_pengajuan' => 'required'
+            'no_kartu_keluarga'         => 'required',
+            'nama_kepala_keluarga'      => 'required',
+            'alamat'                    => 'required',
+            'jumlah_anggota_keluarga'   => 'required',
+            'tanggal_pengajuan'         => 'required'
         ]);
 
         Register::create($request->all());

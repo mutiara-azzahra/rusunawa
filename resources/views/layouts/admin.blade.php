@@ -159,7 +159,7 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link"  href="#" class="nav-link">
+                        <a class="nav-link {{ set_active('kota.index') }}"  href="{{ Route('kota.index') }}" class="nav-link">
                           <p>Kota</p>
                         </a>
                       </li>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Kelurahan;
 use App\Models\Kecamatan;
+use App\Models\Kota;
 
 class KelurahanController extends Controller
 {    
@@ -18,8 +19,10 @@ class KelurahanController extends Controller
 
     public function create()
     {
+        $kota = Kota::all();
         $kecamatan = Kecamatan::all();
-        return view('kelurahan.create',compact('kecamatan'));
+
+        return view('kelurahan.create',compact('kecamatan', 'kota'));
     }
 
     public function store(Request $request)
@@ -44,8 +47,9 @@ class KelurahanController extends Controller
     {
         $kelurahan = Kelurahan::findOrFail($id);
         $kecamatan = Kecamatan::all();
+        $kota = Kota::all();
 
-        return view('kelurahan.edit',compact('kelurahan', 'kecamatan'));
+        return view('kelurahan.edit',compact('kelurahan', 'kecamatan', 'kota'));
     }
   
     public function update(Request $request, Kelurahan $kelurahan)
@@ -68,4 +72,5 @@ class KelurahanController extends Controller
         return redirect()->route('kelurahan.index')
                         ->with('success','Data kelurahan berhasil dihapus!');
     }
+    
 }

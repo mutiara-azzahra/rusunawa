@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Kota;
 
 class KotaController extends Controller
 {    
@@ -16,16 +17,14 @@ class KotaController extends Controller
 
     public function create()
     {
-        $kecamatan = Kecamatan::all();
-        return view('kota.create',compact('kecamatan'));
+        $kota = Kota::all();
+        return view('kota.create', compact('kota'));
     }
 
     public function store(Request $request)
     {
         $request -> validate([
             'nama_kota'     => 'required',
-            'id_kecamatan'  => 'required',
-            'id_kelurahan'  => 'required',
         ]);
 
         Kota::create($request->all());
@@ -42,17 +41,14 @@ class KotaController extends Controller
     public function edit( $id)
     {
         $kota = Kota::findOrFail($id);
-        $kecamatan = Kecamatan::all();
 
-        return view('kota.edit',compact('kota', 'kecamatan'));
+        return view('kota.edit',compact('kota'));
     }
   
     public function update(Request $request, Kota $kota)
     {
         $request->validate([
             'nama_kota'     => 'required',
-            'id_kecamatan'  => 'required',
-            'id_kelurahan'  => 'required',
         ]);
          
         $kota->update($request->all());
@@ -68,4 +64,5 @@ class KotaController extends Controller
         return redirect()->route('kota.index')
                         ->with('success','Data kota berhasil dihapus!');
     }
+    
 }

@@ -75,9 +75,9 @@ class LoginController extends Controller
     }
     public function Beranda()
     {
-        $fasilitas = Fasilitas::all();
-        $gedung = Gedung::all();
-        $posts = Posts::paginate(5);
+        $fasilitas  = Fasilitas::all();
+        $gedung     = Gedung::all();
+        $posts      = Posts::paginate(5);
 
         return view('welcome', compact('gedung', 'posts', 'fasilitas'));
     }

@@ -30,21 +30,29 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Nama Kelurahan</strong>
-                        <input type="text" name="nama_kelurahan" class="form-control" placeholder="Tambah Nama Kelurahan">
+                        <strong>Kota</strong>
+                        <select name="id_kota" class="form-control" id="id_kota" onchange="getKecamatan()">
+                            <option value="">---Pilih Kota--</option>
+                            @foreach($kota as $k)
+                            <option value=" {{ $k->id_kota }}"> {{ $k->nama_kota }} </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Kecamatan</strong>
-                        <select name="id_kecamatan" class="form-control" >
+                        <select name="id_kecamatan" class="form-control" id="id_kecamatan" >
                             <option value="">---Pilih Kecamatan--</option>
-                            @foreach($kecamatan as $kc)
-                            <option value=" {{ $kc->id_kecamatan }}"> {{ $kc->nama_kecamatan }} </option>
-                            @endforeach
                         </select>
                     </div>
-                </div> 
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Nama Kelurahan</strong>
+                        <input type="text" name="nama_kelurahan" class="form-control" placeholder="Tambah Nama Kelurahan">
+                    </div>
+                </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <div class="float-right">
                         <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
@@ -56,4 +64,23 @@
     </div>
 
 </div>
+
+<script>
+    let getKecamatan = async () => {
+       const id_kota =  $('#id_kota').val();
+       const endpoint = '/api/kecamatan/'+id_kota
+
+        const response = await axios.get('/api/kecamatan/'+ id_kota).catch(error => console.log(error));
+        const data_kecamatan = response.data
+        const kecamatanEl = $('#id_kecamatan')
+
+        kecamatanEl.children('option:not(:first)').remove();
+
+        data_kecamatan.map((data) => {
+            kecamatanEl.append(
+                '<option value="'+data.id_kecamatan+'">'+data.nama_kecamatan+'</option>'
+            )
+        })
+    }
+</script>
 @endsection

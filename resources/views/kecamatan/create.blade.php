@@ -31,6 +31,17 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
+                            <strong>Kota</strong>
+                            <select name="id_kota" class="form-control" >
+                                <option value="">---Pilih Kota--</option>
+                                @foreach($kota as $k)
+                                <option value=" {{ $k->id_kota }}"> {{ $k->nama_kota }} </option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
                             <strong>Nama Kecamatan</strong>
                             <input type="text" name="nama_kecamatan" class="form-control" placeholder="Isi nama kecamatan...">
                         </div>

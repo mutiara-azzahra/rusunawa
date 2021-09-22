@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kecamatan;
+use App\Models\Kota;
 
 class KecamatanController extends Controller
 {    
@@ -16,7 +17,9 @@ class KecamatanController extends Controller
 
     public function create()
     {
-        return view('kecamatan.create');
+        $kota = Kota::all();
+
+        return view('kecamatan.create', compact('kota'));
     }
 
     public function store(Request $request)
@@ -62,4 +65,11 @@ class KecamatanController extends Controller
         return redirect()->route('kecamatan.index')
                         ->with('success','Data kecamatan berhasil dihapus!');
     }
+    public function api($id)
+    {
+        $data = Kecamatan::where('id_kota', $id)->get();
+
+        return json_encode($data);
+    }
+    
 }

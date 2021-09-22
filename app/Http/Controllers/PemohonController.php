@@ -27,11 +27,11 @@ class PemohonController extends Controller
     {
         $pilih_ruangan = null;
 
-        $ruangan = Ruangan::all();
-        $gedung = Gedung::all();
-        $lantai = Lantai::all();
-        $user = auth()->user();
-        $pemohon = Pemohon::where('id_user', $user->id_user)->first();
+        $ruangan    = Ruangan::all();
+        $gedung     = Gedung::all();
+        $lantai     = Lantai::all();
+        $user       = auth()->user();
+        $pemohon    = Pemohon::where('id_user', $user->id_user)->first();
 
         return view('pemohon.create',compact('ruangan', 'lantai', 'gedung', 'pilih_ruangan', 'user', 'pemohon'));
     }
@@ -69,8 +69,6 @@ class PemohonController extends Controller
             'foto_anggota_keluarga'             => 'required|mimes:jpg,png,jpeg',
             ]);
         }
-        
-
         $input = $request->all();
 
         if($request->foto_ktp){
@@ -188,10 +186,10 @@ class PemohonController extends Controller
     {
         $pilih_ruangan = Ruangan::findOrFail($request->id_ruangan);
 
-        $ruangan = Ruangan::all();
-        $gedung = Gedung::all();
-        $lantai = Lantai::all();
-        $pemohon = Auth::user()->pemohon;
+        $ruangan    = Ruangan::all();
+        $gedung     = Gedung::all();
+        $lantai     = Lantai::all();
+        $pemohon    = Auth::user()->pemohon;
         return view('pemohon.create',compact('ruangan', 'gedung', 'lantai', 'pilih_ruangan','pemohon'));
     }
 

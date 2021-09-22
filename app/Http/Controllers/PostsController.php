@@ -23,8 +23,8 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $request -> validate([
-            'title' => 'required',
-            'content' => 'required',
+            'title'     => 'required',
+            'content'   => 'required',
         ]);
 
         Posts::create($request->all());
@@ -48,8 +48,8 @@ class PostsController extends Controller
     public function update(Request $request, Post $post)
     {
         $request->validate([
-            'title' => 'required',
-            'content' => 'required',
+            'title'     => 'required',
+            'content'   => 'required',
         ]);
          
         $posts->update($request->all());

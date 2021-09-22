@@ -36,11 +36,15 @@
                     </div>
                 </div> 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
                 </div>
             </div>
         
         </form>
     </div>
 </div>
+
+
 @endsection

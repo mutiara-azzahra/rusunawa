@@ -27,10 +27,10 @@ class RuanganController extends Controller
     public function store(Request $request)
     {
         $request -> validate([
-            'no_ruangan' => 'required',
-            'id_lantai' => 'required',
-            'harga_ruangan' => 'required',
-            'status_ruangan' => 'required',
+            'no_ruangan'        => 'required',
+            'id_lantai'         => 'required',
+            'harga_ruangan'     => 'required',
+            'status_ruangan'    => 'required',
         ]);
 
         Ruangan::create($request->all());
@@ -46,8 +46,8 @@ class RuanganController extends Controller
     
     public function edit($id)
     {
-        $ruangan = Ruangan::findOrFail($id);
-        $lantai = Lantai::all();
+        $ruangan    = Ruangan::findOrFail($id);
+        $lantai     = Lantai::all();
 
         return view('ruangan.edit',compact('ruangan', 'lantai'));
     }
