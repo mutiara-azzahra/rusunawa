@@ -20,12 +20,12 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-bordered table-hover table-sm bg-light" id="dataTable">
+    <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
         <thead>
         <tr>
-            <th width="20px" class="text-center">No</th>
-            <th class="text-center">Tipe Ruangan</th>
-            <th width="250px"class="text-center">Aksi</th>
+            <th>No</th>
+            <th>Tipe Ruangan</th>
+            <th>Aksi</th>
         </tr>    
         </thead>
         <tbody>

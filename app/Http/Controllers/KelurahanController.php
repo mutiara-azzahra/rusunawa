@@ -72,5 +72,11 @@ class KelurahanController extends Controller
         return redirect()->route('kelurahan.index')
                         ->with('success','Data kelurahan berhasil dihapus!');
     }
+    public function api($id)
+    {
+        $data = Kelurahan::where('id_kecamatan', $id)->get();
+
+        return json_encode($data);
+    }
     
 }

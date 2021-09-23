@@ -8,7 +8,7 @@
                 <h2>Data Ruangan</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('ruangan.create') }}"> Tambah Ruangan</a>
+                <a class="btn btn-success" href="{{ route('ruangan.create') }}"><i class="fas fa-plus"></i> Tambah Ruangan</a>
             </div>
         </div>
     </div>
@@ -20,16 +20,16 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-bordered table-hover table-sm bg-light" id="dataTable">
+    <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
         <thead>
         <tr>
-            <th width="20px" class="text-center">No</th>
-            <th width="20px" class="text-center">No Ruangan</th>
-            <th class="text-center">Harga Ruangan</th>
-            <th width="20px" class="text-center">Status Ruangan</th>
-            <th class="text-center">Lantai</th>
-            <th class="text-center">Gedung</th>
-            <th width="250px"class="text-center">Aksi</th>
+            <th>No</th>
+            <th>No Ruangan</th>
+            <th>Harga Ruangan</th>
+            <th>Status Ruangan</th>
+            <th>Lantai</th>
+            <th>Gedung</th>
+            <th class="text-center">Aksi</th>
         </tr>    
         </thead>
         <tbody>
@@ -39,7 +39,7 @@
         @foreach ($ruangan as $r)
         <tr>
             <td class="text-center">{{ $no++ }}</td>
-            <td>{{ $r->no_ruangan }}</td>
+            <td>Nomor {{ $r->no_ruangan }}</td>
             <td>Rp. {{ $r->harga_ruangan }},-/bulan</td>
             <td>{{ $r->status_ruangan }}</td>
             <td>Lantai {{ $r->lantai->lantai }} </td>

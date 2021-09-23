@@ -14,7 +14,6 @@ class TransaksiPembayaran extends Model
     'id_pemohon',
     'id_ruangan',
     'id_user',
-    'bulan',
     'harga',
     'tahun',
     'updated_at',

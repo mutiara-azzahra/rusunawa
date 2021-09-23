@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>No. Transaksi Pembayaran</strong><br>
+                    <strong>ID Transaksi Pembayaran</strong><br>
                     {{ $transaksi_pembayaran->id_transaksi_pembayaran }}
                 </div>
             </div>

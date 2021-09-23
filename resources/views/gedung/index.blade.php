@@ -20,7 +20,7 @@
     @endif
 
     <div class="card" style="padding: 20px;">
-        <table class="table table-hover  table-bordered table-sm bg-light" id="dataTable">
+        <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>
                         <th width="20px" class="text-center">No</th>
@@ -39,7 +39,7 @@
                 <tr>
                     <td class="text-center">{{ $no++ }}</td>
                     <td>{{ $g->nama_gedung }}</td>
-                    <td>{{ $g->tipe_ruangan }}</td>
+                    <td>{{ $g->tipe_ruangan->tipe_ruangan }}</td>
                     <td>{{ $g->jumlah_ruangan }}</td>
                     <td>{{ $g->status_gedung }}</td>
                     <td class="text-center">

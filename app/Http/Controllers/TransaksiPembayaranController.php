@@ -22,14 +22,15 @@ class TransaksiPembayaranController extends Controller
 
     public function create()
     {
-
         $ruangan        = Ruangan::all();
         $pemohon        = Pemohon::all();
         $user           = Auth::user();
+
         return view('transaksipembayaran.create',compact('ruangan', 'pemohon', 'user'));
     }
     public function store(Request $request)
     {
+
         $request -> validate([
             'id_ruangan'        => 'required',
             'tahun'             => 'required',
@@ -37,9 +38,8 @@ class TransaksiPembayaranController extends Controller
             'id_pemohon'        => 'required',
             'id_user'           => 'required',
         ]);
-
+        
         $transaksi = TransaksiPembayaran::create($request->all());
-
         foreach($request->bulan as $bulan)
         {
             DetailTransaksiPembayaran::create([
@@ -48,6 +48,7 @@ class TransaksiPembayaranController extends Controller
                'id_transaksi_pembayaran'    =>$transaksi->id_transaksi_pembayaran,
             ]);
         }
+        
         return redirect()->route('transaksipembayaran.index')->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }
 

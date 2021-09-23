@@ -20,14 +20,14 @@
         @endif
 
     <div class="card" style="padding: 20px;">
-        <table class="table table-hover table-sm bg-light" id="dataTable">
+        <table class="table table-hover table-bordered bg-light" id="dataTable">
             <thead>
                 <tr>
-                    <th width="20px" class="text-center">No</th>
+                    <th>No</th>
                     <th>Nama User</th>
                     <th>Username</th>
                     <th>Email</th>
-                    <th width="100px"class="text-center">Aksi</th>
+                    <th>Aksi</th>
                 </tr>            
             </thead>
             <tbody>

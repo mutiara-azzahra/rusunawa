@@ -20,7 +20,7 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-responsive bg-light" id="dataTable">
+    <table class="table table-hover table-bordered bg-light" id="dataTable">
         <thead>
         <tr>
             <th>No</th>

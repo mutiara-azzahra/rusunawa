@@ -27,7 +27,7 @@ class Gedung extends Model
     }
 
     public function tipe_ruangan(){
-        return $this->hasOne(TipeRuangan::class, 'id_gedung', 'id_gedung');
+        return $this->hasOne(TipeRuangan::class, 'id_tipe_ruangan');
     }
 
     public function fasilitas_umum(){

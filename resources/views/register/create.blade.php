@@ -100,6 +100,30 @@
                                         <td><input style="width:350px;" type="text" name="alamat" class="form-control" placeholder="Isi alamat"></td>
                                     </tr>
                                     <tr>
+                                        <td class="p-3" style="padding-right:50px;"><strong>Kota</strong></td>
+                                        <td>
+                                            <select style="width: 350px;" name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()">
+                                                <option value="">---Pilih Kota--</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3" style="padding-right:50px;"><strong>Kecamatan</strong></td>
+                                        <td>
+                                            <select style="width: 350px;" name="id_kecamatan" class="form-control" id="id_kecamatan" onchange="getKelurahan()">
+                                                <option value="">---Pilih Kecamatan--</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3" style="padding-right:50px;"><strong>Kelurahan</strong></td>
+                                        <td>
+                                            <select  style="width: 350px;" name="id_kecamatan" class="form-control" id="id_kecamatan">
+                                                <option value="">---Pilih Kelurahan--</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Jumlah Anggota Keluarga</strong></td>
                                         <td><input style="width:350px;" type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Isi jumlah anggota keluarga"></td>
                                     </tr>
@@ -136,5 +160,41 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script>
+        let getKecamatan = async () => {
+           const id_kota =  $('#id_kota').val();
+           const endpoint = '/api/kecamatan/'+id_kota
+    
+            const response = await axios.get('/api/kecamatan/'+ id_kota).catch(error => console.log(error));
+            const data_kecamatan = response.data
+            const kecamatanEl = $('#id_kecamatan')
+    
+            kecamatanEl.children('option:not(:first)').remove();
+    
+            data_kecamatan.map((data) => {
+                kecamatanEl.append(
+                    '<option value="'+data.id_kecamatan+'">'+data.nama_kecamatan+'</option>'
+                )
+            })
+        }
+
+        let getKelurahan = async () => {
+        const id_kecamatan =  $('#id_kecamatan').val();
+        const endpoint = '/api/kelurahan/'+id_kecamatan
+
+            const response = await axios.get('/api/kelurahan/'+id_kecamatan).catch(error => console.log(error));
+            const data_kelurahan = response.data
+            const kelurahanEl = $('#id_kelurahan')
+
+            kelurahanEl.children('option:not(:first)').remove();
+
+            data_kelurahan.map((data) => {
+                kelurahanEl.append(
+                    '<option value="'+data.id_kelurahan+'">'+data.nama_kelurahan+'</option>'
+                )
+            })
+        }
+    </script>
+    
   </body>
 </html>

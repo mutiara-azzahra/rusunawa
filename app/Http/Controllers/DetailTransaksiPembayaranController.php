@@ -64,7 +64,8 @@ class DetailTransaksiPembayaranController extends Controller
         ]);
          
         $transaksi_pembayaran->update($request->all());
-         
+        dd($request);
+                 
         return redirect()->route('detail-transaksipembayaran.index')
                         ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }

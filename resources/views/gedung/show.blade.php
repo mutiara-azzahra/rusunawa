@@ -27,10 +27,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Tipe Ruangan</strong><br>
-                @foreach ($gedung->tipe_ruangan as $item)
-                    {{ $item->tipe_ruangan }}
-                @endforeach
-                <br>
+                {{ $gedung->tipe_ruangan->tipe_ruangan }}<br>                
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

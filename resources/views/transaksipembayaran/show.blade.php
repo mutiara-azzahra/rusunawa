@@ -6,7 +6,7 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Daftar Transaksi Pembayaran</h2>
+                <h2>Detail Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
                 <a class="btn btn-success btn-secondary" href=c><i class="fas fa-arrow-left"></i> Kembali</a>
