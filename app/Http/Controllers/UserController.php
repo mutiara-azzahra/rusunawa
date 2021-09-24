@@ -79,7 +79,7 @@ class UserController extends Controller
         $user->update();
 
         return redirect()->route('user.index')
-                        ->with('success','Data user berhasil diubah!');
+                        ->with('success','Password user berhasil diganti menjadi 12345!');
     }
 
     

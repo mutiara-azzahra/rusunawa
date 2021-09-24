@@ -224,9 +224,9 @@
     //ambil ruangan yg ada di lantai
     let getRuangan = async () => {
        const id_lantai =  $('#id_lantai').val();
-       const endpoint = '/api/ruangan/'+id_lantai
+       const endpoint = '/api/ruangan_gedung/'+id_lantai 
 
-        const response = await axios.get('/api/ruangan/'+ id_lantai).catch(error => console.log(error));
+        const response = await axios.get(endpoint).catch(error => console.log(error));
         const data_ruangan = response.data
         const ruanganEl = $('#id_ruangan')
 

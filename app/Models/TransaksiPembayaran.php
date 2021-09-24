@@ -21,7 +21,7 @@ class TransaksiPembayaran extends Model
     ];
     
     public function pemohon(){
-        return $this->hasOne(Pemohon::class, 'id_pemohon', 'id_pemohon');
+        return $this->belongsTo(Pemohon::class, 'id_pemohon', 'id_pemohon');
     }
     public function ruangan(){
         return $this->hasOne(Ruangan::class, 'id_ruangan', 'id_ruangan');

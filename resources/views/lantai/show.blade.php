@@ -8,7 +8,7 @@
                 <h2>Lantai</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('lantai.index') }}"><i class="fas fa-arrow-left"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('lantai.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>

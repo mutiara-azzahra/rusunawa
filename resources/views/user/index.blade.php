@@ -8,7 +8,7 @@
                     <h2>Data User</h2>
                 </div>
                 <div class="float-right">
-                    <a class="btn btn-success" href="/user/create"> Tambah User</a>
+                    <a class="btn btn-success" href="/user/create"><i class="fas fa-plus"></i> Tambah User</a>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                     <td>{{ $u->username }}</td>
                     <td>{{ $u->email }}</td>
                     <td class="text-center">
-                        <a href="{{ route('user.reset',$u->id_user) }}"  class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')"> Reset</a>
+                        <a href="{{ route('user.reset',$u->id_user) }}" style="margin: 5px;" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')"> Reset</a>
 
                         <form action="{{ route('user.destroy',$u->id_user) }}" method="POST">
                             @csrf

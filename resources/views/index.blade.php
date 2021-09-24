@@ -142,6 +142,11 @@
             <div class="card p-2">
               Tagihan Bayar
             </div>
+            {{-- @foreach ($transaksi_pembayran as $t)
+            {{ $t->bulan }}    
+            @endforeach
+             --}}
+
           </div>        
         </div>
 

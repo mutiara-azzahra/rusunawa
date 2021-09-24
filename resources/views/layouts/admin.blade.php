@@ -136,6 +136,11 @@
                         <p>Daftar Pemohon</p>
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('role.index') }}" href="{{ Route('role.index') }}" class="nav-link">
+                        <p>Role</p>
+                      </a>
+                    </li>
                 </ul>
                 
                 

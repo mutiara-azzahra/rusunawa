@@ -5,10 +5,10 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Data Kota</h2>
+                <h2>Data Kota/Kabupaten</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('kota.create') }}"><i class="fas fa-plus"></i> Tambah Kota</a>
+                <a class="btn btn-success" href="{{ route('kota.create') }}"><i class="fas fa-plus"></i> Tambah Data</a>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
                 <thead>
                     <tr>
                         <th width="20px" class="text-center">No</th>
-                        <th width="20px" class="text-center">Nama Kota</th>
+                        <th width="20px" class="text-center">Nama Kota/Kabupaten</th>
                         <th width="150px"class="text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -37,10 +37,7 @@
                         <td class="text-center">{{ $no++ }}</td>
                         <td> {{ $kc->nama_kota }}</td>
                         <td class="text-center">
-                            <form action="{{ route('kota.destroy',$kc->id_kota) }}" method="POST" id="form_delete">
-            
-                                <a class="btn btn-info btn-sm" href="{{ route('kota.show',$kc->id_kota) }}"> Tampilkan</a>
-            
+                            <form action="{{ route('kota.destroy',$kc->id_kota) }}" method="POST" id="form_delete">            
                                 <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$kc->id_kota) }}"> Ubah</a>
             
                                 @csrf

@@ -40,7 +40,7 @@ class Pemohon extends Model
     }
     public function transaksipembayaran()
     {
-        return $this->hasOne(TransaksiPembayaran::class, 'id_transaksi_pembayaran', 'id_transaksi_pembayaran');
+        return $this->hasMany(TransaksiPembayaran::class, 'id_transaksi_pembayaran', 'id_transaksi_pembayaran');
     }
     public function ruangan()
     {

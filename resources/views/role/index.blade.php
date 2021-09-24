@@ -5,10 +5,10 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Tabel Role</h2>
+                <h2>Data Level User</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('role.create') }}"> Tambah Role</a>
+                <a class="btn btn-success" href="{{ route('role.create') }}"><i class="fas fa-plus"></i> Tambah Role</a>
             </div>
         </div>
     </div>
@@ -24,8 +24,8 @@
         <thead>
             <tr>
             <th width="20px" class="text-center">No</th>
-            <th>Nama Role</th>
-            <th width="150px"class="text-center">Action</th>
+            <th>Level User/Pengguna</th>
+            <th width="150px"class="text-center">Aksi</th>
         </tr>
         </thead>
         <tbody>
