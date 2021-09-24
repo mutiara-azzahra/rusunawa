@@ -42,56 +42,35 @@
       </button>
 
       <div class="navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#tentang">Tentang Rusunawa</a>
+            <a class="nav-link" href="{{ route('Beranda') }}">Halaman Awal</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#lokasi">Lokasi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#alur">Alur</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('tanya-jawab')}}">Tanya Jawab</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Layanan Informasi
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Persyaratan</a>
-              <a class="dropdown-item" href="#">Permohonan</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
-            </div>
-          </li>
+  
           @if (Auth::check())
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ Route('AdminBeranda') }}">Profil Saya</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href ="{{ route('logout') }}">Keluar.
-                  <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
-                  {{-- <form id="frm-logout" action="{{ route('logout') }}" method="post" style="display: none;">
-                    @csrf
-                  </form> --}}
-                </a>
-              </div>
-            </li>
-            <li class="nav-item" style="padding-top:7px;">
-              
-            </li>
+  
           @else
-            <li class="nav-item">
-              <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
+          </li>
           @endif
+  
+          @if (Auth::check())
+          <li class="nav-item" style="padding-top: 7px;">
+            <a href ="{{ route('logout') }}" onClick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+              <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
+            </a>
+            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
+          </li>
+          @else
+  
+          @endif
+  
         </ul>
       </div>
+      
     </div>
     </nav>
 </header>
@@ -126,7 +105,7 @@
               </div>
             </div>            
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-12">
                 @foreach ($posts as $p)
                 <div class="accordion" id="accordion">
                   <div class="card mb-2 card-outline">

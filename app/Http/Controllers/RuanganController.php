@@ -75,9 +75,15 @@ class RuanganController extends Controller
                         ->with('success','Data ruangan berhasil dihapus!');
     }
 
-    public function api($id)
+    public function api_lantai($id)
     {
         $data = Ruangan::where('id_lantai', $id)->get();
+
+        return json_encode($data);
+    }
+    public function api_harga($id)
+    {
+        $data = Ruangan::findOrFail($id);
 
         return json_encode($data);
     }

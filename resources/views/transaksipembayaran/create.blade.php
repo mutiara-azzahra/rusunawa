@@ -190,7 +190,7 @@
         let id_ruangan =  $('#id_ruangan').val();
         let tahun =  $('#tahun').val();
 
-        axios.get('/api/pemohon/'+ id_ruangan +'/' + tahun)
+        axios.get('/api_harga/pemohon/'+ id_ruangan +'/' + tahun)
           .then(function (response){
             console.log(response);
            if(response.data.data == '0')

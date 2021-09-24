@@ -120,7 +120,7 @@
                         <div class="form-group">
                             <strong>Foto KTP</strong><br>
                             @if($pemohon->foto_ktp != null )
-                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_ktp)}}" class="btn btn-success btn-sm" ><i class="fas fa-paperclip"></i> Lengkap
+                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_ktp)}}" class="btn btn-success btn-sm" target="__blank"><i class="fas fa-paperclip"></i> Lengkap
                             </a>
                                                       
 
@@ -133,7 +133,7 @@
                         <div class="form-group">
                             <strong>Foto Akta Nikah</strong><br>
                             @if($pemohon->foto_akta_nikah != null )
-                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_akta_nikah)}}" class="btn btn-success btn-sm" ><i class="fas fa-paperclip"></i> Lengkap</a>  
+                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_akta_nikah)}}" class="btn btn-success btn-sm" target="__blank"><i class="fas fa-paperclip"></i> Lengkap</a>  
 
                             @else
                             <span class="badge badge-warning">Belum Lengkap</span><br>
@@ -144,7 +144,7 @@
                         <div class="form-group">
                             <strong>Foto Surat Keterangan Penghasilan</strong><br>
                             @if($pemohon->foto_surat_keterangan_penghasilan != null )
-                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_surat_keterangan_penghasilan)}}" class="btn btn-success btn-sm" ><i class="fas fa-paperclip"></i> Lengkap</a>  
+                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_surat_keterangan_penghasilan)}}" class="btn btn-success btn-sm" target="__blank"><i class="fas fa-paperclip"></i> Lengkap</a>  
 
                             @else
                             <span class="badge badge-warning">Belum Lengkap</span><br>
@@ -155,7 +155,7 @@
                         <div class="form-group">
                             <strong>Foto KTP</strong><br>
                             @if($pemohon->foto_anggota_keluarga != null )
-                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_anggota_keluarga)}}" class="btn btn-success btn-sm" ><i class="fas fa-paperclip"></i> Lengkap</a>  
+                            <a href="{{asset('/storage/lampiran_pemohon/'.$pemohon->foto_anggota_keluarga)}}" class="btn btn-success btn-sm" target="__blank" ><i class="fas fa-paperclip"></i> Lengkap</a>  
 
                             @else
                             <span class="badge badge-warning">Belum Lengkap</span><br>

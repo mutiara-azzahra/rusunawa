@@ -91,10 +91,10 @@ Route::get('/create/permohonan_user', [PemohonController::class,'create_halaman_
 Route::get('transaksipembayaran_user', [TransaksiPembayaranController::class, 'pemohon_show'])->name('transaksipembayaran_user.show');
 Route::get('detail-transaksipembayaran_user', [DetailTransaksiPembayaranController::class, 'pemohon_show'])->name('detail-transaksipembayaran_user.show');
 
-Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.ruangan');
-Route::get('/api/pemohon/{id}/{tahun}', [PemohonController::class,'api'])->name('api.pemohon');
+Route::get('/api/ruangan_harga/{id}', [RuanganController::class,'api_harga'])->name('api.ruangan');
+Route::get('/api_harga/pemohon/{id}/{tahun}', [PemohonController::class,'api'])->name('api.pemohon');
 Route::get('/api/lantai/{id}', [LantaiController::class,'api'])->name('api.lantai');
-Route::get('/api/ruangan/{id}', [RuanganController::class,'api'])->name('api.ruangan');
+Route::get('/api/ruangan_gedung/{id}', [RuanganController::class,'api_lantai'])->name('api_lantai.ruangan');
 Route::get('/api/kecamatan/{id}', [KecamatanController::class,'api'])->name('api.kecamatan');
 
 

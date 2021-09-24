@@ -33,7 +33,13 @@ class PemohonController extends Controller
         $user       = auth()->user();
         $pemohon    = Pemohon::where('id_user', $user->id_user)->first();
 
-        return view('pemohon.create',compact('ruangan', 'lantai', 'gedung', 'pilih_ruangan', 'user', 'pemohon'));
+        if($pemohon->id_ruangan){
+            return redirect()->route('pemohon_user.show',$pemohon->id_pemohon);
+        }else{
+            return view('pemohon.create',compact('ruangan', 'lantai', 'gedung', 'pilih_ruangan', 'user', 'pemohon'));
+
+        }
+
     }
 
     public function store(Request $request)
@@ -208,6 +214,7 @@ class PemohonController extends Controller
     public function api($id, $tahun){
 
         $data = Pemohon::with('ruangan')->where('id_ruangan', $id)->first();
+        
         if($data)
         {
             

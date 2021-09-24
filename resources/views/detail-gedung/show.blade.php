@@ -136,6 +136,139 @@
 
 
     </div>
+
+    <div style="padding: 40px;">
+      <div class="text-justify" style="font-size: 20px;">
+        Denah
+      </div>
+
+      <div class="col-lg-12 col-sm-12">
+        <div class="row" style="padding-top: 20px;">
+          Lantai 1
+        </div>
+        
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-danger">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div> 
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-warning">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div>     
+
+      </div>
+
+      <div class="col-lg-12 col-sm-12">
+        <div class="row" style="padding-top: 20px;">
+          Lantai 2
+        </div>
+        
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div> 
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div>          
+      </div>
+
+      <div class="col-lg-12 col-sm-12">
+        <div class="row" style="padding-top: 20px;">
+          Lantai 3
+        </div>
+        
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-danger">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div> 
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-warning">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div>     
+
+      </div>
+
+      <div class="col-lg-12 col-sm-12">
+        <div class="row" style="padding-top: 20px;">
+          Lantai 4
+        </div>
+        
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div> 
+        <div class="row" style="padding-top: 20px;">
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
+          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
+        </div>          
+      </div>
+    </div>
+    
   </div>
 </div>
 
@@ -147,8 +280,6 @@
       <div class="text-justify">
         <div class="col">
           <h5 style="padding-top: 20px; padding-left: 10px;">
-            Tipe 
-            -
             Lantai {{$l->lantai}}</h5>
         </div>
       </div>
@@ -192,9 +323,10 @@
                 <div class="form-group">
                  <label for=""> Kode Ruangan</label>
                  <select class="form-control" name="" id="input_ruangan{{$l->id_lantai}}" onchange="getRuangan({{$l->id_lantai}})">
-                   @foreach($l->ruangan as $r)
-                   <option value="{{ $r->id_ruangan}}">{{$r->no_ruangan}}</option>
-                   @endforeach
+                  <option value="">---Pilih Ruangan--</option>                   
+                  @foreach($l->ruangan as $r)
+                  <option value="{{ $r->id_ruangan}}">{{$r->no_ruangan}}</option>
+                  @endforeach
                  </select>
                 </div>
                   {{-- <p class="text-justify">
@@ -218,7 +350,7 @@
                   <div class="text-right">
                     <span id="harga{{$l->id_lantai}}" style="font: bold; color:#F58735; font-size: 25px;">Rp. 0 </span>/bulan<br><br>
                     @if (Auth::check()) 
-                      <form action="{{Route('create.permohonan')}}" method="GET">
+                      <form action="{{Route('create.pemohon')}}" method="GET">
                         @csrf
                         <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
                         <button class="btn btn-primary" style="width: 200px;">Pesan Ruangan</button>
@@ -295,12 +427,13 @@
 
       let getRuangan = (id) =>{
         let id_ruangan = $(`#input_ruangan${id}`).val();
-          axios.get('/api/ruangan/'+ id_ruangan)
+          axios.get('/api/ruangan_harga/'+ id_ruangan)
           .then(function (response){
-            
-           console.log(response.data.harga_ruangan)
+           
+           console.log(response.data)
+           $(`#id_ruangan${id}`).val(`${response.data.id_ruangan}`) 
            $(`#harga${id}`).text(`Rp. ${response.data.harga_ruangan}`)
-           $(`#id_ruangan${id}`).val(`${response.data.id_ruangan}`)
+           
           })
           .catch(function (error) {
             console.log(error);
