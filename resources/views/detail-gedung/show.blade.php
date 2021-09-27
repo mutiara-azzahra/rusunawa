@@ -92,7 +92,7 @@
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-150" src="{{ asset('slider1.jpeg') }}" alt="First slide">
+            <img class="d-block w-100" src="{{ asset('slider1.jpeg') }}" alt="First slide">
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="{{ asset('slider2.jpeg') }}" alt="Second slide">
@@ -105,7 +105,7 @@
     </div>
 
     <div style="padding: 40px;">
-      <div class="text-justify" style="font-size: 20px;">
+      <div class="text-justify bawah" style="font-size: 20px;">
         Fasilitas Ruangan
       </div>
 
@@ -138,135 +138,173 @@
     </div>
 
     <div style="padding: 40px;">
-      <div class="text-justify" style="font-size: 20px;">
+      <div class="text-justify bawah" style="font-size: 20px;">
         Denah
       </div>
 
-      <div class="col-lg-12 col-sm-12">
-        <div class="row" style="padding-top: 20px;">
-          Lantai 1
-        </div>
-        
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-danger">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div> 
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-warning">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div>     
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="col-lg-12 col-sm-12">
+            <div class="row" style="padding-top: 20px;">
+              Lantai 1
+            </div>
+            
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">123</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">124</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">125</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">126</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">127</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">128</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">129</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">130</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">131</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">132</button>
+            </div> 
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">133</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">134</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-warning">135</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">135</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">137</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">138</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">139</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">140</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">141</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">142</button>
+            </div>     
 
+          </div>
+
+          <div class="col-lg-12 col-sm-12">
+            <div class="row" style="padding-top: 20px;">
+              Lantai 2
+            </div>
+            
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">143</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">144</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">145</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">146</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">147</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">148</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">149</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">150</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">151</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">152</button>
+            </div> 
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">153</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">154</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">155</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">156</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">157</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">158</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">159</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">160</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">161</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">162</button>
+            </div>          
+          </div>
+
+          <div class="col-lg-12 col-sm-12">
+            <div class="row" style="padding-top: 20px;">
+              Lantai 3
+            </div>
+            
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">163</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">164</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">165</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">166</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">167</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">168</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">169</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">170</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">171</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">172</button>
+            </div> 
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">173</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">174</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-warning">175</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">176</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">177</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">178</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">179</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">180</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">181</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">182</button>
+            </div>     
+
+          </div>
+
+          <div class="col-lg-12 col-sm-12">
+            <div class="row" style="padding-top: 20px;">
+              Lantai 4
+            </div>
+            
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">184</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">185</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">186</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">187</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">188</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">189</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">190</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">191</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">192</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">193</button>
+            </div>
+            <div class="row" style="padding-top: 20px;">
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">184</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">185</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">186</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">187</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">188</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">189</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">190</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">191</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">192</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">193</button>
+            </div> 
+          </div>        
+        </div>
+
+        <div class="col-lg-4 p-3">
+          <div class="card" style="padding-top: 20px; padding-bottom: 40px;">
+            <div class="col-12">
+              <div class="float-left" style="padding-bottom: 5px;">
+                Keterangan Ruangan:
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-2">
+                <div class="col">
+                  <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-success"></button>
+                </div>
+                <div class="col">
+                  <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-warning"></button>
+                </div>
+                <div class="col">
+                  <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-danger"></button>                  
+                </div>
+              </div>
+              <div class="col-lg-10">
+                <div class="float-left text-left">
+                  Terisi<br>
+                  Proses Penyewaan<br>
+                  Kosong<br>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>        
       </div>
 
-      <div class="col-lg-12 col-sm-12">
-        <div class="row" style="padding-top: 20px;">
-          Lantai 2
-        </div>
-        
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div> 
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div>          
-      </div>
 
-      <div class="col-lg-12 col-sm-12">
-        <div class="row" style="padding-top: 20px;">
-          Lantai 3
-        </div>
-        
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-danger">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div> 
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-warning">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div>     
-
-      </div>
-
-      <div class="col-lg-12 col-sm-12">
-        <div class="row" style="padding-top: 20px;">
-          Lantai 4
-        </div>
-        
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div> 
-        <div class="row" style="padding-top: 20px;">
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-success">127</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">128</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">123</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">124</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">125</button>
-          <button type="button" style="height: 50px; margin-right:5px" class="btn btn-primary">126</button>
-        </div>          
-      </div>
     </div>
     
   </div>

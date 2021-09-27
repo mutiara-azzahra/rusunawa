@@ -53,7 +53,7 @@
             </div>
           </div>
             <div class="button justify-content-center">
-              <button type="submit" class="btn btn-primary mx-auto d-block" style="width: 200px">Login</button>
+              <button type="submit" class="btn btn-primary mx-auto d-block" style="width: 200px">Masuk</button>
             </div>
           </form>
         <div class="register">

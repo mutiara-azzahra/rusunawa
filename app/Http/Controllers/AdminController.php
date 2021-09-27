@@ -16,7 +16,6 @@ class AdminController extends Controller
         $pemohonall = Pemohon::all()->map(function($p){
             return $p->transaksi_pembayaran;
         });
-        dd($pemohonall);
         return view('index',compact('user','pemohon'));
     }
     public function pemohon()

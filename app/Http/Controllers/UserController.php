@@ -30,12 +30,15 @@ class UserController extends Controller
             'nama_user'     => 'required',
             'username'      => 'required',
             'email'         => 'required',
-            'password'      => 'required',
+            'password_lama' => 'required',
+            'password_baru' => 'required',
             'id_role'       => 'required'
         ]);
 
         $input = $request->all();
-        $input['password'] = Hash::make($request['password']);
+        $input['password_lama'] = Hash::make($request['password_lama']);
+        $input['password_baru'] = Hash::make($request['password_baru']);
+
         User::create($input);
         
         return redirect()->route('user.index')->with('success','Post created successfully');

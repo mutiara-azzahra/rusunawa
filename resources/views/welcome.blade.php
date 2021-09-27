@@ -122,14 +122,14 @@
         <h2>Pendaftaran Rusunawa</h2>
       </div>
       <div class="col" style="color: #dcdddc;">
-        <h5>Pendaftaran dikhususkan untuk warga Kalimantan Selatan</h5>
+        <h5>Pendaftaran untuk seluruh warga Kalimantan Selatan</h5>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container justify-content-center">
-  <h3 data-aos="zoom-in-up"><b>Informasi Pada Sirusunawa</b></h3>
+  <h3 data-aos="zoom-in-up"><b>Informasi Pada Aplikasi Rusunawa</b></h3>
 <div class="underline-title mx-auto" data-aos="zoom-in-up"></div>
 
 <div class="container">
@@ -384,7 +384,7 @@
   </div>
   <div class="container">
     <div class="row">
-    <div class="col-lg-12 text-center" style="font-size: 15px; color:white"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
+    <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
     </div>
   </div>
 </footer> 

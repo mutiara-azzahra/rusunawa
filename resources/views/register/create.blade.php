@@ -99,11 +99,14 @@
                                         <td class="p-3" style="padding-right:50px;"><strong>Alamat</strong></td>
                                         <td><input style="width:350px;" type="text" name="alamat" class="form-control" placeholder="Isi alamat"></td>
                                     </tr>
-                                    <tr>
+                                    {{-- <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kota</strong></td>
                                         <td>
                                             <select style="width: 350px;" name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()">
                                                 <option value="">---Pilih Kota--</option>
+                                                {{-- @foreach($kota as $k)
+                                                <option value=" {{ $k->id_kota }}"> {{ $k->nama_kota }} </option>
+                                                @endforeach
                                             </select>
                                         </td>
                                     </tr>
@@ -122,7 +125,7 @@
                                                 <option value="">---Pilih Kelurahan--</option>
                                             </select>
                                         </td>
-                                    </tr>
+                                    </tr> --}}
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Jumlah Anggota Keluarga</strong></td>
                                         <td><input style="width:350px;" type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Isi jumlah anggota keluarga"></td>
