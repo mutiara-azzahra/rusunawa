@@ -95,6 +95,17 @@ class LoginController extends Controller
 
         return view('detail-gedung.show', compact('gedung', 'lantai'));
     }
+    public function lupaPassword()
+    {
+        return view('forgot-password');
+    }
+    public function cariEmail(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+        dd($user);
+
+
+    }
 
 
 }

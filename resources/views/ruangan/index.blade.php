@@ -40,7 +40,7 @@
         <tr>
             <td class="text-center">{{ $no++ }}</td>
             <td>Nomor {{ $r->no_ruangan }}</td>
-            <td>Rp. {{ $r->harga_ruangan }},-/bulan</td>
+            <td>@currency($r->harga_ruangan)</td>
             <td>{{ $r->status_ruangan }}</td>
             <td>Lantai {{ $r->lantai->lantai }} </td>
             <td> {{ $r->lantai->gedung->nama_gedung }}</td>

@@ -42,6 +42,11 @@ Route::get('/tanya-jawab', [LoginController::class,'faq'])->name('tanya-jawab');
 
 Route::get('/login', [LoginController::class, 'formLogin'])->name('loginPage');
 Route::post('/login', [LoginController::class, 'LoginStore'])->name('login');
+
+Route::get('/forgot-password', [LoginController::class, 'lupaPassword'])->name('forgot-password');
+Route::post('/forgot-password', [LoginController::class, 'cariEmail'])->name('cariEmail');
+
+
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [LoginController::class, 'formRegister'])->name('formRegister');
 Route::get('/detail-gedung/{id}', [LoginController::class, 'detailgedung'])->name('detailgedung');

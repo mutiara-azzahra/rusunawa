@@ -150,28 +150,28 @@
             </div>
             
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">123</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">124</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">125</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">123</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">124</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">125</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">126</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">127</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">128</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">129</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">130</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">131</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">132</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">128</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">129</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">130</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">131</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">132</button>
             </div> 
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">133</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">134</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">133</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">134</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-warning">135</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">135</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">135</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">137</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">138</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">139</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">140</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">141</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">142</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">138</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">139</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">140</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">141</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">142</button>
             </div>     
 
           </div>
@@ -182,28 +182,28 @@
             </div>
             
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">143</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">144</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">145</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">146</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">143</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">144</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">145</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">146</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">147</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">148</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">149</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">150</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">151</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">152</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">148</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">149</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">150</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">151</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">152</button>
             </div> 
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">153</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">154</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">155</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">156</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">153</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">154</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">155</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">156</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">157</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">158</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">159</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">160</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">161</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">162</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">158</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">159</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">160</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">161</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">162</button>
             </div>          
           </div>
 
@@ -213,28 +213,28 @@
             </div>
             
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">163</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">164</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">165</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">163</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">164</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">165</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">166</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">167</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">168</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">169</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">170</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">171</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">172</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">168</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-dark">169</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">170</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">171</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">172</button>
             </div> 
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">173</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">174</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">173</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">174</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-warning">175</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">176</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">176</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">177</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">178</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">179</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">180</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">181</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">182</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">178</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">179</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">180</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-dark">181</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">182</button>
             </div>     
 
           </div>
@@ -245,28 +245,28 @@
             </div>
             
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">184</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">185</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">186</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">187</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">184</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">185</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">186</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">187</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">188</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">189</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">190</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">191</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">192</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">193</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">189</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">190</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">191</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">192</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">193</button>
             </div>
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">184</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">185</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">186</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">187</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">184</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">185</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">186</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">187</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">188</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">189</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">190</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">191</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">192</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-primary">193</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">189</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-dark">190</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">191</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">192</button>
+              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">193</button>
             </div> 
           </div>        
         </div>
@@ -290,12 +290,16 @@
                 <div class="col">
                   <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-danger"></button>                  
                 </div>
+                <div class="col">
+                  <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-dark"></button>                  
+                </div>
               </div>
               <div class="col-lg-10">
                 <div class="float-left text-left">
                   Terisi<br>
-                  Proses Penyewaan<br>
+                  Dalam Proses Penyewaan<br>
                   Kosong<br>
+                  Rusak<br>
                 </div>
               </div>
             </div>

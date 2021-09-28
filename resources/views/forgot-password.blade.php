@@ -28,41 +28,30 @@
     <!--CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Login Aplikasi Rusunawa</title>
+    <title>Lupa Password | Aplikasi Rusunawa</title>
   </head>
 <body>
 <!--Navbar-->
 
 <div class="login">
     <div class="card card-login shadow-sm p-4 bg-white rounded " style="width: 400px;">
-      <img class="card-img-top" src="{{ asset('logo.png') }}" style="width: 100px;">
       <div class="card-body">
-        <h5 class="text-center">MASUK AKUN RUSUNAWA</h5>
-        <div class="underline-title mx-auto"></div>
-        <form method="POST" action="{{ Route('login') }}">
-
+        <h5 class="text-align">Lupa Password</h5>
+        <div class="underline-title"></div>
+        <form method="post" action="{{ route('cariEmail')}}">
           @csrf
           <div class="form-login">
             <div class="form-group">
-              <label for=""></label>
-              <input type="text" name="username" class="form-control" id="username" placeholder="Username">
-            </div>
-            <div class="form-group">
-              <label for=""></label>
-              <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+              <label for="">Masukkan Email Anda</label>
+              <input type="text" name="email" class="form-control" placeholder="Email">
             </div>
           </div>
             <div class="button justify-content-center">
-              <button type="submit" class="btn btn-primary mx-auto d-block" style="width: 200px">Masuk</button>
+              <button type="submit" class="btn btn-primary d-block" style="width: 150px"> Kirim</button>
             </div>
           </form>
-        <div class="register" style="padding-top: 30px;">
-            <p class="text-center"><a href="{{ route('forgot-password') }}">Lupa Password?</a></p>
-            <p class="text-center">Belum punya akun? <a href="{{ route('formRegister') }}">Register.</p>
-        </div>
-
         <div class="">
-          <p class="text-center"><a href="{{ route('Beranda')}}">Kembali</a></p>
+          <p class="text-center">Kembali Ke Halaman<a href="{{ route('Beranda')}}">Login</a></p>
         </div>
       </div>
     </div>

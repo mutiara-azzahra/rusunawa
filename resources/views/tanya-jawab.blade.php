@@ -86,7 +86,7 @@
                     <img class="img-fluid" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                    <h2 class="pt-5" style="color: #853500; "><strong>Tanya Jawab</strong></h2><br></div>
+                    <h2 class="pt-5" style="color: #853500; "><strong>Pertanyaan yang Sering Ditanyakan</strong></h2><br></div>
                 </div>
                 
             </div>

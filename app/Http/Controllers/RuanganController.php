@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Ruangan;
 use App\Models\Lantai;
 use App\Models\Gedung;
+
 
 class RuanganController extends Controller
 {    
@@ -33,7 +35,10 @@ class RuanganController extends Controller
             'status_ruangan'    => 'required',
         ]);
 
-        Ruangan::create($request->all());
+        $input = $request->all();
+        $input['harga_ruangan'] = Str::remove('.', $request->harga_ruangan);
+        
+        Ruangan::create($input);
         
         return redirect()->route('ruangan.index')->with('success','Post created successfully');
     }
