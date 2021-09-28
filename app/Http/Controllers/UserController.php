@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -30,13 +31,13 @@ class UserController extends Controller
             'nama_user'     => 'required',
             'username'      => 'required',
             'email'         => 'required',
-            'password_lama' => 'required',
+            'password'      => 'required',
             'password_baru' => 'required',
             'id_role'       => 'required'
         ]);
 
         $input = $request->all();
-        $input['password_lama'] = Hash::make($request['password_lama']);
+        $input['password']      = Hash::make($request['password']);
         $input['password_baru'] = Hash::make($request['password_baru']);
 
         User::create($input);
@@ -51,20 +52,39 @@ class UserController extends Controller
     
     public function edit(User $user)
     {
+        
         return view('user.edit',compact('user'));
     }
   
     public function update(Request $request, User $user)
     {
+        $input = $request->all();
+
         $request->validate([
-            'nama_user'     => 'required',
-            'username'      => 'required'
+            'password'          => 'required',
+            'password_baru'     => 'required'
         ]);
+
+
+        $input['password_baru']  = Hash::make($request['password_baru']);
+        if(Hash::check($request->password, $user->password))
+        {
+            $user->password = $input['password_baru'];
+            
+            $user->update();
+
+            return redirect()->route('profil.show')
+                            ->with('success','Password user berhasil diubah!');           
+        }
+        else{
+            return redirect()->route('profil.show')
+                            ->with('error','Password lama dan baru tidak sama');           
+
+        }
          
         $user->update($request->all());
          
-        return redirect()->route('user.index')
-                        ->with('success','Data user berhasil diubah!');
+
     }
   
     public function destroy(User $user)
@@ -77,7 +97,7 @@ class UserController extends Controller
     public function reset($id)
     {
 
-        $user = User::findOrFail($id);
+        $user           = User::findOrFail($id);
         $user->password = Hash::make('12345');
         $user->update();
 
