@@ -60,9 +60,10 @@
               Layanan Informasi
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Persyaratan</a>
-              <a class="dropdown-item" href="#">Permohonan</a>
+              <a class="dropdown-item" href="{{ route('latar-belakang')}}">Rusun Teluk Kelayan</a>
+              <a class="dropdown-item" href="#">Rusun Ganda Maghfirah</a>
               <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
               <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
             </div>
           </li>

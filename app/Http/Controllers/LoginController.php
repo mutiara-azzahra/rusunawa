@@ -88,6 +88,11 @@ class LoginController extends Controller
 
         return view('tanya-jawab',compact('posts'));
     }
+    public function latarBelakang()
+    {
+
+        return view('latar-belakang');
+    }
     public function detailgedung($id)
     {
         $gedung = Gedung::findOrFail($id);
@@ -102,7 +107,15 @@ class LoginController extends Controller
     public function cariEmail(Request $request)
     {
         $user = User::where('email', $request->email)->first();
-        dd($user);
+            
+        if($user != null){
+            dd('bener');
+        }
+        else{
+            return redirect()->route('forgot-password')
+                            ->with('warning','Email tidak ditemukan');
+        }
+        
 
 
     }

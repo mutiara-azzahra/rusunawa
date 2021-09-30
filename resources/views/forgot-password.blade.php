@@ -33,6 +33,12 @@
 <body>
 <!--Navbar-->
 
+@if ($message = Session::get('warning'))
+    <div class="alert alert-success">
+        <p>{{ $message }}</p>
+    </div>
+@endif
+
 <div class="login">
     <div class="card card-login shadow-sm p-4 bg-white rounded " style="width: 400px;">
       <div class="card-body">
@@ -51,7 +57,7 @@
             </div>
           </form>
         <div class="">
-          <p class="text-center">Kembali Ke Halaman<a href="{{ route('Beranda')}}">Login</a></p>
+          <p class="text-center">Kembali Ke Halaman<a href="{{ route('Beranda')}}"> Login</a></p>
         </div>
       </div>
     </div>
