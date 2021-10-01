@@ -25,6 +25,9 @@ use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RusunawaBanjarmasinController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +87,8 @@ Route::group(['middleware' => 'admin'], function () {
     Route::resource('transaksipembayaran', TransaksiPembayaranController::class);
 
 });
+
+Route::post('/kirimemail',[RusunawaBanjarmasinController::class,'index'])->name('sendMail');
 
 Route::get('pemohon_user/pilih-gedung', [PemohonController::class, 'pilihgedung'])->name('pemohon.pilihgedung');
 Route::get('pemohon_user/pilih-ruangan/{id_gedung}', [PemohonController::class, 'pilihruangan'])->name('pemohon.pilihruangan');

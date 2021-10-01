@@ -33,10 +33,15 @@
 <body>
 <!--Navbar-->
 
-@if ($message = Session::get('warning'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
+@if ($message = Session::get('success'))
+<div class="alert alert-success">
+    <p>{{ $message }}</p>
+</div>
+
+@elseif ($message = Session::get('warning'))
+  <div class="alert alert-warning">
+      <p>{{ $message }}</p>
+  </div>
 @endif
 
 <div class="login">
@@ -44,20 +49,22 @@
       <div class="card-body">
         <h5 class="text-align">Lupa Password</h5>
         <div class="underline-title"></div>
-        <form method="post" action="{{ route('cariEmail')}}">
+        <form method="post" action="{{ route('sendMail')}}">
           @csrf
-          <div class="form-login">
+          <div class="form-login pt-5">
             <div class="form-group">
               <label for="">Masukkan Email Anda</label>
               <input type="text" name="email" class="form-control" placeholder="Email">
             </div>
           </div>
-            <div class="button justify-content-center">
+            <div class="button justify-content-center pt-3">
               <button type="submit" class="btn btn-primary d-block" style="width: 150px"> Kirim</button>
             </div>
           </form>
-        <div class="">
-          <p class="text-center">Kembali Ke Halaman<a href="{{ route('Beranda')}}"> Login</a></p>
+        <div class="p-1 pt-4">
+          <div class="float-left">
+            <p class="text-center">Kembali Ke Halaman <a href="{{ route('Beranda')}}"> Login</a></p>
+          </div>
         </div>
       </div>
     </div>

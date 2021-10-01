@@ -33,6 +33,18 @@
 <body>
 <!--Navbar-->
 
+@if ($message = Session::get('success'))
+<div class="alert alert-success">
+    <p>{{ $message }}</p>
+</div>
+
+@elseif ($message = Session::get('warning'))
+  <div class="alert alert-warning">
+      <p>{{ $message }}</p>
+  </div>
+@endif
+
+
 <div class="login">
     <div class="card card-login shadow-sm p-4 bg-white rounded " style="width: 400px;">
       <img class="card-img-top" src="{{ asset('logo.png') }}" style="width: 100px;">

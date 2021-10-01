@@ -109,7 +109,6 @@ class LoginController extends Controller
         $user = User::where('email', $request->email)->first();
             
         if($user != null){
-            dd('bener');
         }
         else{
             return redirect()->route('forgot-password')
