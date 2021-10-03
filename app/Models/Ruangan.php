@@ -28,7 +28,7 @@ class Ruangan extends Model
     }
     public function lantai()
     {
-        return $this->hasOne(Lantai::class, 'id_lantai', 'id_lantai');
+        return $this->belongsTo(Lantai::class, 'id_ruangan');
     }
     public function pemohon()
     {

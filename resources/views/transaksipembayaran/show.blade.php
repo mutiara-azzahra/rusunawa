@@ -43,7 +43,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Penerima</strong><br>
-                    {{ $transaksi_pembayaran->user->nama_user}}
+                    {{ $transaksi_pembayaran->user }}
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -82,7 +82,7 @@
               <div class="col-sm-4 invoice-col">
                 <strong>Penerima : </strong>
                 <address>
-                  {{ $transaksi_pembayaran->user->nama_user}}<br>
+                  {{ $transaksi_pembayaran->user}}<br>
                   Ruangan : {{ $transaksi_pembayaran->pemohon->ruangan->no_ruangan }}<br>
                   Gedung : {{ $transaksi_pembayaran->pemohon->ruangan->lantai->gedung->nama_gedung }} <br>
                 </address>

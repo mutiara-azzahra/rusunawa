@@ -22,7 +22,7 @@ class Gedung extends Model
     ];
 
     public function lantai(){
-        return $this->hasMany(Lantai::class, 'id_gedung');
+        return $this->belongsTo(Lantai::class, 'id_gedung');
     }
 
     public function tipe_ruangan(){

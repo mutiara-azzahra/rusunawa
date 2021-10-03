@@ -22,10 +22,10 @@ class Lantai extends Model
     ];
 
     public function gedung(){
-        return $this->belongsTo(Gedung::class, 'id_gedung', 'id_gedung');
+        return $this->hasOne(Gedung::class, 'id_gedung', 'id_gedung');
     }
     public function ruangan(){
-        return $this->hasMany(Ruangan::class, 'id_lantai', 'id_lantai');
+        return $this->belongsTo(Ruangan::class, 'id_lantai', 'id_lantai');
     }
 
 }
