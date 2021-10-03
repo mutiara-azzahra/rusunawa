@@ -5,7 +5,7 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Ubah Gedung</h2>
+                <h2>Ubah Role/Level Pengguna</h2>
             </div>
             <div class="float-right">
                 <a class="btn btn-secondary" href="{{ route('role.index') }}"> Kembali</a>
@@ -31,7 +31,7 @@
         <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Nama role</strong>
+                <strong>Nama Role</strong>
                 <input type="text" name="nama_role" class="form-control" placeholder="Isi nama role" value= "{{ $role->nama_role }}">  
             </div>
         </div>        

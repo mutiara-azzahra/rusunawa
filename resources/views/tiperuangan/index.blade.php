@@ -25,7 +25,7 @@
         <tr>
             <th>No</th>
             <th>Tipe Ruangan</th>
-            <th>Aksi</th>
+            <th class="text-center">Aksi</th>
         </tr>    
         </thead>
         <tbody>

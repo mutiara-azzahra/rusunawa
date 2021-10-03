@@ -5,7 +5,7 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Data Level User</h2>
+                <h2>Data Level User/Role</h2>
             </div>
             <div class="float-right">
                 <a class="btn btn-success" href="{{ route('role.create') }}"><i class="fas fa-plus"></i> Tambah Role</a>
@@ -20,12 +20,12 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-    <table class="table table-bordered table-hover table-sm bg-light" id="dataTable">
+    <table class="table table-bordered table-hover bg-light" id="dataTable">
         <thead>
             <tr>
-            <th width="20px" class="text-center">No</th>
+            <th>No</th>
             <th>Level User/Pengguna</th>
-            <th width="150px"class="text-center">Aksi</th>
+            <th>Aksi</th>
         </tr>
         </thead>
         <tbody>

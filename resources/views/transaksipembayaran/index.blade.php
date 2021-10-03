@@ -38,7 +38,7 @@
         <tr>
             <td class="text-center">{{ $no++ }}</td>
             <td>{{ $tp->pemohon->nama_kepala_keluarga }}</td>
-            <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }}</td>
+            <td>{{ $tp->ruangan->lantai }}</td>
             <td>Nomor {{ $tp->ruangan->no_ruangan }}</td>
             <td class="text-center">
                 <form action="{{ route('transaksipembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST" id="form_delete">

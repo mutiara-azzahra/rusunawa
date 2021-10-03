@@ -111,7 +111,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                                 <div class="form-group">
                                     <strong>Gedung</strong>
-                                    <input type="text" value=" {{ $gedung->nama_gedung }} " name="id_gedung" class="form-control" readonly>
+                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                                 <div class="float-right">
-                                    <button type="submit" class="btn btn-success btn-primary">Simpan Data</button>
+                                    <button type="submit" class="btn btn-success btn-success">Simpan Data</button>
                                 </div>
                             </div>
                         </div>
@@ -209,7 +209,7 @@
                     @endforeach
                 </table>
     
-        <!-- Modal Fasilitas-->
+        <!-- Modal Tambah Fasilitas-->
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="fasilitas">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -219,9 +219,12 @@
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <h5></h5>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <strong>Gedung</strong>
-                                    <input type="text" value=" {{ $gedung->nama_gedung }} " name="id_gedung" class="form-control" readonly>
+                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
