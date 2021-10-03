@@ -44,6 +44,18 @@
       <div class="navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
+            <a class="nav-link" href="#latarbelakang">Latar Belakang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sumberdana">Sumber Dana</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#syarathuni">Syarat Huni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tatatertib">Tata Tertib</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('Beranda') }}">Halaman Awal</a>
           </li>
   
@@ -74,21 +86,8 @@
     </div>
     </nav>
   </header>
-
+  
   <div class="jumbotron-lokasi" style="padding-top: 100px;">
-    <div class="container">
-        <nav class="nav">
-            <a class="nav-link active" id="latarbelakang" href="#">Latar Belakang</a>
-            <a class="nav-link active" id="sumberdana" href="#">Sumber Dana</a>            
-            <a class="nav-link active" id="syarathuni" href="#">Syarat Huni</a>            
-            <a class="nav-link active" id="tatatertib" href="#">Tata Tertib</a>            
-        </nav>
-    </div>
-    
-  </div>
-  <!-- Footer-->
-  <div class="jumbotron-lokasi" id="latarbelakang">
-
         <!--Latar Belakang-->
         <div class="container text-justify">
           <div class="row">
@@ -256,7 +255,7 @@
     </div>
     <div class="container">
       <div class="row">
-      <div class="col-lg-12 text-center" style="font-size: 15px; color:white"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
+      <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
       </div>
     </div>
   </footer> 

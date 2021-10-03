@@ -114,6 +114,11 @@
                         <p>Lantai</p>
                       </a>
                     </li> 
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('fasilitas.index') }}" href="{{ Route('fasilitas.index') }}" class="nav-link">
+                        <p>Fasilitas</p>
+                      </a>
+                    </li> 
                 </ul>
 
               </li>
@@ -208,7 +213,7 @@
           <li class="nav-item">
             <a class="nav-link {{ set_active('pemohon_user.create') }}" href="{{ Route('pemohon_user.create') }}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
-              <p>Daftarkan Permohonan {{Auth::user()->pemohon}}</p>
+              <p>Permohonan {{Auth::user()->pemohon}}</p>
             </a>
           </li>
           @endif

@@ -150,7 +150,7 @@
             </div>
             
             <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">123</button>
+              <a data-toggle="modal" data-target="#lantai" style="height: 50px; margin-right:2px" class="btn btn-danger">123</a>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">124</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">125</button>
               <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">126</button>
@@ -305,12 +305,24 @@
             </div>
 
           </div>
-        </div>        
+        </div>
+        
+
+        <!--Modalnya lantai-->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="lantai">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="card m-3" style="padding:10px;">
+
+                  </div>
+              </div>
+          </div>
       </div>
 
 
+
+      </div>
     </div>
-    
   </div>
 </div>
 

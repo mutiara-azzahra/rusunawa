@@ -18,8 +18,7 @@ class Gedung extends Model
         'alamat_gedung',
         'jumlah_ruangan',
         'status_gedung',
-        'update_at',
-        'create_at'
+
     ];
 
     public function lantai(){

@@ -28,6 +28,7 @@ class FasilitasController extends Controller
         $request -> validate([
             'nama_fasilitas'             => 'required',
             'kategori_fasilitas'         => 'required',
+            'jumlah_fasilitas'           => 'required',
             'status_fasilitas'           => 'required',
             'icon'                       => 'required|mimes:jpg,png,jpeg',
         ]);

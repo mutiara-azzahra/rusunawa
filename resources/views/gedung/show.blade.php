@@ -111,7 +111,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                                 <div class="form-group">
                                     <strong>Gedung</strong>
-                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly>
+                                    <input type="text" value=" {{ $gedung->nama_gedung }} " name="id_gedung" class="form-control" readonly>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +227,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                     <strong>Pilih Nama Fasilitas</strong>
-                                    <select name="id_kecamatan" class="form-control" >
+                                    <select name="id_fasilitas" class="form-control" >
                                         <option value="">---Pilih Fasilitas--</option>
                                         @foreach($fasilitas as $f)
                                         <option value=" {{ $f->id_fasilitas }}"> {{ $f->nama_fasilitas }} </option>

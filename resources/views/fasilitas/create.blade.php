@@ -64,6 +64,18 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
+                            <strong>Jumlah</strong>
+                            <select name="jumlah_fasilitas" class="form-control" >
+                                <option value="">---Pilih Status--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
                             <strong>Status Fasilitas Ruangan</strong>
                             <select name="status_fasilitas" class="form-control" >
                                 <option value="">---Pilih Status--</option>
@@ -91,3 +103,9 @@
 </div>
 
 @endsection
+
+<script>
+    $('#lantai').modal({
+        keyboard: false
+    })
+</script>

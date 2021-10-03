@@ -15,10 +15,11 @@ class Fasilitas extends Model
     protected $fillable = [
         'nama_fasilitas',
         'kategori_fasilitas',
-        'jumlah', 
+        'jumlah_fasilitas', 
         'status_fasilitas',
         'icon',
-        'updated_at', 'created_at'
+        'updated_at', 
+        'created_at'
     ];
 
     public function gedung()
