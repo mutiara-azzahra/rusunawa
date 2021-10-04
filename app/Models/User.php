@@ -33,7 +33,7 @@ class User extends Authenticatable
     }
     public function pemohon()
     {
-        return $this->hasOne(Pemohon::class, 'id_pemohon', 'id_pemohon');
+        return $this->hasOne(Pemohon::class,  'id_pemohon');
     }
     public function transaksipembayaran()
     {

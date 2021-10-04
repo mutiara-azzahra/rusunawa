@@ -377,9 +377,9 @@
                 <div class="form-group">
                  <label for=""> Kode Ruangan</label>
                  <select class="form-control" name="" id="input_ruangan{{$l->id_lantai}}" onchange="getRuangan({{$l->id_lantai}})">
-                  <option value="">---Pilih Ruangan--</option>                   
+                  <option value="">---Pilih Ruangan--</option> 
                   @foreach($l->ruangan as $r)
-                  <option value="{{ $r->id_ruangan}}">{{$r->no_ruangan}}</option>
+                  <option value="{{ $r->id_ruangan }}">{{$r->no_ruangan}}</option>
                   @endforeach
                  </select>
                 </div>

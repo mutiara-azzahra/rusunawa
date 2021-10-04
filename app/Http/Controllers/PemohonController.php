@@ -195,7 +195,8 @@ class PemohonController extends Controller
         $ruangan    = Ruangan::all();
         $gedung     = Gedung::all();
         $lantai     = Lantai::all();
-        $pemohon    = Auth::user()->pemohon;
+        $pemohon    = Pemohon::where('id_user',Auth::user()->id_user)->first();
+
         return view('pemohon.create',compact('ruangan', 'gedung', 'lantai', 'pilih_ruangan','pemohon'));
     }
 

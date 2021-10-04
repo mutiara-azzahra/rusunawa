@@ -41,7 +41,7 @@
     
           <div style="padding: 40px;">
             <div class="text-justify" style="font-size: 20px;">
-              Fasilitas Ruangan
+              Fasilitas 
             </div>
     
             <div class="col-lg-12 col-sm-12">
@@ -128,6 +128,7 @@
                       <div class="form-group">
                        <label for=""> Kode Ruangan</label>
                        <select class="form-control" name="" id="input_ruangan{{$l->id_lantai}}" onchange="getRuangan({{$l->id_lantai}})">
+                        <option value="">- pilih -</option>
                          @foreach($l->ruangan as $r)
                          <option value="{{ $r->id_ruangan}}">{{$r->no_ruangan}}</option>
                          @endforeach
@@ -157,7 +158,7 @@
                             <form action="{{Route('create.permohonan')}}" method="GET">
                               @csrf
                               <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
-                              <button class="btn btn-primary" style="width: 200px;">Pesan Ruangan</button>
+                              <button class="btn btn-success" style="width: 200px;">Pesan Ruangan</button>
                             </form>
                             @else 
                             <a href="{{ route('loginPage') }}" class="btn btn-primary" style="width: 200px;">Pesan Ruangan</a>
@@ -221,8 +222,8 @@
 
   let getRuangan = (id) =>{
     let id_ruangan = $(`#input_ruangan${id}`).val();
-      axios.get('/api/ruangan/'+ id_ruangan)
-      .then(function (response){
+      axios.get('/api/ruangan_harga/'+ id_ruangan)
+      .then(function (response){ 
         
        console.log(response.data.harga_ruangan)
        $(`#harga${id}`).text(`Rp. ${response.data.harga_ruangan}`)
