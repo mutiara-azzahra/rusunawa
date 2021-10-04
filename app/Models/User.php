@@ -35,5 +35,13 @@ class User extends Authenticatable
     {
         return $this->hasOne(Pemohon::class, 'id_pemohon', 'id_pemohon');
     }
+    public function transaksipembayaran()
+    {
+        return $this->belongsTo(TransaksiPembayaran::class, 'id_user', 'id_user');
+    }
+    public function detail_transaksipembayaran()
+    {
+        return $this->hasMany(DetailsaksiPembayaran::class, 'id_user');
+    }
 
 }

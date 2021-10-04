@@ -22,4 +22,7 @@ class DetailTransaksiPembayaran extends Model
     public function transaksipembayaran(){
         return $this->hasMany(TransaksiPembayaran::class, 'id_transaksi_pembayaran', 'id_transaksi_pembayaran');
     }
+    public function user(){
+        return $this->hasOne(User::class, 'id_detail_transaksi_pembayaran');
+    }
 }

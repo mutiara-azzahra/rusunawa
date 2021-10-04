@@ -80,7 +80,7 @@
               <div class="col-sm-4 invoice-col">
                 <strong>Penerima : </strong>
                 <address>
-                  {{ $transaksi_pembayaran->user->nama_user}}<br>
+                  {{ $transaksi_pembayaran->user->nama_user }}<br>
                   Ruangan : {{ $transaksi_pembayaran->pemohon->ruangan->no_ruangan }}<br>
                   Gedung : {{ $transaksi_pembayaran->pemohon->ruangan->lantai->gedung->nama_gedung }} <br>
                 </address>
