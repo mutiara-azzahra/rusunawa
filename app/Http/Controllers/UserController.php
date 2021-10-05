@@ -78,7 +78,7 @@ class UserController extends Controller
         }
         else{
             return redirect()->route('profil.show')
-                            ->with('error','Password lama dan baru tidak sama');           
+                            ->with('error','Password lama tidak sama');           
 
         }
          

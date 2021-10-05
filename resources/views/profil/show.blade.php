@@ -20,6 +20,11 @@
 
     <div class="row">
         <div class="col-lg-12 col-md-12">
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+            @endif
             <div class="card" style="padding: 30px;">
                 <div class="row">
                     <div class="col-3">
@@ -94,9 +99,5 @@
             </div>        
         </div>        
     </div>
-
-
-
-
 </div>
 @endsection
