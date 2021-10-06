@@ -150,6 +150,7 @@
   border-radius: 30px;
   background: #ffe68f;
   padding: 30px;
+  list-style:none;
 }
 .beranda-syarat-judul{
   display: inline-block;

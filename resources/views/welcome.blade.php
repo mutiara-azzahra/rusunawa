@@ -35,14 +35,14 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="{{ asset('logo.png') }}" alt="" class="img-fluid" style="height: 50px; width: 50px;">
+        <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid" style="height: 60px;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#tentang">Tentang Rusunawa</a>
           </li>
@@ -192,11 +192,7 @@
           <div class="beranda-syarat text-left">
             <h4 class="beranda-syarat-judul">Syarat Mendaftar</h4>
             <ul class="beranda-syarat">
-              <li class="beranda-syarat-list">Lorem ipsum</li>
-              <li class="beranda-syarat-list">Lorem ipsum</li>
-              <li class="beranda-syarat-list">Lorem ipsum</li>
-              <li class="beranda-syarat-list">Lorem ipsum</li>
-              <li class="beranda-syarat-list">Lorem ipsum</li>
+              <li class="beranda-syarat-list"><i class="fas fa-check-circle"></i> Lorem ipsum</li>
             </ul>
             
           </div>
@@ -360,19 +356,19 @@
           <p>Jl. Tembus Mantuil, Kelayan Selatan, Kecamatan Banjarmasin 
           Selatan, Kota Banjarmasin, Kalimantan Selatan 70233</p>
           <h5><b>Rusunawa Kelayan</b></h5>
-        </div>
-        <div class="text">
-          <div class="row">
-            <div class="col-1">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="col-11" style="padding: 0 !important">
-              <b>Jam Operasional:</b></h5><br>
-              <p class="font-weight-light">Senin - Minggu<br>
-                Pukul 08.00 - 20.00 WITA</p>
+          <div class="text">
+            <div class="row">
+              <div class="col-1">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="col-11" style="padding: 0 !important">
+                <b>Jam Operasional:</b></h5><br>
+                <p class="font-weight-light">Senin - Minggu<br>
+                  Pukul 08.00 - 20.00 WITA</p>
+              </div>
             </div>
           </div>
-          
+          <h6>Telp: +62873482738</h6>
         </div>
       </div>
       <div class="col-lg-3 col-sm-12">
