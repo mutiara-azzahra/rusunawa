@@ -156,18 +156,18 @@
   <div class="container-fluid">
     <div class="card" style="padding:30px;">
 
-        <div class="col-lg-12 col-md-6 col-sm-6">
+        <div class="col-lg-12 col-md-6 col-sm-6 pb-3">
           <h4>Selamat Datang, {{ Auth::user()->nama_user}}!</h4>
         </div>
         <div class="row">
-          <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="col-lg-3 col-md-12 col-sm-12">
             <img src="{{ asset('user-welcome.jpg')}}" alt="" class="w-100">
           </div>
 
 
           <div class="col-lg-4 col-md-12 col-sm-12 p-1">
             <div class="card p-2">
-              <div> Status Permohonan Sewa</div>
+              <div><strong>Status Permohonan</strong></div>
               @if($pemohon->status_pengajuan == 'diverifikasi')
               <div><h4><span class="badge badge-success">Diverifikasi</span></h4></div>
 
@@ -186,9 +186,11 @@
               
             </div>
           </div>
-          <div class="col-lg-4 col-md-12 col-sm-12 p-1">
+          <div class="col-lg-5 col-md-12 col-sm-12 p-1">
             <div class="card p-2">
-              Tagihan Bayar
+              <div class=""><strong>Status Pembayaran</strong></div>
+              Bulan Oktober 2021 <div><h4><span class="badge badge-success">Sudah Dibayar</span></h4></div>
+              <div class="" style="color: red">Jatuh Tempo: Setiap tanggal 10</div>
             </div>
             {{-- @foreach ($transaksi_pembayran as $t)
             {{ $t->bulan }}    

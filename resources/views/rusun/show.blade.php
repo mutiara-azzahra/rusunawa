@@ -24,6 +24,20 @@
                     {{ $rusun->nama_rusun }}<br>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Alamat</strong><br>
+                    {{ $rusun->alamat }}<br>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Foto</strong><br>
+                    {{ $rusun->foto }}<br>
+                </div>
+            </div>
+
+
         </div>
     </div>
     

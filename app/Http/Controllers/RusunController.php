@@ -33,11 +33,15 @@ class RusunController extends Controller
 
         $input = $request->all();
 
-        $nama_rusun = $input['nama_rusun'].'_'.$request->foto->getClientOriginalName();
-        $input['foto']= $nama_rusun;
-        $request->file('foto')->move('storage/rusun/', $nama_rusun);
+        if($request->foto){
+            $nama_foto_rusun = $input['nama_rusun'].'_'.$request->foto->getClientOriginalName();
+            $input['foto']= $nama_foto_rusun;
+            $request->file('foto')->move('storage/rusun/', $nama_foto_rusun);
+        }
+
+        Rusun::create($input);
         
-        return redirect()->route('rusun.index')->with('success','Data baru berhasil ditambahkan');
+        return redirect()->route('rusun.index')->with('success','Data baru berhasil ditambahkan');    
     }
 
     public function show( $id)
@@ -65,14 +69,13 @@ class RusunController extends Controller
         
         $input = $request->all();
 
-        $nama_rusun = $input['nama_rusun'].'_'.$request->foto->getClientOriginalName();
-        $input['foto']= $nama_rusun;
-        $request->file('foto')->move('storage/rusun/', $nama_rusun);
+        $nama_foto_rusun = $input['nama_rusun'].'_'.$request->foto->getClientOriginalName();
+        $input['foto']= $nama_foto_rusun;
+        $request->file('foto')->move('storage/rusun/', $nama_foto_rusun);
 
         $rusun->update($input);
          
-        return redirect()->route('rusun.index')
-                        ->with('success','Data pemohon berhasil ditambahkan!');
+        return redirect()->route('rusun.index')->with('success','Data pemohon berhasil ditambahkan!');
     }
   
     public function destroy( $id)

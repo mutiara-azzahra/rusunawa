@@ -17,14 +17,17 @@
     <div class="alert alert-success">
         <p>{{ $message }}</p>
     </div>
+
     @endif
 
     <div class="card" style="padding: 20px;">
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>
-                        <th width="20px" class="text-center">No</th>
-                        <th width="20px" class="text-center">Nama Rusun</th>
+                        <th>No</th>
+                        <th>Nama Rusun</th>
+                        <th>Alamat</th>
+                        <th>Foto</th>
                         <th width="150px"class="text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -32,18 +35,20 @@
                     @php
                     $no=1;
                     @endphp
-                    @foreach ($rusun as $kc)
+                    @foreach ($rusun as $r)
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td> {{ $kc->nama_rusun }}</td>
+                        <td> {{ $r->nama_rusun }}</td>
+                        <td> {{ $r->alamat }} </td>
+                        <td class="text-center"><img class="image" src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100px"></td>
                         <td class="text-center">
-                            <form action="{{ route('rusun.destroy',$kc->id_rusun) }}" method="POST" id="form_delete">            
-                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$kc->id_rusun) }}"> Ubah</a>
+                            <form action="{{ route('rusun.destroy',$r->id_rusun) }}" method="POST" id="form_delete">            
+                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$r->id_rusun) }}"> Ubah</a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_rusun }}')" > Hapus</a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_rusun }}')" > Hapus</a>
                             </form>
                         </td>
                     </tr>
