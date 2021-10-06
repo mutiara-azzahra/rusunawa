@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Rusun;
 use App\Models\Gedung;
 use App\Models\Ruangan;
 use App\Models\Lantai;
@@ -77,9 +78,10 @@ class LoginController extends Controller
     {
         $fasilitas  = Fasilitas::all();
         $gedung     = Gedung::all();
+        $rusun      = Rusun::all();
         $posts      = Posts::paginate(5);
 
-        return view('welcome', compact('gedung', 'posts', 'fasilitas'));
+        return view('welcome', compact('rusun', 'gedung', 'posts', 'fasilitas'));
     }
 
     public function faq()

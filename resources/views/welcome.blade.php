@@ -202,27 +202,47 @@
   </div> 
 </div>
 
-<!--Lokasi-->
+<!--Rusun-->
 <div class="jumbotron-lokasi" id="lokasi" style="padding-top: 100px;">
-  <h3 data-aos="zoom-in-up"><b>Lokasi Rusunawa</b></h3>
+  <h3 data-aos="zoom-in-up"><b>Pilih Rusunawa</b></h3>
     <div class="underline-title mx-auto" data-aos="zoom-in-up"></div>
       <div class="container">
       
         <div class="row">
-        @foreach($gedung as $g)
-        <div class="col-md-3">
-          <div class="card" style="width: 15rem; margin-bottom: 30px;">
-            <img src="{{ asset('rusunawa3.jpg') }}" class="card-img-top" style="height: 250px;">
-              <div class="card-body">
-                <h5 class="card-title" style="height: 50px;"><b>{{$g->nama_gedung}}</b></h5>
-                  <p class="card-text">@if($g->ruangan != null){{$g->ruangan->count()}} @else 0 @endif Ruangan</p>
-                    <a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-primary">PESAN SEKARANG</a>
-              </div>
+          @foreach($rusun as $r)
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ $r->nama_rusun }}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Pilih Rusun</a>
+            </div>
           </div>
-        </div>
           @endforeach          
         </div>
+      </div>
+</div>
 
+<!--Lokasi-->
+<div class="jumbotron-lokasi" id="lokasi" style="padding-top: 100px;">
+  <h3 data-aos="zoom-in-up"><b>Lokasi Gedung Rusunawa</b></h3>
+    <div class="underline-title mx-auto" data-aos="zoom-in-up"></div>
+      <div class="container">
+      
+        <div class="row">
+          @foreach($gedung as $g)
+          <div class="col-md-3">
+            <div class="card" style="width: 15rem; margin-bottom: 30px;">
+              <img src="{{ asset('rusunawa3.jpg') }}" class="card-img-top" style="height: 250px;">
+                <div class="card-body">
+                  <h5 class="card-title" style="height: 50px;"><b>{{$g->nama_gedung}}</b></h5>
+                    <p class="card-text">@if($g->ruangan != null){{$g->ruangan->count()}} @else 0 @endif Ruangan</p>
+                      <a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-primary">PESAN SEKARANG</a>
+                </div>
+            </div>
+          </div>
+          @endforeach          
+        </div>
       </div>
 </div>
 

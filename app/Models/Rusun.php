@@ -14,6 +14,7 @@ class Rusun extends Model
 
     protected $fillable = [
         'nama_rusun',
+        'alamat',
         'update_at',
         'create_at'
     ];

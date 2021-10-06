@@ -25,7 +25,7 @@
     @endif
 
     <div class="card" style="padding: 30px;">
-        <form action="{{ route('rusun.store') }}" method="POST">
+        <form action="{{ route('rusun.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
         
             <div class="row">
@@ -35,6 +35,19 @@
                         <input type="text" name="nama_rusun" class="form-control" placeholder="Nama Rusun">
                     </div>
                 </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Alamat</strong>
+                        <input type="text" name="alamat" class="form-control" placeholder="Alamat">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Foto Rusun</strong>
+                        <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1">
+                    </div>                    
+                </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <div class="float-right">
                         <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>

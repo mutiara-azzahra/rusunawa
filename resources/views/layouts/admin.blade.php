@@ -27,6 +27,9 @@
   <!-- Alert -->
   {{-- <link rel="stylesheet" href="sweetalert2.min.css"> --}}
 
+  <!-- Chart js -->
+  <link rel="stylesheet" href="{{ asset('admin-template/plugins/chart.js/Chart.min.js') }}">
+
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="{{ asset('admin-template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
 
@@ -273,6 +276,9 @@
 
 <!-- Select2 -->
 <script src="{{ asset('admin-template/plugins/select2/js/select2.full.min.js')}}"></script>
+
+<!-- Chart js -->
+<script src="{{ asset('admin-template/plugins/chart.js/Chart.min.js') }}"></script>
 
 <!-- Axios-->
 <script src="{{ asset('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')}}"></script>

@@ -86,7 +86,7 @@
           </div>
 
           <!--Pie Chart-->
-          <div class="col">
+          <div class="col-lg-6">
             <div class="card card-danger">
               <div class="card-header">
                 <h3 class="card-title">Pie Chart</h3>
