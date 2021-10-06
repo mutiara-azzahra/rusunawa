@@ -95,6 +95,11 @@
 
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
+                      <a class="nav-link {{ set_active('rusun.index') }}" href="{{ Route('rusun.index') }}" class="nav-link">
+                        <p>Rusun</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link {{ set_active('gedung.index') }}" href="{{ Route('gedung.index') }}" class="nav-link">
                         <p>Gedung</p>
                       </a>

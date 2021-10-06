@@ -6,6 +6,7 @@ use App\Http\Middleware\Auth;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\RusunController;
 use App\Http\Controllers\GedungController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\TipeRuanganController;
@@ -61,6 +62,7 @@ Route::get('/profil', [ProfilController::class,'showProfil'])->name('profil.show
 Route::get('/profil/edit/{id_user}',[ProfilController::class,'editProfil'])->name('profil.edit');
 
 Route::resource('posts', PostsController::class);
+Route::resource('rusun', RusunController::class);
 Route::resource('gedung', GedungController::class);
 Route::resource('ruangan', RuanganController::class);
 Route::resource('tiperuangan', TipeRuanganController::class);

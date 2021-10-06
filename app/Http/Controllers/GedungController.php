@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Gedung;
 use App\Models\TipeRuangan;
 use App\Models\Galeri;
+use App\Models\Rusun;
 use App\Models\Fasilitas;
 
 
@@ -20,8 +21,10 @@ class GedungController extends Controller
 
     public function create()
     {
-        $tipe_ruangan = TipeRuangan::all();
-        return view('gedung.create', compact('tipe_ruangan'));
+        $rusun          = Rusun::all();
+        $tipe_ruangan   = TipeRuangan::all();
+
+        return view('gedung.create', compact('tipe_ruangan', 'rusun'));
     }
 
     public function store(Request $request)
@@ -61,7 +64,6 @@ class GedungController extends Controller
             'alamat_gedung'     => 'required',
             'jumlah_ruangan'    => 'required',
             'status_gedung'     => 'required',
-            
         ]);
          
         $gedung->update($request->all());

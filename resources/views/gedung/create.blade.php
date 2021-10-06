@@ -41,6 +41,17 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="form-group">
+                            <strong>Rusun</strong>
+                            <select name="id_rusun" class="form-control" >
+                                <option value="">---Pilih Rusun--</option>
+                                @foreach($rusun as $r)
+                                <option value=" {{ $r->id_rusun }}"> {{ $r->nama_rusun }} </option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
                             <strong>Tipe Ruangan</strong>
                             <select name="id_tipe_ruangan" class="form-control" >
                                 <option value="">---Pilih Tipe Ruangan--</option>

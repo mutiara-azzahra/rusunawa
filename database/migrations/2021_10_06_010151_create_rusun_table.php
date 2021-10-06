@@ -16,7 +16,6 @@ class CreateRusunTable extends Migration
         Schema::create('rusun', function (Blueprint $table) {
             $table->bigIncrements('id_rusun');
             $table->string('nama_rusun');
-            $table->Integer('id_gedung');
             $table->timestamps();
         });
     }
