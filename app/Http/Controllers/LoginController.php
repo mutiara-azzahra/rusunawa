@@ -95,6 +95,13 @@ class LoginController extends Controller
 
         return view('latar-belakang');
     }
+    public function detailrusun($id)
+    {
+        $rusun = Rusun::findOrFail($id);
+        $gedung = Gedung::where('id_rusun',$rusun->id_rusun)->get();
+
+        return view('detail-rusun.show', compact('rusun', 'gedung'));
+    }
     public function detailgedung($id)
     {
         $gedung = Gedung::findOrFail($id);

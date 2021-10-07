@@ -211,11 +211,12 @@
         <div class="row">
           @foreach($rusun as $r)
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="image mx-auto p-2" src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="50%">
             <div class="card-body">
-              <h5 class="card-title">{{ $r->nama_rusun }}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Pilih Rusun</a>
+              <h5 class="card-title">Rusunawa {{ $r->nama_rusun }}</h5>
+              <p class="card-text">{{ $r->alamat }}</p>
+              <p class="card-text">@if($r->rusun != null){{$r->rusun->count()}} @else 0 @endif Gedung</p>
+              <a href="{{ route('detailrusun',$r->id_rusun)}}" class="btn btn-primary">Pilih Rusun</a>
             </div>
           </div>
           @endforeach          

@@ -28,7 +28,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
-    <title>Gedung {{ $gedung->nama_gedung }} | Sistem Informasi Rusunawa Kota Banjarmasin</title>
+    <title>Rusunawa {{ $rusun->nama_rusun }} | Sistem Informasi Rusunawa Kota Banjarmasin</title>
   </head>
 <body class="bg-custom-1">
 
@@ -81,9 +81,9 @@
   <div class="card" >
       <div class="text-justify">
         <div class="col-lg-12 col-sm-12">
-          <h5 style="padding-top: 20px;" style="font-size: 25px;">Gedung {{ $gedung->nama_gedung }} Banjarmasin</h5>
+          <h5 style="padding-top: 20px;" style="font-size: 25px;">Rusunawa {{ $rusun->nama_rusun }} Banjarmasin</h5>
             <div class="row" style="padding-left: 15px;">
-              <p class="text-muted">{{ $gedung->alamat_gedung }}</p>
+              <p class="text-muted">{{ $rusun->alamat }}</p>
             </div>
         </div>
       </div>
@@ -326,104 +326,7 @@
   </div>
 </div>
 
-<div>
-<!--Lantai 1-->
-@foreach($lantai as $l)
-<div class="container" style="padding-top: 20px;">
-  <div class="card p-3" >
-      <div class="text-justify">
-        <div class="col">
-          <h5 style="padding-top: 20px; padding-left: 10px;">
-            Lantai {{$l->lantai}}</h5>
-        </div>
-      </div>
-      
 
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="galeri" style="padding:10px;">
-              <a href="{{ asset('kamar2.jpeg') }}" data-toggle = "lightbox" data-gallery="gallery">
-                <img src="{{ asset('sofa1.jpeg') }}" class= "d-block w-100 imggallery pb-1" style="height: 200px; width: 100%;">
-              </a>
-
-            <div class="col">
-              <div class="row">
-                <div class="col p-0">
-                  <a href="{{ asset('sofa3.jpeg') }}" data-toggle = "lightbox" data-gallery="gallery">
-                    <img src="{{ asset('sofa3.jpeg') }}" alt="" class= "imggallery">
-                  </a>
-                </div>
-                <div class="col p-0">
-                  <a href="{{ asset('toilet1.jpeg') }}" data-toggle = "lightbox" data-gallery="gallery">
-                    <img src="{{ asset('toilet1.jpeg') }}" alt="" class= "imggallery">
-                  </a>
-                </div>
-                <div class="col p-0">
-                  <a href="{{ asset('shower1.jpeg') }}" data-toggle = "lightbox" data-gallery="gallery">
-                    <img src="{{ asset('shower1.jpeg') }}" alt="" class= "imggallery">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-8 col-sm-12">
-          <div class="card p-4">
-            <div class="row">
-
-              <div class="col-lg-3 col-sm-12">
-                <p class="text-justify">Daftar Ruangan:</p>
-                <div class="form-group">
-                 <label for=""> Kode Ruangan</label>
-                 <select class="form-control" name="" id="input_ruangan{{$l->id_lantai}}" onchange="getRuangan({{$l->id_lantai}})">
-                  <option value="">---Pilih Ruangan--</option> 
-                  @foreach($l->ruangan as $r)
-                  <option value="{{ $r->id_ruangan }}">{{$r->no_ruangan}}</option>
-                  @endforeach
-                 </select>
-                </div>
-                  {{-- <p class="text-justify">
-                    1 Double Bed<br>
-                    1 Kulkas<br>
-                    1 Meja Makan<br>
-                    1 AC<br>
-                    Listrik Token<br>
-                    Air PDAM<br>
-                  </p> --}}
-              </div>
-
-              <div class="col-lg-4">
-                <p class="text-justify"><span style="color:#d0312d">({{$l->ruangan->count()}} kamar tersedia)</span></p>
-              </div>
-              <div class="col-lg-5 order-sm-12 order-sm-2">
-                  <div class="text-right">
-                    Harga Ruangan <br>
-                  </div>
-                  @csrf
-                  <div class="text-right">
-                    <span id="harga{{$l->id_lantai}}" style="font: bold; color:#F58735; font-size: 25px;">Rp. 0 </span>/bulan<br><br>
-                    @if (Auth::check()) 
-                      <form action="{{Route('create.pemohon')}}" method="GET">
-                        @csrf
-                        <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
-                        <button class="btn btn-primary" style="width: 200px;">Pesan Ruangan</button>
-                      </form>
-                      @else 
-                      <a href="{{ route('loginPage') }}" class="btn btn-primary" style="width: 200px;">Pesan Ruangan</a>
-                    @endif
-
-                  </div>    
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-  </div>
-</div>
-@endforeach
 
 
 <div id="gallery">

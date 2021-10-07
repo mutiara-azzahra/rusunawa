@@ -56,6 +56,7 @@ Route::post('/forgot-password', [LoginController::class, 'cariEmail'])->name('ca
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [LoginController::class, 'formRegister'])->name('formRegister');
 Route::get('/detail-gedung/{id}', [LoginController::class, 'detailgedung'])->name('detailgedung');
+Route::get('/detail-rusun/{id}', [LoginController::class, 'detailrusun'])->name('detailrusun');
 
 Route::get('/admin-beranda', [AdminController::class, 'AdminBeranda'])->name('AdminBeranda');
 Route::get('/profil', [ProfilController::class,'showProfil'])->name('profil.show');
