@@ -229,7 +229,6 @@
   <h3 data-aos="zoom-in-up"><b>Lokasi Gedung Rusunawa</b></h3>
     <div class="underline-title mx-auto" data-aos="zoom-in-up"></div>
       <div class="container">
-      
         <div class="row">
           @foreach($gedung as $g)
           <div class="col-md-3">

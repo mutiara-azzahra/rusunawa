@@ -38,7 +38,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="{{ asset('logo.png') }}" alt="" class="img-fluid" style="height: 50px; width: 50px;">
+      <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid" style="height: 50px;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -145,130 +145,21 @@
       <div class="row">
         <div class="col-lg-7">
           <div class="col-lg-12 col-sm-12">
+            @foreach($lantai as $l)
             <div class="row" style="padding-top: 20px;">
-              Lantai 1
+            Lantai {{$l->lantai}}
             </div>
             
-            <div class="row" style="padding-top: 20px;">
-              <a data-toggle="modal" data-target="#lantai" style="height: 50px; margin-right:2px" class="btn btn-danger">123</a>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">124</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">125</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">126</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">127</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">128</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">129</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">130</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">131</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">132</button>
-            </div> 
-            <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">133</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">134</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-warning">135</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">135</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">137</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">138</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">139</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">140</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">141</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">142</button>
-            </div>     
-
-          </div>
-
-          <div class="col-lg-12 col-sm-12">
-            <div class="row" style="padding-top: 20px;">
-              Lantai 2
+            <div class="row">
+              @foreach($l->ruangan as $r)
+                <button type="button" onclick="getDetailRuangan('{{$r->id_ruangan}}')" class="btn btn-primary m-1">{{ $r->no_ruangan }}</button>
+              @endforeach
+              
             </div>
             
-            <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">143</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">144</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">145</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">146</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">147</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">148</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">149</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">150</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">151</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">152</button>
-            </div> 
-            <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">153</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">154</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">155</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">156</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">157</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">158</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">159</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">160</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">161</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">162</button>
-            </div>          
-          </div>
+            @endforeach
 
-          <div class="col-lg-12 col-sm-12">
-            <div class="row" style="padding-top: 20px;">
-              Lantai 3
-            </div>
-            
-            <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">163</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">164</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">165</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">166</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">167</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">168</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-dark">169</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">170</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">171</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">172</button>
-            </div> 
-            <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">173</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">174</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-warning">175</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">176</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">177</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">178</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">179</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">180</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-dark">181</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">182</button>
-            </div>     
-
-          </div>
-
-          <div class="col-lg-12 col-sm-12">
-            <div class="row" style="padding-top: 20px;">
-              Lantai 4
-            </div>
-            
-            <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">184</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">185</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">186</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">187</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">188</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">189</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">190</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">191</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">192</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">193</button>
-            </div>
-            <div class="row" style="padding-top: 20px;">
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">184</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">185</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">186</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">187</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-success">188</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">189</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-dark">190</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">191</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">192</button>
-              <button type="button" style="height: 50px; margin-right:2px" class="btn btn-danger">193</button>
-            </div> 
-          </div>        
+          </div>       
         </div>
 
         <div class="col-lg-4 p-3">
@@ -309,11 +200,32 @@
         
 
         <!--Modalnya lantai-->
-        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="lantai">
+        <div class="modal fade bd-example-modal-lg" data-toggle="modal"  data-target="#pilihruangan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="detail_ruangan_modal">
           <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                  <div class="card m-3" style="padding:10px;">
-
+                  <div class="card m-3" id="harga{{$l->id_lantai}}" style="padding:10px;">
+                    <table class="table">
+                      <tr>
+                        <td width="25%">Nomor Ruangan</td>
+                        <td widt="3%">:</td>
+                        <td class="text-left"><p id="no_ruangan_modal"></p></td>
+                      </tr>
+                      <tr>
+                        <td>Harga</td>
+                        <td>:</td>
+                        <td class="text-left"><p id="harga_modal"></p></td>
+                      </tr>
+                    </table>
+                    @if (Auth::check()) 
+                      <form action="{{Route('create.permohonan')}}" method="GET">
+                        @csrf
+                        <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
+                        <button class="btn btn-primary" style="width: 200px;">Pesan Ruangan</button>
+                      </form>
+                      @else 
+                      <a href="{{ route('loginPage') }}" class="btn btn-primary" style="width: 200px;">Pesan Ruangan</a>
+                    @endif
+                    <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
                   </div>
               </div>
           </div>
@@ -404,7 +316,7 @@
                   <div class="text-right">
                     <span id="harga{{$l->id_lantai}}" style="font: bold; color:#F58735; font-size: 25px;">Rp. 0 </span>/bulan<br><br>
                     @if (Auth::check()) 
-                      <form action="{{Route('create.pemohon')}}" method="GET">
+                      <form action="{{Route('create.permohonan')}}" method="GET">
                         @csrf
                         <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
                         <button class="btn btn-primary" style="width: 200px;">Pesan Ruangan</button>
@@ -488,6 +400,20 @@
            $(`#id_ruangan${id}`).val(`${response.data.id_ruangan}`) 
            $(`#harga${id}`).text(`Rp. ${response.data.harga_ruangan}`)
            
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
+      }
+
+      let getDetailRuangan = (id) =>{
+        axios.get('/api/ruangan_harga/'+ id)
+          .then(function (response){
+           
+           console.log(response.data)
+           $(`#no_ruangan_modal`).text(`${response.data.no_ruangan}`) 
+           $(`#harga_modal`).text(`Rp. ${response.data.harga_ruangan}`)
+           $(`#detail_ruangan_modal`).modal('show');
           })
           .catch(function (error) {
             console.log(error);
