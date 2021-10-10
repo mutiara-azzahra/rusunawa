@@ -212,7 +212,7 @@
           @foreach($rusun as $r)
           <div class="card" style="width: 20rem;">
             <div class="foto p-0">
-              <img class="" image src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100%">
+              <img class="" image src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100%" height="200px;">
             </div>
             <div class="detail pt-1 pb-2">
               <h5>Rusunawa {{ $r->nama_rusun }}</h5>

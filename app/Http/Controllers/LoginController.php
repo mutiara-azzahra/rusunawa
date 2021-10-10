@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Rusun;
 use App\Models\Gedung;
 use App\Models\Ruangan;
+use App\Models\Galeri;
 use App\Models\Lantai;
 use App\Models\Fasilitas;
 use App\Models\Pemohon;
@@ -97,10 +98,11 @@ class LoginController extends Controller
     }
     public function detailrusun($id)
     {
-        $rusun = Rusun::findOrFail($id);
+        $rusun  = Rusun::findOrFail($id);
         $gedung = Gedung::where('id_rusun',$rusun->id_rusun)->get();
+        dd($id);
 
-        return view('detail-rusun.show', compact('rusun', 'gedung'));
+        return view('detail-rusun.show', compact('rusun', 'gedung', 'galeri'));
     }
     public function detailgedung($id)
     {

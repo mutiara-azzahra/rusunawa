@@ -203,13 +203,18 @@
                     <table class="table">
                       <tr>
                         <td width="25%">Nomor Ruangan</td>
-                        <td widt="3%">:</td>
+                        <td width="3%">:</td>
                         <td class="text-left"><p id="no_ruangan_modal"></p></td>
                       </tr>
                       <tr>
                         <td>Harga</td>
                         <td>:</td>
                         <td class="text-left"><p id="harga_modal"></p></td>
+                      </tr>
+                      <tr>
+                        <td>Status Ruangan</td>
+                        <td>:</td>
+                        <td class="text-left"><p id="status_ruangan_modal"></p></td>
                       </tr>
                     </table>
                     @if (Auth::check()) 
@@ -409,6 +414,7 @@
            console.log(response.data)
            $(`#no_ruangan_modal`).text(`${response.data.no_ruangan}`) 
            $(`#harga_modal`).text(`Rp. ${response.data.harga_ruangan}`)
+           $(`#status_ruangan_modal`).text(`${response.data.status_ruangan}`) 
            $(`#detail_ruangan_modal`).modal('show');
           })
           .catch(function (error) {

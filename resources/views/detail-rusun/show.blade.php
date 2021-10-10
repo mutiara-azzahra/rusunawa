@@ -86,14 +86,15 @@
       <div class="container">
         <div class="row">
           @foreach($gedung as $g)
-          <div class="col-md-3">
-            <div class="card" style="width: 15rem; margin-bottom: 30px;">
-              <img src="{{ asset('rusunawa3.jpg') }}" class="card-img-top" style="height: 250px;">
-                <div class="card-body">
-                  <h5 class="card-title" style="height: 50px;"><b>{{$g->nama_gedung}}</b></h5>
-                    <p class="card-text">@if($g->ruangan != null){{$g->ruangan->count()}} @else 0 @endif Ruangan</p>
-                      <a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-primary">PESAN SEKARANG</a>
-                </div>
+          <div class="card" style="width: 20rem;">
+            <div class="foto p-0">
+              <img class="" image src="{{asset('/storage/galeri/'.$g->galeri )}}" data-id="{{asset('/storage/galeri/'.$g->galeri )}}" alt="" width="100%" height="200px;">
+            </div>
+            <div class="detail pt-1 pb-2">
+              <h5>Gedung Rusun {{$g->nama_gedung}}</h5>
+              <p>{{ $g->alamat }}</p>
+              <p>@if($g->ruangan != null){{$g->ruangan->count()}} @else 0 @endif Ruangan</p>
+              <a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-primary">PESAN SEKARANG</a>
             </div>
           </div>
           @endforeach          
