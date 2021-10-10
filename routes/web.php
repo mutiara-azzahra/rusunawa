@@ -100,6 +100,10 @@ Route::get('pemohon_user/{id}', [PemohonController::class, 'show'])->name('pemoh
 Route::post('pemohon_user/{id}', [PemohonController::class, 'update'])->name('pemohon_user.update');
 Route::post('pemohon_userss/create', [PemohonController::class, 'store'])->name('pemohon_user.store');
 
+Route::get('penghuni', [PemohonController::class, 'show_penghuni'])->name('penghuni.index');
+Route::get('{id}/nonaktif', [PemohonController::class, 'nonaktif'])->name('pemohon.nonaktif');
+Route::get('{id}/verifikasi', [PemohonController::class, 'verifikasi'])->name('pemohon.verifikasi');
+
 Route::get('/create/permohonan', [PemohonController::class,'create_halaman_depan'])->name('create.de');
 Route::get('/create/permohonan_user', [PemohonController::class,'create_halaman_depan'])->name('create.permohonan');
 

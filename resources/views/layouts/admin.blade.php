@@ -141,12 +141,17 @@
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                       <a class="nav-link {{ set_active('user.index') }}" href="{{ Route('user.index') }}" class="nav-link">
-                        <p>Daftar User</p>
+                        <p>Data User</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('penghuni.index') }}" href="{{ Route('penghuni.index') }}" class="nav-link">
+                        <p>Data Penghuni</p>
                       </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link {{ set_active('pemohon.index') }}" href="{{ Route('pemohon.index') }}" class="nav-link">
-                        <p>Daftar Pemohon</p>
+                        <p>Data Pemohon</p>
                       </a>
                     </li>
                     <li class="nav-item">

@@ -103,7 +103,7 @@
       <div class="col-lg-6 col-sm-7 text-left">
         <h1>Selamat Datang di Sistem Informasi Rusunawa</h1>
         <h3>Kota Banjarmasin</h3><br>
-        <p>Rumah Susun Sewa kota Banjarmasin, hunian dengan harga terjangkau, persyaratan mudah, fasilitas lengkap, siap huni.</p>
+        <p>Bantuan Pembangunan Rumah Susun adalah tindak lanjut Program 1 juta rumah dari Kementerian PUPR dalam rangka pemenuhan kebutuhan rumah yang layak huni dan terjangkau bagi MBR (Masyarakat Berpenghasilan Rendah).</p>
         <button type="button" href="#" class="btn btn-primary btn-lg">Daftar Sekarang</button>  
       </div>
       <div class="col-lg-6 order-sm-2">
@@ -210,21 +210,24 @@
       
         <div class="row">
           @foreach($rusun as $r)
-          <div class="card" style="width: 18rem;">
-            <img class="image mx-auto p-2" src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="50%">
-            <div class="card-body">
-              <h5 class="card-title">Rusunawa {{ $r->nama_rusun }}</h5>
-              <p class="card-text">{{ $r->alamat }}</p>
-              <p class="card-text">@if($r->rusun != null){{$r->rusun->count()}} @else 0 @endif Gedung</p>
-              <a href="{{ route('detailrusun',$r->id_rusun)}}" class="btn btn-primary">Pilih Rusun</a>
+          <div class="card" style="width: 20rem;">
+            <div class="foto p-0">
+              <img class="" image src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100%">
             </div>
+            <div class="detail pt-1 pb-2">
+              <h5>Rusunawa {{ $r->nama_rusun }}</h5>
+              <p>{{ $r->alamat }}</p>
+              <p>@if($r->rusun != null){{$r->rusun->count()}} @else 0 @endif Gedung</p>
+              <a href="{{ route('detailrusun',$r->id_rusun)}}" class="btn btn-primary">PILIH RUSUN</a>
+            </div>
+            
           </div>
           @endforeach          
         </div>
       </div>
 </div>
 
-<!--Lokasi-->
+{{-- <!--Lokasi-->
 <div class="jumbotron-lokasi" id="lokasi" style="padding-top: 100px;">
   <h3 data-aos="zoom-in-up"><b>Lokasi Gedung Rusunawa</b></h3>
     <div class="underline-title mx-auto" data-aos="zoom-in-up"></div>
@@ -244,7 +247,7 @@
           @endforeach          
         </div>
       </div>
-</div>
+</div> --}}
 
 <!-- Alur-->
 <div class="jumbotron-lokasi" id="alur" style="padding-top: 50px;">
@@ -311,71 +314,21 @@
   </div>
 </div>
 
-<!-- Footer-->
-{{-- <div class="jumbotron-lokasi" id="faq" style="padding-top: 100px;">
-  <h3 data-aos="zoom-in-up"><b>Pertanyaan Seputar Rusunawa</b></h3>
-    <div class="underline-title mx-auto" data-aos="zoom-in-up"></div>
-
-      <div class="container text-justify">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 pb-4">
-            <div class="float-right">
-              <div class="form-inline">
-                <div class="input-group" data-widget="sidebar-search">
-                  <input class="form-control form-control-sidebar" style="width:20rem" type="search" placeholder="Cari pertanyaan disini.." aria-label="Search">
-                  <div class="input-group-append">
-                    <button class="btn btn-sidebar">
-                      <i class="fas fa-search fa-fw"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>            
-          </div>
-          <div class="col">
-                @foreach ($posts as $p)
-                <div class="accordion" id="accordion">
-                  <div class="card mb-2 card-outline">
-                    <div class="card-header" id="heading">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{ $p->id }}" aria-expanded="true" aria-controls="collapse">
-                          {{ $p->title }}
-                        </button>
-                      </h2>
-                    </div>
-                
-                    <div id="collapse{{ $p->id }}" class="collapse border-2" aria-labelledby="heading" data-parent="#accordion">
-                      <div class="card-body">
-                        {{ $p->content}}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                @endforeach
-                {!! $posts->links('pagination::bootstrap-4') !!}
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-</div> --}}
 
 <footer style="background-color: #ffc168; margin:0px !important;">
   <div class=" container container-fluid">
     <div class="row mb-3 pt-3">
-      <div class="col-lg-2 text-center pt-2 pb-2">
+      <div class="col-lg-1 col-sm-1 mr-4">
         <img class="logo-footer" src="{{ asset('logo.png') }}" style="width: 100px">
       </div>
-      <div class="col-lg-7 text-left">
-        <div class="text"><h4><b>UPT Rusunawa Kota Banjarmasin</b></h4>
+      <div class="col-lg-6 col-sm-12 text-left">
+        <div class="text"><h4><b>Dinas Perumahan dan Kawasan Permukiman
+          Kota Banjarmasin
+          </b></h4>
         </div>
         <div class="text">
           <h5><b>Rusunawa Teluk Kelayan</b></h5>
-          <p>Jl. Tembus Mantuil, Kelayan Selatan, Kecamatan Banjarmasin 
-          Selatan, Kota Banjarmasin, Kalimantan Selatan 70233</p>
-          <h5><b>Rusunawa Kelayan</b></h5>
+          <p>Jalan Teluk Kelayan, Kelurahan Kelayan Barat, Kecamatan  Banjarmasin Selatan</p>
           <div class="text">
             <div class="row">
               <div class="col-1">
@@ -388,10 +341,10 @@
               </div>
             </div>
           </div>
-          <h6>Telp: +62873482738</h6>
+          <h6>Contact Person: 0822-5086-6070 </h6>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-12">
+      <div class="col-lg-4 col-sm-12">
         <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7966.13248691012!2d114.58671917414155!3d-3.333811390292363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42315cebe6133%3A0x771d4faf845a24e5!2sRusunawa%20Teluk%20Kelayan!5e0!3m2!1sid!2sid!4v1628680806932!5m2!1sid!2sid" frameborder="0"
             style="border:0" height="100%" width="100%" allowfullscreen></iframe>

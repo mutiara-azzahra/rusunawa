@@ -126,7 +126,6 @@ class PemohonController extends Controller
 
     public function show( $id)
     {
-
         return view('pemohon.show', ['pemohon' => Pemohon::findOrFail($id)]);
     }
     
@@ -209,7 +208,18 @@ class PemohonController extends Controller
     {
         $gedung = Gedung::findOrFail($id_gedung);
         $lantai = Lantai::where('id_gedung', $gedung->id_gedung)->get();
+
         return view('pemohon.pilihruangan', compact('gedung', 'lantai'));        
+    }
+
+    public function verifikasi($id)
+    {
+        $pemohon = Pemohon::findOrFail($id);
+        $pemohon->status_pengajuan = 'diverifikasi';
+        $pemohon->update();
+
+        return redirect()->route('pemohon.index')
+                        ->with('success','Pemohon behasil di verifikasi!');
     }
 
     public function api($id, $tahun){
@@ -264,6 +274,24 @@ class PemohonController extends Controller
         return redirect()->route('pemohon.show')
                         ->with('success','Data pemohon berhasil ditambahkan!');
     }
-    
+    public function nonaktif($id)
+    {
+        $pemohon                    = Pemohon::findOrFail($id);
+        $pemohon->status_permohonan = 'tidak aktif';
+        $pemohon->update();
+
+        return redirect()->route('penghuni.index')
+                        ->with('success','Penghuni telah dinonaktifkan');
+    }
+
+
+    public function show_penghuni(){
+
+        $pemohon = Pemohon::latest()->paginate(5);
+        $pemohon->status_permohonan = 'aktif';
+
+        return view('penghuni.index',compact('pemohon'))
+        ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
 
 }

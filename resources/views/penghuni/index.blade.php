@@ -5,10 +5,7 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Data Pemohon</h2>
-            </div>
-            <div class="float-right">
-                <a class="btn btn-success" href="{{ route('pemohon.create') }}"><i class="fas fa-plus"></i> Tambah Pemohon</a>
+                <h2>Data Penghuni</h2>
             </div>
         </div>
     </div>
@@ -26,8 +23,7 @@
                     <th width="20px">No</th>
                     <th>Nama</th>
                     <th>Tanggal Pengajuan</th>
-                    <th>Status Pengajuan</th>
-                    <th>Status Permohonan</th>
+                    <th>Status Penghuni</th>
                     <th width="250px"class="text-center">Aksi</th>
                 </tr>
                 </thead>
@@ -41,21 +37,6 @@
                     <td>{{ $p->nama_kepala_keluarga }}</td>
                     <td>{{ Carbon\carbon::parse($p->created_at)->format('d F Y') }}</td>
                     <td>
-                        @if($p->status_pengajuan == 'diverifikasi')
-                        <div><span class="badge badge-success">Diverifikasi</span></div>
-          
-                        @elseif($p->status_pengajuan =='diproses')
-                        <div><span class="badge badge-warning">Diproses</span></div>
-          
-                        @elseif($p->status_pengajuan =='ditolak')
-                        <div><span class="badge badge-danger">Ditolak</span></div>
-          
-                        @elseif($p->status_pengajuan =='belum lengkap')
-                        <div><span class="badge badge-info">Belum Lengkap</span></div>
-                        
-                        @endif
-                    </td>
-                    <td>
                         @if($p->status_permohonan == 'aktif')
                         <div><span class="badge badge-success">Aktif</span></div>
           
@@ -68,8 +49,8 @@
                         @csrf 
                         @method('DELETE')
                         </form>
-                        @if($p->status_pengajuan != 'diverifikasi')
-                            <a class="btn btn-success btn-sm" href="{{ route('pemohon.verifikasi',$p->id_pemohon) }}"> Verifikasi</a>
+                        @if($p->status_permohonan == 'aktif')
+                            <a class="btn btn-danger btn-sm" href="{{ route('pemohon.nonaktif',$p->id_pemohon) }}"> Nonaktifkan</a>
                         @else
                         @endif
                             <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}"><i class="fas fa-eye"></i></a>

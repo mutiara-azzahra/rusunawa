@@ -176,9 +176,6 @@
                   <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-success"></button>
                 </div>
                 <div class="col">
-                  <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-warning"></button>
-                </div>
-                <div class="col">
                   <button type="button" style="height: 20px; width: 40px; margin-right:2px" class="btn btn-danger"></button>                  
                 </div>
                 <div class="col">
@@ -187,9 +184,8 @@
               </div>
               <div class="col-lg-10">
                 <div class="float-left text-left">
+                  Tersedia<br>
                   Terisi<br>
-                  Dalam Proses Penyewaan<br>
-                  Kosong<br>
                   Rusak<br>
                 </div>
               </div>
