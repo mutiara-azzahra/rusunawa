@@ -88,7 +88,7 @@
           @foreach($gedung as $g)
           <div class="card" style="width: 20rem;">
             <div class="foto p-0">
-              <img class="" image src="{{asset('/storage/galeri/'.$g->galeri )}}" data-id="{{asset('/storage/galeri/'.$g->galeri )}}" alt="" width="100%" height="200px;">
+              <img class="" image src="{{asset('/storage/galeri/'.$g->galeri->first()->foto )}}" data-id="{{asset('/storage/galeri/'.$g->galeri )}}" alt="" width="100%" height="200px;">
             </div>
             <div class="detail pt-1 pb-2">
               <h5>Gedung Rusun {{$g->nama_gedung}}</h5>

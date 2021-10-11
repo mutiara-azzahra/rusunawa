@@ -100,9 +100,8 @@ class LoginController extends Controller
     {
         $rusun  = Rusun::findOrFail($id);
         $gedung = Gedung::where('id_rusun',$rusun->id_rusun)->get();
-        dd($id);
 
-        return view('detail-rusun.show', compact('rusun', 'gedung', 'galeri'));
+        return view('detail-rusun.show', compact('rusun', 'gedung'));
     }
     public function detailgedung($id)
     {
