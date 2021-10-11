@@ -39,7 +39,12 @@ class TransaksiPembayaranController extends Controller
             'id_user'           => 'required',
         ]);
         
-        $transaksi = TransaksiPembayaran::create($request->all());
+        $transaksi = TransaksiPembayaran::where('id_pemohon',$request->id_pemohon)->first();
+        if(!$transaksi)
+        {
+            $transaksi = TransaksiPembayaran::create($request->all());
+        }
+
         foreach($request->bulan as $bulan)
         {
             DetailTransaksiPembayaran::create([
@@ -90,5 +95,10 @@ class TransaksiPembayaranController extends Controller
         $transaksi_pembayaran   = TransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->paginate(10);
 
         return view('transaksipembayaran.pemohon_index', compact('transaksi_pembayaran'));
+    }
+    public function notif_bayar(){
+        $id_pemohon                = Auth::id();
+        
+        return view ('index', compact('transaksi_pembayaran'));
     }
 }

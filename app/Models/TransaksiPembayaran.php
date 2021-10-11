@@ -26,8 +26,8 @@ class TransaksiPembayaran extends Model
     public function ruangan(){
         return $this->hasOne(Ruangan::class, 'id_ruangan', 'id_ruangan');
     }
-    public function detailtransaksi_pembayaran(){
-        return $this->belongsTo(DetailTransaksiPembayaran::class, 'id_transaksi_pembayaran');
+    public function detail_transaksi_pembayaran(){
+        return $this->hasMany(DetailTransaksiPembayaran::class, 'id_transaksi_pembayaran');
     }
     public function user(){
         return $this->belongsTo(User::class, 'id_user', 'id_user');

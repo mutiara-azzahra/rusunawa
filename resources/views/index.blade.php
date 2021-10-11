@@ -189,7 +189,16 @@
           <div class="col-lg-5 col-md-12 col-sm-12 p-1">
             <div class="card p-2">
               <div class=""><strong>Status Pembayaran</strong></div>
-              Bulan Oktober 2021 <div><h4><span class="badge badge-success">Sudah Dibayar</span></h4></div>
+              Bulan Oktober 2021 <div><h4>
+                @if ($detail)
+                    
+                <span class="badge badge-success">Sudah Dibayar</span>
+                @else
+                <span class="badge badge-danger">Belum Dibayar</span>
+                    
+                @endif
+                
+              </h4></div>
               <div class="" style="color: red">Jatuh Tempo: Setiap tanggal 10</div>
             </div>
             {{-- @foreach ($transaksi_pembayran as $t)

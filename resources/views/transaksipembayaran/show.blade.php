@@ -9,7 +9,7 @@
                 <h2>Detail Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success btn-secondary" href=c><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-success btn-secondary" href=""><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>

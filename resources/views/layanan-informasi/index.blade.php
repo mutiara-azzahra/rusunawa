@@ -36,13 +36,13 @@
                     @foreach ($info_rusun as $i)
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td>{{ $kc->nama_kecamatan }}</td>
+                        <td>{{ $i->nama_rusun }}</td>
                         <td class="text-center">
-                            <form action="{{ route('kecamatan.destroy',$kc->id_kecamatan) }}" method="POST" id="form_delete">
+                            <form action="{{ route('kecamatan.destroy',$kc->id_rusun) }}" method="POST" id="form_delete">
             
-                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_kecamatan) }}"> Tampilkan</a>
+                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_rusun) }}"> Tampilkan</a>
             
-                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_kecamatan) }}"> Ubah</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_rusun) }}"> Ubah</a>
             
                                 @csrf
                                 @method('DELETE')

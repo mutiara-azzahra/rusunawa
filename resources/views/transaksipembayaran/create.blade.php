@@ -166,7 +166,8 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="form-group">
                                 <strong>Telah Diterima Oleh</strong>
-                                <input type="text" value=" {{ $user->id_user }} " name="id_user" class="form-control" readonly>
+                                <input type="text" value=" {{ Auth::user()->nama_user}} " name="nama_user" class="form-control" readonly>
+                                <input type="text" value=" {{ Auth::user()->id_user}} " name="id_user" style="display: none" class="form-control" readonly>
                             </div>
                         </div>                   
                 </div>
