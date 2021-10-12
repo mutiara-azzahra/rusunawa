@@ -14,7 +14,7 @@ class KelurahanController extends Controller
         $kelurahan = Kelurahan::latest()->paginate(5);
         
         return view('kelurahan.index',compact('kelurahan'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+                    ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()

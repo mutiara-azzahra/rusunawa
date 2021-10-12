@@ -19,7 +19,7 @@ use App\Http\Controllers\PemohonController;
 use App\Http\Controllers\TransaksiPembayaranController;
 use App\Http\Controllers\DetailTransaksiPembayaranController;
 use App\Http\Controllers\RoleController;
-use App\Http\Controllers\InfoRuanganController;
+use App\Http\Controllers\LayananInformasiController;
 use App\Http\Controllers\InformasiRusunController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\LantaiController;
@@ -46,13 +46,11 @@ Route::get('/', [LoginController::class,'Beranda'])->name('Beranda');
 Route::get('/tanya-jawab', [LoginController::class,'faq'])->name('tanya-jawab');
 Route::get('/latar-belakang', [LoginController::class,'latarBelakang'])->name('latar-belakang');
 
-
 Route::get('/login', [LoginController::class, 'formLogin'])->name('loginPage');
 Route::post('/login', [LoginController::class, 'LoginStore'])->name('login');
 
 Route::get('/forgot-password', [LoginController::class, 'lupaPassword'])->name('forgot-password');
 Route::post('/forgot-password', [LoginController::class, 'cariEmail'])->name('cariEmail');
-
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [LoginController::class, 'formRegister'])->name('formRegister');
@@ -75,7 +73,7 @@ Route::resource('kecamatan', KecamatanController::class);
 Route::resource('kota', KotaController::class);
 Route::resource('galeri', GaleriController::class);
 Route::resource('pemohon', PemohonController::class);
-Route::resource('layanan-informasi', InformasiRusunController::class);
+Route::resource('layanan-informasi', LayananInformasiController::class);
 Route::resource('transaksipembayaran', TransaksiPembayaranController::class);
 Route::resource('detail-transaksipembayaran', DetailTransaksiPembayaranController::class);
 Route::resource('lantai', LantaiController::class);
@@ -89,7 +87,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'admin'], function () {
     Route::resource('pemohon', PemohonController::class);
-    Route::resource('transaksipembayaran', TransaksiPembayaranController::class);
+    Route::resource('transaksipembayaran', TransaksiPehmbayaranController::class);
 
 });
 
@@ -118,8 +116,7 @@ Route::get('/api/lantai/{id}', [LantaiController::class,'api'])->name('api.lanta
 Route::get('/api/ruangan_gedung/{id}', [RuanganController::class,'api_lantai'])->name('api_lantai.ruangan');
 Route::get('/api/kecamatan/{id}', [KecamatanController::class,'api'])->name('api.kecamatan');
 
-
-Route::get('register/create', [LoginController::class, 'formRegister'])->name('regsiter.create');
+Route::get('register/create', [LoginController::class, 'formRegister'])->name('register.create');
 Route::post('register/create', [LoginController::class, 'RegsiterStore'])->name('register.store');
 
 Route::get('{id}/reset', [UserController::class, 'reset'])->name('user.reset');

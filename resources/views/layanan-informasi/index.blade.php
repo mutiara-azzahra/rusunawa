@@ -8,7 +8,7 @@
                 <h2>Data Layanan Informasi Rusun</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('info-rusun.create') }}"><i class="fas fa-plus"></i> Tambah Kecamatan</a>
+                <a class="btn btn-success" href="{{ route('layanan-informasi.create') }}"><i class="fas fa-plus"></i> Tambah Kecamatan</a>
             </div>
         </div>
     </div>
@@ -36,18 +36,18 @@
                     @foreach ($info_rusun as $i)
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td>{{ $i->nama_rusun }}</td>
+                        <td></td>
                         <td class="text-center">
-                            <form action="{{ route('kecamatan.destroy',$kc->id_rusun) }}" method="POST" id="form_delete">
+                            <form action="{{ route('layanan-informasi.destroy',$i->id_info_rusun) }}" method="POST" id="form_delete">
             
-                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_info_rusun) }}"><i class="fas fa-eye"></a>
+                                <a class="btn btn-info btn-sm" href="{{ route('layanan-informasi.show',$i->id_info_rusun) }}"><i class="fas fa-eye"></a>
             
-                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_info_rusun) }}"><i class="fas fa-edit"></a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('layanan-informasi.edit',$i->id_info_rusun) }}"><i class="fas fa-edit"></a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kecamatan }}')"><i class="fas fa-trash"></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $i->id_info_rusun }}')"><i class="fas fa-trash"></a>
                             </form>
                         </td>
                     </tr>
@@ -55,7 +55,7 @@
                 </tbody>
             </table>
         
-            {!! $kecamatan->links('pagination::bootstrap-4') !!}
+            {!! $info_rusun->links('pagination::bootstrap-4') !!}
     </div>
         
 </div> 

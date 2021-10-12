@@ -34,7 +34,7 @@
                         <select name="id_kota" class="form-control" id="id_kota" onchange="getKecamatan()">
                             <option value="">---Pilih Rusun--</option>
                             @foreach($rusun as $r)
-                            <option value=" {{ $k->id_rusun }}"> {{ $k->nama_rusun }} </option>
+                            <option value=" {{ $r->id_rusun }}"> {{ $r->nama_rusun }} </option>
                             @endforeach
                         </select>
                     </div>
@@ -47,15 +47,10 @@
                         </div>
                     </div>
                 </div>
-                <section class="content">
-                    <div class="row">
-                      <div class="col-md-12">
+
+                      <div class="col-lg-12">
                         <div class="card card-outline card-info">
                           <div class="card-header">
-                            <h3 class="card-title">
-                              Bootstrap WYSIHTML5
-                              <small>Simple and fast</small>
-                            </h3>
                             <!-- tools box -->
                             <div class="card-tools">
                               <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip"
@@ -73,13 +68,14 @@
                               <textarea class="textarea" placeholder="Place some text here"
                                         style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                             </div>
+                            <p class="text-sm mb-0">
+                              Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation and license
+                              information.</a>
+                            </p>
                           </div>
                         </div>
                       </div>
-                      <!-- /.col-->
-                    </div>
-                    <!-- ./row -->
-                  </section>
+
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <div class="float-right">
                         <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>

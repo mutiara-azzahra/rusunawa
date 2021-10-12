@@ -6,6 +6,7 @@ use App\Models\DetailTransaksiPembayaran;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Pemohon;
+use App\Models\Ruangan;
 use App\Models\TransaksiPembayaran;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +18,7 @@ class AdminController extends Controller
     {
         $user = auth()->user();        
         $pemohon = Pemohon::where('id_user', $user->id_user)->first();
-// dd($pemohon);
+
         $pemohonall = Pemohon::all()->map(function($p){
             return $p->transaksi_pembayaran;
         });
@@ -36,6 +37,16 @@ class AdminController extends Controller
             
         }else{
             $detail = null;
+            $ruangan_terisi = Ruangan::whereHas('pemohon', function($query){
+                $query->where('status_permohonan', 'aktif');
+
+            })
+            ->with('pemohon')
+            ->count();
+
+            $ruangan_kosong = Ruangan::count() - $ruangan_terisi;
+            // dd($ruangan_terisi, $ruangan_kosong);
+            return view('index',compact('ruangan_terisi','ruangan_kosong'));
         }
 
         return view('index',compact('user','pemohon','detail'));

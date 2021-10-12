@@ -158,7 +158,12 @@
                       <a class="nav-link {{ set_active('fasilitas.index') }}" href="{{ Route('fasilitas.index') }}" class="nav-link">
                         <p>Fasilitas</p>
                       </a>
-                    </li> 
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('layanan-informasi.index') }}" href="{{ Route('layanan-informasi.index') }}" class="nav-link">
+                        <p>Layanan Informasi</p>
+                      </a>
+                    </li>
                 </ul>
               </li>
               
@@ -282,6 +287,7 @@
 <!-- Select2 -->
 <script src="{{ asset('admin-template/plugins/select2/js/select2.full.min.js')}}"></script>
 
+<script src="{{ asset('admin-template/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- Chart js -->
 <script src="{{ asset('admin-template/plugins/chart.js/Chart.min.js') }}"></script>
 
@@ -310,6 +316,11 @@ $(function () {
     $('.select2bs4').select2({
       theme: 'bootstrap4'
     })
+})
+
+$(function () {
+  // Summernote
+  $('.textarea').summernote()
 })
 
 </script>

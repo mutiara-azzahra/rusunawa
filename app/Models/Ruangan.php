@@ -32,7 +32,7 @@ class Ruangan extends Model
     }
     public function pemohon()
     {
-        return $this->hasOne(Pemohon::class, 'id_pemohon', 'id_pemohon');
+        return $this->hasMany(Pemohon::class, 'id_pemohon');
     }
     
 }
