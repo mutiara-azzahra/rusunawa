@@ -37,5 +37,9 @@ class Gedung extends Model
         return $this->hasMany(Galeri::class, 'id_gedung');
     }
 
+    public function ruang(){
+        return $this->hasMany(Ruangan::class, 'id_ruangan');
+    }
+
    
 }

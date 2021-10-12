@@ -89,6 +89,38 @@
 
               <li class="nav-item">
                 <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-users"></i>
+                  <p>
+                    Data User
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('user.index') }}" href="{{ Route('user.index') }}" class="nav-link">
+                        <p>Data User</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('penghuni.index') }}" href="{{ Route('penghuni.index') }}" class="nav-link">
+                        <p>Data Penghuni</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('pemohon.index') }}" href="{{ Route('pemohon.index') }}" class="nav-link">
+                        <p>Data Pemohon</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('role.index') }}" href="{{ Route('role.index') }}" class="nav-link">
+                        <p>Role</p>
+                      </a>
+                    </li>
+                </ul>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-building"></i>
                   <p>
                     Data Master
@@ -128,40 +160,8 @@
                       </a>
                     </li> 
                 </ul>
-
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-users"></i>
-                  <p>
-                    Data User
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a class="nav-link {{ set_active('user.index') }}" href="{{ Route('user.index') }}" class="nav-link">
-                        <p>Data User</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link {{ set_active('penghuni.index') }}" href="{{ Route('penghuni.index') }}" class="nav-link">
-                        <p>Data Penghuni</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link {{ set_active('pemohon.index') }}" href="{{ Route('pemohon.index') }}" class="nav-link">
-                        <p>Data Pemohon</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link {{ set_active('role.index') }}" href="{{ Route('role.index') }}" class="nav-link">
-                        <p>Role</p>
-                      </a>
-                    </li>
-                </ul>
-                
-                
+              
                 <li class="nav-item">
                   <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-map-marker"></i>

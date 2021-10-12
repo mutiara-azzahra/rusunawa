@@ -23,9 +23,9 @@
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>
-                        <th width="20px" class="text-center">No</th>
-                        <th width="20px" class="text-center">Nama Kecamatan</th>
-                        <th width="150px"class="text-center">Aksi</th>
+                        <th>No</th>
+                        <th>Nama Kecamatan</th>
+                        <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,14 +39,14 @@
                         <td class="text-center">
                             <form action="{{ route('kecamatan.destroy',$kc->id_kecamatan) }}" method="POST" id="form_delete">
             
-                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_kecamatan) }}"> Tampilkan</a>
+                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_kecamatan) }}"><i class="fas fa-eye"></i></a>
             
-                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_kecamatan) }}"> Ubah</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_kecamatan) }}"><i class="fas fa-edit"></i></a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kecamatan }}')" > Hapus</a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kecamatan }}')" ><i class="fas fa-trash"></i></a>
                             </form>
                         </td>
                     </tr>

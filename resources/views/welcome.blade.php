@@ -217,7 +217,8 @@
             <div class="detail pt-1 pb-2">
               <h5>Rusunawa {{ $r->nama_rusun }}</h5>
               <p>{{ $r->alamat }}</p>
-              <p>@if($r->rusun != null){{$r->rusun->count()}} @else 0 @endif Gedung</p>
+              {{$gedung->where('id_rusun',$r->id_rusun)->count()}}
+              {{-- <p>@if($r-> != null){{$r->nama_rusun}} @else 0 @endif Gedung</p> --}}
               <a href="{{ route('detailrusun',$r->id_rusun)}}" class="btn btn-primary">PILIH RUSUN</a>
             </div>
             
@@ -345,16 +346,26 @@
         </div>
       </div>
       <div class="col-lg-4 col-sm-12">
-        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7966.13248691012!2d114.58671917414155!3d-3.333811390292363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42315cebe6133%3A0x771d4faf845a24e5!2sRusunawa%20Teluk%20Kelayan!5e0!3m2!1sid!2sid!4v1628680806932!5m2!1sid!2sid" frameborder="0"
-            style="border:0" height="100%" width="100%" allowfullscreen></iframe>
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7966.13248691012!2d114.58671917414155!3d-3.333811390292363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42315cebe6133%3A0x771d4faf845a24e5!2sRusunawa%20Teluk%20Kelayan!5e0!3m2!1sid!2sid!4v1628680806932!5m2!1sid!2sid" frameborder="0"
+                style="border:0" height="100%" width="100%" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-12 mt-3 text-left">
+              <h6>Sosial Media Kami</h6>
+              <i class="fab fa-instagram"></i><a href="" class=""></a>
+              <i class="fab fa-facebook"></i><a href="" class=""></a>
+              <i class="fab fa-youtube"></i><a href="" class=""></a>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="row">
-    <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
+      <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
     </div>
   </div>
 </footer> 

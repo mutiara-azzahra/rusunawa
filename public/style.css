@@ -211,7 +211,9 @@
   font-size: 36px;
   margin-left: 50px;
 }
-
+.sosmed{
+  color:#111;
+}
 /* The button used to open the sidebar */
 .openbtn {
   font-size: 20px;
@@ -232,9 +234,16 @@
   padding: 20px;
 }
 
+.img-fluid1 {
+  width: 100%;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+  .img-fluid1 {
+    width: 20%;
+  }
 }
 

@@ -286,12 +286,10 @@ class PemohonController extends Controller
 
 
     public function show_penghuni(){
-
-        $pemohon = Pemohon::latest()->paginate(5);
-        $pemohon->status_permohonan = 'aktif';
-
-        return view('penghuni.index',compact('pemohon'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+    
+        $pemohon = Pemohon::where('status_permohonan', 'aktif')->paginate(5);;
+        
+        return view('penghuni.index', compact('pemohon'));
     }
 
 }

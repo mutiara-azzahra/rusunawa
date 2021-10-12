@@ -23,9 +23,9 @@
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>
-                        <th width="20px" class="text-center">No</th>
-                        <th width="20px" class="text-center">Nama Kota/Kabupaten</th>
-                        <th width="150px"class="text-center">Aksi</th>
+                        <th>No</th>
+                        <th>Nama Kota/Kabupaten</th>
+                        <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,12 +38,12 @@
                         <td> {{ $kc->nama_kota }}</td>
                         <td class="text-center">
                             <form action="{{ route('kota.destroy',$kc->id_kota) }}" method="POST" id="form_delete">            
-                                <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$kc->id_kota) }}"> Ubah</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$kc->id_kota) }}"><i class="fas fa-edit"></i></a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kota }}')" > Hapus</a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kota }}')" ><i class="fas fa-trash"></i></a>
                             </form>
                         </td>
                     </tr>

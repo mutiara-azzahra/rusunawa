@@ -25,7 +25,7 @@
             <tr>
             <th>No</th>
             <th>Level User/Pengguna</th>
-            <th>Aksi</th>
+            <th class="text-center">Aksi</th>
         </tr>
         </thead>
         <tbody>
@@ -39,14 +39,14 @@
             <td class="text-center">
                 <form action="{{ route('role.destroy',$r->id_role) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('role.show',$r->id_role) }}">Tampil</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('role.show',$r->id_role) }}"><i class="fas fa-eye"></i></a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('role.edit',$r->id_role) }}">Ubah</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('role.edit',$r->id_role) }}"><i class="fas fa-edit"></i></a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                    <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></a>
                 </form>
             </td>
         </tr>

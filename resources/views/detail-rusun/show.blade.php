@@ -93,7 +93,11 @@
             <div class="detail pt-1 pb-2">
               <h5>Gedung Rusun {{$g->nama_gedung}}</h5>
               <p>{{ $g->alamat }}</p>
-              <p>@if($g->ruangan != null){{$g->ruangan->count()}} @else 0 @endif Ruangan</p>
+              
+              @foreach ($ruangan as $r)
+              {{$r->where('status_ruangan','kosong')->count()}}
+              @endforeach
+            
               <a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-primary">PESAN SEKARANG</a>
             </div>
           </div>

@@ -23,10 +23,10 @@
         <table class="table table-hover table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>
-                        <th width="20px" class="text-center">No</th>
-                        <th class="text-center">Kategori</th>
-                        <th class="text-center">Foto</th>
-                        <th width="200px" class="text-center">Aksi</th>
+                        <th>No</th>
+                        <th>Kategori</th>
+                        <th>Foto</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

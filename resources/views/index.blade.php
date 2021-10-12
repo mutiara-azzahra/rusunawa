@@ -164,8 +164,9 @@
             <img src="{{ asset('user-welcome.jpg')}}" alt="" class="w-100">
           </div>
 
+          <div class="col-lg-1"></div>
 
-          <div class="col-lg-4 col-md-12 col-sm-12 p-1">
+          <div class="col-lg-7 col-md-12 col-sm-12 p-1">
             <div class="card p-2">
               <div><strong>Status Permohonan</strong></div>
               @if($pemohon->status_pengajuan == 'diverifikasi')
@@ -185,8 +186,6 @@
               
               
             </div>
-          </div>
-          <div class="col-lg-5 col-md-12 col-sm-12 p-1">
             <div class="card p-2">
               <div class=""><strong>Status Pembayaran</strong></div>
               Bulan Oktober 2021 <div><h4>
@@ -201,11 +200,6 @@
               </h4></div>
               <div class="" style="color: red">Jatuh Tempo: Setiap tanggal 10</div>
             </div>
-            {{-- @foreach ($transaksi_pembayran as $t)
-            {{ $t->bulan }}    
-            @endforeach
-             --}}
-
           </div>        
         </div>
 

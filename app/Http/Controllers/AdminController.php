@@ -25,11 +25,15 @@ class AdminController extends Controller
         {
 
             $transaksi_pembayaran   = TransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->first();
+            
+            if(is_null($transaksi_pembayaran)){
+                $detail = null;
+            }
+            else{
             $month = Carbon::now()->translatedFormat('F');
-            // dd($transaksi_pembayaran->id_transaksi_pembayaran); 
-            // $detail = $transaksi_pembayaran->
             $detail = DetailTransaksiPembayaran::where('id_transaksi_pembayaran',$transaksi_pembayaran->id_transaksi_pembayaran)->whereBulan($month)->first();
-            // dd($detail);
+            }
+            
         }else{
             $detail = null;
         }

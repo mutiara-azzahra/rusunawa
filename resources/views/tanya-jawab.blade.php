@@ -75,15 +75,13 @@
     </nav>
   </header>
 
-  <!-- Footer-->
   <div class="jumbotron-lokasi" id="faq" style="padding-top: 100px;">
-
         <div class="container text-justify">
           <div class="row">
           <div class="col-lg-12 col-md-12">
               <div class="row">
                   <div class="col-lg-2 col-md-5 col-sm-5 col-xs-5">
-                      <img class="img-fluid" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
+                      <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
                   </div>
                   <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                       <h2 class="pt-5" style="color: #853500; "><strong>Pertanyaan yang Sering Ditanyakan</strong></h2><br></div>
@@ -137,49 +135,65 @@
         </div>
   </div>
 
+
   <footer style="background-color: #ffc168; margin:0px !important;">
     <div class=" container container-fluid">
       <div class="row mb-3 pt-3">
-        <div class="col-lg-2 text-center pt-2 pb-2">
+        <div class="col-lg-1 col-sm-1 mr-4">
           <img class="logo-footer" src="{{ asset('logo.png') }}" style="width: 100px">
         </div>
-        <div class="col-lg-7 text-left">
-          <div class="text"><h4><b>UPT Rusunawa Kota Banjarmasin</b></h4>
+        <div class="col-lg-6 col-sm-12 text-left">
+          <div class="text"><h4><b>Dinas Perumahan dan Kawasan Permukiman
+            Kota Banjarmasin
+            </b></h4>
           </div>
           <div class="text">
             <h5><b>Rusunawa Teluk Kelayan</b></h5>
-            <p>Jl. Tembus Mantuil, Kelayan Selatan, Kecamatan Banjarmasin 
-            Selatan, Kota Banjarmasin, Kalimantan Selatan 70233</p>
-            <h5><b>Rusunawa Kelayan</b></h5>
-          </div>
-          <div class="text">
-            <div class="row">
-              <div class="col-1">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div class="col-11" style="padding: 0 !important">
-                <b>Jam Operasional:</b></h5><br>
-                <p class="font-weight-light">Senin - Minggu<br>
-                  Pukul 08.00 - 20.00 WITA</p>
+            <p>Jalan Teluk Kelayan, Kelurahan Kelayan Barat, Kecamatan  Banjarmasin Selatan</p>
+            <div class="text">
+              <div class="row">
+                <div class="col-1">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="col-11" style="padding: 0 !important">
+                  <b>Jam Operasional:</b></h5><br>
+                  <p class="font-weight-light">Senin - Minggu<br>
+                    Pukul 08.00 - 20.00 WITA</p>
+                </div>
               </div>
             </div>
-            
+            <h6>Contact Person: 0822-5086-6070 </h6>
           </div>
         </div>
-        <div class="col-lg-3 col-sm-12">
-          <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7966.13248691012!2d114.58671917414155!3d-3.333811390292363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42315cebe6133%3A0x771d4faf845a24e5!2sRusunawa%20Teluk%20Kelayan!5e0!3m2!1sid!2sid!4v1628680806932!5m2!1sid!2sid" frameborder="0"
-              style="border:0" height="100%" width="100%" allowfullscreen></iframe>
+        <div class="col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7966.13248691012!2d114.58671917414155!3d-3.333811390292363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42315cebe6133%3A0x771d4faf845a24e5!2sRusunawa%20Teluk%20Kelayan!5e0!3m2!1sid!2sid!4v1628680806932!5m2!1sid!2sid" frameborder="0"
+                  style="border:0" height="100%" width="100%" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-lg-12 mt-3 text-left">
+              <h6>Sosial Media Kami</h6>
+              <div class="row ml-3">
+                <i class="fab fa-instagram"></i><a href="" class=""></a>
+                <i class="fab fa-facebook"></i><a href="" class=""></a>
+                <i class="fab fa-youtube"></i><a href="" class=""></a>
+              </div>
+            </div>
           </div>
+    
+          
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-      <div class="col-lg-12 text-center" style="font-size: 15px; color:white"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
+        <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin © 2021</div>
       </div>
     </div>
-  </footer> 
+  </footer>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -5,10 +5,10 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Data FAQ</h2>
+                <h2>Data Tanya Jawab</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('posts.create') }}"><i class="fas fa-plus"></i> Tambah Data</a>
+                <a class="btn btn-success" href="{{ route('posts.create') }}"><i class="fas fa-plus"></i> Tambah Tanya Jawab</a>
             </div>
         </div>
     </div>
@@ -23,10 +23,10 @@
     <table class="table table-bordered table-hover table-sm bg-light" id="dataTable">
         <thead>
             <tr>
-            <th width="20px" class="text-center">No</th>
+            <th>No</th>
             <th>Pertanyaan</th>
             <th>Jawaban</th>
-            <th width="280px"class="text-center">Aksi</th>
+            <th class="text-center">Aksi</th>
         </tr>
         </thead>
         <tbody>
@@ -38,14 +38,14 @@
             <td class="text-center">
                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$post->id) }}">Tampil</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$post->id) }}"><i class="fas fa-eye"></i></a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$post->id) }}">Ubah</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$post->id) }}"><i class="fas fa-edit"></i></a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                    <a type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></a>
                 </form>
             </td>
         </tr>

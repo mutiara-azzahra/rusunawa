@@ -20,7 +20,7 @@
     @endif
 
 <div class="card" style="padding: 20px;">
-<table class="table table-hover table-sm bg-light" id="dataTable">
+<table class="table table-hover table-sm bg-light table-bordered" id="dataTable">
         <thead>
             <tr>
             <th width="20px" class="text-center">No</th>
@@ -41,9 +41,9 @@
             <td class="text-center">
                 <form action="{{ route('fasilitas.destroy',$fr->id_fasilitas) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('fasilitas.show',$fr->id_fasilitas) }}"> Tampil</a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('fasilitas.edit',$fr->id_fasilitas) }}"> Ubah</a>
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{$fr->id_fasilitas}}')"> Hapus</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('fasilitas.show',$fr->id_fasilitas) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('fasilitas.edit',$fr->id_fasilitas) }}"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{$fr->id_fasilitas}}')"><i class="fas fa-trash"></i></a>
 
                     @csrf
                     @method('DELETE')

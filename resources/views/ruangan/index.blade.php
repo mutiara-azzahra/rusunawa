@@ -47,14 +47,14 @@
             <td class="text-center">
                 <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}">Tampil</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}"><i class="fas fa-eye"></i></a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}">Ubah</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}"><i class="fas fa-edit"></i></a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                    <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></a>
                 </form>
             </td>
         </tr>

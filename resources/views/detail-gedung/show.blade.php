@@ -190,7 +190,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         
@@ -231,9 +230,6 @@
               </div>
           </div>
       </div>
-
-
-
       </div>
     </div>
   </div>
@@ -241,8 +237,8 @@
 
 <div>
 <!--Lantai 1-->
-@foreach($lantai as $l)
-<div class="container" style="padding-top: 20px;">
+{{-- @foreach($lantai as $l) --}}
+{{-- <div class="container" style="padding-top: 20px;">
   <div class="card p-3" >
       <div class="text-justify">
         <div class="col">
@@ -303,7 +299,7 @@
                     1 AC<br>
                     Listrik Token<br>
                     Air PDAM<br>
-                  </p> --}}
+                  </p>
               </div>
 
               <div class="col-lg-4">
@@ -335,11 +331,11 @@
       </div>
 
   </div>
-</div>
-@endforeach
+</div> --}}
+{{-- @endforeach --}}
 
 
-<div id="gallery">
+{{-- <div id="gallery">
 <h4 class="text-center d-none">Lightbox Photo Gallery</h4>
 <br>
   <div class="row text-center">
@@ -374,7 +370,7 @@
       </a>
     </div>
   </div>
-</div>
+</div> --}}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

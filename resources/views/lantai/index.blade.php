@@ -43,9 +43,9 @@
             <td class="text-center">
                 <form action="{{ route('lantai.destroy',$l->id_lantai) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('lantai.show',$l->id_lantai) }}">Tampil</a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('lantai.edit',$l->id_lantai) }}">Ubah</a>
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $l->id_lantai }}')">Hapus</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('lantai.show',$l->id_lantai) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('lantai.edit',$l->id_lantai) }}"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $l->id_lantai }}')"><i class="fas fa-trash"></i></a>
 
                     @csrf
                     @method('DELETE')

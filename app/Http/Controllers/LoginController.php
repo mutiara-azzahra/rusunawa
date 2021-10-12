@@ -78,7 +78,7 @@ class LoginController extends Controller
     public function Beranda()
     {
         $fasilitas  = Fasilitas::all();
-        $gedung     = Gedung::all();
+        $gedung     = Gedung::withCount('ruang');
         $rusun      = Rusun::all();
         $posts      = Posts::paginate(5);
 
@@ -100,16 +100,18 @@ class LoginController extends Controller
     {
         $rusun  = Rusun::findOrFail($id);
         $gedung = Gedung::where('id_rusun',$rusun->id_rusun)->get();
+        $ruangan = Ruangan::all();
 
-        return view('detail-rusun.show', compact('rusun', 'gedung'));
+        return view('detail-rusun.show', compact('rusun', 'gedung', 'ruangan'));
     }
     public function detailgedung($id)
     {
         
         $gedung = Gedung::findOrFail($id);
         $lantai = Lantai::where('id_gedung',$gedung->id_gedung)->get();
+        $ruangan = Ruangan::all();
 
-        return view('detail-gedung.show', compact('gedung', 'lantai'));
+        return view('detail-gedung.show', compact('gedung', 'lantai', 'ruangan'));
     }
     public function lupaPassword()
     {
