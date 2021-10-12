@@ -85,29 +85,27 @@
     <div class="col-lg-12">
       <div class="container">
         <div class="row">
-          @foreach($gedung as $g)
-          <div class="card" style="width: 20rem;">
-            <div class="foto p-0">
-              <img class="" image src="{{asset('/storage/galeri/'.$g->galeri->first()->foto )}}" data-id="{{asset('/storage/galeri/'.$g->galeri )}}" alt="" width="100%" height="200px;">
+          <div class="float-left">
+            @foreach($gedung as $g)
+            <div class="card" style="width: 20rem;">
+              <div class="foto p-0">
+                <img class="" image src="{{asset('/storage/galeri/'.$g->galeri->first()->foto )}}" data-id="{{asset('/storage/galeri/'.$g->galeri )}}" alt="" width="100%" height="200px;">
+              </div>
+              <div class="detail pt-3 pb-3 pl-3 text-left">
+                <h5>Gedung Rusun {{$g->nama_gedung}}</h5>
+                {{ $g->alamat_gedung }}<br>
+                {{$g->lantai->ruangan->where('status_ruangan','kosong')->count()}} Ruangan Tersedia<br>
+                <div class="pt-2"><a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-md btn-primary">PESAN SEKARANG</a></div>
+              </div>
             </div>
-            <div class="detail pt-1 pb-2">
-              <h5>Gedung Rusun {{$g->nama_gedung}}</h5>
-              <p>{{ $g->alamat }}</p>
-              
-              @foreach ($ruangan as $r)
-              {{$r->where('status_ruangan','kosong')->count()}}
-              @endforeach
-            
-              <a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-primary">PESAN SEKARANG</a>
-            </div>
+            @endforeach 
           </div>
-          @endforeach          
+                   
         </div>
       </div>
     </div>
   </div>
-  
-  
+
 </div>
 
 

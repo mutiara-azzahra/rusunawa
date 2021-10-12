@@ -40,14 +40,14 @@
                         <td class="text-center">
                             <form action="{{ route('kecamatan.destroy',$kc->id_rusun) }}" method="POST" id="form_delete">
             
-                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_rusun) }}"> Tampilkan</a>
+                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_info_rusun) }}"><i class="fas fa-eye"></a>
             
-                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_rusun) }}"> Ubah</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_info_rusun) }}"><i class="fas fa-edit"></a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kecamatan }}')" > Hapus</a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kecamatan }}')"><i class="fas fa-trash"></a>
                             </form>
                         </td>
                     </tr>

@@ -104,7 +104,7 @@
         <h1>Selamat Datang di Sistem Informasi Rusunawa</h1>
         <h3>Kota Banjarmasin</h3><br>
         <p>Bantuan Pembangunan Rumah Susun adalah tindak lanjut Program 1 juta rumah dari Kementerian PUPR dalam rangka pemenuhan kebutuhan rumah yang layak huni dan terjangkau bagi MBR (Masyarakat Berpenghasilan Rendah).</p>
-        <button type="button" href="#" class="btn btn-primary btn-lg">Daftar Sekarang</button>  
+        <a type="button" href="{{ route('loginPage')}}" class="btn btn-primary btn-lg">Daftar Sekarang</a>  
       </div>
       <div class="col-lg-6 order-sm-2">
         <div>
@@ -179,12 +179,11 @@
           <div class="text-left">
               <h3 data-aos="zoom-in-up"><b>Tentang Rusunawa Kota Banjarmasin</b></h3>
               <div class="underline-title mr-auto" data-aos="zoom-in-up"></div>
-              <p><h5 style="line-height:30px;">Rumah Susun Sewa (Rusunawa) merupakan perumahahan yang dibangun oleh <b>UPT Pelayanan Rusunawa Kota Banjarmasin</b> 
+              <p data-aos="zoom-in-up"><h5 style="line-height:30px;">Rumah Susun Sewa (Rusunawa) merupakan perumahahan yang dibangun oleh <b>UPT Pelayanan Rusunawa Kota Banjarmasin</b> 
                 yang disewakan untuk masyarakat 
                 khususnya kota Banjarmasin dengan harga yang terjangkau, lingkungan yang bersih dan aman.
-                Ada tiga (3) buah rusun yang dapat ditempati di kota Banjarmasin yaitu di daerah 
-                <span style="font: bold, italic; color: red">Basirih,
-                Mantuil dan Teluk Kelayan</span></h5></p>
+                Ada tiga (2) buah rusun yang dapat ditempati di kota Banjarmasin yaitu 
+                <span style="font: bold, italic; color: red">Teluk Kelayan dan Ganda Maghfirah</span></h5></p>
             </div>             
           </div>
 
@@ -214,12 +213,13 @@
             <div class="foto p-0">
               <img class="" image src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100%" height="200px;">
             </div>
-            <div class="detail pt-1 pb-2">
+            <div class="detail pt-3 pb-3 pl-3 text-left">
               <h5>Rusunawa {{ $r->nama_rusun }}</h5>
-              <p>{{ $r->alamat }}</p>
-              {{$gedung->where('id_rusun',$r->id_rusun)->count()}}
+              {{ $r->alamat }}, Banjarmasin<br>
+              {{$gedung->where('id_rusun',$r->id_rusun)->count()}} Gedung<br>
               {{-- <p>@if($r-> != null){{$r->nama_rusun}} @else 0 @endif Gedung</p> --}}
-              <a href="{{ route('detailrusun',$r->id_rusun)}}" class="btn btn-primary">PILIH RUSUN</a>
+              <div class="pt-1"><a href="{{ route('detailrusun',$r->id_rusun)}}" class="btn btn-primary">PILIH RUSUN</a></div>
+              
             </div>
             
           </div>
