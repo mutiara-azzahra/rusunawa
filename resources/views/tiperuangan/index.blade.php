@@ -40,13 +40,12 @@
                 <form action="{{ route('tiperuangan.destroy',$tr->id_tipe_ruangan) }}" method="POST" id="form_delete">
  
                     <a class="btn btn-info btn-sm" href="{{ route('tiperuangan.show',$tr->id_tipe_ruangan) }}"><i class="fas fa-eye"></i></a>
- 
                     <a class="btn btn-primary btn-sm" href="{{ route('tiperuangan.edit',$tr->id_tipe_ruangan) }}"><i class="fas fa-edit"></i></a>
  
                     @csrf
                     @method('DELETE')
  
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></button>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_tipe_ruangan }}')" ><i class="fas fa-trash"></i></a>
                 </form>
             </td>
         </tr>
@@ -65,7 +64,7 @@
 @section('script')
 
 <script>
-    Hapus = (id_pemohon)=>{
+    Hapus = (id_tipe_ruangan)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
             text:  "menghapus notifikasi" ,
@@ -79,7 +78,6 @@
                 if (result.value) {
                     $('#form_delete').submit();
                 }
-
         })
     }
 </script>

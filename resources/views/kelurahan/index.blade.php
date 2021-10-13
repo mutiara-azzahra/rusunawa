@@ -42,13 +42,12 @@
                     <form action="{{ route('kelurahan.destroy',$kl->id_kelurahan) }}" method="POST" id="form_delete">
     
                         <a class="btn btn-info btn-sm" href="{{ route('kelurahan.show',$kl->id_kelurahan) }}"><i class="fas fa-eye"></i></a>
-    
                         <a class="btn btn-primary btn-sm" href="{{ route('kelurahan.edit',$kl->id_kelurahan) }}"><i class="fas fa-edit"></i></a>
     
                         @csrf
                         @method('DELETE')
                         
-                        <button class="btn btn-danger btn-sm" onclick="Hapus('{{$kl->id_kelurahan}}')"><i class="fas fa-trash"></i></button>
+                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{$kl->id_kelurahan}}')"><i class="fas fa-trash"></i></a>
                     </form>
                 </td>
             </tr>
@@ -63,6 +62,7 @@
 @endsection
 
 @section('script')
+
 <script>
     Hapus = (id_kelurahan)=>{
         Swal.fire({

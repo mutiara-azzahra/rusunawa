@@ -47,11 +47,11 @@
         
                             <a class="btn btn-info btn-sm" href="{{ route('gedung.show',$g->id_gedung) }}"><i class="fas fa-eye"></i></a>
                             <a class="btn btn-primary btn-sm" href="{{ route('gedung.edit',$g->id_gedung) }}"><i class="fas fa-edit"></i></a>
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_gedung}}')" data-action="{{ route('gedung.destroy',$g->id_gedung) }}" id="form_delete"><i class="fas fa-trash"></i></a>
-
+                            
                             @csrf
                             @method('DELETE')
-        
+                            
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_gedung}}')" data-action="{{ route('gedung.destroy',$g->id_gedung) }}" id="form_delete"><i class="fas fa-trash"></i></a>
                         </form>
                     </td>
                 </tr>

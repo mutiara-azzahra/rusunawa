@@ -46,7 +46,7 @@
                         <form action="{{ route('user.destroy',$u->id_user) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"> <i class="fas fa-trash"></i></button>
+                            <a class="btn btn-danger btn-sm" onclick=""> <i class="fas fa-trash"></i></a>
                         </form>
                     </td>
                 </tr>
@@ -60,3 +60,23 @@
     </div>
 @endsection
 
+@section('script')
+<script>
+    Hapus = (id_user)=>{
+        Swal.fire({
+            title: 'Apa anda yakin menghapus data ini?',
+            text:  "menghapus notifikasi" ,
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6' ,
+            cancelButtonColor: 'red' ,
+            confirmButtonText: 'hapus data' ,
+            cancelButtonText: 'batal' ,
+            reverseButtons: false
+            }).then((result) => {
+                if (result.value) {
+                    $('#form_delete').submit();
+                }
+        })
+    }
+</script>
+@endsection

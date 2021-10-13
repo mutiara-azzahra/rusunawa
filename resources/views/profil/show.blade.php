@@ -8,7 +8,7 @@
                 <h2>Lihat/Edit Profil</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{route('AdminBeranda')}}"><i class="fas fa-arrow-left"></i>  Kembali</a>
+                <a class="btn btn-success" href="{{route('beranda')}}"><i class="fas fa-arrow-left"></i>  Kembali</a>
             </div>
         </div>
         <div class="col-lg-12 margin-tb mb-3">

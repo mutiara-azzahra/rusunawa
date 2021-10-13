@@ -74,7 +74,6 @@
                 if (result.value) {
                     $('#form_delete').submit();
                 }
-
         })
     }
 </script>

@@ -54,7 +54,7 @@
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"></i></a>
                 </form>
             </td>
         </tr>
@@ -70,7 +70,7 @@
 @section('script')
 
 <script>
-    Hapus = (id_pemohon)=>{
+    Hapus = (id_ruangan)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
             text:  "menghapus notifikasi" ,

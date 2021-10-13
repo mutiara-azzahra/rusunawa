@@ -43,12 +43,12 @@
                         <td class="text-center"><img class="image" src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100px"></td>
                         <td class="text-center">
                             <form action="{{ route('rusun.destroy',$r->id_rusun) }}" method="POST" id="form_delete">            
-                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$r->id_rusun) }}"> Ubah</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$r->id_rusun) }}"><i class="fas fa-edit"></a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_rusun }}')" > Hapus</a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_rusun }}')" ><i class="fas fa-trash"></a>
                             </form>
                         </td>
                     </tr>

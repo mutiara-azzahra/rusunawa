@@ -45,11 +45,11 @@
  
                     <a class="btn btn-info btn-sm" href="{{ route('lantai.show',$l->id_lantai) }}"><i class="fas fa-eye"></i></a>
                     <a class="btn btn-primary btn-sm" href="{{ route('lantai.edit',$l->id_lantai) }}"><i class="fas fa-edit"></i></a>
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $l->id_lantai }}')"><i class="fas fa-trash"></i></a>
 
                     @csrf
                     @method('DELETE')
  
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $l->id_lantai }}')"><i class="fas fa-trash"></i></a>
                 </form>
             </td>
         </tr>
@@ -66,7 +66,7 @@
 @section('script')
 
 <script>
-    Hapus = (id_pemohon)=>{
+    Hapus = (id_lantai)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
             text:  "menghapus notifikasi" ,
