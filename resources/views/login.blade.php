@@ -52,7 +52,6 @@
         <h5 class="text-center">MASUK AKUN RUSUNAWA</h5>
         <div class="underline-title mx-auto"></div>
         <form method="POST" action="{{ Route('login') }}">
-
           @csrf
           <div class="form-login">
             <div class="form-group">

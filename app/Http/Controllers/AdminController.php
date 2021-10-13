@@ -14,14 +14,15 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function AdminBeranda()
+    public function beranda()
     {
-        $user = auth()->user();        
+        $user = auth()->user();  
         $pemohon = Pemohon::where('id_user', $user->id_user)->first();
 
         $pemohonall = Pemohon::all()->map(function($p){
             return $p->transaksi_pembayaran;
         });
+
         if(Auth::user()->id_role ==2)
         {
 
@@ -34,8 +35,12 @@ class AdminController extends Controller
             $month = Carbon::now()->translatedFormat('F');
             $detail = DetailTransaksiPembayaran::where('id_transaksi_pembayaran',$transaksi_pembayaran->id_transaksi_pembayaran)->whereBulan($month)->first();
             }
+            return view('beranda.user', compact('detail','transaksi_pembayaran', 'month'));
             
         }else{
+
+            $pemohon_diproses = Pemohon::where('status_pengajuan', 'diproses')->count();
+            $pemohon_aktif = Pemohon::where('status_permohonan', 'aktif')->count();
             $detail = null;
             $ruangan_terisi = Ruangan::whereHas('pemohon', function($query){
                 $query->where('status_permohonan', 'aktif');
@@ -44,12 +49,11 @@ class AdminController extends Controller
             ->with('pemohon')
             ->count();
 
+
             $ruangan_kosong = Ruangan::count() - $ruangan_terisi;
             // dd($ruangan_terisi, $ruangan_kosong);
-            return view('index',compact('ruangan_terisi','ruangan_kosong'));
+            return view('beranda.admin', compact('ruangan_terisi','ruangan_kosong', 'pemohon_diproses', 'pemohon_aktif'));
         }
-
-        return view('index',compact('user','pemohon','detail'));
     }
     public function pemohon()
     {

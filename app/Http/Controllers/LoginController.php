@@ -25,11 +25,11 @@ class LoginController extends Controller
     public function LoginStore(Request $request)
     {
         $credentials = $request->only('username', 'password');
-
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             
-            return redirect()->route('AdminBeranda');
+            
+            return redirect()->route('beranda');
         }
 
         return back()->withErrors([

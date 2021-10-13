@@ -216,11 +216,11 @@
                         <td class="text-left"><p id="status_ruangan_modal"></p></td>
                       </tr>
                     </table>
-                    @if (Auth::check()) 
+                    @if (Auth::check())
                       <form action="{{Route('create.permohonan')}}" method="GET">
                         @csrf
                         <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
-                        <button class="btn btn-primary" style="width: 200px;">Pesan Ruangan</button>
+                        <button class="btn btn-primary" style="width: 200px;">Pesan Sekarang</button>
                       </form>
                       @else 
                       <a href="{{ route('loginPage') }}" class="btn btn-primary" style="width: 200px;">Pesan Ruangan</a>

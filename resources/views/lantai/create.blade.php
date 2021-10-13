@@ -35,9 +35,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Lantai</strong> <span style="color: red" >*isi dalam angka</span>
-                        <select name="lantai" class="form-control" >
-                            <input type="text" name="lantai" class="form-control" placeholder="Isi lantai">
-                        </select>
+                        <input type="text" name="lantai" class="form-control" placeholder="Isi lantai">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">

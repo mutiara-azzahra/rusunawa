@@ -57,7 +57,7 @@ Route::get('/register', [LoginController::class, 'formRegister'])->name('formReg
 Route::get('/detail-gedung/{id}', [LoginController::class, 'detailgedung'])->name('detailgedung');
 Route::get('/detail-rusun/{id}', [LoginController::class, 'detailrusun'])->name('detailrusun');
 
-Route::get('/admin-beranda', [AdminController::class, 'AdminBeranda'])->name('AdminBeranda');
+Route::get('/beranda', [AdminController::class, 'beranda'])->name('beranda');
 Route::get('/profil', [ProfilController::class,'showProfil'])->name('profil.show');
 Route::get('/profil/edit/{id_user}',[ProfilController::class,'editProfil'])->name('profil.edit');
 

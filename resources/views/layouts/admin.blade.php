@@ -72,7 +72,7 @@
           <img src="{{ asset('admin-template/dist/img/user.png') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{route('AdminBeranda')}}" class="d-block"> Hai, {{ Auth::user()->nama_user}} !</a>
+          <a href="{{route('beranda')}}" class="d-block"> Hai, {{ Auth::user()->nama_user}} !</a>
         </div>
       </div>
 
