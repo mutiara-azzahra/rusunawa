@@ -195,7 +195,7 @@
                 </li>
               
               <li class="nav-item">
-                <a class="nav-link {{ set_active('transaksipembayaran.index') }}" href="{{ Route('transaksipembayaran.index') }}" class="nav-link">
+                <a class="nav-link {{ set_active('transaksi-pembayaran.index') }}" href="{{ Route('transaksi-pembayaran.index') }}" class="nav-link">
                   <i class="nav-icon fas fa-file-invoice-dollar"></i>
                   <p>Riwayat Pembayaran</p>
                 </a>
@@ -236,7 +236,7 @@
           </li>
           @endif
           <li class="nav-item">
-            <a href="{{ Route('transaksipembayaran_user.show') }}" class="nav-link">
+            <a href="{{ Route('transaksi-pembayaran_user.show') }}" class="nav-link">
               <i class="nav-icon fas fa-file-invoice"></i>
               <p>Riwayat Pembayaran</p>
             </a>

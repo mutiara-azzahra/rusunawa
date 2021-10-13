@@ -10,7 +10,7 @@
                     <h3>Tambah Transaksi Pembayaran</h3>
                 </div>
                 <div class="float-right">
-                    <a class="btn btn-success" href="{{ route('transaksipembayaran.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
+                    <a class="btn btn-success" href="{{ route('transaksi-pembayaran.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
                 </div>
             </div>
         </div>        
@@ -28,7 +28,7 @@
     @endif
 
     <div class="card" style="padding: 30px;">
-        <form action="{{ route('transaksipembayaran.store') }}" method="POST">
+        <form action="{{ route('transaksi-pembayaran.store') }}" method="POST">
             @csrf
             
             <div class="col-lg-12">

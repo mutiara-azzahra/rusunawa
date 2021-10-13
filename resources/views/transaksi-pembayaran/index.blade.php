@@ -8,7 +8,7 @@
                 <h2>Data Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('transaksipembayaran.create') }}"><i class="fas fa-plus"></i> Tambah Transaksi Baru</a>
+                <a class="btn btn-success" href="{{ route('transaksi-pembayaran.create') }}"><i class="fas fa-plus"></i> Tambah Transaksi Baru</a>
             </div>
         </div>
     </div>
@@ -41,11 +41,11 @@
             <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }}</td>
             <td>Nomor {{ $tp->ruangan->no_ruangan }}</td>
             <td class="text-center">
-                <form action="{{ route('transaksipembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST" id="form_delete">
+                <form action="{{ route('transaksi-pembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Tampil</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('transaksi-pembayaran.show',$tp->id_transaksi_pembayaran) }}">Tampil</a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('transaksipembayaran.edit',$tp->id_transaksi_pembayaran) }}">Ubah</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('transaksi-pembayaran.edit',$tp->id_transaksi_pembayaran) }}">Ubah</a>
  
                     @csrf
                     @method('DELETE')

@@ -9,7 +9,7 @@
                 <h2>Ubah Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('transaksipembayaran.index') }}"> Kembali</a>
+                <a class="btn btn-secondary" href="{{ route('transaksi-pembayaran.index') }}"> Kembali</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
         </div>
     @endif
  
-    <form action="{{ route('transaksipembayaran.update',$transaksi_pembayaran->id_transaksi_pembayaran) }}" method="POST">
+    <form action="{{ route('transaksi-pembayaran.update',$transaksi_pembayaran->id_transaksi_pembayaran) }}" method="POST">
         @csrf
         @method('PUT')
  

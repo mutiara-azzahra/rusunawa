@@ -16,7 +16,7 @@ class TransaksiPembayaranController extends Controller
     public function index()
     {
         $transaksi_pembayaran = TransaksiPembayaran::latest()->paginate(5);
-        return view('transaksipembayaran.index',compact('transaksi_pembayaran'))
+        return view('transaksi-pembayaran.index',compact('transaksi_pembayaran'))
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -26,7 +26,7 @@ class TransaksiPembayaranController extends Controller
         $pemohon        = Pemohon::all();
         $user           = Auth::user();
 
-        return view('transaksipembayaran.create',compact('ruangan', 'pemohon', 'user'));
+        return view('transaksi-pembayaran.create',compact('ruangan', 'pemohon', 'user'));
     }
     public function store(Request $request)
     {
@@ -54,14 +54,14 @@ class TransaksiPembayaranController extends Controller
             ]);
         }
         
-        return redirect()->route('transaksipembayaran.index')->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
+        return redirect()->route('transaksi-pembayaran.index')->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }
 
     public function show( $id)
     {
         $transaksi_pembayaran           = TransaksiPembayaran::findOrFail($id);
         $detail_transaksi_pembayaran    = DetailTransaksiPembayaran::where('id_transaksi_pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran)->get();
-        return view('transaksipembayaran.show', compact('transaksi_pembayaran', 'detail_transaksi_pembayaran'));
+        return view('transaksi-pembayaran.show', compact('transaksi_pembayaran', 'detail_transaksi_pembayaran'));
     }
     
     public function edit($id)
@@ -69,14 +69,14 @@ class TransaksiPembayaranController extends Controller
         $transaksi_pembayaran   = TransaksiPembayaran::findOrFail($id);
         $pemohon                = Pemohon::all();
 
-        return view('transaksipembayaran.edit',compact('transaksi_pembayaran', 'pemohon'));
+        return view('transaksi-pembayaran.edit',compact('transaksi_pembayaran', 'pemohon'));
     }
   
     public function update(Request $request, TransaksiPembayaran $transaksi_pembayaran)
     {
         $transaksi_pembayaran->update($request->all());
          
-        return redirect()->route('transaksipembayaran.index')
+        return redirect()->route('transaksi-pembayaran.index')
                         ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }
   
@@ -84,7 +84,7 @@ class TransaksiPembayaranController extends Controller
     {
         $transaksi_pembayaran = TransaksiPembayaran::destroy($id);
   
-        return redirect()->route('transaksipembayaran.index')
+        return redirect()->route('transaksi-pembayaran.index')
                         ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }
 
@@ -94,7 +94,7 @@ class TransaksiPembayaranController extends Controller
         $pemohon                = Pemohon::where('id_user', $user_id)->first();
         $transaksi_pembayaran   = TransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->paginate(10);
 
-        return view('transaksipembayaran.pemohon_index', compact('transaksi_pembayaran'));
+        return view('transaksi-pembayaran.pemohon_index', compact('transaksi_pembayaran'));
     }
     public function notif_bayar(){
         $id_pemohon                = Auth::id();

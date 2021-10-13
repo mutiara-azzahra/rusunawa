@@ -74,7 +74,7 @@ Route::resource('kota', KotaController::class);
 Route::resource('galeri', GaleriController::class);
 Route::resource('pemohon', PemohonController::class);
 Route::resource('layanan-informasi', LayananInformasiController::class);
-Route::resource('transaksipembayaran', TransaksiPembayaranController::class);
+Route::resource('transaksi-pembayaran', TransaksiPembayaranController::class);
 Route::resource('detail-transaksipembayaran', DetailTransaksiPembayaranController::class);
 Route::resource('lantai', LantaiController::class);
 Route::resource('user', UserController::class);
@@ -87,7 +87,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'admin'], function () {
     Route::resource('pemohon', PemohonController::class);
-    Route::resource('transaksipembayaran', TransaksiPehmbayaranController::class);
+    Route::resource('transaksi-pembayaran', TransaksiPembayaranController::class);
 
 });
 
@@ -107,7 +107,7 @@ Route::get('{id}/verifikasi', [PemohonController::class, 'verifikasi'])->name('p
 Route::get('/create/permohonan', [PemohonController::class,'create_halaman_depan'])->name('create.de');
 Route::get('/create/permohonan_user', [PemohonController::class,'create_halaman_depan'])->name('create.permohonan');
 
-Route::get('transaksipembayaran_user', [TransaksiPembayaranController::class, 'pemohon_show'])->name('transaksipembayaran_user.show');
+Route::get('transaksi-pembayaran_user', [TransaksiPembayaranController::class, 'pemohon_show'])->name('transaksipembayaran_user.show');
 Route::get('detail-transaksipembayaran_user', [DetailTransaksiPembayaranController::class, 'pemohon_show'])->name('detail-transaksipembayaran_user.show');
 
 Route::get('/api/ruangan_harga/{id}', [RuanganController::class,'api_harga'])->name('api.ruangan');
