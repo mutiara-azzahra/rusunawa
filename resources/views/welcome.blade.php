@@ -73,7 +73,7 @@
                 Menu
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ Route('AdminBeranda') }}">Profil Saya</a>
+                <a class="dropdown-item" href="{{ Route('beranda') }}">Profil Saya</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href ="{{ route('logout') }}">Keluar
                   <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>

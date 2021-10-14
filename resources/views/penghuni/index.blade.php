@@ -8,6 +8,12 @@
                 <h2>Data Penghuni</h2>
             </div>
         </div>
+        <div class="col-lg-12 margin-tb">
+            <div class="float-right">
+                <a class="btn btn-success" href="{{ route('report.pemohon') }}" target="__blank"><i class="fas fa-plus"></i> Cetak PDF</a>
+            </div>
+        </div>
+        
     </div>
  
     @if ($message = Session::get('success'))

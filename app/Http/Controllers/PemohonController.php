@@ -12,6 +12,7 @@ use App\Models\Gedung;
 use App\Models\Lantai;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use PDF;
 
 class PemohonController extends Controller
 {    
@@ -283,13 +284,19 @@ class PemohonController extends Controller
         return redirect()->route('penghuni.index')
                         ->with('success','Penghuni telah dinonaktifkan');
     }
-
-
     public function show_penghuni(){
     
         $pemohon = Pemohon::where('status_permohonan', 'aktif')->paginate(5);;
         
         return view('penghuni.index', compact('pemohon'));
+    }
+    public function cetak_pdf()
+    {
+        $data       = Pemohon::where('status_permohonan', 'aktif')->get();
+        $pdf        = PDF::loadView('report.pemohon', ['data'=>$data]);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->stream('penghuni.pdf');
     }
 
 }
