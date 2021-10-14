@@ -111,7 +111,8 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                                 <div class="form-group">
                                     <strong>Gedung</strong>
-                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly>
+                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly style="display: none;">
+                                    <input type="text" value=" {{ $gedung->nama_gedung }} " name="" class="form-control" readonly>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +215,7 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="card m-3" style="padding:10px;">
-                        <form action="" method="POST">
+                        <form action="{{ route('fasilitas.store') }}" method="POST">
                         @csrf
 
                         <div class="row">
@@ -224,7 +225,8 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <strong>Gedung</strong>
-                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly>
+                                    <input type="text" value=" {{ $gedung->id_gedung }} " name="id_gedung" class="form-control" readonly style="display: none;">
+                                    <input type="text" value=" {{ $gedung->nama_gedung }} " name="" class="form-control" readonly>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">

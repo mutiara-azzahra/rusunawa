@@ -8,7 +8,7 @@
                 <h2>Data Layanan Informasi Rusun</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('layanan-informasi.create') }}"><i class="fas fa-plus"></i> Tambah Kecamatan</a>
+                <a class="btn btn-success" href="{{ route('layanan-informasi.create') }}"><i class="fas fa-plus"></i> Tambah Layanan Informasi</a>
             </div>
         </div>
     </div>

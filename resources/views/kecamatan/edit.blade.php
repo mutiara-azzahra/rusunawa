@@ -27,18 +27,23 @@
     <form action="{{ route('kecamatan.update',$kecamatan->id_kecamatan) }}" method="POST">
         @csrf
         @method('PUT')
- 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Nama Kecamatan</strong>
-                    <input type="text" name="nama_kecamatan" class="form-control" placeholder="kecamatan" value="{{ $kecamatan->nama_kecamatan }}">
+
+        <div class="card" style="padding: 20px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Nama Kecamatan</strong>
+                        <input type="text" name="nama_kecamatan" class="form-control" placeholder="kecamatan" value="{{ $kecamatan->nama_kecamatan }}">
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
-            </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                   <div class="float-right"> 
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>                    
+                </div>
+            </div>        
         </div>
+
     </form>
 </div>
 @endsection

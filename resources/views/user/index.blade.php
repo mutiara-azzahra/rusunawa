@@ -41,9 +41,8 @@
                     <td>{{ $u->username }}</td>
                     <td>{{ $u->email }}</td>
                     <td class="text-center">
-                        <a href="{{ route('user.reset',$u->id_user) }}" style="margin: 5px;" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')"> Reset</a>
-
                         <form action="{{ route('user.destroy',$u->id_user) }}" method="POST">
+                        <a href="{{ route('user.reset',$u->id_user) }}" style="margin: 5px;" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')"> Reset</a>
                             @csrf
                             @method('DELETE')
                             <a class="btn btn-danger btn-sm" onclick=""> <i class="fas fa-trash"></i></a>

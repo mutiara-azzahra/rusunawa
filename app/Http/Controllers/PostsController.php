@@ -45,7 +45,7 @@ class PostsController extends Controller
         return view('ruangan.edit',compact('ruangan', 'lantai'));
     }
   
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Posts $posts)
     {
         $request->validate([
             'title'     => 'required',

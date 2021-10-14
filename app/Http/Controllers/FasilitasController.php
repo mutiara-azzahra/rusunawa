@@ -43,6 +43,19 @@ class FasilitasController extends Controller
 
         return redirect()->route('fasilitas.index', $request->id_fasilitas)->with('success','Data baru berhasil dibuat!');
     }
+    public function fasilitas_gedung( Request $request, $id)
+    {
+
+        $fasilitas = Fasilitas::findOrFail($id);
+        $request->validate([
+            'id_gedung'
+        ]);
+         
+        $fasilitas->update($request->all());
+         
+        return redirect()->route('gedung.show')
+                        ->with('success','Fasilitas Gedung telah ditambahkan');
+    }
 
     public function show( $id)
     {

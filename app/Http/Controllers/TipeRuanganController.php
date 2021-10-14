@@ -49,7 +49,7 @@ class TipeRuanganController extends Controller
     {
         TipeRuangan::findOrFail($id)->update([
             'tipe_ruangan' => $request->tipe_ruangan
-            ]);
+        ]);
          
         return redirect()->route('tiperuangan.index')
                         ->with('success','Data tipe ruangan berhasil ditambahkan!');
