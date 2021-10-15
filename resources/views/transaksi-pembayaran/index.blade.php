@@ -8,6 +8,7 @@
                 <h2>Data Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
+                <a class="btn btn-warning" href="{{ route('transaksi-pembayaran.create') }}"><i class="fas fa-print"></i> Filter Tanggal Cetak</a>
                 <a class="btn btn-success" href="{{ route('transaksi-pembayaran.create') }}"><i class="fas fa-plus"></i> Tambah Transaksi Baru</a>
             </div>
         </div>

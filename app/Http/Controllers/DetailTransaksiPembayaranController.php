@@ -7,6 +7,8 @@ use App\Models\Pemohon;
 use App\Models\TransaksiPembayaran;
 use App\Models\DetailTransaksiPembayaran;
 use App\Models\Ruangan;
+use Illuminate\Support\Facades\Auth;
+use PDF;
 
 class DetailTransaksiPembayaranController extends Controller
 {
@@ -78,12 +80,21 @@ class DetailTransaksiPembayaranController extends Controller
                         ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }
 
-    public function pemohon_show()
+    public function pemohon_show(Pemohon $pemohon)
     {
         $transaksi_pembayaran = TransaksiPembayaran::where('id_transaksi_pembayaran',Auth::user()->id)->first();
         $detail_transaksi_pembayaran = DetailTransaksiPembayaran::where('id_pemohon', $pemohon->id_pemohon)->latest()->get();
         
         return view('detail-transaksipembayaran.pemohon_index', compact('detail_transaksi_pembayaran'));
+    }
+
+    public function cetak_detail_transaksi_user()
+    {
+        $data       = DetailTransaksiPembayaran::all();
+        $pdf        = PDF::loadView('report.detail-transaksi-pembayaran', ['data'=>$data]);
+        $pdf->setPaper('a4', 'landscape');
+
+        return $pdf->stream('detail_transaksi_pembayaran.pdf');
     }
 }
 

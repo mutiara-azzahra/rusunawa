@@ -23,6 +23,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\LantaiController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BlokController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RusunawaBanjarmasinController;
@@ -80,7 +81,7 @@ Route::resource('detail-transaksipembayaran', DetailTransaksiPembayaranControlle
 Route::resource('lantai', LantaiController::class);
 Route::resource('user', UserController::class);
 Route::resource('role', RoleController::class);
-Route::resource('dokumen', DokumenController::class);
+Route::resource('blok', BlokController::class);
 
 //HomeController
 //middleware
@@ -103,13 +104,16 @@ Route::get('pemohon_user/create', [PemohonController::class, 'create'])->name('p
 Route::get('pemohon_user/{id}', [PemohonController::class, 'show'])->name('pemohon_user.show');
 Route::post('pemohon_user/{id}', [PemohonController::class, 'update'])->name('pemohon_user.update');
 Route::post('pemohon_userss/create', [PemohonController::class, 'store'])->name('pemohon_user.store');
-Route::get('penghuni/report', [PemohonController::class, 'cetak_pdf'])->name('report.pemohon');
 Route::get('/create/permohonan', [PemohonController::class,'create_halaman_depan'])->name('create.de');
 Route::get('/create/permohonan_user', [PemohonController::class,'create_halaman_depan'])->name('create.permohonan');
 Route::get('penghuni', [PemohonController::class, 'show_penghuni'])->name('penghuni.index');
 Route::get('{id}/nonaktif', [PemohonController::class, 'nonaktif'])->name('pemohon.nonaktif');
 Route::get('{id}/verifikasi', [PemohonController::class, 'verifikasi'])->name('pemohon.verifikasi');
 Route::get('/api_harga/pemohon/{id}/{tahun}', [PemohonController::class,'api'])->name('api.pemohon');
+
+//Report
+Route::get('penghuni/report', [PemohonController::class, 'cetak_pdf'])->name('report.pemohon');
+Route::get('detail-transaksi-pembayaran/report', [DetailTransaksiPembayaranController::class, 'cetak_detail_transaksi_user'])->name('report.detail-transaksi-pembayaran');
 
 //FasilitasController
 Route::get('fasilitas_gedung', [FasilitasController::class, 'fasilitas_gedung'])->name('gedung.show');

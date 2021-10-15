@@ -140,6 +140,11 @@
                       </a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link {{ set_active('blok.index') }}" href="{{ Route('blok.index') }}" class="nav-link">
+                        <p>Blok</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link {{ set_active('ruangan.index') }}" href="{{ Route('ruangan.index') }}" class="nav-link">
                         <p>Ruangan</p>
                       </a>

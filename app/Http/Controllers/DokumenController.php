@@ -29,7 +29,7 @@ class DokumenController extends Controller
             'surat_keterangan_2'    => 'required',
         ]);
 
-            Gedung::create($request->all());
+            Dokumen::create($request->all());
 
         return redirect()->route('dokumen.index')->with('success','Dokumen berhasil dibuat!');
     }
@@ -60,11 +60,11 @@ class DokumenController extends Controller
                         ->with('success','Data dokumen berhasil diubah!');
     }
 
-    public function destroy( $id)
+    public function destroy( $id, Dokumen $dokumen)
     {
         $dokumen->destroy($id);
   
-        return redirect()->route('gedung.index')
+        return redirect()->route('dokumen.index')
                         ->with('success','Data gedung berhasil dihapus!');
     }
 }
