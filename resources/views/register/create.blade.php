@@ -38,7 +38,7 @@
         <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
             <div class="col-lg-12 margin-tb">
                 <div class="float-left">
-                    <h2>Registrasi Akun Baru </h2>
+                    <h2>Registrasi Akun Baru</h2>
                 </div>
             </div>
         </div>

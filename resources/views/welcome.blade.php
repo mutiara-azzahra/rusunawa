@@ -190,10 +190,11 @@
         <div class="col-lg-6 col-md-12">
           <div class="beranda-syarat text-left">
             <h4 class="beranda-syarat-judul">Syarat Mendaftar</h4>
+            @foreach ($syarat_mendaftar as $s)
             <ul class="beranda-syarat">
-              <li class="beranda-syarat-list"><i class="fas fa-check-circle"></i> Lorem ipsum</li>
+              <li class="beranda-syarat-list"><i class="fas fa-check-circle" style="padding-right: 5px; color: green;"></i>{{ $s->syarat_mendaftar}}</li>           
             </ul>
-            
+            @endforeach
           </div>
         </div>    
       </div>
@@ -354,10 +355,10 @@
             </div>
           </div>
           <div class="col-lg-12 mt-3 text-left">
-              <h6>Sosial Media Kami</h6>
-              <i class="fab fa-instagram"></i><a href="" class=""></a>
-              <i class="fab fa-facebook"></i><a href="" class=""></a>
-              <i class="fab fa-youtube"></i><a href="" class=""></a>
+              <h6>Sosial Media Kami:</h6>
+              <a href="https://google.com" class="footer-sosmed"><i class="fab fa-instagram"></i></a>
+              <a href="https://google.com" class="footer-sosmed"><i class="fab fa-facebook"></i></a>
+              <a href="https://google.com" class="footer-sosmed"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>

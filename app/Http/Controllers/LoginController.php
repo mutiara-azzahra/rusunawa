@@ -10,6 +10,7 @@ use App\Models\Ruangan;
 use App\Models\Galeri;
 use App\Models\Lantai;
 use App\Models\Fasilitas;
+use App\Models\SyaratMendaftar;
 use App\Models\Pemohon;
 use App\Models\User;
 use App\Models\Posts;
@@ -77,12 +78,13 @@ class LoginController extends Controller
     }
     public function Beranda()
     {
-        $fasilitas  = Fasilitas::all();
-        $gedung     = Gedung::withCount('ruang');
-        $rusun      = Rusun::all();
-        $posts      = Posts::paginate(5);
+        $fasilitas          = Fasilitas::all();
+        $gedung             = Gedung::withCount('ruang');
+        $rusun              = Rusun::all();
+        $syarat_mendaftar   = SyaratMendaftar::all();
+        $posts              = Posts::paginate(5);
 
-        return view('welcome', compact('rusun', 'gedung', 'posts', 'fasilitas'));
+        return view('welcome', compact('rusun', 'gedung', 'posts', 'fasilitas', 'syarat_mendaftar'));
     }
 
     public function faq()

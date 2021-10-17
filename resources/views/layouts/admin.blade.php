@@ -172,6 +172,11 @@
                         <p>Layanan Informasi</p>
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link {{ set_active('syarat-mendaftar.index') }}" href="{{ Route('syarat-mendaftar.index') }}" class="nav-link">
+                        <p>Syarat Mendaftar</p>
+                      </a>
+                    </li>
                 </ul>
               </li>
               
