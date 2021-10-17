@@ -9,7 +9,7 @@
                 <h2>Detail Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-warning" href="{{ route('report.detail-transaksi-pembayaran') }}"><i class="fas fa-print"></i> Cetak</a>
+                <a class="btn btn-warning" href="{{ route('report.detail-transaksi-pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran) }}" target="_blank"><i class="fas fa-print"></i> Cetak</a>
                 <a class="btn btn-success btn-secondary" href=""><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
@@ -44,7 +44,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Penerima</strong><br>
-                    {{ $transaksi_pembayaran->user }}
+                    {{ $transaksi_pembayaran->user->nama_user }}
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -83,7 +83,7 @@
               <div class="col-sm-4 invoice-col">
                 <strong>Penerima : </strong>
                 <address>
-                  {{ $transaksi_pembayaran}}<br>
+                  {{ $transaksi_pembayaran->user->nama_user }}<br>
                   Ruangan : {{ $transaksi_pembayaran->pemohon->ruangan->no_ruangan }}<br>
                   Gedung : {{ $transaksi_pembayaran->pemohon->ruangan->lantai->gedung->nama_gedung }} <br>
                 </address>

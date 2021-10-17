@@ -18,7 +18,6 @@ class AdminController extends Controller
     {
         $user = auth()->user();  
         $pemohon = Pemohon::where('id_user', $user->id_user)->first();
-
         $pemohonall = Pemohon::all()->map(function($p){
             return $p->transaksi_pembayaran;
         });
@@ -35,7 +34,7 @@ class AdminController extends Controller
             $month = Carbon::now()->translatedFormat('F');
             $detail = DetailTransaksiPembayaran::where('id_transaksi_pembayaran',$transaksi_pembayaran->id_transaksi_pembayaran)->whereBulan($month)->first();
             }
-            return view('beranda.user', compact('detail','transaksi_pembayaran', 'month'));
+            return view('beranda.user', compact('detail','transaksi_pembayaran', 'month','pemohon'));
             
         }else{
 

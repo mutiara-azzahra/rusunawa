@@ -22,6 +22,10 @@
       th{
         text-align: center;
       }
+      .atas{
+          text-align: left;
+          border: none;
+      }
       td{
         text-align: center;
       }
@@ -71,9 +75,17 @@
      .isi{
          padding:10px;
      }
+
     </style>
 </head>
 <body>
+    <style>
+        @page { 
+          size: 21 cm 29.6 cm; 
+          margin: 0.5 cm 0.5 cm 0.5 cm 0.5 cm !important;
+          padding: 0px !important;
+          } 
+     </style>
     <div class="header">
             <div class="logo">
                     <img class="pemko" src="logo.png">
@@ -90,27 +102,73 @@
         <div class="isi">
             <h2 style="text-align:center;">NOTA PEMBAYARAN</h2>
             <br>
+
+            <table class="table align-items-center table-flush atas" id="dataTable">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="atas"><b>Nama Pembayar:</b></th>
+                        <th class="atas"><b>Penerima:</b></th>
+                        <th class="atas"><b>Tanggal Bayar:</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="atas">{{ $transaksi_pembayaran->pemohon->nama_kepala_keluarga }}</td>
+                        <td class="atas">{{ $transaksi_pembayaran->user->nama_user }}</td>
+                        <td class="atas">{{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->format('d F Y') }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table align-items-center table-flush atas" id="dataTable">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="atas"><b>Gedung:</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="atas">{{ $transaksi_pembayaran->ruangan->lantai->gedung->nama_gedung }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table align-items-center table-flush atas" id="dataTable">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="atas"><b>No Ruangan:</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="atas">{{ $transaksi_pembayaran->ruangan->no_ruangan }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+
             <table class="table align-items-center table-flush" id="dataTable">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th>No</th>
-                                    <th>Bulan</th>
-                                    <th>Harga</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($data as $p)
-                                <tr>
-                                    <td>{{$loop->iteration}}</td>
-                                    <td>{{$p->bulan}}</td>
-                                    <td>{{$p->harga}}</td>
-                                    
-                                    {{-- <td>{{$p->ruangan->lantai->gedung->nama_gedung}}</td>
-                                    <td>{{$p->ruangan->lantai->lantai}}</td> --}}
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                <thead class="thead-light">
+                    <tr>
+                        <th>No</th>
+                        <th>Bulan</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($data as $p)
+                    <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td>{{$p->bulan}}</td>
+                        <td>Rp. {{$p->harga}},-</td>
+                    </tr>
+                    @endforeach
+                    <tr><td colspan="2"><b>Total</b></td>
+                        <td><b>Rp. {{$data->sum('harga')}},-<b></td></tr>
+                </tbody>
+            </table>
+
                 <br>
                 <br>
                 <div class="ttd">

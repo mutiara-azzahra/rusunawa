@@ -12,6 +12,9 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('admin-template/plugins/fontawesome-free/css/all.min.css') }}">
 
+  
+  <link rel="stylesheet" href="{{ asset('admin-template/summernote/summernote.css') }}">
+
   <!-- DataTables -->
   <link rel="stylesheet" href="{{ asset('admin-template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
   <link rel="stylesheet" href="{{ asset('admin-template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
@@ -285,6 +288,7 @@
 <script src="{{ asset('admin-template/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('admin-template/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('admin-template/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('admin-template/summernote/summernote.js') }}"></script>
 
 <!-- AdminLTE App -->
 <script src="{{ asset('admin-template/dist/js/adminlte.min.js') }}"></script>
@@ -323,10 +327,9 @@ $(function () {
     })
 })
 
-$(function () {
-  // Summernote
-  $('.textarea').summernote()
-})
+$(document).ready(function() {
+  $('#summernote').summernote();
+});
 
 </script>
 

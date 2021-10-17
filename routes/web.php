@@ -113,13 +113,16 @@ Route::get('/api_harga/pemohon/{id}/{tahun}', [PemohonController::class,'api'])-
 
 //Report
 Route::get('penghuni/report', [PemohonController::class, 'cetak_pdf'])->name('report.pemohon');
-Route::get('detail-transaksi-pembayaran/report', [DetailTransaksiPembayaranController::class, 'cetak_detail_transaksi_user'])->name('report.detail-transaksi-pembayaran');
+Route::get('detail-transaksi-pembayaran/report/{id}', [DetailTransaksiPembayaranController::class, 'cetak_detail_transaksi_user'])->name('report.detail-transaksi-pembayaran');
+Route::get('transaksi/report', [TransaksiPembayaranController::class, 'cetak_transaksi_pembayaran_bulanan'])->name('report.transaksi-pembayaran');
+
 
 //FasilitasController
 Route::get('fasilitas_gedung', [FasilitasController::class, 'fasilitas_gedung'])->name('gedung.show');
 
 //TransaksiPembayaranController
-Route::get('transaksi-pembayaran_user', [TransaksiPembayaranController::class, 'pemohon_show'])->name('transaksipembayaran_user.show');
+Route::get('transaksi-pembayaran/filter/cetak', [TransaksiPembayaranController::class, 'filter'])->name('transaksi-pembayaran.filter');
+Route::get('transaksi-pembayaran_user', [TransaksiPembayaranController::class, 'pemohon_show'])->name('transaksi-pembayaran_user.show');
 Route::get('detail-transaksipembayaran_user', [DetailTransaksiPembayaranController::class, 'pemohon_show'])->name('detail-transaksipembayaran_user.show');
 
 //api

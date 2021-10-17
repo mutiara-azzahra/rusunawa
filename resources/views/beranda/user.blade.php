@@ -53,7 +53,7 @@
               </div>
               <div class="card p-2">
                 <div class=""><strong>Status Pembayaran</strong></div>
-                Bulan {{ $month = Carbon::now()->translatedFormat('F'); }} <div><h4>
+                Bulan {{ $month = Carbon\carbon::now()->translatedFormat('F'); }} <div><h4>
                   @if ($detail)
                       
                   <span class="badge badge-success">Sudah Dibayar</span>

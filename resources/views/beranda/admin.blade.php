@@ -33,7 +33,7 @@
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{ Route('pemohon.index') }}" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->
@@ -61,7 +61,7 @@
                 <div class="inner">
                   <div class="col">
                     <div class="row">
-                      <h3></h3> <h6> orang</h6>
+                      <h3>7</h3><h6> orang</h6>
                     </div>
                   </div>
                   Tunggakan Bulan ini

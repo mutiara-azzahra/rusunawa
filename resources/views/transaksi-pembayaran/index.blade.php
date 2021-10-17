@@ -8,7 +8,7 @@
                 <h2>Data Transaksi Pembayaran</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-warning" href="{{ route('transaksi-pembayaran.create') }}"><i class="fas fa-print"></i> Filter Tanggal Cetak</a>
+                <a class="btn btn-primary" href="{{ route('transaksi-pembayaran.filter') }}"><i class="fas fa-print"></i> Filter Tanggal - Cetak</a>
                 <a class="btn btn-success" href="{{ route('transaksi-pembayaran.create') }}"><i class="fas fa-plus"></i> Tambah Transaksi Baru</a>
             </div>
         </div>
@@ -45,13 +45,12 @@
                 <form action="{{ route('transaksi-pembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST" id="form_delete">
  
                     <a class="btn btn-info btn-sm" href="{{ route('transaksi-pembayaran.show',$tp->id_transaksi_pembayaran) }}">Tampil</a>
- 
                     <a class="btn btn-primary btn-sm" href="{{ route('transaksi-pembayaran.edit',$tp->id_transaksi_pembayaran) }}">Ubah</a>
  
                     @csrf
                     @method('DELETE')
  
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+                    <a type="submit" class="btn btn-danger btn-sm" onclick="Hapus()">Hapus</button>
                 </form>
             </td>
         </tr>
@@ -71,7 +70,7 @@
 @section('script')
 
 <script>
-    Hapus = (id_pemohon)=>{
+    Hapus = (id_transaksi_pembayaran)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
             text:  "menghapus notifikasi" ,

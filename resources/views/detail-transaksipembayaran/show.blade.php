@@ -10,9 +10,9 @@
             </div>
             <div class="float-right">
                 @if(Auth::user()->id_role == 1 )
-                <a class="btn btn-success" href="{{ route('transaksipembayaran.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-success" href="{{ route('transaksi-pembayaran.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
                 @else
-                <a class="btn btn-success" href="{{ route('transaksipembayaran_user.show') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-success" href="{{ route('transaksi-pembayaran_user.show') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
                 @endif
             </div>
         </div>

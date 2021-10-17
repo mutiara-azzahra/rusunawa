@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\TransaksiPembayaranExport;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Models\TransaksiPembayaran;
 use App\Models\Ruangan;
 use App\Models\Gedung;
 use App\Models\Pemohon;
 use App\Models\DetailTransaksiPembayaran;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 
 class TransaksiPembayaranController extends Controller
@@ -39,11 +42,11 @@ class TransaksiPembayaranController extends Controller
             'id_user'           => 'required',
         ]);
         
-        $transaksi = TransaksiPembayaran::where('id_pemohon',$request->id_pemohon)->first();
-        if(!$transaksi)
-        {
+        // $transaksi = TransaksiPembayaran::where('id_pemohon',$request->id_pemohon)->first();
+        // if(!$transaksi)
+        // {
             $transaksi = TransaksiPembayaran::create($request->all());
-        }
+        // }
 
         foreach($request->bulan as $bulan)
         {
@@ -101,14 +104,22 @@ class TransaksiPembayaranController extends Controller
         
         return view ('index', compact('transaksi_pembayaran'));
     }
+    public function filter()
+    {
+        return view('transaksi-pembayaran.filter');
+    }
     public function cetak_transaksi_pembayaran_bulanan(Request $request)
     {
-        $data           = TransaksiPembayaran::whereBetween('created_at', [$request->tanggal_awal, $req->tanggal_akhir])->get();
+
+        $data           = TransaksiPembayaran::whereBetween('created_at', [$request->tanggal_awal, $request->tanggal_akhir])->get();
         $tanggal_awal   = $request->tanggal_awal;
         $tanggal_akhir  = $request->tanggal_akhir;
-        $pdf            = PDF::loadView('report.transaksi-pembayaran', ['data'=>$data]);
-        $pdf->setPaper('a4', 'landscape');
+//        dd(new TransaksiPembayaranExport($tanggal_awal, $tanggal_akhir), $tanggal_awal);
+        return Excel::download(new TransaksiPembayaranExport($tanggal_awal, $tanggal_akhir), 'transaksi-pembayaran-rusunawa.xlsx');
 
-        return $pdf->stream('transaksi_pembayaran_bulanan.pdf');
+        // $pdf            = PDF::loadView('report.transaksi-pembayaran', ['data'=>$data]);
+        // $pdf->setPaper('a4', 'landscape');
+
+        // return $pdf->stream('transaksi_pembayaran_bulanan.pdf');
     }
 }

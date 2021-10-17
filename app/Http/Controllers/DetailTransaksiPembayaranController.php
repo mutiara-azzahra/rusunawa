@@ -88,11 +88,12 @@ class DetailTransaksiPembayaranController extends Controller
         return view('detail-transaksipembayaran.pemohon_index', compact('detail_transaksi_pembayaran'));
     }
 
-    public function cetak_detail_transaksi_user()
+    public function cetak_detail_transaksi_user($id)
     {
-        $data       = DetailTransaksiPembayaran::all();
-        $pdf        = PDF::loadView('report.detail-transaksi-pembayaran', ['data'=>$data]);
-        $pdf->setPaper('a4', 'landscape');
+        $transaksi_pembayaran = TransaksiPembayaran::findOrFail($id);
+        $data       = DetailTransaksiPembayaran::where('id_transaksi_pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran)->get();
+        $pdf        = PDF::loadView('report.detail-transaksi-pembayaran', ['data'=>$data, 'transaksi_pembayaran'=>$transaksi_pembayaran]);
+        $pdf->setPaper('a4', 'potrait');
 
         return $pdf->stream('detail_transaksi_pembayaran.pdf');
     }
