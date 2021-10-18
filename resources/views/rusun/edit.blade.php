@@ -24,21 +24,38 @@
         </div>
     @endif
  
-    <form action="{{ route('rusun.update',$rusun->id_rusun) }}" method="POST">
-        @csrf
-        @method('PUT')
- 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Rusun</strong>
-                    <input type="text" name="nama_rusun" class="form-control" placeholder="" value="{{ $rusun->nama_rusun }}">
+    <div class="card" style="padding: 20px;">
+        <form action="{{ route('rusun.update',$rusun->id_rusun) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+    
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Rusun</strong>
+                        <input type="text" name="nama_rusun" class="form-control" placeholder="" value="{{ $rusun->nama_rusun }}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Alamat</strong>
+                        <input type="text" name="alamat" class="form-control" placeholder="" value="{{ $rusun->alamat }}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Foto Rusun</strong>
+                        <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1" value="{{ $rusun->foto }}">
+                    </div>                    
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
 </div>
 @endsection

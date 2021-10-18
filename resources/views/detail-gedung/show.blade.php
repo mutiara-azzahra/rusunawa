@@ -152,7 +152,13 @@
             
             <div class="row">
               @foreach($l->ruangan as $r)
-                <button type="button" onclick="getDetailRuangan('{{$r->id_ruangan}}')" class="btn btn-primary m-1">{{ $r->no_ruangan }}</button>
+                <button type="button" onclick="getDetailRuangan('{{$r->id_ruangan}}')" class="btn 
+                  @if($r->status_ruangan == 'kosong')
+                  btn-success
+                  @else
+                  btn-danger
+                  @endif
+                  m-1">{{ $r->no_ruangan }}</button>
               @endforeach
               
             </div>
@@ -216,7 +222,9 @@
                         <td class="text-left"><p id="status_ruangan_modal"></p></td>
                       </tr>
                     </table>
-                    @if (Auth::check())
+
+                    <div class="float-right">
+                      @if (Auth::check())
                       <form action="{{Route('create.permohonan')}}" method="GET">
                         @csrf
                         <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
@@ -224,7 +232,9 @@
                       </form>
                       @else 
                       <a href="{{ route('loginPage') }}" class="btn btn-primary" style="width: 200px;">Pesan Ruangan</a>
-                    @endif
+                      @endif
+                    </div>
+                    
                     <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
                   </div>
               </div>
