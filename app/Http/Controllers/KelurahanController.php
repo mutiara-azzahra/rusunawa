@@ -19,8 +19,8 @@ class KelurahanController extends Controller
 
     public function create()
     {
-        $kota = Kota::all();
-        $kecamatan = Kecamatan::all();
+        $kota       = Kota::all();
+        $kecamatan  = Kecamatan::all();
 
         return view('kelurahan.create',compact('kecamatan', 'kota'));
     }
@@ -28,8 +28,8 @@ class KelurahanController extends Controller
     public function store(Request $request)
     {
         $request -> validate([
-            'nama_kelurahan' => 'required',
-            'id_kecamatan' => 'required',
+            'nama_kelurahan'    => 'required',
+            'id_kecamatan'      => 'required',
         ]);
 
         Kelurahan::create($request->all());
@@ -55,8 +55,8 @@ class KelurahanController extends Controller
     public function update(Request $request, Kelurahan $kelurahan)
     {
         $request->validate([
-            'nama_kelurahan' => 'required',
-            'id_kecamatan' => 'required',
+            'nama_kelurahan'    => 'required',
+            'id_kecamatan'      => 'required',
         ]);
          
         $kelurahan->update($request->all());

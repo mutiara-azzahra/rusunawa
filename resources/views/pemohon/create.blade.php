@@ -36,7 +36,7 @@
         @endif
         @csrf
             <div class="row">
-                
+                @if(Auth::user()->id_role == 1)
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-12 col-lg-4">
@@ -66,6 +66,9 @@
                         </div>
                     </div>
                 </div>
+                @else
+                @endif
+    
                 @if(Auth::user()->id_role == 1)
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
@@ -132,7 +135,6 @@
                 @endif
             </div>
 
-            @if(Auth::user()->id_role == 1)
             <div class="col">
                 <div class="col">
                     <div class="row">
@@ -168,9 +170,7 @@
                     </div>
                 </div>
             </div>
-            @elseif(Auth::user()->id_role == 2)
 
-            @endif
                 @if(Auth::user()->id_role == 1)
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">

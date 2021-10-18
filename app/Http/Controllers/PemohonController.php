@@ -53,9 +53,6 @@ class PemohonController extends Controller
                 'nama_kepala_keluarga'              => 'required',
                 'alamat'                            => 'required',
                 'jumlah_anggota_keluarga'           => 'required',
-                'id_gedung'                         => 'required',
-                'id_lantai'                         => 'required',
-                'id_ruangan'                        => 'required',
             ]);
         }
         
@@ -200,17 +197,32 @@ class PemohonController extends Controller
         return view('pemohon.create',compact('ruangan', 'gedung', 'lantai', 'pilih_ruangan','pemohon'));
     }
 
-    public function pilihgedung(Request $request)
+    public function pilihgedung()
     {
-        $gedung = Gedung::all();
+        $gedung     = Gedung::all();
+        
         return view('pemohon.pilihgedung', compact('gedung'));        
     }
-    public function pilihruangan($id_gedung)
+    public function pilihruangan(Request $request, $id_gedung)
     {
-        $gedung = Gedung::findOrFail($id_gedung);
-        $lantai = Lantai::where('id_gedung', $gedung->id_gedung)->get();
 
-        return view('pemohon.pilihruangan', compact('gedung', 'lantai'));        
+        $gedung     = Gedung::findOrFail($id_gedung);
+        $lantai     = Lantai::where('id_gedung', $gedung->id_gedung)->get();
+
+        return view('pemohon.pilihruangan', compact('gedung', 'lantai', ));        
+    }
+    public function pesanRuangan(Request $request)
+    {
+        $ruangan = Ruangan::where('id_ruangan',$request->id_ruangan)->first();
+        $pemohon = Pemohon::where('id_user',Auth::user()->id_user)->first();
+
+        $pemohon->id_gedung = $ruangan->lantai->gedung->id_gedung;
+        $pemohon->id_lantai = $ruangan->lantai->id_lantai;
+        $pemohon->id_ruangan    = $ruangan->id_ruangan;
+
+        $pemohon->update();
+
+        return redirect()->route('beranda', compact('ruangan'));
     }
 
     public function verifikasi($id)
@@ -250,10 +262,10 @@ class PemohonController extends Controller
     public function updatefoto(Request $request, Pemohon $pemohon)
     {
         $request->validate([
-            'foto_ktp'                          => 'required',
-            'foto_akta_nikah'                   => 'required',
-            'foto_surat_keterangan_penghasilan' => 'required',
-            'foto_anggota_keluarga'             => 'required',
+            'foto_ktp'                          => 'required|mimes:jpg,png,jpeg',
+            'foto_akta_nikah'                   => 'required|mimes:jpg,png,jpeg',
+            'foto_surat_keterangan_penghasilan' => 'required|mimes:jpg,png,jpeg',
+            'foto_anggota_keluarga'             => 'required|mimes:jpg,png,jpeg',
         ]);
 
         $pemohon->update($request->all());

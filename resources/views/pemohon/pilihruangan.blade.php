@@ -155,10 +155,11 @@
                         <div class="text-right">
                           <span id="harga{{$l->id_lantai}}" style="font: bold; color:#F58735; font-size: 25px;">Rp. 0 </span>/bulan<br><br>
                           @if (Auth::check()) 
-                            <form action="{{Route('create.permohonan')}}" method="GET">
+                            <form action="{{ route('pemohon.pesanRuangan') }}" method="GET">
                               @csrf
                               <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
-                              <button class="btn btn-success" style="width: 200px;">Pesan Ruangan</button>
+                              {{-- <a href="{{Route('pemohon.pilihruangan',$l->id_lantai)}}" class="btn btn-success" style="width: 200px;">Pesan Ruangan</a> --}}
+                              <button type="submit" class="btn btn-success" style="width: 200px;">Pesan Ruangan</button>
                             </form>
                             @else 
                             <a href="{{ route('loginPage') }}" class="btn btn-primary" style="width: 200px;">Pesan Ruangan</a>

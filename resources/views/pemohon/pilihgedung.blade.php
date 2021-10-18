@@ -24,7 +24,7 @@
                     <b>{{$g->nama_gedung}}</b>
                     <p class="card-text text-muted">{{$g->alamat_gedung}}</p>
                     <p class="card-text" style="color: red">@if($g->ruangan != null){{$g->ruangan->count()}} @else 0 @endif Ruangan Tersedia</p>
-                    <a href="{{ route('pemohon.pilihruangan',$g->id_gedung)}}"  class="btn btn-primary">Pilih Ruangan</a>
+                    <a href="{{ route('pemohon.pilihruangan',$g->id_gedung)}}"  class="btn btn-success">Pilih Ruangan</a>
                 </div>
             </div>
         </div>

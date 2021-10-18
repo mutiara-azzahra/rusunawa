@@ -129,7 +129,7 @@
   </div>
 </div>
 
-<div class="container justify-content-center">
+<div class="container justify-content-center" style="margin-top: 100px;">
   <h3 data-aos="zoom-in-up"><b>Informasi Pada Aplikasi Rusunawa</b></h3>
 <div class="underline-title mx-auto" data-aos="zoom-in-up"></div>
 

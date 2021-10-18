@@ -46,7 +46,7 @@
 
 <div class="login-wrapper">
   <div class="login">
-    <div class="card card-login shadow-sm p-4 bg-white rounded " style="width: 400px;">
+    <div class="card card-login shadow-sm p-4 bg-white rounded" style="width: 400px;">
       <img class="card-img-top" src="{{ asset('logo.png') }}" style="width: 100px;">
       <div class="card-body">
         <h5 class="text-center">MASUK AKUN RUSUNAWA</h5>
@@ -64,17 +64,21 @@
             </div>
           </div>
             <div class="button justify-content-center">
-              <button type="submit" class="btn btn-primary mx-auto d-block" style="width: 200px">Masuk</button>
+              <button type="submit" class="btn btn-primary mx-auto d-block mt-2" style="width: 200px">Masuk</button>
             </div>
           </form>
-        <div class="register" style="padding-top: 30px;">
-            <p class="text-center"><a href="{{ route('forgot-password') }}">Lupa Password?</a></p>
-            <p class="text-center">Belum punya akun? <a href="{{ route('formRegister') }}">Register.</p>
-        </div>
-
-        <div class="">
-          <p class="text-center"><a href="{{ route('Beranda')}}">Kembali</a></p>
-        </div>
+          <div class="button justify-content-center">
+            <a type="submit" href="{{ route('formRegister') }}" class="btn btn-success mx-auto d-block" style="width: 200px">Register</a>
+          </div>
+          <div class="text-center">
+            <div class="button justify-content-center">
+              <a href="{{ route('forgot-password') }}" class="mx-auto d-block" style="width: 200px">Lupa Password?</a>
+            </div>
+            <div class="button justify-content-center">
+              <a href="{{ route('Beranda')}}" class="mx-auto d-block" style="width: 200px">Kembali</a>
+            </div>
+          </div>
+          
       </div>
   
     </div>

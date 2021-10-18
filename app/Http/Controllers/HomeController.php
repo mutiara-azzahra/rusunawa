@@ -15,7 +15,7 @@ class HomeController extends Controller
         })
         ->with('pemohon')
         ->get();
-        dd($ruangan);
+        
         return view('home',compact('ruangan'));
     }
     

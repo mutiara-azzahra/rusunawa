@@ -52,7 +52,7 @@ class LantaiController extends Controller
     public function update(Request $request, Lantai $lantai)
     {
         $request->validate([
-            'lantai'    => 'required',
+            'lantai'        => 'required',
             'id_gedung'     => 'required',
         ]);
          

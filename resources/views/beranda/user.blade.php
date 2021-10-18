@@ -40,13 +40,20 @@
                 @elseif($pemohon->status_pengajuan =='diproses')
                 <div><h4><span class="badge badge-warning">Diproses</span></h4></div>
 
+                @if($pemohon->id_ruangan == null)
+                <div><a class="btn btn-success btn-sm mt-3" href="{{ Route('pemohon.pilihgedung') }}"> Pilih Gedung</a></div>
+                @else
+                @endif
+
                 @elseif($pemohon->status_pengajuan =='ditolak')
                 <div><h4><span class="badge badge-danger">Ditolak</span></h4></div>
 
                 @elseif($pemohon->status_pengajuan =='belum lengkap')
                 <div><h4><span class="badge badge-info">Belum Lengkap</span></h4></div>
                 <div><a class="btn btn-success btn-sm" href="{{ Route('pemohon_user.create') }}"> Lengkapi Dokumen</a></div>
-                
+
+
+
                 @endif
                 
                 

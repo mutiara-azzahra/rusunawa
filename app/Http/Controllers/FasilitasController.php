@@ -35,8 +35,8 @@ class FasilitasController extends Controller
 
 
         $input = $request->all();
-        $nama_foto = $input['nama_fasilitas'].'_'.$request->icon->getClientOriginalName();
-        $input['icon']= $nama_foto;
+        $nama_foto      = $input['nama_fasilitas'].'_'.$request->icon->getClientOriginalName();
+        $input['icon']  = $nama_foto;
         $request->file('icon')->move('storage/icon_galeri/', $nama_foto);
 
         Fasilitas::create($input);

@@ -64,15 +64,15 @@
                         <table class="text-left">
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Username</strong></td>
-                                        <td><input style="width:300px;" type="text" name="username" class="form-control" placeholder=""></td>
+                                        <td><input style="width:300px;" type="text" name="username" class="form-control" placeholder="Username"></td>
                                     </tr>
                                     <tr>
                                         <td class="p-3"style="padding-right:50px;"><strong>Email</strong></td>
-                                        <td><input style="width:300px;" type="text" name="email" class="form-control" placeholder=""></td>
+                                        <td><input style="width:300px;" type="text" name="email" class="form-control" placeholder="contoh@email.com"></td>
                                     </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Password</strong></td>
-                                        <td><input style="width:300px;" type="password" name="password" class="form-control" placeholder=""></td>
+                                        <td><input style="width:300px;" type="password" name="password" class="form-control" placeholder="Password"></td>
                                     </tr>
                         </table>                        
                     </div>
