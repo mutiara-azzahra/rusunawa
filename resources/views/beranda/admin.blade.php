@@ -25,9 +25,12 @@
               <!-- small box -->
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <div class="row">
-                    <h3>{{ $pemohon_diproses }}</h3><h6> orang</h6>
+                  <div class="col">
+                    <div class="row">
+                      <h3> {{ $pemohon_diproses }} </h3><h6> orang</h6>
+                    </div>
                   </div>
+                  
                   Jumlah Pemohon Belum Diverifikasi
                 </div>
                 <div class="icon">
@@ -43,7 +46,7 @@
                 <div class="inner">
                   <div class="col">
                     <div class="row">
-                      <h3>{{ $pemohon_aktif }}</h3><h6> orang</h6>
+                      <h3> {{ $pemohon_aktif }} </h3><h6> orang</h6>
                     </div>
                   </div>
                   Jumlah Penghuni Aktif
@@ -61,10 +64,10 @@
                 <div class="inner">
                   <div class="col">
                     <div class="row">
-                      <h3>7</h3><h6> orang</h6>
+                      <h3>{{ $tunggakan }}</h3><h6> orang</h6>
                     </div>
                   </div>
-                  Tunggakan Bulan ini
+                  Tunggakan Bulan {{ $bulan_ini }}
                 </div>
                 <div class="icon">
                   <i class="ion ion-person-add"></i>
@@ -78,7 +81,7 @@
               <div class="small-box bg-secondary">
                 <div class="inner">
                   <div class="col">
-                    <h3>Rp. 3.000.000</h3>
+                    <h3>Rp. {{ $detail_transaksi_pembayaran }}</h3>
                   </div>
                   Total Pendapatan Bulan ini
                 </div>
