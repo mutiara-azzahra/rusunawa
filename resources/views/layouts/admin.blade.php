@@ -60,7 +60,7 @@
     </ul>
   </nav>
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-light" style="position:fixed;">
+  <aside class="main-sidebar sidebar-light">
     <!-- Brand Logo -->
     <a href="" class="brand-link" style="background-color: #192841">
       <img src="{{ asset('admin-template/dist/img/logo.png') }}" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -260,8 +260,8 @@
               <p>Halaman Utama</p>
             </a>
           </li>
-        @endif
-          </ul>            
+          </ul>
+          @endif           
         </nav>
     </div>
   </aside>

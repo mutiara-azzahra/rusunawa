@@ -37,17 +37,6 @@
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <strong>Gedung</strong>
-                            <select name="id_gedung" class="form-control" >
-                                <option value="">---Pilih Gedung--</option>
-                                @foreach($gedung as $g)
-                                <option value=" {{ $g->id_gedung }}"> {{ $g->nama_gedung }} </option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
                             <strong>Nama Fasilitas</strong>
                             <input type="text" name="nama_fasilitas" class="form-control" placeholder="Isi nama fasilitas">
                         </div>
@@ -66,7 +55,7 @@
                         <div class="form-group">
                             <strong>Jumlah</strong>
                             <select name="jumlah_fasilitas" class="form-control" >
-                                <option value="">---Pilih Status--</option>
+                                <option value="">---Pilih Jumlah--</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>

@@ -197,7 +197,7 @@
                         <td></td>
                         <td class="text-center">
                                     <form action="{{ route('fasilitas.destroy',$f->id_fasilitas) }}" id="form_delete" method="POST">
-                                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_fasilitas}}')"> Hapus</a>
+                                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{$f->id_fasilitas}}')"> Hapus</a>
             
                                         @csrf
                                         @method('DELETE')
@@ -215,7 +215,7 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="card m-3" style="padding:10px;">
-                        <form action="{{ route('fasilitas.store') }}" method="POST">
+                        <form action="{{ route('fasilitas.fasilitas-gedung') }}" method="GET">
                         @csrf
 
                         <div class="row">

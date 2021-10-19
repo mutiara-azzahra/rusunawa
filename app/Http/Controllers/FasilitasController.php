@@ -43,19 +43,14 @@ class FasilitasController extends Controller
 
         return redirect()->route('fasilitas.index', $request->id_fasilitas)->with('success','Data baru berhasil dibuat!');
     }
-    public function fasilitas_gedung( Request $request, $id)
-    {
-
-        $fasilitas = Fasilitas::findOrFail($id);
-        $request->validate([
-            'id_gedung'
-        ]);
+    // public function fasilitasGedung($id)
+    // {
+    //     $gedung = Gedung::findOrFail($id);
          
-        $fasilitas->update($request->all());
+    //     $fasilitas->update($request);
          
-        return redirect()->route('gedung.show')
-                        ->with('success','Fasilitas Gedung telah ditambahkan');
-    }
+    //     return redirect()->route('gedung.show', compact('fasilitas'));
+    // }
 
     public function show( $id)
     {
@@ -92,4 +87,6 @@ class FasilitasController extends Controller
         return redirect()->route('fasilitas.index')
                         ->with('success','Data fasilitas umum berhasil dihapus!');
     }
+
+    
 }

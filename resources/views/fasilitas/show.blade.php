@@ -28,7 +28,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Kategori</strong><br>
-                    {{ $fasilitas->kategori }}<br>
+                    {{ $fasilitas->kategori_fasilitas }}<br>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -40,7 +40,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Icon</strong><br>
-                    {{ $fasilitas->icon }}<br>
+                    {{ $fasilitas->icon }}
+                    <br>
                 </div>
             </div>  
         </div>

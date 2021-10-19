@@ -209,7 +209,7 @@ class PemohonController extends Controller
         $gedung     = Gedung::findOrFail($id_gedung);
         $lantai     = Lantai::where('id_gedung', $gedung->id_gedung)->get();
 
-        return view('pemohon.pilihruangan', compact('gedung', 'lantai', ));        
+        return view('pemohon.pilihruangan', compact('gedung', 'lantai' ));        
     }
     public function pesanRuangan(Request $request)
     {

@@ -46,7 +46,7 @@ class GedungController extends Controller
     {
         $gedung     = Gedung::findOrFail($id);
         $galeri     = Galeri::where('id_gedung', $gedung->id_gedung)->latest()->get();
-        $fasilitas  = Fasilitas::where('id_gedung', $gedung->id_gedung)->latest()->get();
+        $fasilitas  = Fasilitas::all();
 
         return view('gedung.show', compact('gedung','galeri', 'fasilitas'));
     }

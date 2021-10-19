@@ -103,8 +103,6 @@ Route::post('/kirimemail',[RusunawaBanjarmasinController::class,'index'])->name(
 Route::get('pemohon_user/pilih-gedung', [PemohonController::class, 'pilihgedung'])->name('pemohon.pilihgedung');
 Route::get('pemohon_user/pilih-ruangan/{id_gedung}', [PemohonController::class, 'pilihruangan'])->name('pemohon.pilihruangan');
 Route::get('pemohon_user/pesan-ruangan', [PemohonController::class, 'pesanRuangan'])->name('pemohon.pesanRuangan');
-
-
 Route::get('pemohon_user/create', [PemohonController::class, 'create'])->name('pemohon_user.create');
 Route::get('pemohon_user/{id}', [PemohonController::class, 'show'])->name('pemohon_user.show');
 Route::post('pemohon_user/{id}', [PemohonController::class, 'update'])->name('pemohon_user.update');
@@ -123,7 +121,7 @@ Route::get('transaksi/report', [TransaksiPembayaranController::class, 'cetak_tra
 
 
 //FasilitasController
-Route::get('fasilitas_gedung', [FasilitasController::class, 'fasilitas_gedung'])->name('gedung.show');
+Route::post('gedung/fasilitas', [FasilitasController::class, 'fasilitasGedung'])->name('fasilitas.fasilitas-gedung');
 
 //TransaksiPembayaranController
 Route::get('transaksi-pembayaran/filter/cetak', [TransaksiPembayaranController::class, 'filter'])->name('transaksi-pembayaran.filter');
