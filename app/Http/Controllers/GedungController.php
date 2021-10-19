@@ -8,6 +8,7 @@ use App\Models\TipeRuangan;
 use App\Models\Galeri;
 use App\Models\Rusun;
 use App\Models\Fasilitas;
+use App\Models\FasilitasGedung;
 
 
 class GedungController extends Controller
@@ -44,11 +45,12 @@ class GedungController extends Controller
 
     public function show( $id)
     {
-        $gedung     = Gedung::findOrFail($id);
-        $galeri     = Galeri::where('id_gedung', $gedung->id_gedung)->latest()->get();
-        $fasilitas  = Fasilitas::all();
+        $gedung             = Gedung::findOrFail($id);
+        $galeri             = Galeri::where('id_gedung', $gedung->id_gedung)->latest()->get();
+        $fasilitas          = Fasilitas::all();
+        $fasilitas_gedung   = FasilitasGedung::all();
 
-        return view('gedung.show', compact('gedung','galeri', 'fasilitas'));
+        return view('gedung.show', compact('gedung','galeri', 'fasilitas', 'fasilitas_gedung'));
     }
 
     public function edit(Gedung $gedung)

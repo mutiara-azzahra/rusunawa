@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Fasilitas;
 use App\Models\Gedung;
+use App\Models\FasilitasGedung;
 
 
 class FasilitasController extends Controller
@@ -20,6 +21,7 @@ class FasilitasController extends Controller
     public function create()
     {
         $gedung = Gedung::all();
+
         return view('fasilitas.create', compact('gedung'));
     }
 
@@ -43,15 +45,6 @@ class FasilitasController extends Controller
 
         return redirect()->route('fasilitas.index', $request->id_fasilitas)->with('success','Data baru berhasil dibuat!');
     }
-    // public function fasilitasGedung($id)
-    // {
-    //     $gedung = Gedung::findOrFail($id);
-         
-    //     $fasilitas->update($request);
-         
-    //     return redirect()->route('gedung.show', compact('fasilitas'));
-    // }
-
     public function show( $id)
     {
         return view('fasilitas.show', [
@@ -87,6 +80,4 @@ class FasilitasController extends Controller
         return redirect()->route('fasilitas.index')
                         ->with('success','Data fasilitas umum berhasil dihapus!');
     }
-
-    
 }

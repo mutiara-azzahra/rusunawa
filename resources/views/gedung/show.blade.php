@@ -182,22 +182,21 @@
                             <th width="20px" class="text-center">No</th>
                             <th class="text-center">Nama Fasilitas</th>
                             <th class="text-center">Jumlah</th>
-                            <th width="200px" class="text-center">Aksi</th>
+                            <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @php
                     $no=1;
                     @endphp
-                    @foreach ($fasilitas as $f)
+                    @foreach ($fasilitas_gedung as $f)
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td>{{ $f->nama_fasilitas}}</td>
+                        <td>{{ $f->fasilitas->nama_fasilitas}}</td>
                         <td>{{ $f->jumlah_fasilitas}}</td>
-                        <td></td>
                         <td class="text-center">
-                                    <form action="{{ route('fasilitas.destroy',$f->id_fasilitas) }}" id="form_delete" method="POST">
-                                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{$f->id_fasilitas}}')"> Hapus</a>
+                                    <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete" method="POST">
+                                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{$f->id_fasilitas_gedung}}')"> Hapus</a>
             
                                         @csrf
                                         @method('DELETE')
@@ -215,7 +214,7 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="card m-3" style="padding:10px;">
-                        <form action="{{ route('fasilitas.fasilitas-gedung') }}" method="GET">
+                        <form action="{{ route('fasilitas.fasilitas-gedung')}} " method="POST">
                         @csrf
 
                         <div class="row">
@@ -243,7 +242,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <strong>Jumlah</strong>
-                                    <input type="text" name="jumlah_fasilitas" class="form-control">
+                                    <input type="text" name="jumlah" class="form-control">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

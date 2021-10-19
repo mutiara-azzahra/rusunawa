@@ -11,6 +11,7 @@ use App\Http\Controllers\GedungController;
 use App\Http\Controllers\RuanganController;
 use App\Http\Controllers\TipeRuanganController;
 use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\FasilitasGedungController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\KotaController;
@@ -121,7 +122,8 @@ Route::get('transaksi/report', [TransaksiPembayaranController::class, 'cetak_tra
 
 
 //FasilitasController
-Route::post('gedung/fasilitas', [FasilitasController::class, 'fasilitasGedung'])->name('fasilitas.fasilitas-gedung');
+Route::post('fasilitas-gedung', [FasilitasGedungController::class, 'fasilitas_gedung'])->name('fasilitas.fasilitas-gedung');
+Route::post('fasilitas-gedung/destroy', [FasilitasGedungController::class, 'destroy'])->name('fasilitas-gedung.destroy');
 
 //TransaksiPembayaranController
 Route::get('transaksi-pembayaran/filter/cetak', [TransaksiPembayaranController::class, 'filter'])->name('transaksi-pembayaran.filter');
