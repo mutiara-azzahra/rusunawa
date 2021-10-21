@@ -193,7 +193,7 @@
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
                         <td>{{ $f->fasilitas->nama_fasilitas}}</td>
-                        <td>{{ $f->jumlah_fasilitas}}</td>
+                        <td>{{ $f->jumlah}}</td>
                         <td class="text-center">
                                     <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete" method="POST">
                                         <a class="btn btn-danger btn-sm" onclick="Hapus('{{$f->id_fasilitas_gedung}}')"> Hapus</a>
