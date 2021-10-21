@@ -13,6 +13,7 @@ class LayananInformasi extends Model
     protected $primaryKey = 'id_info_rusun';
 
     protected $fillable = [
+        'id_rusun',
         'latar_belakang',
         'tipologi_bangunan',
         'sumber_dana',
@@ -22,4 +23,7 @@ class LayananInformasi extends Model
         'created_at', 
         'updated_at'
     ];
+    public function rusun(){
+        return $this->belongsTo(Rusun::class, 'id_rusun');
+    }
 }
