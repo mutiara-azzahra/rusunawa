@@ -8,7 +8,7 @@
                 <h2>Ubah Tipe Ruangan</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('tiperuangan.index') }}"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('tiperuangan.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -24,21 +24,26 @@
         </div>
     @endif
  
-    <form action="{{ route('tiperuangan.update', $tipe_ruangan->id_tipe_ruangan) }}" method="POST">
-        @csrf
-        @method('PUT')
- 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Tipe Ruangan</strong>
-                    <input type="text" name="tipe_ruangan" class="form-control" placeholder="" value="{{ $tipe_ruangan->tipe_ruangan }}">
+    <div class="card" style="padding: 20px;">
+        <form action="{{ route('tiperuangan.update', $tipe_ruangan->id_tipe_ruangan) }}" method="POST">
+            @csrf
+            @method('PUT')
+    
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Tipe Ruangan</strong>
+                        <input type="text" name="tipe_ruangan" class="form-control" placeholder="" value="{{ $tipe_ruangan->tipe_ruangan }}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-    </form>
+        </form>    
+    </div>
+
 </div>
 @endsection

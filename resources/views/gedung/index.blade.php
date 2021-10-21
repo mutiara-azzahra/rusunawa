@@ -23,12 +23,13 @@
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>
-                        <th width="20px" class="text-center">No</th>
+                        <th class="text-center">No</th>
                         <th class="text-center">Nama Gedung</th>
-                        <th width="60px" class="text-center">Tipe Ruangan</th>
-                        <th width="60px" class="text-center">Jumlah Ruangan</th>
+                        <th class="text-center">Blok</th>
+                        <th class="text-center">Tipe Ruangan</th>
+                        <th class="text-center">Jumlah Ruangan</th>
                         <th class="text-center">Status Gedung</th>
-                        <th width="200px" class="text-center">Aksi</th>
+                        <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +40,13 @@
                 <tr>
                     <td class="text-center">{{ $no++ }}</td>
                     <td>{{ $g->nama_gedung }}</td>
+                    <td>
+                    @if($g->blok == null)
+                    -
+                    @else
+                    {{ $g->blok}}
+                    @endif
+                    </td>
                     <td>{{ $g->tipe_ruangan->tipe_ruangan }}</td>
                     <td>{{ $g->jumlah_ruangan }}</td>
                     <td>

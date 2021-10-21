@@ -41,7 +41,7 @@
             <td>Lantai {{ $l->lantai }}</td>
             <td >{{ $l->gedung->nama_gedung }}</td>
             <td class="text-center">
-                <form action="{{ route('lantai.destroy',$l->id_lantai) }}" method="POST" id="form_delete">
+                <form action="{{ route('lantai.destroy',$l->id_lantai) }}" method="POST" id="form_delete{{$l->id_lantai}}">
  
                     <a class="btn btn-info btn-sm" href="{{ route('lantai.show',$l->id_lantai) }}"><i class="fas fa-eye"></i></a>
                     <a class="btn btn-primary btn-sm" href="{{ route('lantai.edit',$l->id_lantai) }}"><i class="fas fa-edit"></i></a>
@@ -78,7 +78,7 @@
             reverseButtons: false
             }).then((result) => {
                 if (result.value) {
-                    $('#form_delete').submit();
+                    $(`#form_delete${id_lantai}`).submit();
                 }
         })
     }

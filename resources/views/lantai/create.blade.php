@@ -44,7 +44,7 @@
                         <select name="id_gedung" class="form-control" >
                             <option value="">---Pilih Gedung--</option>
                             @foreach($gedung as $g)
-                            <option value=" {{ $g->id_gedung }}"> {{ $g->nama_gedung }} </option>
+                            <option value=" {{ $g->id_gedung }}"> {{ $g->nama_gedung }} - Blok-{{ $g->blok }} </option>
                             @endforeach
                         </select>
                     </div>

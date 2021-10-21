@@ -85,7 +85,7 @@
             <td>{{ $g->kategori}}</td>
             <td class="text-center"><img class="image" src="{{asset('/storage/galeri/'.$g->foto)}}" data-id="{{asset('/storage/galeri/'.$g->foto)}}" alt="" width="100px"></td>
             <td class="text-center">
-                        <form action="{{ route('galeri.destroy',$g->id_galeri) }}" id="form_delete" method="POST">
+                        <form action="{{ route('galeri.destroy',$g->id_galeri) }}" id="form_delete_galeri{{$id_galeri}}" method="POST">
                             <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_galeri}}')"> Hapus</a>
 
                             @csrf
@@ -150,7 +150,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                                 <div class="float-right">
-                                    <button type="submit" class="btn btn-success btn-success">Simpan Data</button>
+                                    <button type="submit" class="btn btn-success btn-success"> Simpan Data</button>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +196,7 @@
                         <td>{{ $f->fasilitas->nama_fasilitas}}</td>
                         <td>{{ $f->jumlah}}</td>
                         <td class="text-center">
-                                    <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete" method="POST">
+                                    <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete_fasilitas{{$id_fasilitas_gedung}}" method="POST">
                                         <a class="btn btn-danger btn-sm" onclick="Hapus('{{$f->id_fasilitas_gedung}}')"> Hapus</a>
             
                                         @csrf
@@ -301,7 +301,7 @@ $('#fasilitas', '#gedung').modal({
 </script>
 
 <script>
-    Hapus = (id_pemohon)=>{
+    Hapus = (id_galeri)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
             text:  "menghapus notifikasi" ,
@@ -313,10 +313,30 @@ $('#fasilitas', '#gedung').modal({
             reverseButtons: true
             }).then((result) => {
                 if (result.value) {
-                    $('#form_delete').submit();
+                    $(`#form_delete_galeri.${id_galeri}`).submit();
+                }
+
+        })
+    }
+
+    Hapus = (id_fasilitas_gedung)=>{
+        Swal.fire({
+            title: 'Apa anda yakin menghapus data ini?',
+            text:  "menghapus notifikasi" ,
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6' ,
+            cancelButtonColor: 'red' ,
+            confirmButtonText: 'hapus data' ,
+            cancelButtonText: 'batal' ,
+            reverseButtons: true
+            }).then((result) => {
+                if (result.value) {
+                    $(`#form_delete_fasilitas.${id_fasilitas_gedung}`).submit();
                 }
 
         })
     }
 </script>
+
+
 @endsection

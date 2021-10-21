@@ -14,12 +14,11 @@ class Gedung extends Model
 
     protected $fillable = [
         'nama_gedung',
-        'id_tipe_ruangan',
-        'id_rusun',
+        'blok',
         'alamat_gedung',
         'jumlah_ruangan',
         'status_gedung',
-
+        'id_rusun',
     ];
 
     public function lantai(){

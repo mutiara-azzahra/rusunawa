@@ -33,6 +33,7 @@ class GedungController extends Controller
         $request -> validate([
             'nama_gedung'       => 'required',
             'alamat_gedung'     => 'required',
+            'blok'              => 'required',
             'jumlah_ruangan'    => 'required',
             'status_gedung'     => 'required',
             
@@ -55,8 +56,9 @@ class GedungController extends Controller
 
     public function edit(Gedung $gedung)
     {
+        $tipe_ruangan = TipeRuangan::all();
 
-        return view('gedung.edit',compact('gedung'));
+        return view('gedung.edit',compact('gedung', 'tipe_ruangan'));
     }
 
     public function update(Request $request, Gedung $gedung)
@@ -64,6 +66,7 @@ class GedungController extends Controller
         $request->validate([
             'nama_gedung'       => 'required',
             'alamat_gedung'     => 'required',
+            'blok'              => 'required',
             'jumlah_ruangan'    => 'required',
             'status_gedung'     => 'required',
         ]);

@@ -35,14 +35,14 @@ class TipeRuanganController extends Controller
     public function show( $id)
     {
         return view('tiperuangan.show', [
-                    'tipe_ruangan' => TipeRuangan::findOrFail($id)]);
+            'tipe_ruangan' => TipeRuangan::findOrFail($id)]);
     }
     
     public function edit( $id)
     {
-        $tipe_ruangan = TipeRuangan::all();
+        $tipe_ruangan = TipeRuangan::findOrFail( $id);
 
-        return view('tiperuangan.edit',compact('ruangan, tipe_ruangan'));
+        return view('tiperuangan.edit',compact('tipe_ruangan'));
     }
   
     public function update(Request $request, $id)

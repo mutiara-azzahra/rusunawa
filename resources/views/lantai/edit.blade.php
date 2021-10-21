@@ -48,12 +48,6 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Harga</strong>
-                        <input type="text" name="harga" class="form-control" placeholder="" value= "{{ $lantai->harga }}">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
                         <strong>Gedung</strong>
                         <select name="id_gedung" class="form-control" value= "{{ $lantai->id_gedung }}" >
                             <option value="">---Pilih Gedung--</option>
@@ -65,7 +59,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <div class="float-right">
-                        <button type="submit" class="btn btn-success btn-primary"> Simpan Data</button>
+                        <button type="submit" class="btn btn-success"> Simpan Data</button>
                     </div>
                 </div>
             </div>  
