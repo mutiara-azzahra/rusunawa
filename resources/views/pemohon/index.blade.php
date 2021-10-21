@@ -69,7 +69,7 @@
                         @method('DELETE')
                         </form>
                         @if($p->status_pengajuan != 'diverifikasi')
-                            <a class="btn btn-success btn-sm" href="{{ route('pemohon.verifikasi',$p->id_pemohon) }}"> Verifikasi</a>
+                            <a class="btn btn-success btn-sm" href="{{ route('pemohon.verifikasi',$p->id_pemohon) }}"><i class="fas fa-check-circle"></i></a>
                         @else
                         @endif
                             <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}"><i class="fas fa-eye"></i></a>

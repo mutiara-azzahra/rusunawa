@@ -4,21 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Register;
+use App\Models\Kota;
+use App\Models\Kecamatan;
+use App\Models\Kelurahan;
 
 
 class RegisterController extends Controller
 {    
-    public function index()
-    {
-        $pemohon = Register::latest()->paginate(5);
-        
-        return view('register.index',compact('pemohon'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
-    }
-
     public function create()
     {
-        return view('pemohon.create');
+        $kelurahan = Kelurahan::all();
+        $kecamatan  = Kecamatan::all();
+        $kota   = Kota::all();
+        
+        return view('register.create', compact('kelurahan', 'kecamatan', 'kota'));
     }
 
     public function store(Request $request)

@@ -32,13 +32,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Total Pembayaran</strong><br>
-                    Rp. {{$detail_transaksi_pembayaran->sum('harga')}} ,-
+                    Rp. {{$detail_transaksi_pembayaran->sum('harga')}}
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Tanggal Pembayaran</strong><br>
-                    {{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->format('d F Y') }}
+                    {{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->translatedFormat('d F Y') }}
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -66,7 +66,7 @@
                 </h5>
               </div>
               <div class="col-4">
-                <small class="">Tanggal Pembayaran : {{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->format('d F Y') }}</small>
+                <small class="">Tanggal Pembayaran : {{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->translatedFormat('d F Y') }}</small>
               </div>
 
               <!-- /.col -->

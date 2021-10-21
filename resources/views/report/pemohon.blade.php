@@ -108,10 +108,10 @@
                                 @foreach ($data as $p)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
-                                    <td>{{$p->nama_kepala_keluarga}}</td>
-                                    <td>{{$p->nik_kepala_keluarga}}</td>
-                                    <td>{{$p->pekerjaan_kepala_keluarga}}</td>
-                                    <td>{{$p->jumlah_anggota_keluarga}}</td>
+                                    <td class="text-left">{{$p->nama_kepala_keluarga}}</td>
+                                    <td class="text-left">{{$p->nik_kepala_keluarga}}</td>
+                                    <td class="text-left">{{$p->pekerjaan_kepala_keluarga}}</td>
+                                    <td class="text-left">{{$p->jumlah_anggota_keluarga}}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>

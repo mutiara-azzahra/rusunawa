@@ -14,6 +14,9 @@ use App\Models\SyaratMendaftar;
 use App\Models\Pemohon;
 use App\Models\User;
 use App\Models\Posts;
+use App\Models\Kota;
+use App\Models\Kecamatan;
+use App\Models\Kelurahan;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -40,7 +43,11 @@ class LoginController extends Controller
 
     public function formRegister()
     {
-       return view('register.create');
+        $kelurahan  = Kelurahan::all();
+        $kecamatan  = Kecamatan::all();
+        $kota       = Kota::all();
+        
+       return view('register.create', compact('kelurahan', 'kecamatan', 'kota'));
     }
     public function RegsiterStore(Request $request){
         {

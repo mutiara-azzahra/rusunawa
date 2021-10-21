@@ -33,11 +33,13 @@
   <!-- Chart js -->
   <link rel="stylesheet" href="{{ asset('admin-template/plugins/chart.js/Chart.min.js') }}">
 
+  <link rel="shortcut icon" href="{{ asset('logo.png')}}">
+
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="{{ asset('admin-template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
 
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
   <nav class="main-header navbar navbar-fixed navbar-expand" style="background-color: #192841">
     <!-- Left navbar links -->
@@ -75,7 +77,7 @@
           <img src="{{ asset('admin-template/dist/img/user.png') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{route('beranda')}}" class="d-block"> Hai, {{ Auth::user()->nama_user}} !</a>
+          <a href="{{route('beranda')}}" class="d-block"> Beranda {{ Auth::user()->nama_user}} </a>
         </div>
       </div>
 
@@ -184,7 +186,7 @@
                   <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-map-marker"></i>
                     <p>
-                      Daerah
+                      Data Daerah
                       <i class="right fas fa-angle-left"></i>
                     </p>
                   </a>

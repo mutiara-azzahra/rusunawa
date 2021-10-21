@@ -41,7 +41,15 @@
                     <td>{{ $g->nama_gedung }}</td>
                     <td>{{ $g->tipe_ruangan->tipe_ruangan }}</td>
                     <td>{{ $g->jumlah_ruangan }}</td>
-                    <td>{{ $g->status_gedung }}</td>
+                    <td>
+                    @if($g->status_gedung == 'Masih Tersedia')
+                    <div><span class="badge badge-success">Masih Tersedia</span></div>
+
+                    @elseif($g->status_gedung == 'Penuh')
+                    <div><span class="badge badge-warning">Penuh</span></div>
+
+                    @endif
+                    </td>
                     <td class="text-center">
                         <form action="{{ route('gedung.destroy',$g->id_gedung) }}" method="POST" id="form_delete">
         

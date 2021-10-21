@@ -23,6 +23,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     
+    <link rel="shortcut icon" href="{{ asset('logo.png')}}">
+    
     <!--CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -99,36 +101,51 @@
                                         <td class="p-3" style="padding-right:50px;"><strong>Alamat</strong></td>
                                         <td><input style="width:350px;" type="text" name="alamat" class="form-control" placeholder="Isi alamat"></td>
                                     </tr>
-                                    {{-- <tr>
+                                    <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kota</strong></td>
                                         <td>
-                                            <select style="width: 350px;" name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()">
-                                                <option value="">---Pilih Kota--</option>
-                                                {{-- @foreach($kota as $k)
+                                            <select style="width:350px;" name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()" >
+                                                <option value="">-- Pilih Kota --</option>
+                                                @foreach($kota as $k)
                                                 <option value=" {{ $k->id_kota }}"> {{ $k->nama_kota }} </option>
                                                 @endforeach
                                             </select>
+                                            
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kecamatan</strong></td>
                                         <td>
-                                            <select style="width: 350px;" name="id_kecamatan" class="form-control" id="id_kecamatan" onchange="getKelurahan()">
-                                                <option value="">---Pilih Kecamatan--</option>
+                                            <select style="width:350px;" name="id_kecamatan" class="form-control" id="id_kelurahan" onchange="getKelurahan()" >
+                                                <option value="">-- Pilih Kecamatan --</option>
+                                                @foreach($kecamatan as $kc)
+                                                <option value="{{ $kc->id_kecamatan }}"> {{ $kc->nama_kecamatan }} </option>
+                                                @endforeach
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kelurahan</strong></td>
                                         <td>
-                                            <select  style="width: 350px;" name="id_kecamatan" class="form-control" id="id_kecamatan">
-                                                <option value="">---Pilih Kelurahan--</option>
+                                            <select style="width:350px;" name="id_kelurahan" class="form-control" id="id_kecamatan" >
+                                                <option value="">-- Pilih Kelurahan --</option>
+                                                @foreach($kelurahan as $kl)
+                                                <option value="{{ $kl->id_kelurahan }}"> {{ $kl->nama_kelurahan }} </option>
+                                                @endforeach
                                             </select>
                                         </td>
-                                    </tr> --}}
+                                    </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Jumlah Anggota Keluarga</strong></td>
-                                        <td><input style="width:350px;" type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Isi jumlah anggota keluarga"></td>
+                                        <td>
+                                            <select style="width:350px;" name="jumlah_anggota_keluarga" class="form-control" id="id_kecamatan" >
+                                                <option value="">-- Pilih Jumlah --</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </td>
                                     </tr>
                         </table>                        
                     </div>

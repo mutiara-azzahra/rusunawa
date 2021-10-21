@@ -115,7 +115,7 @@
                     <tr>
                         <td class="atas">{{ $transaksi_pembayaran->pemohon->nama_kepala_keluarga }}</td>
                         <td class="atas">{{ $transaksi_pembayaran->user->nama_user }}</td>
-                        <td class="atas">{{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->format('d F Y') }}</td>
+                        <td class="atas">{{ Carbon\carbon::parse($transaksi_pembayaran->created_at)->translatedFormat('d F Y') }}</td>
                     </tr>
                 </tbody>
             </table>

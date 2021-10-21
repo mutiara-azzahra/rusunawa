@@ -41,7 +41,18 @@
             <td class="text-center">{{ $no++ }}</td>
             <td>Nomor {{ $r->no_ruangan }}</td>
             <td>@currency($r->harga_ruangan)</td>
-            <td>{{ $r->status_ruangan }}</td>
+            <td>
+            @if($r->status_ruangan == 'kosong')
+            <div><span class="badge badge-danger">Kosong</span></div>
+
+            @elseif($r->status_ruangan == 'terisi')
+            <div><span class="badge badge-success">Terisi</span></div>
+
+            @elseif($r->status_ruangan == 'rusak')
+            <div><span class="badge badge-secondary">Rusak</span></div>
+
+            @endif
+            </td>
             <td>Lantai {{ $r->lantai->lantai }} </td>
             <td> {{ $r->lantai->gedung->nama_gedung }}</td>
             <td class="text-center">

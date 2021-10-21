@@ -306,7 +306,7 @@ class PemohonController extends Controller
     {
         $data       = Pemohon::where('status_permohonan', 'aktif')->get();
         $pdf        = PDF::loadView('report.pemohon', ['data'=>$data]);
-        $pdf->setPaper('a4', 'portrait');
+        $pdf->setPaper('a4', 'landscape');
 
         return $pdf->stream('penghuni.pdf');
     }

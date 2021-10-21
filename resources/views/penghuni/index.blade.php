@@ -10,10 +10,9 @@
         </div>
         <div class="col-lg-12 margin-tb">
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('report.pemohon') }}" target="__blank"><i class="fas fa-plus"></i> Cetak PDF</a>
+                <a class="btn btn-warning" href="{{ route('report.pemohon') }}" target="__blank"><i class="fas fa-print"></i> Cetak PDF</a>
             </div>
         </div>
-        
     </div>
  
     @if ($message = Session::get('success'))
@@ -26,11 +25,11 @@
             <table class="table table-bordered table-hover table-sm bg-light" id="dataTable">
                 <thead>
                 <tr>
-                    <th width="20px">No</th>
+                    <th>No</th>
                     <th>Nama</th>
                     <th>Tanggal Pengajuan</th>
                     <th>Status Penghuni</th>
-                    <th width="250px"class="text-center">Aksi</th>
+                    <th class="text-center">Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,7 +40,7 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $p->nama_kepala_keluarga }}</td>
-                    <td>{{ Carbon\carbon::parse($p->created_at)->format('d F Y') }}</td>
+                    <td>{{ Carbon\carbon::parse($p->created_at)->translatedFormat('d F Y') }}</td>
                     <td>
                         @if($p->status_permohonan == 'aktif')
                         <div><span class="badge badge-success">Aktif</span></div>
@@ -55,13 +54,12 @@
                         @csrf 
                         @method('DELETE')
                         </form>
-                        @if($p->status_permohonan == 'aktif')
-                            <a class="btn btn-danger btn-sm" href="{{ route('pemohon.nonaktif',$p->id_pemohon) }}"> Nonaktifkan</a>
-                        @else
-                        @endif
                             <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}"><i class="fas fa-eye"></i></a>
+                            @if($p->status_permohonan == 'aktif')
+                            <a class="btn btn-warning btn-sm" href="{{ route('pemohon.nonaktif',$p->id_pemohon) }}"><i class="fas fa-times-circle"></i></a>
+                            @else
+                            @endif
                             <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')"><i class="fas fa-trash"></i></a>
-                            
                     </td>
                 </tr>
                 @endforeach

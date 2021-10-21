@@ -26,9 +26,9 @@
         <tr>
             <th>No</th>
             <th>Nama Penghuni</th>
-            <th>Ruangan</th>
             <th>Gedung</th>
-            <th>Aksi</th>
+            <th>Ruangan</th>
+            <th class="text-center">Aksi</th>
         </tr>            
         </thead>
         <tbody>
@@ -44,13 +44,13 @@
             <td class="text-center">
                 <form action="{{ route('transaksi-pembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('transaksi-pembayaran.show',$tp->id_transaksi_pembayaran) }}">Tampil</a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('transaksi-pembayaran.edit',$tp->id_transaksi_pembayaran) }}">Ubah</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('transaksi-pembayaran.show',$tp->id_transaksi_pembayaran) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('transaksi-pembayaran.edit',$tp->id_transaksi_pembayaran) }}"><i class="fas fa-edit"></i></a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a type="submit" class="btn btn-danger btn-sm" onclick="Hapus()">Hapus</button>
+                    <a type="submit" class="btn btn-danger btn-sm" onclick="Hapus('{{ $tp->id_transaksi_pembayaran }}')"><i class="fas fa-trash"></i></button>
                 </form>
             </td>
         </tr>
