@@ -19,8 +19,9 @@ class TransaksiPembayaranController extends Controller
     public function index()
     {
         $transaksi_pembayaran = TransaksiPembayaran::latest()->paginate(5);
+
         return view('transaksi-pembayaran.index',compact('transaksi_pembayaran'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -42,13 +43,10 @@ class TransaksiPembayaranController extends Controller
             'id_user'           => 'required',
         ]);
         
-        // $transaksi = TransaksiPembayaran::where('id_pemohon',$request->id_pemohon)->first();
-        // if(!$transaksi)
-        // {
-            $transaksi = TransaksiPembayaran::create($request->all());
-        // }
+        $transaksi = TransaksiPembayaran::create($request->all());
 
         foreach($request->bulan as $bulan)
+
         {
             DetailTransaksiPembayaran::create([
                'bulan'                      =>$bulan,
@@ -56,7 +54,7 @@ class TransaksiPembayaranController extends Controller
                'id_transaksi_pembayaran'    =>$transaksi->id_transaksi_pembayaran,
             ]);
         }
-        
+
         return redirect()->route('transaksi-pembayaran.index')->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }
 
@@ -64,6 +62,7 @@ class TransaksiPembayaranController extends Controller
     {
         $transaksi_pembayaran           = TransaksiPembayaran::findOrFail($id);
         $detail_transaksi_pembayaran    = DetailTransaksiPembayaran::where('id_transaksi_pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran)->get();
+
         return view('transaksi-pembayaran.show', compact('transaksi_pembayaran', 'detail_transaksi_pembayaran'));
     }
     
@@ -88,7 +87,7 @@ class TransaksiPembayaranController extends Controller
         $transaksi_pembayaran = TransaksiPembayaran::destroy($id);
   
         return redirect()->route('transaksi-pembayaran.index')
-                        ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
+            ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');
     }
 
     public function pemohon_show()
@@ -110,16 +109,10 @@ class TransaksiPembayaranController extends Controller
     }
     public function cetak_transaksi_pembayaran_bulanan(Request $request)
     {
-
         $data           = TransaksiPembayaran::whereBetween('created_at', [$request->tanggal_awal, $request->tanggal_akhir])->get();
         $tanggal_awal   = $request->tanggal_awal;
         $tanggal_akhir  = $request->tanggal_akhir;
-//        dd(new TransaksiPembayaranExport($tanggal_awal, $tanggal_akhir), $tanggal_awal);
+
         return Excel::download(new TransaksiPembayaranExport($tanggal_awal, $tanggal_akhir), 'transaksi-pembayaran-rusunawa.xlsx');
-
-        // $pdf            = PDF::loadView('report.transaksi-pembayaran', ['data'=>$data]);
-        // $pdf->setPaper('a4', 'landscape');
-
-        // return $pdf->stream('transaksi_pembayaran_bulanan.pdf');
     }
 }

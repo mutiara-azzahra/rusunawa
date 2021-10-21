@@ -37,7 +37,7 @@
             <td class="text-center">{{ $no++ }}</td>
             <td>{{ $r->nama_role }}</td>
             <td class="text-center">
-                <form action="{{ route('role.destroy',$r->id_role) }}" method="POST">
+                <form action="{{ route('role.destroy',$r->id_role) }}" method="POST" id="form_delete">
  
                     <a class="btn btn-info btn-sm" href="{{ route('role.show',$r->id_role) }}"><i class="fas fa-eye"></i></a>
  
@@ -46,7 +46,7 @@
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_role }}')"><i class="fas fa-trash"></i></a>
                 </form>
             </td>
         </tr>

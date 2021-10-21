@@ -22,6 +22,7 @@ class UserController extends Controller
     public function create()
     {
         $role = Role::all();
+
         return view('user.create',compact('role'));
     }
 
@@ -32,7 +33,6 @@ class UserController extends Controller
             'username'      => 'required',
             'email'         => 'required',
             'password'      => 'required',
-            'password_baru' => 'required',
             'id_role'       => 'required'
         ]);
 
@@ -42,7 +42,7 @@ class UserController extends Controller
 
         User::create($input);
         
-        return redirect()->route('user.index')->with('success','Post created successfully');
+        return redirect()->route('user.index')->with('success','User baru berhasil ditambahkan!');
     }
 
     public function show(User $user)

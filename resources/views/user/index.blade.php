@@ -41,11 +41,11 @@
                     <td>{{ $u->username }}</td>
                     <td>{{ $u->email }}</td>
                     <td class="text-center">
-                        <form action="{{ route('user.destroy',$u->id_user) }}" method="POST">
-                        <a href="{{ route('user.reset',$u->id_user) }}" style="margin: 5px;" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')"> Reset</a>
+                        <form action="{{ route('user.destroy',$u->id_user) }}" method="POST" id="form_delete">
+                        <a href="{{ route('user.reset',$u->id_user) }}" style="margin: 5px;" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')"><i class="fas fa-redo"></i></a>
                             @csrf
                             @method('DELETE')
-                            <a class="btn btn-danger btn-sm" onclick=""> <i class="fas fa-trash"></i></a>
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $u->id_user }}')"><i class="fas fa-trash"></i></a>
                         </form>
                     </td>
                 </tr>

@@ -40,7 +40,7 @@ class RuanganController extends Controller
         
         Ruangan::create($input);
         
-        return redirect()->route('ruangan.index')->with('success','Post created successfully');
+        return redirect()->route('ruangan.index')->with('success','Data ruangan baru berhasil ditambahkan!');
     }
 
     public function show( $id)
@@ -69,7 +69,7 @@ class RuanganController extends Controller
         $ruangan->update($request->all());
          
         return redirect()->route('ruangan.index')
-                        ->with('success','Data ruangan berhasil ditambahkan!');
+                        ->with('success','Data ruangan berhasil diubah!');
     }
   
     public function destroy(Ruangan $ruangan)

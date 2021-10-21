@@ -32,7 +32,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Blok</strong>
-                        <input type="text" name="nama_blok" class="form-control" placeholder="Nama Blok">
+                        <input type="text" name="blok" class="form-control" placeholder="Nama Blok">
                     </div>
                 </div> 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">

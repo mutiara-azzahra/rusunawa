@@ -45,7 +45,7 @@
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_tipe_ruangan }}')" ><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $tr->id_tipe_ruangan }}')" ><i class="fas fa-trash"></i></a>
                 </form>
             </td>
         </tr>

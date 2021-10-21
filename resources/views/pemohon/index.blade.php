@@ -39,7 +39,7 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $p->nama_kepala_keluarga }}</td>
-                    <td>{{ Carbon\carbon::parse($p->created_at)->format('d F Y') }}</td>
+                    <td>{{ Carbon\carbon::parse($p->created_at)->translatedFormat('d F Y') }}</td>
                     <td>
                         @if($p->status_pengajuan == 'diverifikasi')
                         <div><span class="badge badge-success">Diverifikasi</span></div>

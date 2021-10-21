@@ -13,7 +13,7 @@ class RegisterController extends Controller
         $pemohon = Register::latest()->paginate(5);
         
         return view('register.index',compact('pemohon'))
-                            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -57,7 +57,6 @@ class RegisterController extends Controller
         $pemohon = Pemohon::destroy($id);
   
         return redirect()->route('pemohon.index')
-                        ->with('success','Data pemohon berhasil dihapus!');
+            ->with('success','Data pemohon berhasil dihapus!');
     }
 }
-

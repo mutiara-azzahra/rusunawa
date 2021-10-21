@@ -23,7 +23,7 @@ class RusunawaBanjarmasinController extends Controller
             Mail::to($request->email)->send(new RusunawaBanjarmasinEmail($user));
 
             return redirect()->route('login')
-                            ->with('success','Silahkan cek Email anda untuk cek password baru anda');
+                            ->with('success','Silahkan cek Email anda untuk cek password baru anda !');
         }
         else{
             return redirect()->route('forgot-password')

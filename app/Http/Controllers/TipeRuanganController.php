@@ -13,7 +13,7 @@ class TipeRuanganController extends Controller
         $tipe_ruangan = TipeRuangan::latest()->paginate(5);
         
         return view('tiperuangan.index',compact('tipe_ruangan'))
-                                ->with('i', (request()->input('page', 1) - 1) * 5);
+                ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -29,7 +29,7 @@ class TipeRuanganController extends Controller
 
         TipeRuangan::create($request->all());
         
-        return redirect()->route('tiperuangan.index')->with('success','Data baru berhasil ditambahkan');
+        return redirect()->route('tiperuangan.index')->with('success','Data tipe ruangan baru berhasil ditambahkan');
     }
 
     public function show( $id)
@@ -52,7 +52,7 @@ class TipeRuanganController extends Controller
         ]);
          
         return redirect()->route('tiperuangan.index')
-                        ->with('success','Data tipe ruangan berhasil ditambahkan!');
+                        ->with('success','Data tipe ruangan berhasil diubah!');
     }
   
     public function destroy( $id)

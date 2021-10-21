@@ -41,7 +41,7 @@ class RusunController extends Controller
 
         Rusun::create($input);
         
-        return redirect()->route('rusun.index')->with('success','Data baru berhasil ditambahkan');    
+        return redirect()->route('rusun.index')->with('success','Data rusun baru berhasil ditambahkan!');    
     }
 
     public function show( $id)
@@ -75,7 +75,7 @@ class RusunController extends Controller
 
         $rusun->update($input);
          
-        return redirect()->route('rusun.index')->with('success','Data pemohon berhasil ditambahkan!');
+        return redirect()->route('rusun.index')->with('success','Data rusun berhasil diubah!');
     }
   
     public function destroy( $id)

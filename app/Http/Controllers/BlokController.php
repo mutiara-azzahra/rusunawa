@@ -18,18 +18,19 @@ class BlokController extends Controller
     public function create()
     {
         $blok = Blok::all();
+        
         return view('blok.create', compact('blok'));
     }
 
     public function store(Request $request)
     {
         $request -> validate([
-            'nama_kota'     => 'required',
+            'blok'     => 'required',
         ]);
 
         Blok::create($request->all());
         
-        return redirect()->route('blok.index')->with('success','Data baru berhasil ditambahkan');
+        return redirect()->route('blok.index')->with('success','Blok baru berhasil ditambahkan');
     }
 
     public function show( $id)
@@ -54,7 +55,7 @@ class BlokController extends Controller
         $blok->update($request->all());
          
         return redirect()->route('blok.index')
-                        ->with('success','Data blok berhasil ditambahkan!');
+                        ->with('success','Data blok berhasil diubah!');
     }
   
     public function destroy( $id)

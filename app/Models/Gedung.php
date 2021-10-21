@@ -15,6 +15,7 @@ class Gedung extends Model
     protected $fillable = [
         'nama_gedung',
         'id_tipe_ruangan',
+        'id_rusun',
         'alamat_gedung',
         'jumlah_ruangan',
         'status_gedung',

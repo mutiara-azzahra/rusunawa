@@ -93,10 +93,10 @@
           <div class="row">
           <div class="col-lg-12 col-md-12">
               <div class="row">
-                  <div class="col-lg-3 col-md-1 col-sm-5 col-xs-5">
-                      <img class="img-fluid" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <img class="img-fluid img-tanya-jawab" src="{{asset('tanya.jpg')}}" alt="">
                   </div>
-                  <div class="col-lg-9 col-md-11 col-sm-7 col-xs-7">
+                  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                       <div class="float-left">
                         <h2 class="pt-5" style="color: #853500; "><strong>Latar Belakang Pembangunan Rusunawa Teluk Kelayan Kota Banjarmasin</strong></h2><br></div>
                       </div>

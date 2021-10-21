@@ -60,7 +60,7 @@
     </ul>
   </nav>
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar elevation-4" style="background-color: #192841;">
     <!-- Brand Logo -->
     <a href="" class="brand-link" style="background-color: #192841">
       <img src="{{ asset('admin-template/dist/img/logo.png') }}" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">

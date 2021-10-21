@@ -29,7 +29,7 @@ class RoleController extends Controller
 
         Role::create($request->all());
 
-        return redirect()->route('role.index')->with('success','role created successfully');
+        return redirect()->route('role.index')->with('success','Role baru berhasil ditambahkan!');
     }
 
     public function show(Role $role)
@@ -51,7 +51,7 @@ class RoleController extends Controller
         $role->update($request->all());
          
         return redirect()->route('role.index')
-                        ->with('success','role updated successfully');
+                        ->with('success','Role berhasil diubah!');
     }
   
     public function destroy(Role $role)
@@ -59,6 +59,6 @@ class RoleController extends Controller
         $role->delete();
   
         return redirect()->route('role.index')
-                        ->with('success','role deleted successfully');
+                        ->with('success','Role berhasil dihapus');
     }
 }

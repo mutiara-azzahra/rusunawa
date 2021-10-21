@@ -56,18 +56,26 @@
                             <select name="id_tipe_ruangan" class="form-control" >
                                 <option value="">---Pilih Tipe Ruangan--</option>
                                 @foreach($tipe_ruangan as $tr)
-                                <option value=" {{ $tr->id_tipe_ruangan }}"> {{ $tr->tipe_ruangan }} </option>
+                                <option value="{{ $tr->id_tipe_ruangan }}"> {{ $tr->tipe_ruangan }} </option>
                                 @endforeach
                             </select>
                         </div>
-                    </div>
+                    </div>               
+                </div>
+                <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="form-group">
                             <strong>Jumlah Ruangan</strong>
                             <input type="text" name="jumlah_ruangan" class="form-control" placeholder="">
                         </div>
-                    </div>                    
-                </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="form-group">
+                            <strong>Blok</strong>
+                            <input type="text" name="blok" class="form-control" placeholder="">
+                        </div>
+                    </div>   
+                </div>  
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
