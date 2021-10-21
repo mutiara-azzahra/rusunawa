@@ -69,10 +69,10 @@
     <table class="table  table-bordered table-hover table-sm bg-light" id="dataTable">
         <thead>
             <tr>
-                <th width="20px" class="text-center">No</th>
+                <th class="text-center">No</th>
                 <th class="text-center">Kategori</th>
                 <th class="text-center">Foto</th>
-                <th width="200px" class="text-center">Aksi</th>
+                <th class="text-center">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -138,6 +138,7 @@
                                         <option>Gedung</option>
                                         <option>Fasilitas Gedung</option>
                                         <option>Fasilitas Ruangan</option>
+                                        <option>Ruangan</option>
                                     </select>
                                 </div>
                             </div>
@@ -179,7 +180,7 @@
                 <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                     <thead>
                         <tr>
-                            <th width="20px" class="text-center">No</th>
+                            <th class="text-center">No</th>
                             <th class="text-center">Nama Fasilitas</th>
                             <th class="text-center">Jumlah</th>
                             <th class="text-center">Aksi</th>
@@ -251,9 +252,8 @@
                                         <button type="submit" class="btn btn-success btn-primary"><i class="fas fa-save"></i>  Simpan Data</button>
                                     </div>
                                 </div>
-                            </div>
-                        
-                    </div>
+                            </div>   
+                        </div>
                        
                         @if ($errors->any())
                             <div class="alert alert-danger">

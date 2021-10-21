@@ -17,6 +17,7 @@ class CreateKelurahanTable extends Migration
             $table->bigIncrements('id_kelurahan');
             $table->string('nama_kelurahan');
             $table->Integer('id_kecamatan')->nullable();
+            $table->Integer('id_kota')->nullable();
             $table->timestamps();
         });
     }

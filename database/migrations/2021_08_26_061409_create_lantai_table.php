@@ -16,7 +16,6 @@ class CreateLantaiTable extends Migration
         Schema::create('lantai', function (Blueprint $table) {
             $table->bigIncrements('id_lantai');
             $table->string('lantai');
-            $table->string('harga');
             $table->string('id_gedung');
             $table->timestamps();
         });

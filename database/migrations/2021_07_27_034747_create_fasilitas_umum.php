@@ -15,10 +15,11 @@ class CreateFasilitas extends Migration
     {
         Schema::create('fasilitas', function (Blueprint $table) {
             $table->bigIncrements('id_fasilitas_umum');
-            $table->string('nama_fasilitas_umum');
-            $table->Integer('jumlah');
-            $table->string('status_fasilitas_umum');
-            $table->Integer('id_gedung')->nullable();
+            $table->string('nama_fasilitas');
+            $table->string('kategori_fasilitas');
+            $table->Integer('jumlah_fasilitas');
+            $table->string('status_fasilitas');
+            $table->text('icon');
             $table->timestamps();
         });
     }

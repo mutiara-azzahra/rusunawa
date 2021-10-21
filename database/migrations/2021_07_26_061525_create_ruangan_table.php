@@ -19,7 +19,7 @@ class CreateRuanganTable extends Migration
             $table->Integer('harga_ruangan');
             $table->string('status_ruangan');
             $table->string('blok');
-            $table->Integer('lantai');
+            $table->Integer('id_lantai');
             $table->Integer('id_gedung');
             $table->Integer('id_pengajuan')->nullable();
             $table->Integer('id_tipe_ruangan')->nullable();

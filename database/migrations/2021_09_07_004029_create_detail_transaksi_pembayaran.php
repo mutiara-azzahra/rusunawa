@@ -14,10 +14,8 @@ class CreateDetailTransaksiPembayaran extends Migration
     public function up()
     {
         Schema::create('detail_transaksi_pembayaran', function (Blueprint $table) {
-            $table->bigIncrements('id_detail_transaksi_pembayaran');
-            $table->Integer('id_pemohon');            
+            $table->bigIncrements('id_detail_transaksi_pembayaran');           
             $table->date('bulan');
-            $table->date('tahun');
             $table->Integer('harga');
             $table->Integer('id_transaksi_pembayaran');
             $table->timestamps();

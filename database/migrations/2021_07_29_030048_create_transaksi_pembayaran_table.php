@@ -15,14 +15,10 @@ class CreateTransaksiPembayaranTable extends Migration
     {
         Schema::create('transaksi_pembayaran', function (Blueprint $table) {
             $table->bigIncrements('id_transaksi_pembayaran');
-            $table->Integer('id_gedung');
             $table->Integer('id_ruangan');
+            $table->Integer('id_pemohon');  
+            $table->Integer('tahun');
             $table->Integer('harga');
-            $table->date('awal');
-            $table->date('akhir');
-            $table->date('tanggal_bayar');
-            $table->Integer('total_bayar');
-            $table->Integer('id_admin');
             $table->Integer('id_user');
             $table->timestamps();
         });
