@@ -62,7 +62,7 @@
                         <select name="id_lantai" class="form-control" >
                             <option value="">---Pilih Lantai--</option>
                             @foreach($lantai as $l)
-                            <option value=" {{ $l->id_lantai }}">Lantai {{ $l->lantai }} - {{$l->gedung->nama_gedung}}</option>
+                            <option value=" {{ $l->id_lantai }}">Lantai {{ $l->lantai }} - {{$l->gedung->nama_gedung}} - {{$l->gedung->blok}}</option>
                             @endforeach
                         </select>
                     </div>

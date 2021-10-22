@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <strong>Status Fasilitas Ruangan</strong>
+                            <strong>Status Fasilitas</strong>
                             <select name="status_fasilitas" class="form-control" >
                                 <option value="">---Pilih Status--</option>
                                 <option>Baik</option>

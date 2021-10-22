@@ -81,7 +81,7 @@
   <div class="card" >
       <div class="text-justify">
         <div class="col-lg-12 col-sm-12">
-          <h5 style="padding-top: 20px;" style="font-size: 25px;">Gedung {{ $gedung->nama_gedung }} Banjarmasin</h5>
+          <h5 style="padding-top: 20px;" style="font-size: 25px;">Gedung {{ $gedung->nama_gedung }} {{ $gedung->blok }} Banjarmasin</h5>
             <div class="row" style="padding-left: 15px;">
               <p class="text-muted">{{ $gedung->alamat_gedung }}</p>
             </div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Ruangan;
 use App\Models\Lantai;
 use App\Models\Gedung;
+use App\Models\Blok;
 
 
 class RuanganController extends Controller

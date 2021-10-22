@@ -19,7 +19,7 @@ class Galeri extends Model
     ];
 
     public function gedung(){
-        return $this->hasMany(Gedung::class, 'id_gedung', 'id_gedung');
+        return $this->hasMany(Gedung::class, 'id_gedung');
     }
     
 }

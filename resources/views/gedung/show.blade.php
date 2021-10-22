@@ -85,8 +85,8 @@
             <td>{{ $g->kategori}}</td>
             <td class="text-center"><img class="image" src="{{asset('/storage/galeri/'.$g->foto)}}" data-id="{{asset('/storage/galeri/'.$g->foto)}}" alt="" width="100px"></td>
             <td class="text-center">
-                        <form action="{{ route('galeri.destroy',$g->id_galeri) }}" id="form_delete_galeri{{$id_galeri}}" method="POST">
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_galeri}}')"> Hapus</a>
+                        <form action="{{ route('galeri.destroy',$g->id_galeri) }}" id="form_delete_galeri{{$g->id_galeri}}" method="POST">
+                            <a class="btn btn-danger btn-sm" onclick="HapusGaleri('{{$g->id_galeri}}')"> Hapus</a>
 
                             @csrf
                             @method('DELETE')
@@ -196,8 +196,8 @@
                         <td>{{ $f->fasilitas->nama_fasilitas}}</td>
                         <td>{{ $f->jumlah}}</td>
                         <td class="text-center">
-                                    <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete_fasilitas{{$id_fasilitas_gedung}}" method="POST">
-                                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{$f->id_fasilitas_gedung}}')"> Hapus</a>
+                                    <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete_fasilitas{{$f->id_fasilitas_gedung}}" method="POST">
+                                        <a class="btn btn-danger btn-sm" onclick="HapusFasilitas('{{$f->id_fasilitas_gedung}}')"> Hapus</a>
             
                                         @csrf
                                         @method('DELETE')
@@ -301,7 +301,7 @@ $('#fasilitas', '#gedung').modal({
 </script>
 
 <script>
-    Hapus = (id_galeri)=>{
+    HapusGaleri = (id_galeri)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
             text:  "menghapus notifikasi" ,
@@ -319,7 +319,7 @@ $('#fasilitas', '#gedung').modal({
         })
     }
 
-    Hapus = (id_fasilitas_gedung)=>{
+    HapusFasilitas = (id_fasilitas_gedung)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
             text:  "menghapus notifikasi" ,

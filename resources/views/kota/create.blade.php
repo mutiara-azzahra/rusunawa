@@ -5,10 +5,10 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Daftar Blok</h2>
+                <h2>Daftar Kota</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('blok.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-success" href="{{ route('kota.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -25,14 +25,14 @@
     @endif
 
     <div class="card" style="padding: 30px;">
-        <form action="{{ route('blok.store') }}" method="POST">
+        <form action="{{ route('kota.store') }}" method="POST">
             @csrf
         
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Nama Blok</strong>
-                        <input type="text" name="nama_blok" class="form-control" placeholder="Nama Blok">
+                        <strong>Nama Kota/Kabupaten</strong>
+                        <input type="text" name="nama_kota" class="form-control" placeholder="Nama Kota/Kabupaten">
                     </div>
                 </div> 
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
