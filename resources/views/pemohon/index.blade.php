@@ -23,12 +23,12 @@
             <table class="table table-bordered table-hover table-sm bg-light" id="dataTable">
                 <thead>
                 <tr>
-                    <th width="20px">No</th>
-                    <th>Nama</th>
+                    <th>No</th>
+                    <th> Nama</th>
                     <th>Tanggal Pengajuan</th>
                     <th>Status Pengajuan</th>
                     <th>Status Permohonan</th>
-                    <th width="250px"class="text-center">Aksi</th>
+                    <th class="text-center">Aksi</th>
                 </tr>
                 </thead>
                 <tbody>

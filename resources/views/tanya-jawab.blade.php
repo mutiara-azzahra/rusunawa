@@ -80,12 +80,12 @@
   <div class="jumbotron-lokasi" id="faq" style="padding-top: 100px;">
         <div class="container text-justify">
           <div class="row">
-          <div class="col-lg-12 col-md-12">
+          <div class="col-lg-12">
               <div class="row">
-                  <div class="col-lg-2 col-md-5 col-sm-5 col-xs-5">
-                      <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+                  <div class="col-lg-2">
+                      <img class="img-fluid1" style="width: 100%" src="{{asset('tanya.jpg')}}" alt="">
                   </div>
-                  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                  <div class="col-lg-10">
                       <h2 class="pt-5" style="color: #853500; "><strong>Pertanyaan yang Sering Ditanyakan</strong></h2><br></div>
                   </div>
                   
