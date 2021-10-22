@@ -60,12 +60,12 @@
 
         @if (Auth::check())
         <li class="nav-item" style="padding-top: 7px;">
-          <a href ="{{ route('logout') }}" onClick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-            <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
+          <a href ="{{ route('logout') }}">
+            <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" style="color: #F58735;" title="Keluar"></i>
           </a>
-          <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+          {{-- <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
-          </form>
+          </form> --}}
         </li>
         @else
 
@@ -94,8 +94,15 @@
               <div class="detail pt-3 pb-3 pl-3 text-left">
                 <h5>Gedung {{$g->nama_gedung}} {{$g->blok}}</h5>
                 {{ $g->alamat_gedung }}<br>
-                {{-- {{$g->lantai->ruangan->where('status_ruangan','kosong')->count()}} Ruangan Tersedia<br> --}}
-                <div class="pt-2"><a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-md btn-primary">PESAN SEKARANG</a></div>
+                  {{$ruangan->whereIn('id_lantai',$g->id_lantai)->where('status_ruangan','kosong')->count()}} Ruangan Tersedia<br>
+                  @if(Auth::check())
+                    @if(Auth::user()->id_role == 2)
+                    <div class="pt-2"><a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-md btn-primary">PESAN SEKARANG</a></div>
+                    @endif
+                  
+                  @else
+                  <div class="pt-2"><a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-md btn-primary">PESAN SEKARANG</a></div>
+                  @endif
               </div>
             </div>
             

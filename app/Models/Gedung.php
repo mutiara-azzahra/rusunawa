@@ -22,7 +22,7 @@ class Gedung extends Model
     ];
 
     public function lantai(){
-        return $this->belongsTo(Lantai::class, 'id_gedung');
+        return $this->hasMany(Lantai::class, 'id_gedung');
     }
 
     public function tipe_ruangan(){
@@ -39,6 +39,10 @@ class Gedung extends Model
 
     public function ruang(){
         return $this->hasMany(Ruangan::class, 'id_ruangan');
+    }
+
+    public function rusun(){
+        return $this->belongsTo(Rusun::class, 'id_rusun');
     }
 
    

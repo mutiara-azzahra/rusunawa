@@ -27,8 +27,8 @@
             <th>No Ruangan</th>
             <th>Harga Ruangan</th>
             <th>Status Ruangan</th>
-            <th>Lantai</th>
             <th>Gedung</th>
+            <th>Blok</th>
             <th class="text-center">Aksi</th>
         </tr>    
         </thead>
@@ -53,8 +53,8 @@
 
             @endif
             </td>
-            <td>Lantai {{ $r->lantai->lantai }} </td>
             <td> {{ $r->lantai->gedung->nama_gedung }}</td>
+            <td> {{ $r->lantai->gedung->blok }}</td>
             <td class="text-center">
                 <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
  

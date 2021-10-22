@@ -20,4 +20,8 @@ class Rusun extends Model
         'create_at'
     ];
 
+    public function gedung(){
+        return $this->hasMany(Gedung::class, 'id_rusun','id_rusun');
+    }
+
 }

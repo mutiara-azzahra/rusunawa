@@ -47,7 +47,7 @@
                     {{ $g->blok}}
                     @endif
                     </td>
-                    <td>{{ $g->tipe_ruangan->tipe_ruangan }}</td>
+                    {{-- <td>{{ $g->tipe_ruangan->tipe_ruangan }}</td> --}}
                     <td>{{ $g->jumlah_ruangan }}</td>
                     <td>
                     @if($g->status_gedung == 'Masih Tersedia')

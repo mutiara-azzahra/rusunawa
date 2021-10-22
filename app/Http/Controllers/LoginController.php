@@ -9,6 +9,7 @@ use App\Models\Gedung;
 use App\Models\Ruangan;
 use App\Models\Galeri;
 use App\Models\Lantai;
+use App\Models\Role;
 use App\Models\Fasilitas;
 use App\Models\SyaratMendaftar;
 use App\Models\Pemohon;
@@ -109,6 +110,11 @@ class LoginController extends Controller
     {
         $rusun  = Rusun::findOrFail($id);
         $gedung = Gedung::where('id_rusun',$rusun->id_rusun)->get();
+
+        $gedung->map(function($q){
+           $q->id_lantai = $q->lantai->pluck('id_lantai');
+        });
+
         $ruangan = Ruangan::all();
 
         return view('detail-rusun.show', compact('rusun', 'gedung', 'ruangan'));

@@ -49,7 +49,7 @@
                       <h3> {{ $pemohon_aktif }} </h3><h6> orang</h6>
                     </div>
                   </div>
-                  Jumlah Penghuni Aktif
+                  Jumlah Pemohon Aktif
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
