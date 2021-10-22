@@ -216,8 +216,8 @@ class PemohonController extends Controller
         $ruangan = Ruangan::where('id_ruangan',$request->id_ruangan)->first();
         $pemohon = Pemohon::where('id_user',Auth::user()->id_user)->first();
 
-        $pemohon->id_gedung = $ruangan->lantai->gedung->id_gedung;
-        $pemohon->id_lantai = $ruangan->lantai->id_lantai;
+        $pemohon->id_gedung     = $ruangan->lantai->gedung->id_gedung;
+        $pemohon->id_lantai     = $ruangan->lantai->id_lantai;
         $pemohon->id_ruangan    = $ruangan->id_ruangan;
 
         $pemohon->update();
@@ -225,12 +225,16 @@ class PemohonController extends Controller
         return redirect()->route('beranda', compact('ruangan'));
     }
 
-    public function verifikasi($id)
+    public function verifikasi($id, Request $request)
     {
-        $pemohon = Pemohon::findOrFail($id);
-        $pemohon->status_pengajuan = 'diverifikasi';
+        $pemohon                    = Pemohon::findOrFail($id);
+        $pemohon->status_pengajuan  = 'diverifikasi';
         $pemohon->update();
 
+        $ruangan = Ruangan::whereIdRuangan($pemohon->id_ruangan)->first();
+        $ruangan->status_ruangan    = 'terisi';
+        $ruangan->update();
+        
         return redirect()->route('pemohon.index')
                         ->with('success','Pemohon behasil di verifikasi!');
     }

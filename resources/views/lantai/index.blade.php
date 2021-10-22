@@ -29,7 +29,7 @@
             <tr>
                 <th class="text-center">Lantai</th>
                 <th class="text-center">Gedung</th>
-                <th width="250px" class="text-center">Aksi</th>
+                <th class="text-center">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -39,7 +39,7 @@
         @foreach ($lantai as $l)
         <tr>
             <td>Lantai {{ $l->lantai }}</td>
-            <td >{{ $l->gedung->nama_gedung }}</td>
+            <td >{{ $l->gedung->nama_gedung }} {{ $l->gedung->blok }}</td>
             <td class="text-center">
                 <form action="{{ route('lantai.destroy',$l->id_lantai) }}" method="POST" id="form_delete{{$l->id_lantai}}">
  
