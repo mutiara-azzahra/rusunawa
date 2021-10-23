@@ -24,7 +24,7 @@
                 <thead>
                 <tr>
                     <th>No</th>
-                    <th> Nama</th>
+                    <th>Nama</th>
                     <th>Tanggal Pengajuan</th>
                     <th>Status Pengajuan</th>
                     <th>Status Permohonan</th>

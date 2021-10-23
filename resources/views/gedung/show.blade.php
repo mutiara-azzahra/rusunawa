@@ -27,7 +27,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Tipe Ruangan</strong><br>
-                {{-- {{ $gedung->tipe_ruangan->tipe_ruangan }}<br>                 --}}
+                {{ $gedung->tipe_ruangan->tipe_ruangan }}<br>        
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

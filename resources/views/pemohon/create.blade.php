@@ -73,62 +73,62 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Pemohon</strong>
-                        <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)" value="">
+                        <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)" value="" >
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>NIK</strong> (sesuai KTP)
-                        <input type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK" value="">
+                        <input type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK" value="" >
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Pekerjaan</strong>
-                        <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga" value="">
+                        <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga" value="" >
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Alamat</strong>
-                        <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat" value="">
+                        <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat" value="" >
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Jumlah Anggota Keluarga</strong>
-                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="">
+                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="" >
                     </div>
                 </div>
                 @else
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Pemohon</strong>
-                        <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)" value="{{ $pemohon->nama_kepala_keluarga }}">
+                        <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)" value="{{ $pemohon->nama_kepala_keluarga }}" readonly>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>NIK</strong> (sesuai KTP)
-                        <input type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK" value="{{ $pemohon->nik_kepala_keluarga }}">
+                        <input type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK" value="{{ $pemohon->nik_kepala_keluarga }}" readonly>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Pekerjaan</strong>
-                        <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga" value="{{ $pemohon->pekerjaan_kepala_keluarga }}">
+                        <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga" value="{{ $pemohon->pekerjaan_kepala_keluarga }}" readonly>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Alamat</strong>
-                        <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat" value="{{ $pemohon->alamat }}">
+                        <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat" value="{{ $pemohon->alamat }}" readonly>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Jumlah Anggota Keluarga</strong>
-                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="{{ $pemohon->jumlah_anggota_keluarga }}">
+                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="{{ $pemohon->jumlah_anggota_keluarga }}" readonly>
                     </div>
                 </div>
 

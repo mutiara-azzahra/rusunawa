@@ -133,8 +133,6 @@
           </div>
         </div>          
       </div>
-
-
     </div>
 
     <div style="padding: 40px;">
@@ -160,7 +158,6 @@
                   @endif
                   m-1">{{ $r->no_ruangan }}</button>
               @endforeach
-              
             </div>
             
             @endforeach

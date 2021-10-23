@@ -61,6 +61,15 @@
                     </div>
                 </div>    
             </div>
+            @if(Auth::check())
+                @if(Auth::user()->id_role == 1)
+                    @if($pemohon->status_pengajuan != 'diverifikasi')
+                    <form action="{{Route('pemohon.verifikasi',$pemohon->id_pemohon)}}" method="get" id="form_verification"></form>
+                    <a class="btn btn-success btn-sm" onclick="verifikasi_permohonan('{{$pemohon->id_pemohon}}')" ><i class="fas fa-check-circle"> Verifikasi Pengajuan</i></a>
+                    @else
+                    @endif
+                @endif
+            @endif
         </div>
 
         <div class="col-lg-6">
@@ -247,7 +256,25 @@
 
     <!-- Lightbox Script -->
     <script>
+        let verifikasi_permohonan = (id_pemohon) =>{
 
+                console.log(id_pemohon)
+                Swal.fire({
+                    title: 'Apa anda yakin menghapus data ini?',
+                    text:  "menghapus notifikasi" ,
+                    showCancelButton: true,
+                    confirmButtonColor: 'green' ,
+                    cancelButtonColor: 'red' ,
+                    confirmButtonText: 'Verifikasi' ,
+                    cancelButtonText: 'Batal' ,
+                    reverseButtons: false
+                    }).then((result) => {
+                        if (result.value) {
+                            $('#form_verification').submit();
+                        }
+
+                })
+                }
         $(document).on("click", '[data-toggle="lightbox"]', function(event) {
             event.preventDefault();
             $(this).ekkoLightbox();
@@ -266,5 +293,7 @@
                 console.log(error);
             })
         }
+        
+    
     </script>
 @endsection

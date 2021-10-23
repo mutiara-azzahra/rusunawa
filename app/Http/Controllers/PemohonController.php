@@ -200,8 +200,13 @@ class PemohonController extends Controller
     public function pilihgedung()
     {
         $gedung     = Gedung::all();
+        $gedung->map(function($q){
+            $q->id_lantai = $q->lantai->pluck('id_lantai');
+         });
+
+        $ruangan    = Ruangan::all();
         
-        return view('pemohon.pilihgedung', compact('gedung'));        
+        return view('pemohon.pilihgedung', compact('gedung', 'ruangan'));        
     }
     public function pilihruangan(Request $request, $id_gedung)
     {

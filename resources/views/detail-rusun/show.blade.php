@@ -89,11 +89,15 @@
           <div class="float-left">
             <div class="card m-3" style="width: 20rem;">
               <div class="foto p-0">
+                @if($g->galeri->isNotEmpty())
                 <img class="" image src="{{asset('/storage/galeri/'.$g->galeri->first()->foto )}}" data-id="{{asset('/storage/galeri/'.$g->galeri )}}" alt="" width="100%" height="200px;">
+                @else
+                <img class="" image src="{{asset('/building.jpg')}}" data-id="{{asset('/storage/galeri/no_image.jpg' )}}" alt="" width="100%" height="200px;">
+                @endif
               </div>
               <div class="detail pt-3 pb-3 pl-3 text-left">
                 <h5>Gedung {{$g->nama_gedung}} {{$g->blok}}</h5>
-                {{ $g->alamat_gedung }}<br>
+                  {{ $g->alamat_gedung }}<br>
                   {{$ruangan->whereIn('id_lantai',$g->id_lantai)->where('status_ruangan','kosong')->count()}} Ruangan Tersedia<br>
                   @if(Auth::check())
                     @if(Auth::user()->id_role == 2)

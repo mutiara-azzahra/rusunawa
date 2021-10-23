@@ -16,6 +16,7 @@ class Gedung extends Model
         'nama_gedung',
         'blok',
         'alamat_gedung',
+        'id_tipe_ruangan',
         'jumlah_ruangan',
         'status_gedung',
         'id_rusun',
