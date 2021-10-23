@@ -13,7 +13,8 @@ class LayananInformasiController extends Controller
     {
         $info_rusun = LayananInformasi::latest()->paginate(5);
         
-        return view('layanan-informasi.index',compact('info_rusun'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('layanan-informasi.index',compact('info_rusun'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -37,7 +38,7 @@ class LayananInformasiController extends Controller
 
         LayananInformasi::create($request->all());
         
-        return redirect()->route('layanan-informasi.index')->with('success','Data baru berhasil ditambahkan');
+        return redirect()->route('layanan-informasi.index')->with('success','Layanan Informasi Rusun berhasil ditambahkan');
     }
 
     public function show( $id)
@@ -67,7 +68,7 @@ class LayananInformasiController extends Controller
         $info_rusun->update($request->all());
          
         return redirect()->route('layanan-informasi.index')
-                        ->with('success','Data rusun berhasil diubah!');
+                        ->with('success','Layanan Informasi Rusun berhasil diubah!');
     }
   
     public function destroy( $id)
@@ -75,7 +76,7 @@ class LayananInformasiController extends Controller
         $info_rusun = LayananInformasi::destroy($id);
   
         return redirect()->route('layanan-informasi.index')
-                        ->with('success','Data informasi berhasil dihapus!');
+                        ->with('success','Layanan Informasi Rusun berhasil dihapus!');
     }
     
 }

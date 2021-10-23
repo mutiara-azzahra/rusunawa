@@ -51,7 +51,6 @@ class KecamatanController extends Controller
         $request->validate([
             'nama_kecamatan' => 'required',
         ]);
-        //  dd($kecamatan, $request->all());
         $kecamatan->update($request->all());
          
         return redirect()->route('kecamatan.index')

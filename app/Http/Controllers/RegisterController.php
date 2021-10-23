@@ -13,9 +13,9 @@ class RegisterController extends Controller
 {    
     public function create()
     {
-        $kelurahan = Kelurahan::all();
+        $kelurahan  = Kelurahan::all();
         $kecamatan  = Kecamatan::all();
-        $kota   = Kota::all();
+        $kota       = Kota::all();
         
         return view('register.create', compact('kelurahan', 'kecamatan', 'kota'));
     }

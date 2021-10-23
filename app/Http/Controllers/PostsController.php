@@ -12,7 +12,7 @@ class PostsController extends Controller
         $posts = Posts::latest()->paginate(5);
         
         return view('posts.index',compact('posts'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -29,7 +29,7 @@ class PostsController extends Controller
 
         Posts::create($request->all());
 
-        return redirect()->route('posts.index')->with('success','Post created successfully');
+        return redirect()->route('posts.index')->with('success','Data tanya jawab baru berhasil ditambahkan!');
     }
 
     public function show(Posts $post)
@@ -55,7 +55,7 @@ class PostsController extends Controller
         $posts->update($request->all());
          
         return redirect()->route('posts.index')
-                        ->with('success','Post updated successfully');
+                        ->with('success','Data tanya jawab berhasil diubah!');
     }
   
     public function destroy($id)
@@ -63,6 +63,6 @@ class PostsController extends Controller
         $posts = Posts::destroy($id);
   
         return redirect()->route('posts.index')
-                        ->with('success','Post deleted successfully');
+                        ->with('success','Data tanya jawab berhasil dihapus!');
     }
 }

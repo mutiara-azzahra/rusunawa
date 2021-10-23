@@ -45,9 +45,9 @@ class KelurahanController extends Controller
     
     public function edit( $id)
     {
-        $kelurahan = Kelurahan::findOrFail($id);
-        $kecamatan = Kecamatan::all();
-        $kota = Kota::all();
+        $kelurahan  = Kelurahan::findOrFail($id);
+        $kecamatan  = Kecamatan::all();
+        $kota       = Kota::all();
 
         return view('kelurahan.edit',compact('kelurahan', 'kecamatan', 'kota'));
     }

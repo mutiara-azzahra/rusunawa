@@ -11,10 +11,9 @@ class HomeController extends Controller
     {
         $ruangan = Ruangan::whereHas('pemohon', function($query){
             $query->where('status_pemohon', 'aktif');
-
-        })
-        ->with('pemohon')
-        ->get();
+            })
+            ->with('pemohon')
+            ->get();
         
         return view('home',compact('ruangan'));
     }

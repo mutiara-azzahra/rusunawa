@@ -30,7 +30,7 @@ class SyaratMendaftarController extends Controller
 
         SyaratMendaftar::create($request->all());
         
-        return redirect()->route('syarat-mendaftar.index')->with('success','Data baru berhasil ditambahkan');
+        return redirect()->route('syarat-mendaftar.index')->with('success','Data syarat mendaftar berhasil ditambahkan');
     }
 
     public function show( $id)
@@ -55,7 +55,7 @@ class SyaratMendaftarController extends Controller
         $syarat_mendaftar->update($request->all());
          
         return redirect()->route('syarat_mendaftar.index')
-                        ->with('success','Data baru berhasil diubah!');
+                        ->with('success','Data syarat mendaftar berhasil diubah!');
     }
   
     public function destroy( $id)
@@ -63,7 +63,7 @@ class SyaratMendaftarController extends Controller
         $syarat_mendaftar = SyaratMendaftar::destroy($id);
   
         return redirect()->route('syarat_mendaftar.index')
-            ->with('success','Data syarat_mendaftar berhasil dihapus!');
+            ->with('success','Data syarat mendaftar berhasil dihapus!');
     }
     
 }

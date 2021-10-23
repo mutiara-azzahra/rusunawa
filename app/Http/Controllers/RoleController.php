@@ -13,7 +13,7 @@ class RoleController extends Controller
         $role = Role::latest()->paginate(5);
         
         return view('role.index',compact('role'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -59,6 +59,6 @@ class RoleController extends Controller
         $role->delete();
   
         return redirect()->route('role.index')
-                        ->with('success','Role berhasil dihapus');
+            ->with('success','Role berhasil dihapus');
     }
 }

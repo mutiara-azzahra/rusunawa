@@ -67,6 +67,7 @@ class LantaiController extends Controller
     {
         $lantai = Lantai::findOrFail($id);
         $lantai->delete();
+        
         return redirect()->route('lantai.index')
                         ->with('success','Lantai berhasil dihapus!');
     }

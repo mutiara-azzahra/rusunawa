@@ -83,8 +83,6 @@ class UserController extends Controller
         }
          
         $user->update($request->all());
-         
-
     }
   
     public function destroy(User $user)
@@ -93,6 +91,7 @@ class UserController extends Controller
   
         return redirect()->route('user.index')
                         ->with('success','Data user berhasil dihapus!');
+                        
     }
     public function reset($id)
     {

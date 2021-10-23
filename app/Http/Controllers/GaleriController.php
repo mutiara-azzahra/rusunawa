@@ -30,10 +30,9 @@ class GaleriController extends Controller
             'id_gedung' => 'required',
         ]);
 
-        
-        $input = $request->all();
-        $nama_foto = $input['kategori'].'_'.$request->foto->getClientOriginalName();
-        $input['foto']= $nama_foto;
+        $input          = $request->all();
+        $nama_foto      = $input['kategori'].'_'.$request->foto->getClientOriginalName();
+        $input['foto']  = $nama_foto;
         $request->file('foto')->move('storage/galeri/', $nama_foto);
 
         Galeri::create($input);

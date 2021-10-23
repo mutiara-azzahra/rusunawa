@@ -282,6 +282,7 @@ class PemohonController extends Controller
         return redirect()->route('pemohon.index')
                         ->with('success','Data pemohon berhasil ditambahkan!');
     }
+
     public function update_foto(Request $request, Pemohon $pemohon)
     {
         $request->validate([
@@ -317,7 +318,7 @@ class PemohonController extends Controller
         $pdf        = PDF::loadView('report.pemohon', ['data'=>$data]);
         $pdf->setPaper('a4', 'landscape');
 
-        return $pdf->stream('penghuni.pdf');
+        return $pdf->stream('nota-pembayaran-penghuni.pdf');
     }
 
 }

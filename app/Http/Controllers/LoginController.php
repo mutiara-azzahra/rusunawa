@@ -122,9 +122,9 @@ class LoginController extends Controller
     public function detailgedung($id)
     {
         
-        $gedung = Gedung::findOrFail($id);
-        $lantai = Lantai::where('id_gedung',$gedung->id_gedung)->get();
-        $ruangan = Ruangan::all();
+        $gedung     = Gedung::findOrFail($id);
+        $lantai     = Lantai::where('id_gedung',$gedung->id_gedung)->get();
+        $ruangan    = Ruangan::all();
 
         return view('detail-gedung.show', compact('gedung', 'lantai', 'ruangan'));
     }

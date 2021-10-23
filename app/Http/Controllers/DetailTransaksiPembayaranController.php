@@ -17,7 +17,7 @@ class DetailTransaksiPembayaranController extends Controller
         $detail_transaksi_pembayaran = DetailTransaksiPembayaran::latest()->paginate(5);
         
         return view('detail-transaksipembayaran.index',compact('detail_transaksi_pembayaran'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()
@@ -45,14 +45,13 @@ class DetailTransaksiPembayaranController extends Controller
         $transaksi_pembayaran           = TransaksiPembayaran::findOrFail($id);
         $detail_transaksi_pembayaran    = DetailTransaksiPembayaran::where('id_transaksi_pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran)->get();
 
-
         return view('detail-transaksipembayaran.show', compact('transaksi_pembayaran', 'detail_transaksi_pembayaran'));
     }
     
     public function edit($id)
     {
-        $detiail_transaksi_pembayaran = TransaksiPembayaran::findOrFail($id);
-        $pemohon = Pemohon::all();
+        $detiail_transaksi_pembayaran   = TransaksiPembayaran::findOrFail($id);
+        $pemohon                        = Pemohon::all();
 
         return view('detail-transaksipembayaran.edit',compact('detail_transaksi_pembayaran', 'pemohon'));
     }
@@ -66,7 +65,6 @@ class DetailTransaksiPembayaranController extends Controller
         ]);
          
         $transaksi_pembayaran->update($request->all());
-        dd($request);
                  
         return redirect()->route('detail-transaksipembayaran.index')
                         ->with('success','Data Transaksi Pembayaran berhasil ditambahkan');

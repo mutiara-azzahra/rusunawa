@@ -12,7 +12,7 @@ class BlokController extends Controller
         $blok = Blok::latest()->paginate(5);
         
         return view('blok.index',compact('blok'))
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()

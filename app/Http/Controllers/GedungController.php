@@ -39,7 +39,7 @@ class GedungController extends Controller
             
         ]);
 
-            Gedung::create($request->all());
+        Gedung::create($request->all());
 
         return redirect()->route('gedung.index')->with('success','Gedung berhasil dibuat!');
     }
@@ -79,7 +79,6 @@ class GedungController extends Controller
 
     public function destroy(Gedung $gedung)
     {
-        /// melakukan hapus data berdasarkan parameter yang dikirimkan
         $gedung->delete();
   
         return redirect()->route('gedung.index')
