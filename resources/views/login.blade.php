@@ -35,36 +35,29 @@
 <body>
 <!--Navbar-->
 
-@if ($message = Session::get('success'))
-<div class="alert alert-success">
-    <p>{{ $message }}</p>
-</div>
-
-@elseif ($message = Session::get('warning'))
-  <div class="alert alert-warning">
-      <p>{{ $message }}</p>
-  </div>
-@endif
-
 <div class="login-wrapper">
   <div class="login">
-    <div class="card card-login shadow-sm p-4 bg-white rounded" style="width: 400px;">
+    <div class="card card-login shadow-sm p-4 bg-white rounded" style="width: 500px;">
       <img class="card-img-top" src="{{ asset('logo.png') }}" style="width: 100px;">
       <div class="card-body">
         <h5 class="text-center">MASUK AKUN RUSUNAWA</h5>
         <div class="underline-title mx-auto"></div>
+        
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success mt-3">
+            <p>{{ $message }}</p>
+        </div>
+        @elseif ($message = Session::get('warning'))
+        @endif
+
         <form method="POST" action="{{ Route('login') }}">
           @csrf
-          <div class="form-login">
-            <div class="form-group">
-              <label for=""></label>
+            <div class="form-group mt-3">
               <input type="text" name="username" class="form-control" id="username" placeholder="Username">
             </div>
             <div class="form-group">
-              <label for=""></label>
               <input type="password" name="password" class="form-control" id="password" placeholder="Password">
             </div>
-          </div>
             <div class="button justify-content-center">
               <button type="submit" class="btn btn-primary mx-auto d-block mt-2" style="width: 200px">Masuk</button>
             </div>

@@ -71,7 +71,7 @@ class LoginController extends Controller
             $input['status_pengajuan']  = 'belum lengkap';
             $data                       = Pemohon::create($input);
     
-            return redirect('login');
+            return redirect('login')->with('success','Silahkan lanjutkan login!');
         }
 
     }
