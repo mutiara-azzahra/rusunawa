@@ -222,7 +222,7 @@
 
                     <div class="float-right">
                       @if (Auth::check())
-                      <form action="{{Route('create.permohonan')}}" method="GET">
+                      <form action="{{route('pemohon.pesanRuangan')}}" method="GET">
                         @csrf
                         <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
                         <button class="btn btn-primary" style="width: 200px;">Pesan Sekarang</button>

@@ -185,7 +185,7 @@ class PemohonController extends Controller
                         ->with('success','Data pemohon berhasil dihapus');
     }
 
-    public function create_halaman_depan(Request $request)
+    public function create_halaman_depan(Request $request, $id)
     {
         $pilih_ruangan = Ruangan::findOrFail($request->id_ruangan);
 
@@ -214,7 +214,7 @@ class PemohonController extends Controller
         $gedung     = Gedung::findOrFail($id_gedung);
         $lantai     = Lantai::where('id_gedung', $gedung->id_gedung)->get();
 
-        return view('pemohon.pilihruangan', compact('gedung', 'lantai' ));        
+        return view('pemohon.pilihruangan', compact('gedung', 'lantai'));        
     }
     public function pesanRuangan(Request $request)
     {

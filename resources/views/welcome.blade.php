@@ -217,7 +217,7 @@
               <img class="" image src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100%" height="200px;">
             </div>
             <div class="detail pt-3 pb-3 pl-3 text-left">
-              <h5>Rusunawa {{ $r->nama_rusun."-". $r->id_rusun }}</h5>
+              <h5>Rusunawa {{ $r->nama_rusun }}</h5>
               {{ $r->alamat }}, Banjarmasin<br>
               {{-- {{ $gedung->where('id_rusun','6')->count() }} Gedung<br> --}}
               {{ $r->gedung->count() }} Gedung<br>

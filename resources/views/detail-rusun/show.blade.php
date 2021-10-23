@@ -101,7 +101,7 @@
                   {{$ruangan->whereIn('id_lantai',$g->id_lantai)->where('status_ruangan','kosong')->count()}} Ruangan Tersedia<br>
                   @if(Auth::check())
                     @if(Auth::user()->id_role == 2)
-                    <div class="pt-2"><a href="{{ route('detailgedung',$g->id_gedung)}}" class="btn btn-md btn-primary">PESAN SEKARANG</a></div>
+                    <div class="pt-2"><a href="{{ route('pemohon.pilihruangan',$g->id_gedung)}}" class="btn btn-md btn-primary">PESAN SEKARANG</a></div>
                     @endif
                   
                   @else
