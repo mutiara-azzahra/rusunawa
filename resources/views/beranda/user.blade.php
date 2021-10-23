@@ -58,6 +58,8 @@
                 
                 
               </div>
+
+              @if($pemohon->status_pengajuan == 'diverifikasi')
               <div class="card p-2">
                 <div class=""><strong>Status Pembayaran</strong></div>
                 Bulan {{ $month = Carbon\carbon::now()->translatedFormat('F'); }} <div><h4>
@@ -72,6 +74,9 @@
                 </h4></div>
                 <div class="" style="color: red">Jatuh Tempo: Setiap tanggal 10</div>
               </div>
+              @else
+              @endif
+
             </div>        
           </div>
         </div>

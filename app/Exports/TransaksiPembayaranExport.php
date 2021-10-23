@@ -30,6 +30,7 @@ class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldA
             $item->no_registrasi    = $item->id_transaksi_pembayaran;
             $item->nama             = $item->pemohon->nama_kepala_keluarga;
             $item->blok             = '-';
+            $item->gedung           = $item->ruangan->lantai->gedung->nama_gedung;
             $item->lantai           = $item->ruangan->lantai->lantai;
             $item->no_ruangan       = $item->ruangan->no_ruangan;
             $item->harga_ruangan    = 'Rp. '.$item->ruangan->harga_ruangan;
@@ -38,12 +39,12 @@ class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldA
             $item->tanggal_validasi = Carbon::parse($item->created_at)->translatedFormat('d F Y');
 
             $item->tahun_validasi   = Carbon::parse($item->created_at)->translatedFormat('Y');
-            $item->jumlah_bulan     = '-';
+            $item->jumlah_bulan     = $item->detail_transaksi_pembayaran->count();
             $item->retribusi        = 'Rp. '.$item->ruangan->harga_ruangan;
             $item->total_bayar      = 'Rp. '.$item->detail_transaksi_pembayaran->sum('harga');
          
             return $item->only(['no','id_transaksi_pembayaran','nama',
-                'blok','lantai','no_ruangan','harga_ruangan',
+                'blok','gedung','lantai','no_ruangan','harga_ruangan',
                 'bulan','tanggal_validasi','tahun_validasi',
                 'jumlah_bulan','retribusi','total_bayar', 
                 'jumlah', 'piutang', 'penerimaan']);
@@ -56,7 +57,9 @@ class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldA
             ['PENERIMAAN RUSUNAWA'],
             ['BULAN '],
             ['BULAN ' => Carbon::parse($this->tanggal_awal)->translatedFormat('M Y')],
-            ['No','No Registrasi','Nama','Blok','Lantai','No','Besaran Per Bulan','Bulan','Tanggal Validasi','Tahun','Retribusi','Total']
+            ['No','No Registrasi','Nama','Blok','Gedung','Lantai','No Ruangan',
+                'Besaran Per Bulan','Bulan','Tanggal Validasi',
+                'Tahun','Jumlah Bulan','Retribusi','Total']
         ];
     }
 }

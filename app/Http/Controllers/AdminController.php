@@ -48,10 +48,10 @@ class AdminController extends Controller
             $pemohon_aktif      = Pemohon::where('status_permohonan', 'aktif')->count();
             $detail             = null;
             $ruangan_terisi     = Ruangan::whereHas('pemohon', function($query){
-                                    $query->where('status_permohonan', 'aktif');
-            })
-            ->with('pemohon')
-            ->count();
+                                    $query->where('status_pengajuan', 'diverifikasi');
+                                        })
+                                        ->with('pemohon')
+                                        ->count();
 
 
             $ruangan_kosong = Ruangan::count() - $ruangan_terisi;

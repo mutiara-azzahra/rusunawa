@@ -38,7 +38,7 @@
                                 <label>Ruangan</label>
                                 <select name="id_ruangan" class="form-control select2bs4 p-1" style="width: 100%;" onchange="getPemohon()" id="id_ruangan">
                                 <option >-- Pilih Ruangan --</option>
-                                @foreach($ruangan as $r)
+                                @foreach($ruangan->where('status_ruangan','terisi') as $r)
                                 <option value="{{ $r->id_ruangan }}"> {{ $r->no_ruangan }} - {{$r->lantai->lantai }} - {{ $r->lantai->gedung->nama_gedung }} </option>
                                 @endforeach
                                 </select>
@@ -83,25 +83,25 @@
                         
                             <div class="col-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Januari" id="januari">
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Januari" id="Januari">
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Januari
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Februari" id="februari" >
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Februari" id="Februari" >
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Februari
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Maret" id="maret">
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Maret" id="Maret">
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Maret
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="April" id="april" >
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="April" id="April" >
                                     <label class="form-check-label" for="flexCheckDefault">
                                     April
                                     </label>
@@ -109,25 +109,25 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Mei" id="mei">
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Mei" id="Mei">
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Mei
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Juni" id="juni" >
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Juni" id="Juni" >
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Juni
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Juli" id="juli">
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Juli" id="Juli">
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Juli
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Agustus" id="agustus" >
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Agustus" id="Agustus" >
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Agustus
                                     </label>
@@ -135,25 +135,25 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="September" id="september">
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="September" id="September">
                                     <label class="form-check-label" for="flexCheckDefault">
                                     September
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Oktober" id="oktober">
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Oktober" id="Oktober">
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Oktober
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="November" id="november">
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="November" id="November">
                                     <label class="form-check-label" for="flexCheckDefault">
                                     November
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Desember" id="desember" >
+                                    <input class="form-check-input" name="bulan[]" type="checkbox" value="Desember" id="Desember" >
                                     <label class="form-check-label" for="flexCheckDefault">
                                     Desember
                                     </label>

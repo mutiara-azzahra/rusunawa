@@ -136,6 +136,8 @@
             </div>
 
             <div class="col">
+                
+                @if($pemohon->foto_ktp == null)
                 <div class="col">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
@@ -152,7 +154,6 @@
                         </div>                    
                     </div>
                 </div>
-
                 <div class="col">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
@@ -169,6 +170,8 @@
                         </div>
                     </div>
                 </div>
+                @else
+                @endif
             </div>
 
                 @if(Auth::user()->id_role == 1)
@@ -193,9 +196,12 @@
                 @endif
 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" style="padding-right: 10px; margin: 0 !important">
+                    @if($pemohon->foto_ktp == null)
                     <div class="float-right">
                         <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Permohonan</button>
                     </div>
+                    @else
+                    @endif
                 </div>
             </div>
         </form>

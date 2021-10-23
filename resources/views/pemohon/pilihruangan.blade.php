@@ -127,7 +127,7 @@
                        <label for=""> Kode Ruangan</label>
                        <select class="form-control" name="" id="input_ruangan{{$l->id_lantai}}" onchange="getRuangan({{$l->id_lantai}})" style="width: 180px;">
                         <option value="">-- Pilih Ruangan --</option>
-                         @foreach($l->ruangan as $r)
+                         @foreach($l->ruangan->where('status_ruangan','kosong') as $r)
                          <option value="{{ $r->id_ruangan}}">{{$r->no_ruangan}}</option>
                          @endforeach
                        </select>
