@@ -33,13 +33,12 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             
-            
             return redirect()->route('beranda');
         }
 
-        return back()->withErrors([
-            'username' => 'The provided credentials do not match our records.',
-        ]);
+        return back()->with('danger','Username atau password salah!');
+
+        
     }
 
     public function formRegister()

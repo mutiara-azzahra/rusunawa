@@ -47,7 +47,10 @@
         <div class="alert alert-success mt-3">
             <p>{{ $message }}</p>
         </div>
-        @elseif ($message = Session::get('warning'))
+        @elseif ($message = Session::get('danger'))
+        <div class="alert alert-danger mt-3">
+          <p>{{ $message }}</p>
+        </div>
         @endif
 
         <form method="POST" action="{{ Route('login') }}">

@@ -18,14 +18,14 @@
 
 <div class="card" style="padding: 20px;">
    <div class="card-body">
-    <table class="table table-hover bg-light" id="dataTable">
+    <table class="table table-hover table-bordered bg-light" id="dataTable">
         <thead>
         <tr>
             <th>No</th>
+            <th>Nama Penghuni</th>
             <th>Gedung</th>
             <th>Ruangan</th>
-            <th>Nama Penghuni</th>
-            <th class="text-center">Aksi</th>
+            <th class="text-center">Detail</th>
         </tr>            
         </thead>
         <tbody>
@@ -35,11 +35,11 @@
         @foreach ($transaksi_pembayaran as $tp)
         <tr>
             <td class="text-center">{{ $no++ }}</td>
+            <td>{{ $tp->pemohon->nama_kepala_keluarga }}</td>
             <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }}</td>
             <td>Nomor {{ $tp->ruangan->no_ruangan }}</td>
-            <td>{{ $tp->pemohon->nama_kepala_keluarga }}</td>   
             <td class="text-center"> 
-                <a class="btn btn-info btn-sm" href="{{ route('detail-transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Detail Pembayaran</a> 
+                <a class="btn btn-info btn-sm" href="{{ route('detail-transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Detail Bulan</a> 
             </td>
         </tr>
         @endforeach            
