@@ -116,6 +116,7 @@ Route::get('/create/permohonan_user/{id_gedung}', [PemohonController::class,'cre
 Route::get('penghuni', [PemohonController::class, 'show_penghuni'])->name('penghuni.index');
 Route::get('{id}/nonaktif', [PemohonController::class, 'nonaktif'])->name('pemohon.nonaktif');
 Route::get('{id}/verifikasi', [PemohonController::class, 'verifikasi'])->name('pemohon.verifikasi');
+Route::get('{id}/tolak', [PemohonController::class, 'tolak'])->name('pemohon.tolak');
 Route::get('/api_harga/pemohon/{id}/{tahun}', [PemohonController::class,'api'])->name('api.pemohon');
 
 //Report

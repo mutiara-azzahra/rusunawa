@@ -136,9 +136,9 @@
             </div>
 
             <div class="col">
-                
+                <h5><b>Dokumen Pendukung</b> (dalam bentuk jpg/jpeg/png)</h5> 
                 @if($pemohon->foto_ktp == null)
-                <div class="col">
+                <div class="col pt-3">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                             <div class="form-group">

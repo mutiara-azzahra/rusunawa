@@ -112,9 +112,9 @@
                                     <td class="text-left">{{$p->nik_kepala_keluarga}}</td>
                                     <td class="text-left">{{$p->pekerjaan_kepala_keluarga}}</td>
                                     <td class="text-left">{{$p->jumlah_anggota_keluarga}}</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="text-left"></td>
+                                    <td class="text-left"></td>
+                                    <td class="text-left"></td>
                                     
                                     {{-- <td>{{$p->ruangan->lantai->gedung->nama_gedung}}</td>
                                     <td>{{$p->ruangan->lantai->lantai}}</td> --}}

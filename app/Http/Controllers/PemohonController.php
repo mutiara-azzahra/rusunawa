@@ -247,6 +247,16 @@ class PemohonController extends Controller
         return redirect()->route('pemohon.index')
                         ->with('success','Pemohon behasil di verifikasi!');
     }
+    public function tolak($id)
+    {
+        $pemohon    = Pemohon::findOrFail($id);
+        $pemohon->status_pengajuan  = 'ditolak';
+        $pemohon->update();
+
+        return redirect()->route('pemohon.index')
+                        ->with('success','Pengajuan pemohon ditolak!');
+
+    }
 
     public function api($id, $tahun){
 

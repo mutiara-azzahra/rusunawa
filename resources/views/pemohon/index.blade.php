@@ -68,8 +68,8 @@
                         @csrf 
                         @method('DELETE')
                         </form>
-                            <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}"><i class="fas fa-eye"></i></a>
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')"><i class="fas fa-trash"></i></a>   
+                            <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>   
                     </td>
                 </tr>
                 @endforeach

@@ -91,7 +91,7 @@
                                     </tr>
                                     <tr>
                                         <td class="p-3"style="padding-right:50px;"><strong>NIK  </strong><span style="color:red">*sesuai KTP</span></td>
-                                        <td><input style="width:350px;" type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK kepala keluarga"></td>
+                                        <td><input style="width:350px;" type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK" maxlength="16" minlength="16"></td>
                                     </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Pekerjaan</strong></td>

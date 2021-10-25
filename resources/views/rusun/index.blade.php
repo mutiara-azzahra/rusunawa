@@ -45,8 +45,8 @@
                             <form action="{{ route('rusun.destroy',$r->id_rusun) }}" method="POST" id="form_delete">            
                                 @csrf
                                 @method('DELETE')
-                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$r->id_rusun) }}"><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_rusun }}')" ><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$r->id_rusun) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_rusun }}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>
                             </form>
                         </td>
                     </tr>

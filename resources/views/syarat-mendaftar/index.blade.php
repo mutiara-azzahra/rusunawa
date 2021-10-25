@@ -38,12 +38,12 @@
                         <td> {{ $s->syarat_mendaftar }}</td>
                         <td class="text-center">
                             <form action="{{ route('syarat-mendaftar.destroy',$s->id_syarat_mendaftar) }}" method="POST" id="form_delete">            
-                                <a class="btn btn-primary btn-sm" href="{{ route('syarat-mendaftar.edit',$s->id_syarat_mendaftar) }}"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('syarat-mendaftar.edit',$s->id_syarat_mendaftar) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $s->id_syarat_mendaftar }}')" ><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $s->id_syarat_mendaftar }}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>
                             </form>
                         </td>
                     </tr>

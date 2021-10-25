@@ -61,15 +61,21 @@
                     </div>
                 </div>    
             </div>
-            @if(Auth::check())
-                @if(Auth::user()->id_role == 1)
-                    @if($pemohon->status_pengajuan != 'diverifikasi')
-                    <form action="{{Route('pemohon.verifikasi',$pemohon->id_pemohon)}}" method="get" id="form_verification"></form>
-                    <a class="btn btn-success btn-md" onclick="verifikasi_permohonan('{{$pemohon->id_pemohon}}')" ><i class="fas fa-check-circle"></i> Verifikasi Pengajuan</a>
-                    @else
+            <div class="row">
+                @if(Auth::check())
+                    @if(Auth::user()->id_role == 1)
+                        @if($pemohon->status_pengajuan != 'diverifikasi')
+                        <form action="{{Route('pemohon.verifikasi',$pemohon->id_pemohon)}}" method="get" id="form_verification"></form>
+                        <a class="btn btn-success btn-md m-2" onclick="verifikasi_permohonan('{{$pemohon->id_pemohon}}')" ><i class="fas fa-check-circle"></i> Verifikasi Pengajuan</a>
+                        
+                        <form action="{{Route('pemohon.tolak',$pemohon->id_pemohon)}}" method="get" id="form_tolak"></form>
+                        <a class="btn btn-danger btn-md m-2" onclick="tolak_permohonan('{{$pemohon->id_pemohon}}')" ><i class="fas fa-times-circle"></i> Tolak Pengajuan</a>
+                        @else
+                        @endif
                     @endif
-                @endif
-            @endif
+                @endif                
+            </div>
+
         </div>
 
         <div class="col-lg-6">
@@ -249,7 +255,6 @@
                 </div>        
             </div>           
         </div>
-
     </div>
 
 </div>
@@ -260,11 +265,11 @@
 
                 console.log(id_pemohon)
                 Swal.fire({
-                    title: 'Apa anda yakin menghapus data ini?',
+                    title: 'Verifikasi permohonan ini?',
                     text:  "menghapus notifikasi" ,
                     showCancelButton: true,
                     confirmButtonColor: 'green' ,
-                    cancelButtonColor: 'red' ,
+                    cancelButtonColor: '#187bcd' ,
                     confirmButtonText: 'Verifikasi' ,
                     cancelButtonText: 'Batal' ,
                     reverseButtons: false
@@ -274,7 +279,28 @@
                         }
 
                 })
-                }
+            }
+
+            let tolak_permohonan = (id_pemohon) =>{
+
+                console.log(id_pemohon)
+                Swal.fire({
+                    title: 'Tolak permohonan ini?',
+                    text:  "" ,
+                    showCancelButton: true,
+                    confirmButtonColor: 'red' ,
+                    cancelButtonColor: '#187bcd' ,
+                    confirmButtonText: 'Tolak' ,
+                    cancelButtonText: 'Batal' ,
+                    reverseButtons: false
+                    }).then((result) => {
+                        if (result.value) {
+                            $('#form_tolak').submit();
+                        }
+
+                })
+            }
+
         $(document).on("click", '[data-toggle="lightbox"]', function(event) {
             event.preventDefault();
             $(this).ekkoLightbox();

@@ -27,7 +27,7 @@
                     <th>Nama User</th>
                     <th>Username</th>
                     <th>Email</th>
-                    <th>Aksi</th>
+                    <th class="text-center">Aksi</th>
                 </tr>            
             </thead>
             <tbody>
@@ -42,10 +42,10 @@
                     <td>{{ $u->email }}</td>
                     <td class="text-center">
                         <form action="{{ route('user.destroy',$u->id_user) }}" method="POST" id="form_delete">
-                        <a href="{{ route('user.reset',$u->id_user) }}" style="margin: 5px;" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')"><i class="fas fa-redo"></i></a>
+                        <a href="{{ route('user.reset',$u->id_user) }}" style="margin: 5px;" class="btn btn-warning btn-sm" onclick="return confirm('Apakah Anda yakin ingin reset password user ini?')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Reset Password"><i class="fas fa-redo"></i></a>
                             @csrf
                             @method('DELETE')
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $u->id_user }}')"><i class="fas fa-trash"></i></a>
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $u->id_user }}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>
                         </form>
                     </td>
                 </tr>
