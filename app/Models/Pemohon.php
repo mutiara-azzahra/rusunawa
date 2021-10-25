@@ -18,6 +18,7 @@ class Pemohon extends Model
         'pekerjaan_kepala_keluarga',
         'no_kartu_keluarga',
         'alamat',
+        'no_hp',
         'jumlah_anggota_keluarga',
         'tanggal_pengajuan',
         'status_pengajuan',

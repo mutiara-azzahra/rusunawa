@@ -102,6 +102,10 @@
                                         <td><input style="width:350px;" type="text" name="alamat" class="form-control" placeholder="Isi alamat"></td>
                                     </tr>
                                     <tr>
+                                        <td class="p-3" style="padding-right:50px;"><strong>No. HP</strong></td>
+                                        <td><input style="width:350px;" type="text" name="no_hp" class="form-control" placeholder="Isi nomor handphone"></td>
+                                    </tr>
+                                    <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kota</strong></td>
                                         <td>
                                             <select style="width:350px;" name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()" >

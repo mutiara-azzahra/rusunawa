@@ -68,13 +68,8 @@
                         @csrf 
                         @method('DELETE')
                         </form>
-                        @if($p->status_pengajuan != 'diverifikasi')
-                            <a class="btn btn-success btn-sm" href="{{ route('pemohon.verifikasi',$p->id_pemohon) }}"><i class="fas fa-check-circle"></i></a>
-                        @else
-                        @endif
                             <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}"><i class="fas fa-eye"></i></a>
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')"><i class="fas fa-trash"></i></a>
-                            
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')"><i class="fas fa-trash"></i></a>   
                     </td>
                 </tr>
                 @endforeach

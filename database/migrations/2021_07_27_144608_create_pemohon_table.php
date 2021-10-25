@@ -20,6 +20,7 @@ class CreatePemohonTable extends Migration
             $table->string('pekerjaan_kepala_keluarga');
             $table->string('no_kartu_keluarga');
             $table->string('alamat');
+            $table->Integer('no_hp')->nullable();
             $table->Integer('id_kota')->nullable();
             $table->Integer('id_kecamatan')->nullable();
             $table->Integer('id_kelurahan')->nullable();

@@ -65,7 +65,7 @@
                 @if(Auth::user()->id_role == 1)
                     @if($pemohon->status_pengajuan != 'diverifikasi')
                     <form action="{{Route('pemohon.verifikasi',$pemohon->id_pemohon)}}" method="get" id="form_verification"></form>
-                    <a class="btn btn-success btn-sm" onclick="verifikasi_permohonan('{{$pemohon->id_pemohon}}')" ><i class="fas fa-check-circle"> Verifikasi Pengajuan</i></a>
+                    <a class="btn btn-success btn-md" onclick="verifikasi_permohonan('{{$pemohon->id_pemohon}}')" ><i class="fas fa-check-circle"></i> Verifikasi Pengajuan</a>
                     @else
                     @endif
                 @endif

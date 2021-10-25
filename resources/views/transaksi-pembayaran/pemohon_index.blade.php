@@ -24,8 +24,10 @@
             <th>No</th>
             <th>Nama Penghuni</th>
             <th>Gedung</th>
-            <th>Ruangan</th>
-            <th class="text-center">Detail</th>
+            <th>Nomor Ruangan</th>
+            <th>Bulan Bayar</th>
+            <th>Tahun</th>
+            <th class="text-center">Aksi</th>
         </tr>            
         </thead>
         <tbody>
@@ -38,8 +40,10 @@
             <td>{{ $tp->pemohon->nama_kepala_keluarga }}</td>
             <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }}</td>
             <td>Nomor {{ $tp->ruangan->no_ruangan }}</td>
+            <td>{{ $tp->detail_transaksi_pembayaran->implode('bulan',','); }}</td>
+            <td>{{ $tp->tahun }}</td>
             <td class="text-center"> 
-                <a class="btn btn-info btn-sm" href="{{ route('detail-transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}">Detail Bulan</a> 
+                <a class="btn btn-info btn-sm" href="{{ route('detail-transaksipembayaran.show',$tp->id_transaksi_pembayaran) }}"><i class="fas fa-eye"></i> Detail</a> 
             </td>
         </tr>
         @endforeach            

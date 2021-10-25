@@ -34,11 +34,14 @@ class PemohonController extends Controller
         $user       = auth()->user();
         $pemohon    = Pemohon::where('id_user', $user->id_user)->first();
 
-        if($pemohon->id_ruangan){
+        
+        if($pemohon->id_ruangan)
+        {
             return redirect()->route('pemohon_user.show',$pemohon->id_pemohon);
-        }else{
+        }
+        else
+        {
             return view('pemohon.create',compact('ruangan', 'lantai', 'gedung', 'pilih_ruangan', 'user', 'pemohon'));
-
         }
 
     }
@@ -63,6 +66,7 @@ class PemohonController extends Controller
             'pekerjaan_kepala_keluarga'         => 'required',
             'nama_kepala_keluarga'              => 'required',
             'alamat'                            => 'required',
+            'no_hp'                             => 'required',
             'jumlah_anggota_keluarga'           => 'required',
             'id_gedung'                         => 'required',
             'id_lantai'                         => 'required',
