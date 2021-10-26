@@ -5,10 +5,13 @@ namespace App\Exports;
 use Carbon\Carbon;
 use App\Models\TransaksiPembayaran;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithStyles;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use PhpOffice\PhpSpreadsheet\Style\Fill;
 
-class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldAutoSize
+class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldAutoSize, WithStyles
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -55,11 +58,36 @@ class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldA
     {
         return [
             ['PENERIMAAN RUSUNAWA'],
-            ['BULAN '],
-            ['BULAN ' => Carbon::parse($this->tanggal_awal)->translatedFormat('M Y')],
-            ['No','No Registrasi','Nama','Blok','Gedung','Lantai','No Ruangan',
-                'Besaran Per Bulan','Bulan','Tanggal Validasi',
-                'Tahun','Jumlah Bulan','Retribusi','Total']
+            ['BULAN ' => Carbon::parse($this->tanggal_awal)->translatedFormat('F Y')],
+            ['NO.','NO. REGISTRASI','NAMA','BLOK','GEDUNG','LANTAI','NO. RUANGAN',
+                'BESARAN PER BULAN','BULAN','TANGGAL VALIDASI',
+                'TAHUN','JUMLAH BULAN','RETRIBUSI','TOTAL']
+        ];
+    }
+
+    public function styles(Worksheet $sheet)
+    {
+        $count = $this->collection()->count();
+        $count = $count + 4;
+        $cell   = 'A3:N' . $count;
+
+        $sheet->mergeCells('A1:N1');
+        $sheet->mergeCells('A2:N2');
+        
+        $sheet->getStyle('A1:N1')->applyFromArray(['aligment' => ['horizontal' => 'center']]);
+        $sheet->getStyle('A2:N2')->applyFromArray(['aligment' => ['horizontal' => 'center']]);
+
+        $sheet->getStyle('A3:N3')->getFill()->setFillType(Fill::FILL_SOLID)->getStartColor()->setARGB('F07470');
+
+        return [
+            $cell => [
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                        'color' => ['argb' => '000000'],
+                    ]
+                ]
+            ],
         ];
     }
 }
