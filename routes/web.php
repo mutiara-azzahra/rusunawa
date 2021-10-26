@@ -105,6 +105,7 @@ Route::get('pemohon_user/pilih-gedung', [PemohonController::class, 'pilihgedung'
 Route::get('pemohon_user/pilih-ruangan/{id_gedung}', [PemohonController::class, 'pilihruangan'])->name('pemohon.pilihruangan');
 Route::get('pemohon_user/pesan-ruangan', [PemohonController::class, 'pesanRuangan'])->name('pemohon.pesanRuangan');
 
+Route::get('pemohon_admin/create', [PemohonController::class, 'create'])->name('pemohon_admin.create');
 Route::get('pemohon_user/create', [PemohonController::class, 'create'])->name('pemohon_user.create');
 Route::get('pemohon_user/{id}', [PemohonController::class, 'show'])->name('pemohon_user.show');
 Route::post('pemohon_user/{id}', [PemohonController::class, 'update'])->name('pemohon_user.update');

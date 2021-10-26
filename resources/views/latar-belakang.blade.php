@@ -32,61 +32,65 @@
   </head>
 
   <body>
-    <!--Navbar-->
-  <header id="header" class="header">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="{{ asset('logo.png') }}" alt="" class="img-fluid" style="height: 50px; width: 50px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#latarbelakang">Latar Belakang</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sumberdana">Sumber Dana</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#syarathuni">Syarat Huni</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#tatatertib">Tata Tertib</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('Beranda') }}">Halaman Awal</a>
-          </li>
-  
-          @if (Auth::check())
-  
-          @else
-          <li class="nav-item">
-            <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
-          </li>
-          @endif
-  
-          @if (Auth::check())
-          <li class="nav-item" style="padding-top: 7px;">
-            <a href ="{{ route('logout') }}" onClick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-              <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
-            </a>
-            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
-            </form>
-          </li>
-          @else
-  
-          @endif
-  
-        </ul>
-      </div>
+    <header id="header" class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid img-logo-navbar">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       
-    </div>
-    </nav>
+        <div class="collapse navbar-collapse" style="margin-right: 30px;" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#tentang">Tentang <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lokasi">Lokasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#alur">Alur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('tanya-jawab')}}">Tanya Jawab</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Layanan Informasi
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('latar-belakang')}}">Rusun Teluk Kelayan</a>
+                <a class="dropdown-item" href="#">Rusun Ganda Maghfirah</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
+                <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
+              </div>
+            </li>
+            @if (Auth::check())
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ Route('beranda') }}">Profil Saya</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href ="{{ route('logout') }}">Keluar
+                    <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
+                    {{-- <form id="frm-logout" action="{{ route('logout') }}" method="post" style="display: none;">
+                      @csrf
+                    </form>--}}
+                  </a>
+                </div>
+              </li>
+            @else
+              <li class="nav-item">
+                <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
+              </li>
+            @endif
+          </ul>
+        </div>
+      </nav>
   </header>
   
   <div class="jumbotron-lokasi" style="padding-top: 100px;">

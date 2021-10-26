@@ -32,75 +32,69 @@
   </head>
 
   <body>
-    <!--Navbar-->
   <header id="header" class="header">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid" style="height: 60px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#tentang">Tentang Rusunawa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#lokasi">Lokasi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#alur">Alur</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('tanya-jawab')}}">Tanya Jawab</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Layanan Informasi
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('latar-belakang')}}">Rusun Teluk Kelayan</a>
-              <a class="dropdown-item" href="#">Rusun Ganda Maghfirah</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
-              <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
-            </div>
-          </li>
-          @if (Auth::check())
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid img-logo-navbar">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" style="padding-right: 30px;" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#tentang">Tentang <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lokasi">Lokasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#alur">Alur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('tanya-jawab')}}">Tanya Jawab</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Menu
+                Layanan Informasi
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ Route('beranda') }}">Profil Saya</a>
+                <a class="dropdown-item" href="{{ route('latar-belakang')}}">Rusun Teluk Kelayan</a>
+                <a class="dropdown-item" href="#">Rusun Ganda Maghfirah</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href ="{{ route('logout') }}">Keluar
-                  <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
-                  {{-- <form id="frm-logout" action="{{ route('logout') }}" method="post" style="display: none;">
-                    @csrf
-                  </form> --}}
-                </a>
+                <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
+                <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
               </div>
             </li>
-            <li class="nav-item" style="padding-top:7px;">
-              
-            </li>
-          @else
-            <li class="nav-item">
-              <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
-            </li>
-          @endif
-        </ul>
-      </div>
-    </div>
-    </nav>
-</header>
+            @if (Auth::check())
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ Route('beranda') }}">Profil Saya</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href ="{{ route('logout') }}">Keluar
+                    <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
+                    {{-- <form id="frm-logout" action="{{ route('logout') }}" method="post" style="display: none;">
+                      @csrf
+                    </form>--}}
+                  </a>
+                </div>
+              </li>
+            @else
+              <li class="nav-item">
+                <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
+              </li>
+            @endif
+          </ul>
+        </div>
+      </nav>
+  </header>
 
 <div class="container" data-aos="fade-right">
-  <div style="padding-top: 100px; padding-bottom: 50px;">
+  <div class="pt-3 pb-5">
     <div class="row">
       <div class="col-lg-6 col-sm-7 text-left">
         <h1>Selamat Datang di Sistem Informasi Rusunawa</h1>
@@ -174,30 +168,33 @@
 
 <!--Tentang Rusunawa Kota Banjarmasin-->
 <div class="container">
-  <div class="jumbotron-rusunawa" id="tentang" style="padding-top: 100px;">
+  <div class="jumbotron-rusunawa" id="tentang" style="padding-top: 50px;">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-12" style="padding-right:100px;" >
+        <div class="col-lg-7 col-md-12" >
           <div class="text-left">
               <h3 data-aos="zoom-in-up"><b>Tentang Rusunawa Kota Banjarmasin</b></h3>
               <div class="underline-title mr-auto" data-aos="zoom-in-up"></div>
-              <p data-aos="zoom-in-up"><h5 style="line-height:30px;">Rumah Susun Sewa (Rusunawa) merupakan perumahahan yang dibangun oleh <b>UPT Pelayanan Rusunawa Kota Banjarmasin</b> 
+              <p data-aos="zoom-in-up" class="text-justify pt-3">Rumah Susun Sewa (Rusunawa) merupakan perumahahan yang dibangun oleh <b>UPT Pelayanan Rusunawa Kota Banjarmasin</b> 
                 yang disewakan untuk masyarakat 
                 khususnya kota Banjarmasin dengan harga yang terjangkau, lingkungan yang bersih dan aman.
                 Ada tiga (2) buah rusun yang dapat ditempati di kota Banjarmasin yaitu 
-                <span style="font: bold, italic; color: red">Teluk Kelayan dan Ganda Maghfirah</span></h5></p>
+                <span style="font: bold, italic; color: red">Teluk Kelayan dan Ganda Maghfirah</span></p>
             </div>             
           </div>
 
-        <div class="col-lg-6 col-md-12">
-          <div class="beranda-syarat text-left">
+        <div class="col-lg-5 col-md-12">
+          <div class="card" style="border-radius:  30px !important;">
+            <div class="beranda-syarat text-left">
             <h4 class="beranda-syarat-judul">Syarat Mendaftar</h4>
             @foreach ($syarat_mendaftar as $s)
             <ul class="beranda-syarat">
               <li class="beranda-syarat-list"><i class="fas fa-check-circle" style="padding-right: 5px; color: green;"></i>{{ $s->syarat_mendaftar}}</li>           
             </ul>
             @endforeach
+            </div>
           </div>
+          
         </div>    
       </div>
     </div>  

@@ -8,7 +8,7 @@
                 <h4>Pilih Tanggal</h4>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('transaksi-pembayaran.index') }}"><i class="fas fa-plus"></i> Kembali</a>
+                <a class="btn btn-success" href="{{ route('transaksi-pembayaran.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
                     <input type="date" name="tanggal_akhir" id="" class="form-control" placeholder="">
                 </div>
         </div>
-        <div class="card-footer text-right">
+        <div class="text-right">
             <button type="submit" class="btn btn-warning" href="{{ route('report.transaksi-pembayaran') }}"><i class="fas fa-print"></i> Cetak Data</button>
         </div>
     </form>

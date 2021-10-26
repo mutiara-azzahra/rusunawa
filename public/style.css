@@ -170,7 +170,7 @@
 .beranda-syarat{
   border-radius: 30px;
   background: #ffe68f;
-  padding: 20px;
+  padding: 15px;
   list-style:none;
 }
 .beranda-syarat-list{
@@ -259,21 +259,28 @@
 .img-fluid1 {
   width: 100%;
 }
+.img-logo-navbar{
+  height: auto; width: 80%;
+}
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
   .sidebar
   {
-    padding-top: 15px;
+    padding-top: 15px !important;
   }
   .sidebar a
   {
-    font-size: 18px;
+    font-size: 18px !important;
   }
   .img-fluid1
   {
-    width: 50%;
+    width: 50% !important;
   }
+  .img-logo-navbar{
+    height: auto; width: 40% !important;
+  } */
 
 }
 

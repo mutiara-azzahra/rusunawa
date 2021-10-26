@@ -32,7 +32,12 @@ class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldA
             $item->no               = '-';
             $item->no_registrasi    = $item->id_transaksi_pembayaran;
             $item->nama             = $item->pemohon->nama_kepala_keluarga;
-            $item->blok             = '-';
+            if($item->ruangan->lantai->gedung->blok){
+                $item->blok             = $item->ruangan->lantai->gedung->blok;
+            }
+            else{
+                $item->blok = '-';
+            }
             $item->gedung           = $item->ruangan->lantai->gedung->nama_gedung;
             $item->lantai           = $item->ruangan->lantai->lantai;
             $item->no_ruangan       = $item->ruangan->no_ruangan;
@@ -59,17 +64,20 @@ class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldA
         return [
             ['PENERIMAAN RUSUNAWA'],
             ['BULAN ' => Carbon::parse($this->tanggal_awal)->translatedFormat('F Y')],
+            [
+                ''
+            ],
             ['NO.','NO. REGISTRASI','NAMA','BLOK','GEDUNG','LANTAI','NO. RUANGAN',
                 'BESARAN PER BULAN','BULAN','TANGGAL VALIDASI',
-                'TAHUN','JUMLAH BULAN','RETRIBUSI','TOTAL']
+                'TAHUN','JUMLAH BULAN','RETRIBUSI','TOTAL'],
         ];
     }
 
     public function styles(Worksheet $sheet)
     {
         $count = $this->collection()->count();
-        $count = $count + 4;
-        $cell   = 'A3:N' . $count;
+        $count = $count + 5;
+        $cell   = 'A4:N' . $count;
 
         $sheet->mergeCells('A1:N1');
         $sheet->mergeCells('A2:N2');
@@ -77,7 +85,7 @@ class TransaksiPembayaranExport implements FromCollection, WithHeadings, ShouldA
         $sheet->getStyle('A1:N1')->applyFromArray(['aligment' => ['horizontal' => 'center']]);
         $sheet->getStyle('A2:N2')->applyFromArray(['aligment' => ['horizontal' => 'center']]);
 
-        $sheet->getStyle('A3:N3')->getFill()->setFillType(Fill::FILL_SOLID)->getStartColor()->setARGB('F07470');
+        $sheet->getStyle('A4:N4')->getFill()->setFillType(Fill::FILL_SOLID)->getStartColor()->setARGB('F07470');
 
         return [
             $cell => [
