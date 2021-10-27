@@ -8,7 +8,7 @@
                 <h2>Data Pemohon</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('pemohon.create') }}"><i class="fas fa-plus"></i> Tambah Pemohon</a>
+                <a class="btn btn-success" href="{{ route('pemohon_admin.create') }}"><i class="fas fa-plus"></i> Tambah Pemohon</a>
             </div>
         </div>
     </div>

@@ -47,11 +47,15 @@ class PemohonController extends Controller
     }
     public function create_admin()
     {
+        $pilih_ruangan = null;
+
         $ruangan    = Ruangan::all();
         $gedung     = Gedung::all();
         $lantai     = Lantai::all();
-
-        return view('pemohon.create',compact('ruangan', 'lantai', 'gedung', 'pilih_ruangan', 'user', 'pemohon'));
+        $user       = auth()->user();
+        $pemohon    = Pemohon::where('id_user', $user->id_user)->first();
+        
+        return view('pemohon.create_pemohon',compact('ruangan', 'lantai', 'gedung', 'pilih_ruangan', 'user', 'pemohon'));
     }
 
     public function store(Request $request)
