@@ -41,7 +41,7 @@
                 <div><h4><span class="badge badge-warning">Diproses</span></h4></div>
 
                 @if($pemohon->id_ruangan == null)
-                <div><a class="btn btn-success btn-sm mt-3" href="{{ Route('pemohon.pilihgedung') }}"> Pilih Gedung</a></div>
+                <div><a class="btn btn-success btn-sm mt-3" href="{{ Route('pemohon.pilihrusun') }}"> Pilih Rusun</a></div>
                 @else
                 @endif
 

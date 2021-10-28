@@ -9,6 +9,7 @@ use App\Models\TransaksiPembayaran;
 use App\Models\DetailTransaksiPembayaran;
 use App\Models\Ruangan;
 use App\Models\Gedung;
+use App\Models\Rusun;
 use App\Models\Lantai;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -213,9 +214,21 @@ class PemohonController extends Controller
         return view('pemohon.create',compact('ruangan', 'gedung', 'lantai', 'pilih_ruangan','pemohon'));
     }
 
-    public function pilihgedung()
+    public function pilihrusun()
     {
-        $gedung     = Gedung::all();
+        $rusun      = Rusun::all();
+
+        // $gedung->map(function($q){
+        //    $q->id_lantai = $q->lantai->pluck('id_lantai');
+        // });
+
+        // $ruangan = Ruangan::all();
+
+        return view('pemohon.pilihrusun', compact('rusun'));
+    }
+    public function pilihgedung($id)
+    {
+        $gedung     = Gedung::where('id_rusun', $id)->get();
         $gedung->map(function($q){
             $q->id_lantai = $q->lantai->pluck('id_lantai');
          });

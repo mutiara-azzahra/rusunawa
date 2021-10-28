@@ -120,7 +120,7 @@
                     @if($pemohon->id_ruangan == null )
                     <div class="col-lg-12">
                         <div class="float-right">
-                            <a class="btn btn-success btn-sm btn-secondary" href="{{ Route('pemohon.pilihgedung') }}"><i class="fas fa-building"></i>  Pilih Ruangan</a>
+                            <a class="btn btn-success btn-sm btn-secondary" href="{{ Route('pemohon.pilihrusun',$g->id_gedung) }}"><i class="fas fa-building"></i>  Pilih Ruangan</a>
                         </div>
                     </div>
                     @else

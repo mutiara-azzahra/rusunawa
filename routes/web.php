@@ -101,7 +101,8 @@ Route::group(['middleware' => 'admin'], function () {
 Route::post('/kirimemail',[RusunawaBanjarmasinController::class,'index'])->name('sendMail');
 
 //PemohonController
-Route::get('pemohon_user/pilih-gedung', [PemohonController::class, 'pilihgedung'])->name('pemohon.pilihgedung');
+Route::get('pemohon_user/pilih-rusun', [PemohonController::class, 'pilihrusun'])->name('pemohon.pilihrusun');
+Route::get('pemohon_user/pilih-gedung/{id_rusun}', [PemohonController::class, 'pilihgedung'])->name('pemohon.pilihgedung');
 Route::get('pemohon_user/pilih-ruangan/{id_gedung}', [PemohonController::class, 'pilihruangan'])->name('pemohon.pilihruangan');
 Route::get('pemohon_user/pesan-ruangan', [PemohonController::class, 'pesanRuangan'])->name('pemohon.pesanRuangan');
 
