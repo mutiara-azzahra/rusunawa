@@ -23,5 +23,8 @@ class Rusun extends Model
     public function gedung(){
         return $this->hasMany(Gedung::class, 'id_rusun','id_rusun');
     }
+    public function layanan_informasi(){
+        return $this->hasOne(LayananInformasi::class, 'id_info_rusun');
+    }
 
 }

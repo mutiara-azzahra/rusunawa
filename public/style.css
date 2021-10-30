@@ -265,7 +265,7 @@
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-/* @media screen and (max-height: 450px) {
+/* @media only screen and (max-height: 450px) {
   .sidebar
   {
     padding-top: 15px !important;
@@ -280,7 +280,14 @@
   }
   .img-logo-navbar{
     height: auto; width: 40% !important;
-  } */
+  }
 
+} */
+
+@media only screen and (max-width: 450px) {
+  .img-fluid1
+  {
+    width: 50% !important;
+  }
 }
 

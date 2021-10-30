@@ -9,9 +9,9 @@ use App\Models\Gedung;
 use App\Models\Ruangan;
 use App\Models\Galeri;
 use App\Models\Lantai;
-use App\Models\Role;
 use App\Models\Fasilitas;
 use App\Models\SyaratMendaftar;
+use App\Models\LayananInformasi;
 use App\Models\Pemohon;
 use App\Models\User;
 use App\Models\Posts;
@@ -90,8 +90,9 @@ class LoginController extends Controller
         $rusun              = Rusun::all();
         $syarat_mendaftar   = SyaratMendaftar::all();
         $posts              = Posts::paginate(5);
+        $info_rusun         = LayananInformasi::all();
 
-        return view('welcome', compact('rusun', 'gedung', 'posts', 'fasilitas', 'syarat_mendaftar'));
+        return view('welcome', compact('rusun', 'gedung', 'posts', 'fasilitas', 'syarat_mendaftar', 'info_rusun'));
     }
 
     public function faq()
@@ -100,10 +101,11 @@ class LoginController extends Controller
 
         return view('tanya-jawab',compact('posts'));
     }
-    public function latarBelakang()
+    public function latarBelakang( $id)
     {
+        $info_rusun = LayananInformasi::findOrFail( $id);
 
-        return view('latar-belakang');
+        return view('latar-belakang', compact('info_rusun'));
     }
     public function detailrusun($id)
     {

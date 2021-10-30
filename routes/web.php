@@ -46,7 +46,7 @@ use App\Http\Controllers\RusunawaBanjarmasinController;
 //LoginController
 Route::get('/', [LoginController::class,'Beranda'])->name('Beranda');
 Route::get('/tanya-jawab', [LoginController::class,'faq'])->name('tanya-jawab');
-Route::get('/latar-belakang', [LoginController::class,'latarBelakang'])->name('latar-belakang');
+Route::get('/latar-belakang/{id_rusun}', [LoginController::class,'latarBelakang'])->name('latar-belakang');
 Route::get('/login', [LoginController::class, 'formLogin'])->name('loginPage');
 Route::post('/login', [LoginController::class, 'LoginStore'])->name('login');
 Route::get('/forgot-password', [LoginController::class, 'lupaPassword'])->name('forgot-password');
@@ -85,6 +85,8 @@ Route::resource('lantai', LantaiController::class);
 Route::resource('user', UserController::class);
 Route::resource('role', RoleController::class);
 Route::resource('blok', BlokController::class);
+
+
 
 //HomeController
 //middleware

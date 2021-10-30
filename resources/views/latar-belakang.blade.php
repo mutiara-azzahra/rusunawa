@@ -59,13 +59,13 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Layanan Informasi
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{{ route('latar-belakang')}}">Rusun Teluk Kelayan</a>
                 <a class="dropdown-item" href="#">Rusun Ganda Maghfirah</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
                 <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
-              </div>
+              </div> --}}
             </li>
             @if (Auth::check())
               <li class="nav-item dropdown">
@@ -95,6 +95,7 @@
   
   <div class="jumbotron-lokasi" style="padding-top: 100px;">
         <!--Latar Belakang-->
+        
         <div class="container text-justify">
           <div class="row">
           <div class="col-lg-12 col-md-12">
@@ -104,25 +105,14 @@
                   </div>
                   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                       <div class="float-left">
-                        <h2 class="pt-5" style="color: #853500; "><strong>Latar Belakang Pembangunan Rusunawa Teluk Kelayan Kota Banjarmasin</strong></h2><br></div>
+                        <h2 class="pt-5" style="color: #853500; "><strong>Latar Belakang Pembangunan Rusunawa</strong></h2><br></div>
                       </div>
                   </div>
-                  
               </div>
               
             <div class="col-lg-12 col-md-12 pb-4 p-5">
                 <ol>
-                    <li>Rumah layak huni dan terjangkau bagi Masyarakat Berpenghasilan Rendah (MBR) merupakan 
-                        permasalahan yang harus ditangani oleh Pemerintah Pusat dan Pemerintah Daerah.</li><br>
-                    <li>Pada Undang-Undang Nomor 1 Tahun 2011 tentang Perumahan dan Kawasan Permukiman, Negara 
-                        bertanggung jawab atas penyelenggaraan perumahan dan kawasan permukiman yang pembinaannya 
-                        dilaksanakan oleh pemerintah sehingga setiap orang / keluarga / rumah tangga berhak menempati 
-                        rumah layak huni.</li><br>
-                    <li>Dalam rangka mendukung Visi-Misi Walikota Banjarmasin tahun 2016-2021 terutama Misi ketiga 
-                        "Mewujudkan Kota Banjarmasin indah dengan penataan kota berbasis tata ruang berbasis sungai, 
-                        guna terwujud kota yang asri dan harmoni" dimana salah satu sasaran strategisnya adalah 
-                        pembenahan permukiman kumuh melalui penyediaan hunian yang layak bagi masyarakat Kota 
-                        Banjarmasin.</li><br>
+                    <li>{!! $info_rusun->latar_belakang !!}</li><br>
                 </ol>
             </div>
           </div>
@@ -145,9 +135,7 @@
                     </div>
                     
                     <div class="col-lg-12 col-md-12 pb-4 p-5">
-                        Pembangunan Rumah Susun Sewa Teluk Kelayan Bersumber Dari Dana APBN Tahun Anggaran 2018 
-                        Yang Dilaksanakan Oleh Direktorat Rumah Susun, Direktorat Jenderal Penyediaan Perumahan Kementerian  
-                        Pekerjaan Umum Dan Perumahan Rakyat Melalui Satuan Kerja Pengembangan Perumahan.<br>
+                        {!! $info_rusun->sumber_dana !!}<br>
                     </div>
                 </div>
             </div>
@@ -159,7 +147,7 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="row">
                         <div class="col-lg-3 col-md-5 col-sm-5 col-xs-5">
-                            <img class="img-fluid" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
+                            <img class="img-fluid1" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
                         </div>
                         <div class="col-lg-9 col-md-7 col-sm-7 col-xs-7">
                             <div class="float-left">
@@ -169,18 +157,8 @@
                     </div>
                     
                     <div class="col-lg-12 col-md-12 pb-4 p-5">
-                        Berdasarkan Perda Nomor 2 Tahun 2009 Pasal 10:<br><br>
                         <ol>
-                            <li>Memiliki KTP dan Kartu Keluarga;</li>
-                            <li>Memiliki pekerjaan tetap, dibuktikan dengan Surat Keterangan dari pimpinan bagi yang 
-                                bekerja secara formal dan Surat Keterangan dari RT,  Lurah, dan Camat bagi yang bekerja secara 
-                                informal;</li>
-                            <li>Berpenghasilan rendah dengan pendapatan maksimal 2 (dua) kali UMP yang dibuktikan dengan struk 
-                                gaji yang ditandatangani oleh pengelola gaji dan rincian pendapatan bagi yang bukan karyawan yang 
-                                diketahui oleh RT,  Lurah, dan Camat;</li>
-                            <li>Sudah berkeluarga/menikah dengan dibuktikan Surat Nikah;</li>
-                            <li>Maksimal anggota keluarga adalah 4 (empat) orang.</li>
-
+                            {!! $info_rusun->persyaratan_huni !!}
                         </ol>
                     </div>
                 </div>
@@ -204,18 +182,7 @@
                     
                     <div class="col-lg-12 col-md-12 pb-4 p-5">
                         <ol>
-                            Perda No 2 Tahun 2009 Pasal  9, setiap penghuni Rusun wajib :<br><br>
-
-                            <li>Menjaga keamanan, ketertiban, kenyamanan dan kebersihan dalam unit hunian, dan lingkungan Rumah Susun</li>
-                            <li>Mematuhi tata tertib dan peraturan yang sudah  ditetapkan</li>
-                            <li>Membayar uang sewa sesuai dengan ketentuan</li>
-                            <li>Membayar uang jaminan sesuai dengan ketentuan</li>
-                            <li>Memelihara Rumah Susun yang disewa dengan sebaik-baiknya sesuai ketentuan</li>
-                            <li>Membayar biaya penggunaan listrik</li>
-                            <li>Membayar biaya pengelolaan sampah</li>
-                            <li>Membayar biaya penggunaan air bersih</li>
-                            <li>Membayar iuran bersama demi kepentingan bersama yang besarnya ditentukan dalam musyawarah bersama penghuni</li>
-                            <li>Menyerahkan kembali Unit Hunian Rumah Susun apabila Perjanjian Sewa-menyewa telah berakhir masa sewanya, dengan tanpa syarat apapun.</li>
+                           {!! $info_rusun->tata_tertib !!}
                         </ol>
                     </div>
                 </div>

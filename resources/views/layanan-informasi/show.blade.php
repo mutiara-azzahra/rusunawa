@@ -18,37 +18,37 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Latar Belakang</strong><br>
-                    {{ $info_rusun->latar_belakang }}<br>
+                    {!! $info_rusun->latar_belakang !!}<br>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Tipologi Bangunan</strong><br>
-                    {{ $info_rusun->tipologi_bangunan }}<br>
+                    {!! $info_rusun->tipologi_bangunan !!}<br>
                 </div>
             </div>  
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Sumber Dana</strong><br>
-                    {{ $info_rusun->sumber_dana }}<br>
+                    {!! $info_rusun->sumber_dana !!}<br>
                 </div>
             </div>    
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Persyaratan Huni</strong><br>
-                    {{ $info_rusun->persyaratan_huni }}<br>
+                    {!! $info_rusun->persyaratan_huni !!}<br>
                 </div>
             </div> 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Tipologi Bangunan</strong><br>
-                    {{ $info_rusun->tata_tertib }}<br>
+                    {!! $info_rusun->tata_tertib !!}<br>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Larangan</strong><br>
-                    {{ $info_rusun->larangan }}<br>
+                    {!! $info_rusun->larangan !!}<br>
                 </div>
             </div>         
         </div>        

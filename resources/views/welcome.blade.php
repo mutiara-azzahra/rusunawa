@@ -60,8 +60,9 @@
                 Layanan Informasi
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('latar-belakang')}}">Rusun Teluk Kelayan</a>
-                <a class="dropdown-item" href="#">Rusun Ganda Maghfirah</a>
+                @foreach($info_rusun as $i)
+                <a class="dropdown-item" href="{{ route('latar-belakang',$i->id_info_rusun)}}">{{$i->rusun->nama_rusun}}</a>
+                @endforeach
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
                 <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
