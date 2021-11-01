@@ -93,99 +93,26 @@
       </nav>
   </header>
   
-  <div class="jumbotron-lokasi" style="padding-top: 100px;">
+  <div class="jumbotron-lokasi">
+
         <!--Latar Belakang-->
-        
         <div class="container text-justify">
-          <div class="row">
           <div class="col-lg-12 col-md-12">
               <div class="row">
-                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                      <img class="img-fluid img-tanya-jawab" src="{{asset('tanya.jpg')}}" alt="">
+                  <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
+                      <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
                   </div>
-                  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                      <div class="float-left">
-                        <h2 class="pt-5" style="color: #853500; "><strong>Latar Belakang Pembangunan Rusunawa</strong></h2><br></div>
+                  <div class="col-lg-10 col-md-12">
+                      <div class="judul-latar-belakang">
+                        <h2 style="color: #853500; "><strong>Latar Belakang Pembangunan Rusunawa</strong></h2><br></div>
                       </div>
                   </div>
               </div>
               
-            <div class="col-lg-12 col-md-12 pb-4 p-5">
+            <div class="col-lg-12 col-md-12 content-latar-belakang">
                 <ol>
                     <li>{!! $info_rusun->latar_belakang !!}</li><br>
                 </ol>
-            </div>
-          </div>
-        </div>
-
-
-        <!--Sumber Dana-->
-        <div class="container text-justify">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-1 col-sm-5 col-xs-5">
-                            <img class="img-fluid" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
-                        </div>
-                        <div class="col-lg-9 col-md-11 col-sm-7 col-xs-7">
-                            <div class="float-left">
-                            <h2 class="pt-5" style="color: #853500; "><strong>Sumber Dana</strong></h2><br></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-12 col-md-12 pb-4 p-5">
-                        {!! $info_rusun->sumber_dana !!}<br>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!--Persyaratam Huni-->
-        <div class="container text-justify">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-5 col-sm-5 col-xs-5">
-                            <img class="img-fluid1" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
-                        </div>
-                        <div class="col-lg-9 col-md-7 col-sm-7 col-xs-7">
-                            <div class="float-left">
-                            <h2 class="pt-5" style="color: #853500; "><strong>Persyaratan Penghunian Rumah Susun</strong></h2><br></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-12 col-md-12 pb-4 p-5">
-                        <ol>
-                            {!! $info_rusun->persyaratan_huni !!}
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Tata Tertib-->
-        <div class="container text-justify">
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-5 col-sm-5 col-xs-5">
-                            <img class="img-fluid" src="{{asset('tanya.jpg')}}" style="width: 100%;" alt="">
-                        </div>
-                        <div class="col-lg-9 col-md-7 col-sm-7 col-xs-7">
-                            <div class="float-left">
-                            <h2 class="pt-5" style="color: #853500; "><strong>Tata Tertib Hunian Rumah Susun</strong></h2><br></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-12 col-md-12 pb-4 p-5">
-                        <ol>
-                           {!! $info_rusun->tata_tertib !!}
-                        </ol>
-                    </div>
-                </div>
             </div>
         </div>
 

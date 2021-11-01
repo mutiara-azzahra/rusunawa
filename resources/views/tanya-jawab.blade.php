@@ -77,63 +77,63 @@
     </nav>
   </header>
 
-  <div class="jumbotron-lokasi" id="faq" style="padding-top: 100px;">
-        <div class="container text-justify">
+  <div class="jumbotron-lokasi pt-5" id="faq">
+        <div class="container">
           <div class="row">
-          <div class="col-lg-12">
-              <div class="row">
-                  <div class="col-lg-2">
-                      <img class="img-fluid1" style="width: 100%" src="{{asset('tanya.jpg')}}" alt="">
-                  </div>
-                  <div class="col-lg-10">
-                      <h2 class="pt-5" style="color: #853500; "><strong>Pertanyaan yang Sering Ditanyakan</strong></h2><br></div>
-                  </div>
-                  
-              </div>
-              
-            <div class="col-lg-12 col-md-12 pb-4">
-              <div class="float-right">
-                <div class="form-inline">
-                  <div class="input-group" data-widget="sidebar-search">
-                    <input class="form-control form-control-sidebar" style="width:20rem" type="search" placeholder="Cari pertanyaan disini.." aria-label="Search">
-                    <div class="input-group-append">
-                      <button class="btn btn-sidebar">
-                        <i class="fas fa-search fa-fw"></i>
-                      </button>
+            <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
+                    <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+                </div>
+                    <div class="col-lg-10">
+                        <h2 class="pt-5" style="color: #853500; "><strong>Pertanyaan yang Sering Ditanyakan</strong></h2><br></div>
+                    </div>
+                    
+                </div>
+                
+              <div class="col-lg-12 col-md-12 pb-4">
+                <div class="float-right">
+                  <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                      <input class="form-control form-control-sidebar" style="width:20rem" type="search" placeholder="Cari pertanyaan disini.." aria-label="Search">
+                      <div class="input-group-append">
+                        <button class="btn btn-sidebar">
+                          <i class="fas fa-search fa-fw"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>            
-            </div>
-            <div class="col-lg-12">
-                  @foreach ($posts as $p)
-                  <div class="accordion" id="accordion">
-                    <div class="card mb-2 card-outline">
-                      <div class="card-header" id="heading">
-                        <h2 class="mb-0">
-                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{ $p->id }}" aria-expanded="true" aria-controls="collapse">
-                              <div class="row">
-                              <i class="fas fa-arrow-right" style="padding-top: 5px; padding-right: 20px;"></i>
-                              <h5 class="text-wrap"><b> {{ $p->title }} </b><h5>
-                              </div>
-                          </button>
-                        </h2>
-                      </div>
-                  
-                      <div id="collapse{{ $p->id }}" class="collapse"  aria-labelledby="heading" data-parent="#accordion">
-                        <div class="card-body bawah">
-                          {{ $p->content}}
+                </div>            
+              </div>
+              <div class="col-lg-12">
+                    @foreach ($posts as $p)
+                    <div class="accordion" id="accordion">
+                      <div class="card mb-2 card-outline">
+                        <div class="card-header" id="heading">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse{{ $p->id }}" aria-expanded="true" aria-controls="collapse">
+                                <div class="row">
+                                <i class="fas fa-arrow-right" style="padding-top: 5px; padding-right: 20px;"></i>
+                                <h5 class="text-wrap"><b> {{ $p->title }} </b><h5>
+                                </div>
+                            </button>
+                          </h2>
+                        </div>
+                    
+                        <div id="collapse{{ $p->id }}" class="collapse"  aria-labelledby="heading" data-parent="#accordion">
+                          <div class="card-body bawah">
+                            {{ $p->content}}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  @endforeach
-                  <div class="float-right">
-                      {!! $posts->links('pagination::bootstrap-4') !!}
-                  </div>
+                    @endforeach
+                    <div class="float-right">
+                        {!! $posts->links('pagination::bootstrap-4') !!}
+                    </div>
+                </div>
               </div>
             </div>
-          </div>
         </div>
   </div>
 

@@ -176,9 +176,6 @@
 .beranda-syarat-list{
   position: absolute;
 }
-.img-tanya-jawab{
-  width: 100%;
-}
 
 /* CSS for Lightbox */
 .imggallery{
@@ -263,9 +260,23 @@
   height: auto; width: 80%;
 }
 
+.judul-latar-belakang{
+  position: absolute;
+  top: 30%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.content-latar-belakang{
+  margin-top: 40px;
+  position:relative;
+  align-items: center;
+  font-size: 22px;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-/* @media only screen and (max-height: 450px) {
+/* @media only screen and (max-width: 450px) {
   .sidebar
   {
     padding-top: 15px !important;
@@ -284,10 +295,36 @@
 
 } */
 
-@media only screen and (max-width: 450px) {
+/* @media only screen and (max-width: 450px) {
   .img-fluid1
   {
     width: 50% !important;
+    align: center;
+  }
+} */
+
+@media only screen and (max-width: 600px) {
+  .logo-img-fluid1{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .img-fluid1
+  {
+    height: 80%;
+    width: auto;
+  }
+  .judul-latar-belakang{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .content-latar-belakang{
+    margin-top: 100px;
+    position: relative;
+    align-items: center;
+    font-size: 19px;
   }
 }
-
