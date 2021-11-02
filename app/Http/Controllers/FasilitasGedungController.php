@@ -24,14 +24,15 @@ class FasilitasGedungController extends Controller
         $input  = $request->all();
         FasilitasGedung::create($input);
 
-        return redirect()->route('gedung.show')
+        return redirect()->route('gedung.show', $request->id_gedung)
             ->with('success','Data fasilitas gedung berhasil ditambahkan!');
     }
     public function destroy( $id)
     {
-        $fasilitas_gedung = FasilitasGedung::destroy($id);
+        $fasilitas_gedung = FasilitasGedung::findOrFail($id);
+        $fasilitas_gedung->delete();
   
-        return redirect()->route('gedung.show')
+        return redirect()->route('gedung.show', $fasilitas_gedung->id_gedung)
             ->with('success','Data fasilitas umum berhasil dihapus!');
     }
 

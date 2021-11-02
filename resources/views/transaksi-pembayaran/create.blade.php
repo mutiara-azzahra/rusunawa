@@ -39,7 +39,7 @@
                                 <select name="id_ruangan" class="form-control select2bs4 p-1" style="width: 100%;" onchange="getPemohon()" id="id_ruangan">
                                 <option >-- Pilih Ruangan --</option>
                                 @foreach($ruangan->where('status_ruangan','terisi') as $r)
-                                <option value="{{ $r->id_ruangan }}"> {{ $r->no_ruangan }} - {{$r->lantai->lantai }} - {{ $r->lantai->gedung->nama_gedung }} </option>
+                                <option value="{{ $r->id_ruangan }}"> {{ $r->no_ruangan }} - Lantai {{$r->lantai->lantai }} - Gedung {{ $r->lantai->gedung->nama_gedung }} </option>
                                 @endforeach
                                 </select>
                         </div>

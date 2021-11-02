@@ -86,11 +86,9 @@
             <td class="text-center"><img class="image" src="{{asset('/storage/galeri/'.$g->foto)}}" data-id="{{asset('/storage/galeri/'.$g->foto)}}" alt="" width="100px"></td>
             <td class="text-center">
                         <form action="{{ route('galeri.destroy',$g->id_galeri) }}" id="form_delete" method="POST">
-                            
                             @csrf
                             @method('DELETE')
                             <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_galeri}}')" ><i class="fas fa-trash"></i> Hapus</a>
-
                         </form>
                 </form>
             </td>
@@ -163,7 +161,7 @@
     </div>            
 </div>
 
-<!-- Fasilitas-->
+<!-- Fasilitas Gedung-->
 <div class="card" style="padding:30px;">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="row mt-5 mb-5">
@@ -194,15 +192,12 @@
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
                         <td>{{ $f->fasilitas->nama_fasilitas}}</td>
-                        <td>{{ $f->jumlah}}</td>
+                        <td class="text-center">{{ $f->jumlah}}</td>
                         <td class="text-center">
                                     <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete_fasilitas" method="POST">
-
                                         @csrf
                                         @method('DELETE')
-                                        
                                         <a class="btn btn-danger btn-sm" onclick="HapusFasilitas('{{$f->id_fasilitas_gedung}}')"> Hapus</a>
-
                                     </form>
                             </form>
                         </td>
@@ -319,7 +314,7 @@
 
     HapusFasilitas = (id_fasilitas_gedung)=>{
         Swal.fire({
-            title: 'Apa anda yakin menghapus data ini?',
+            title: 'Apa anda yakin menghapus fasilitas ini?',
             text:  "menghapus notifikasi" ,
             showCancelButton: true,
             confirmButtonColor: '#3085d6' ,
@@ -329,7 +324,7 @@
             reverseButtons: true
             }).then((result) => {
                 if (result.value) {
-                    $(`#form_delete_fasilitas.${id_fasilitas_gedung}`).submit();
+                    $('#form_delete_fasilitas').submit();
                 }
 
         })

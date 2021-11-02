@@ -30,8 +30,7 @@
                       <h3> {{ $pemohon_diproses }} </h3><h6> orang</h6>
                     </div>
                   </div>
-                  
-                  Jumlah Pemohon Belum Diverifikasi
+                    Pemohon Belum Diverifikasi
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
@@ -49,7 +48,7 @@
                       <h3> {{ $pemohon_aktif }} </h3><h6> orang</h6>
                     </div>
                   </div>
-                  Jumlah Pemohon Aktif
+                  Total Pemohon Aktif
                 </div>
                 <div class="icon">
                   <i class="ion ion-stats-bars"></i>
@@ -83,7 +82,7 @@
                   <div class="col">
                     <h3>Rp. {{ $detail_transaksi_pembayaran }}</h3>
                   </div>
-                  Total Pendapatan Bulan ini
+                  Total Pendapatan Bulan {{ $bulan_ini }}
                 </div>
                 <div class="icon">
                   <i class="ion ion-pie-graph"></i>

@@ -131,7 +131,7 @@ Route::get('transaksi/report', [TransaksiPembayaranController::class, 'cetak_tra
 
 //FasilitasController
 Route::post('fasilitas-gedung', [FasilitasGedungController::class, 'fasilitas_gedung'])->name('fasilitas.fasilitas-gedung');
-Route::post('fasilitas-gedung/destroy', [FasilitasGedungController::class, 'destroy'])->name('fasilitas-gedung.destroy');
+Route::delete('fasilitas-gedung/destroy/{id}', [FasilitasGedungController::class, 'destroy'])->name('fasilitas-gedung.destroy');
 
 //TransaksiPembayaranController
 Route::get('transaksi-pembayaran/filter/cetak', [TransaksiPembayaranController::class, 'filter'])->name('transaksi-pembayaran.filter');

@@ -94,27 +94,90 @@
   </header>
   
   <div class="jumbotron-lokasi">
-
         <!--Latar Belakang-->
-        <div class="container text-justify">
+        <div class="container latar-belakang text-justify">
           <div class="col-lg-12 col-md-12">
-              <div class="row">
-                  <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
-                      <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
-                  </div>
-                  <div class="col-lg-10 col-md-12">
-                      <div class="judul-latar-belakang">
-                        <h2 style="color: #853500; "><strong>Latar Belakang Pembangunan Rusunawa</strong></h2><br></div>
-                      </div>
+            <div class="row">
+              <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
+                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+              </div>
+              <div class="col-lg-10 col-md-12">
+                  <div class="judul-latar-belakang">
+                    <h2 style="color: #853500; "><strong>Latar Belakang Pembangunan Rusunawa</strong></h2><br></div>
                   </div>
               </div>
-              
+            </div>  
             <div class="col-lg-12 col-md-12 content-latar-belakang">
                 <ol>
                     <li>{!! $info_rusun->latar_belakang !!}</li><br>
                 </ol>
             </div>
+          </div>
         </div>
+
+        <!--Tipologi Bangunan-->
+        <div class="container latar-belakang text-justify">
+          <div class="col-lg-12 col-md-12">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
+                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+              </div>
+              <div class="col-lg-10 col-md-12">
+                  <div class="judul-latar-belakang">
+                    <h2 style="color: #853500;"><strong>Tipologi Bangunan Rusunawa</strong></h2><br></div>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-lg-12 col-md-12 content-latar-belakang">
+                <ol>
+                    <li>{!! $info_rusun->tipologi_bangunan !!}</li><br>
+                </ol>
+            </div>
+          </div>
+        </div>
+
+        <!--Sumber Dana-->
+        <div class="container latar-belakang text-justify">
+          <div class="col-lg-12 col-md-12">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
+                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+              </div>
+              <div class="col-lg-10 col-md-12">
+                  <div class="judul-latar-belakang">
+                    <h2 style="color: #853500;"><strong>Sumber Dana Pembangunan Rusunawa</strong></h2><br></div>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-lg-12 col-md-12 content-latar-belakang">
+                <ol>
+                    <li>{!! $info_rusun->sumber_dana !!}</li><br>
+                </ol>
+            </div>
+          </div>
+        </div>
+
+        <!--Persyaratan Huni-->
+        <div class="container latar-belakang text-justify">
+          <div class="col-lg-12 col-md-12">
+            <div class="row">
+              <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
+                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+              </div>
+              <div class="col-lg-10 col-md-12">
+                  <div class="judul-latar-belakang">
+                    <h2 style="color: #853500;"><strong>Persyaratan Huni Rusunawa</strong></h2><br></div>
+                  </div>
+              </div>
+            </div>  
+            <div class="col-lg-12 col-md-12 content-latar-belakang">
+                <ol>
+                    <li>{!! $info_rusun->persyaratan_huni !!}</li><br>
+                </ol>
+            </div>
+          </div>
+        </div>
+
 
   <footer style="background-color: #ffc168; margin:0px !important;">
     <div class=" container container-fluid">
@@ -122,27 +185,23 @@
         <div class="col-lg-2 text-center pt-2 pb-2">
           <img class="logo-footer" src="{{ asset('logo.png') }}" style="width: 100px">
         </div>
-        <div class="col-lg-7 text-left">
-          <div class="text"><h4><b>UPT Rusunawa Kota Banjarmasin</b></h4>
+        <div class="col-lg-7 text-left ">
+          <div class="text footer-bawah"><h4><b>UPT Rusunawa Kota Banjarmasin</b></h4>
           </div>
-          <div class="text">
+          <div class="text footer-bawah">
             <h5><b>Rusunawa Teluk Kelayan</b></h5>
             <p>Jl. Tembus Mantuil, Kelayan Selatan, Kecamatan Banjarmasin 
             Selatan, Kota Banjarmasin, Kalimantan Selatan 70233</p>
-            <h5><b>Rusunawa Kelayan</b></h5>
           </div>
-          <div class="text">
-            <div class="row">
-              <div class="col-1">
+          <div class="text footer-bawah">
+              {{-- <div class="col-1">
                 <i class="fas fa-clock"></i>
-              </div>
+              </div> --}}
               <div class="col-11" style="padding: 0 !important">
                 <b>Jam Operasional:</b></h5><br>
                 <p class="font-weight-light">Senin - Minggu<br>
                   Pukul 08.00 - 20.00 WITA</p>
-              </div>
-            </div>
-            
+              </div>  
           </div>
         </div>
         <div class="col-lg-3 col-sm-12">
