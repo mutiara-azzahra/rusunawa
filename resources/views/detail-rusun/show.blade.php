@@ -33,54 +33,50 @@
 <body class="bg-custom-1">
 
 <!--Navbar-->
-
 <header id="header" class="header">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-      <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid" style="height: 50px;">
+      <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid img-logo-navbar">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="navbar-collapse" id="navbarSupportedContent">
+  
+    <div class="collapse navbar-collapse" style="padding-right: 30px;" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="{{ route('Beranda') }}">Halaman Awal</a>
         </li>
-
         @if (Auth::check())
-
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ Route('beranda') }}">Profil Saya</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ="{{ route('logout') }}">Keluar
+                <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
+                {{-- <form id="frm-logout" action="{{ route('logout') }}" method="post" style="display: none;">
+                  @csrf
+                </form>--}}
+              </a>
+            </div>
+          </li>
         @else
-        <li class="nav-item">
-          <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
+          </li>
         @endif
-
-        @if (Auth::check())
-        <li class="nav-item" style="padding-top: 7px;">
-          <a href ="{{ route('logout') }}">
-            <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" style="color: #F58735;" title="Keluar"></i>
-          </a>
-          {{-- <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-          </form> --}}
-        </li>
-        @else
-
-        @endif
-
       </ul>
     </div>
-  </div>
   </nav>
 </header>
 
-<div class="container" style="padding-top: 100px;">
+<div class="container ml-3">
   <div class="row">
     <div class="col-lg-12">
-      <h3 class="float-left">Pilih Gedung</h3>
+      <h3 class="float-left ">Pilih Gedung</h3>
     </div>
     <div class="col-lg-12">
       <div class="container">

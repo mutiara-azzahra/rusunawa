@@ -126,8 +126,9 @@ class LoginController extends Controller
         $gedung     = Gedung::findOrFail($id);
         $lantai     = Lantai::where('id_gedung',$gedung->id_gedung)->get();
         $ruangan    = Ruangan::all();
+        $galeri     = Galeri::where('id_gedung', $gedung->id_gedung)->get();
 
-        return view('detail-gedung.show', compact('gedung', 'lantai', 'ruangan'));
+        return view('detail-gedung.show', compact('gedung', 'lantai', 'ruangan', 'galeri'));
     }
     public function lupaPassword()
     {

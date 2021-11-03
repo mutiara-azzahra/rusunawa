@@ -41,31 +41,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse" style="margin-right: 30px;" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" style="padding-right: 30px;" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#tentang">Tentang <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href="#lokasi">Lokasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#alur">Alur</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('tanya-jawab')}}">Tanya Jawab</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Layanan Informasi
-              </a>
-              {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('latar-belakang')}}">Rusun Teluk Kelayan</a>
-                <a class="dropdown-item" href="#">Rusun Ganda Maghfirah</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
-                <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
-              </div> --}}
+              <a class="nav-link" href="{{ route('Beranda') }}">Halaman Awal</a>
             </li>
             @if (Auth::check())
               <li class="nav-item dropdown">
@@ -91,7 +70,7 @@
           </ul>
         </div>
       </nav>
-  </header>
+    </header>
   
   <div class="jumbotron-lokasi">
         <!--Latar Belakang-->

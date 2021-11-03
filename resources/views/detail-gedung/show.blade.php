@@ -35,49 +35,46 @@
 <!--Navbar-->
 
 <header id="header" class="header">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-      <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid" style="height: 50px;">
+      <img src="{{ asset('logo-dinasperkin.png') }}" alt="" class="img-fluid img-logo-navbar">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="navbar-collapse" id="navbarSupportedContent">
+  
+    <div class="collapse navbar-collapse" style="padding-right: 30px;" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="{{ route('Beranda') }}">Halaman Awal</a>
         </li>
-
         @if (Auth::check())
-
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ Route('beranda') }}">Profil Saya</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href ="{{ route('logout') }}">Keluar
+                <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
+                {{-- <form id="frm-logout" action="{{ route('logout') }}" method="post" style="display: none;">
+                  @csrf
+                </form>--}}
+              </a>
+            </div>
+          </li>
         @else
-        <li class="nav-item">
-          <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
+          </li>
         @endif
-
-        @if (Auth::check())
-        <li class="nav-item" style="padding-top: 7px;">
-          <a href ="{{ route('logout') }}" onClick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-            <i class="nav-icon fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Keluar"></i>
-          </a>
-          <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-          </form>
-        </li>
-        @else
-
-        @endif
-
       </ul>
     </div>
-  </div>
   </nav>
 </header>
 
-<div class="container" style="padding-top: 100px;">
+<div class="container" style="padding-top: 40px;">
   <div class="card" >
       <div class="text-justify">
         <div class="col-lg-12 col-sm-12">
@@ -91,15 +88,11 @@
     <div class="container" style="padding-top: 20px !important;">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ asset('slider1.jpeg') }}" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('slider2.jpeg') }}" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('slider3.jpeg') }}" alt="Third slide">
-          </div>
+          @foreach ($galeri as $g)
+          <div class="carousel-item @if($loop->iteration == 1) active @endif">
+            <img class="d-block w-100" src="{{asset('/storage/galeri/'.$g->foto)}}" data-id="{{asset('/storage/galeri/'.$g->foto)}}" alt="First slide">
+          </div>    
+          @endforeach
         </div>
       </div>
     </div>
@@ -140,6 +133,7 @@
         Denah
       </div>
 
+      @if($lantai->isNotEmpty())
       <div class="row">
         <div class="col-lg-6">
           <div class="col-lg-12 col-sm-12">
@@ -150,8 +144,8 @@
             
             <div class="row">
               @foreach($l->ruangan as $r)
-                <button type="button" onclick="getDetailRuangan('{{$r->id_ruangan}}')" class="btn 
-                  @if($r->status_ruangan == 'kosong')
+                <button type="button" onclick="@if($r->status_ruangan == 'kosong') getDetailRuangan('{{$r->id_ruangan}}') @else @endif" class="btn 
+                  @if($r->status_ruangan == 'kosong') 
                   btn-success
                   @else
                   btn-danger
@@ -201,7 +195,7 @@
         <div class="modal fade bd-example-modal-lg" data-toggle="modal"  data-target="#pilihruangan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="detail_ruangan_modal">
           <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                  <div class="card m-3" id="harga{{$l->id_lantai}}" style="padding:10px;">
+                  <div class="card m-3 p-2" id="harga{{$l->id_lantai}}">
                     <table class="table">
                       <tr>
                         <td width="25%">Nomor Ruangan</td>
@@ -216,7 +210,7 @@
                       <tr>
                         <td>Status Ruangan</td>
                         <td>:</td>
-                        <td class="text-left"><p id="status_ruangan_modal"></p></td>
+                        <td class="text-left"><span class="badge badge-success" id="status_ruangan_modal"></td>
                       </tr>
                     </table>
 
@@ -225,6 +219,7 @@
                       <form action="{{route('pemohon.pesanRuangan')}}" method="GET">
                         @csrf
                         <input type="hidden" id="id_ruangan{{$l->id_lantai}}"  name="id_ruangan">
+
                         <button class="btn btn-primary" style="width: 200px;">Pesan Sekarang</button>
                       </form>
                       @else 
@@ -237,6 +232,13 @@
               </div>
           </div>
       </div>
+      @else
+      <div class="row">
+          Belum ada ruangan
+      </div>
+      @endif
+
+
       </div>
     </div>
   </div>

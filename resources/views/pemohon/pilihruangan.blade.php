@@ -26,15 +26,11 @@
           <div class="container" style="padding-top: 20px !important;">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="{{ asset('slider1.jpeg') }}" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="{{ asset('slider2.jpeg') }}" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="{{ asset('slider3.jpeg') }}" alt="Third slide">
-                </div>
+                @foreach ($galeri as $g)
+                <div class="carousel-item @if($loop->iteration == 1) active @endif">
+                  <img class="d-block w-100" src="{{asset('/storage/galeri/'.$g->foto)}}" data-id="{{asset('/storage/galeri/'.$g->foto)}}" alt="First slide">
+                </div>    
+                @endforeach
               </div>
             </div>
           </div>

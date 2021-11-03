@@ -61,11 +61,8 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 @foreach($info_rusun as $i)
-                <a class="dropdown-item" href="{{ route('latar-belakang',$i->id_info_rusun)}}">{{$i->rusun->nama_rusun}}</a>
+                <a class="dropdown-item" href="{{ route('latar-belakang',$i->id_info_rusun)}}">Rusun {{$i->rusun->nama_rusun}}</a>
                 @endforeach
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Persyaratan dan Tata Tertib</a>
-                <a class="dropdown-item" href="#">Kelengkapan Berkas</a>
               </div>
             </li>
             @if (Auth::check())
@@ -210,9 +207,9 @@
       
         <div class="row">
           @foreach($rusun as $r)
-          <div class="card" style="width: 20rem;">
+          <div class="card card-pilih-rusun" style="width: 20rem;">
             <div class="foto p-0">
-              <img class="" image src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100%" height="200px;">
+              <img class="" src="{{asset('/storage/rusun/'.$r->foto)}}" data-id="{{asset('/storage/rusun/'.$r->foto)}}" alt="" width="100%" height="200px;">
             </div>
             <div class="detail pt-3 pb-3 pl-3 text-left">
               <h5>Rusunawa {{ $r->nama_rusun }}</h5>
@@ -315,57 +312,42 @@
   </div>
 </div>
 
-
 <footer style="background-color: #ffc168; margin:0px !important;">
   <div class=" container container-fluid">
     <div class="row mb-3 pt-3">
-      <div class="col-lg-1 col-sm-1 mr-4">
+      <div class="col-lg-2 text-center pt-2 pb-2">
         <img class="logo-footer" src="{{ asset('logo.png') }}" style="width: 100px">
       </div>
-      <div class="col-lg-6 col-sm-12 text-left">
-        <div class="text"><h4><b>Dinas Perumahan dan Kawasan Permukiman
-          Kota Banjarmasin
-          </b></h4>
+      <div class="col-lg-7 text-left ">
+        <div class="text footer-bawah"><h4><b>UPT Rusunawa Kota Banjarmasin</b></h4>
         </div>
-        <div class="text">
+        <div class="text footer-bawah">
           <h5><b>Rusunawa Teluk Kelayan</b></h5>
-          <p>Jalan Teluk Kelayan, Kelurahan Kelayan Barat, Kecamatan  Banjarmasin Selatan</p>
-          <div class="text">
-            <div class="row">
-              <div class="col-1">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div class="col-11" style="padding: 0 !important">
-                <b>Jam Operasional:</b></h5><br>
-                <p class="font-weight-light">Senin - Minggu<br>
-                  Pukul 08.00 - 20.00 WITA</p>
-              </div>
-            </div>
-          </div>
-          <h6>Contact Person: 0822-5086-6070 </h6>
+          <p>Jl. Tembus Mantuil, Kelayan Selatan, Kecamatan Banjarmasin 
+          Selatan, Kota Banjarmasin, Kalimantan Selatan 70233</p>
+        </div>
+        <div class="text footer-bawah">
+            {{-- <div class="col-1">
+              <i class="fas fa-clock"></i>
+            </div> --}}
+            <div class="col-11" style="padding: 0 !important">
+              <b>Jam Operasional:</b></h5><br>
+              <p class="font-weight-light">Senin - Minggu<br>
+                Pukul 08.00 - 20.00 WITA</p>
+            </div>  
         </div>
       </div>
-      <div class="col-lg-4 col-sm-12">
-        <div class="row">
-          <div class="col-lg-12">
-            <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7966.13248691012!2d114.58671917414155!3d-3.333811390292363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42315cebe6133%3A0x771d4faf845a24e5!2sRusunawa%20Teluk%20Kelayan!5e0!3m2!1sid!2sid!4v1628680806932!5m2!1sid!2sid" frameborder="0"
-                style="border:0" height="100%" width="100%" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="col-lg-12 mt-3 text-left">
-              <h6>Sosial Media Kami:</h6>
-              <a href="https://google.com" class="footer-sosmed"><i class="fab fa-instagram"></i></a>
-              <a href="https://google.com" class="footer-sosmed"><i class="fab fa-facebook"></i></a>
-              <a href="https://google.com" class="footer-sosmed"><i class="fab fa-youtube"></i></a>
-          </div>
+      <div class="col-lg-3 col-sm-12">
+        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7966.13248691012!2d114.58671917414155!3d-3.333811390292363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de42315cebe6133%3A0x771d4faf845a24e5!2sRusunawa%20Teluk%20Kelayan!5e0!3m2!1sid!2sid!4v1628680806932!5m2!1sid!2sid" frameborder="0"
+            style="border:0" height="100%" width="100%" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
+    <div class="col-lg-12 text-center" style="font-size: 15px;"><span>Developed by Dinas Komunikasi, Informasi dan Statistik</span> Kota Banjarmasin, 2021</div>
     </div>
   </div>
 </footer> 

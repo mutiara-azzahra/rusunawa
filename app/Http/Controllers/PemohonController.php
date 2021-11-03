@@ -9,6 +9,7 @@ use App\Models\TransaksiPembayaran;
 use App\Models\DetailTransaksiPembayaran;
 use App\Models\Ruangan;
 use App\Models\Gedung;
+use App\Models\Galeri;
 use App\Models\Rusun;
 use App\Models\Lantai;
 use Illuminate\Support\Facades\Auth;
@@ -242,8 +243,9 @@ class PemohonController extends Controller
 
         $gedung     = Gedung::findOrFail($id_gedung);
         $lantai     = Lantai::where('id_gedung', $gedung->id_gedung)->get();
+        $galeri     = Galeri::where('id_gedung', $gedung->id_gedung)->get();
 
-        return view('pemohon.pilihruangan', compact('gedung', 'lantai'));        
+        return view('pemohon.pilihruangan', compact('gedung', 'lantai', 'galeri'));        
     }
     public function pesanRuangan(Request $request)
     {

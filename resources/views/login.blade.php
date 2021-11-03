@@ -45,11 +45,16 @@
         
         @if ($message = Session::get('success'))
         <div class="alert alert-success mt-3">
-            <p>{{ $message }}</p>
+          <div class="row">
+            <i class="fas fa-info-circle p-1"></i><p>{{ $message }}</p>            
+          </div>
         </div>
         @elseif ($message = Session::get('danger'))
         <div class="alert alert-danger mt-3">
-          <p>{{ $message }}</p>
+          <div class="row">
+            <i class="fas fa-info-circle p-1"></i><p>{{ $message }}</p>           
+          </div>
+
         </div>
         @endif
 

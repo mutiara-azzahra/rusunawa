@@ -31,7 +31,7 @@ class GaleriController extends Controller
         ]);
 
         $input          = $request->all();
-        $nama_foto      = $input['kategori'].'_'.$request->foto->getClientOriginalName();
+        $nama_foto      = $input['id_gedung'].'_'.$input['kategori'].'_'.$request->foto->getClientOriginalName();
         $input['foto']  = $nama_foto;
         $request->file('foto')->move('storage/galeri/', $nama_foto);
 
