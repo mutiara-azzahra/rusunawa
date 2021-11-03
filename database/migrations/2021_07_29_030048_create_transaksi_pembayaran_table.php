@@ -14,7 +14,7 @@ class CreateTransaksiPembayaranTable extends Migration
     public function up()
     {
         Schema::create('transaksi_pembayaran', function (Blueprint $table) {
-            $table->bigIncrements('id_transaksi_pembayaran');
+            $table->Integer('id_transaksi_pembayaran');
             $table->Integer('id_ruangan');
             $table->Integer('id_pemohon');  
             $table->Integer('tahun');

@@ -14,7 +14,7 @@ class CreateLantaiTable extends Migration
     public function up()
     {
         Schema::create('lantai', function (Blueprint $table) {
-            $table->bigIncrements('id_lantai');
+            $table->Integer('id_lantai');
             $table->string('lantai');
             $table->string('id_gedung');
             $table->timestamps();

@@ -14,7 +14,7 @@ class CreateInfoRusunTable extends Migration
     public function up()
     {
         Schema::create('info_rusun', function (Blueprint $table) {
-            $table->bigIncrements('id_info_rusun');
+            $table->Integer('id_info_rusun');
             $table->text('latar_belakang');
             $table->text('tipologi_bangunan');
             $table->text('sumber_dana');

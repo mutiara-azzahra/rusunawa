@@ -14,7 +14,7 @@ class CreateFasilitas extends Migration
     public function up()
     {
         Schema::create('fasilitas', function (Blueprint $table) {
-            $table->bigIncrements('id_fasilitas_umum');
+            $table->Integer('id_fasilitas_umum');
             $table->string('nama_fasilitas');
             $table->string('kategori_fasilitas');
             $table->Integer('jumlah_fasilitas');

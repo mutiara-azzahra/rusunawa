@@ -14,7 +14,7 @@ class CreateSyaratMendaftarTable extends Migration
     public function up()
     {
         Schema::create('syarat_mendaftar', function (Blueprint $table) {
-            $table->bigIncrements('id_syarat_mendaftar');
+            $table->Integer('id_syarat_mendaftar');
             $table->string('syarat_mendaftar');
             $table->timestamps();
         });

@@ -14,7 +14,7 @@ class CreateRusunTable extends Migration
     public function up()
     {
         Schema::create('rusun', function (Blueprint $table) {
-            $table->bigIncrements('id_rusun');
+            $table->Integer('id_rusun');
             $table->string('nama_rusun');
             $table->string('alamat');
             $table->text('foto');

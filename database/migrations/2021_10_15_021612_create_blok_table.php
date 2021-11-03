@@ -14,7 +14,7 @@ class CreateBlokTable extends Migration
     public function up()
     {
         Schema::create('blok', function (Blueprint $table) {
-            $table->bigIncrements('id_blok');
+            $table->Integer('id_blok');
             $table->string('blok');
             $table->timestamps();
         });

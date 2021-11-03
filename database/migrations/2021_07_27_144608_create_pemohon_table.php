@@ -14,7 +14,7 @@ class CreatePemohonTable extends Migration
     public function up()
     {
         Schema::create('pemohon', function (Blueprint $table) {
-            $table->bigIncrements('id_pemohon');
+            $table->Integer('id_pemohon');
             $table->text('nama_kepala_keluarga');
             $table->string('nik_kepala_keluarga');
             $table->string('pekerjaan_kepala_keluarga');

@@ -14,7 +14,7 @@ class CreateFasilitasGedungTable extends Migration
     public function up()
     {
         Schema::create('fasilitas_gedung', function (Blueprint $table) {
-            $table->bigIncrements('id_fasilitas_gedung');
+            $table->Integer('id_fasilitas_gedung');
             $table->Integer('id_fasilitas');
             $table->Integer('jumlah');
             $table->Integer('id_gedung');

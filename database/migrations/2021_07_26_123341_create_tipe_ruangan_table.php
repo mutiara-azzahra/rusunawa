@@ -14,7 +14,7 @@ class CreateTipeRuanganTable extends Migration
     public function up()
     {
         Schema::create('tipe_ruangan', function (Blueprint $table) {
-            $table->bigIncrements('id_tipe_ruangan');
+            $table->Integer('id_tipe_ruangan');
             $table->string('tipe_ruangan');
             $table->timestamps();
         });

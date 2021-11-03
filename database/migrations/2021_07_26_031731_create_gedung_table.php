@@ -14,7 +14,7 @@ class CreateGedungTable extends Migration
     public function up()
     {
         Schema::create('gedung', function (Blueprint $table) {
-            $table->bigIncrements('id_gedung');
+            $table->Integer('id_gedung');
             $table->string('nama_gedung');
             $table->string('blok');
             $table->string('alamat_gedung');
