@@ -28,7 +28,7 @@
     <!--CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Rusunawa Teluk Kelayan | Sistem Informasi Rusunawa Kota Banjarmasin</title>
+    <title>Rusunawa Teluk Kelayan | Sistem Informasi Rumah Susun Kota (SIRSAK) Banjarmasin</title>
   </head>
 
   <body>
