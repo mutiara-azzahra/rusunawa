@@ -96,7 +96,7 @@
     <div class="row">
       <div class="col-lg-6 col-sm-7 text-left">
         <h1>Selamat Datang di Sistem Informasi Rusunawa</h1>
-        <h3>Kota Banjarmasin</h3><br>
+        <h3>Kota (SIRSAK) Banjarmasin</h3><br>
         <p>Bantuan Pembangunan Rumah Susun adalah tindak lanjut Program 1 juta rumah dari Kementerian PUPR dalam rangka pemenuhan kebutuhan rumah yang layak huni dan terjangkau bagi MBR (Masyarakat Berpenghasilan Rendah).</p>
         <a type="button" href="{{ route('loginPage')}}" class="btn btn-primary btn-lg">Daftar Sekarang</a>  
       </div>
