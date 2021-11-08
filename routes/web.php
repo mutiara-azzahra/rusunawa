@@ -143,6 +143,7 @@ Route::get('/api/ruangan_harga/{id}', [RuanganController::class,'api_harga'])->n
 Route::get('/api/lantai/{id}', [LantaiController::class,'api'])->name('api.lantai');
 Route::get('/api/ruangan_gedung/{id}', [RuanganController::class,'api_lantai'])->name('api_lantai.ruangan');
 Route::get('/api/kecamatan/{id}', [KecamatanController::class,'api'])->name('api.kecamatan');
+Route::get('/api/kelurahan/{id}', [KelurahanController::class,'api'])->name('api.kelurahan');
 
 //UserController
 Route::get('{id}/reset', [UserController::class, 'reset'])->name('user.reset');

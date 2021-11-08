@@ -30,7 +30,7 @@
     <!--CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Login Aplikasi Rusunawa</title>
+    <title>Login Aplikasi SIRSAK Kota Banjarmasin</title>
   </head>
 <body>
 <!--Navbar-->
@@ -40,7 +40,7 @@
     <div class="card card-login shadow-sm p-4 bg-white rounded" style="width: 500px;">
       <img class="card-img-top" src="{{ asset('logo.png') }}" style="width: 100px;">
       <div class="card-body">
-        <h5 class="text-center">MASUK AKUN RUSUNAWA</h5>
+        <h5 class="text-center">MASUK AKUN SIRSAK</h5>
         <div class="underline-title mx-auto"></div>
         
         @if ($message = Session::get('success'))

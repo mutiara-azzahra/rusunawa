@@ -160,6 +160,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ asset('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')}}"></script>
+
 
     <script>
         let getKecamatan = async () => {
@@ -167,11 +169,12 @@
            const endpoint = '/api/kecamatan/'+id_kota
     
             const response = await axios.get('/api/kecamatan/'+ id_kota).catch(error => console.log(error));
+            console.log(response.data)
             const data_kecamatan = response.data
             const kecamatanEl = $('#id_kecamatan')
     
             kecamatanEl.children('option:not(:first)').remove();
-    
+            
             data_kecamatan.map((data) => {
                 kecamatanEl.append(
                     '<option value="'+data.id_kecamatan+'">'+data.nama_kecamatan+'</option>'

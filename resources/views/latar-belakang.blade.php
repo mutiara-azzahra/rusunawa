@@ -78,7 +78,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="row">
               <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
-                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+                  <img class="img-fluid1" src="{{asset('latarbelakang.png')}}" alt="">
               </div>
               <div class="col-lg-10 col-md-12">
                   <div class="judul-latar-belakang">
@@ -99,7 +99,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="row">
               <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
-                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+                  <img class="img-fluid1" src="{{asset('topologi.png')}}" alt="">
               </div>
               <div class="col-lg-10 col-md-12">
                   <div class="judul-latar-belakang">
@@ -120,7 +120,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="row">
               <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
-                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+                  <img class="img-fluid1" src="{{asset('pendanaan.png')}}" alt="">
               </div>
               <div class="col-lg-10 col-md-12">
                   <div class="judul-latar-belakang">
@@ -141,7 +141,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="row">
               <div class="col-lg-2 col-md-12 col-sm-12 logo-img-fluid1">
-                  <img class="img-fluid1" src="{{asset('tanya.jpg')}}" alt="">
+                  <img class="img-fluid1" src="{{asset('persyaratan.png')}}" alt="">
               </div>
               <div class="col-lg-10 col-md-12">
                   <div class="judul-latar-belakang">

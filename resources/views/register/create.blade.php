@@ -28,7 +28,7 @@
     <!--CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Registrasi Akun Rusunawa</title>
+    <title>Registrasi Akun SIRSAK Kota Banjarmasin</title>
   </head>
 <body class="bg-custom-1">
 
@@ -108,41 +108,37 @@
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kota</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()" >
+                                            <select style="width:350px;" name="id_kota" class="form-control" id="id_kota" onchange="getKecamatan()" >
                                                 <option value="">-- Pilih Kota --</option>
-                                                @foreach($kota as $k)
-                                                <option value=" {{ $k->id_kota }}"> {{ $k->nama_kota }} </option>
+                                                @foreach ($kota as $k)
+                                                 <option value="{{$k->id_kota}}">{{$k->nama_kota}}</option>   
                                                 @endforeach
+                                                </select>
                                             </select>
-                                            
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kecamatan</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="id_kecamatan" class="form-control" id="id_kelurahan" onchange="getKelurahan()" >
+                                            <select style="width:350px;" name="id_kecamatan" class="form-control" id="id_kecamatan" onchange="getKelurahan()" >
                                                 <option value="">-- Pilih Kecamatan --</option>
-                                                @foreach($kecamatan as $kc)
-                                                <option value="{{ $kc->id_kecamatan }}"> {{ $kc->nama_kecamatan }} </option>
-                                                @endforeach
+                                                </select>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Kelurahan</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="id_kelurahan" class="form-control" id="id_kecamatan" >
+                                            <select style="width:350px;" name="id_kelurahan" class="form-control" id="id_kelurahan" >
                                                 <option value="">-- Pilih Kelurahan --</option>
-                                                @foreach($kelurahan as $kl)
-                                                <option value="{{ $kl->id_kelurahan }}"> {{ $kl->nama_kelurahan }} </option>
-                                                @endforeach
+                                                </select>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Jumlah Anggota Keluarga</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="jumlah_anggota_keluarga" class="form-control" id="id_kecamatan" >
+                                            <select style="width:350px;" name="jumlah_anggota_keluarga" class="form-control" id="" >
                                                 <option value="">-- Pilih Jumlah --</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -183,6 +179,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ asset('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')}}"></script>
+
 
     <script>
         let getKecamatan = async () => {
@@ -191,6 +189,7 @@
     
             const response = await axios.get('/api/kecamatan/'+ id_kota).catch(error => console.log(error));
             const data_kecamatan = response.data
+            // console.log(data_kecamatan)
             const kecamatanEl = $('#id_kecamatan')
     
             kecamatanEl.children('option:not(:first)').remove();
@@ -200,13 +199,14 @@
                     '<option value="'+data.id_kecamatan+'">'+data.nama_kecamatan+'</option>'
                 )
             })
-        }
+        } 
 
         let getKelurahan = async () => {
         const id_kecamatan =  $('#id_kecamatan').val();
         const endpoint = '/api/kelurahan/'+id_kecamatan
 
             const response = await axios.get('/api/kelurahan/'+id_kecamatan).catch(error => console.log(error));
+            console.log(response)
             const data_kelurahan = response.data
             const kelurahanEl = $('#id_kelurahan')
 
