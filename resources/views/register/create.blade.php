@@ -40,7 +40,7 @@
         <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
             <div class="col-lg-12 margin-tb">
                 <div class="float-left">
-                    <h2>Registrasi Akun Baru</h2>
+                    <h2>Registrasi Akun Baru SIRSAK Kota Banjarmasin</h2>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
 
         <div class="row">
                 <div class="col-lg-5 col-md-12">
-                    <div class="card" style="padding-top:30px; padding-bottom:30px;">
+                    <div class="card pt-3 pb-3 m-2">
                         <table class="text-left">
                                     <tr>
                                         <td class="p-3" style="padding-right:50px;"><strong>Username</strong></td>
@@ -80,35 +80,33 @@
                     </div>
 
                 </div>
-                
-            
                 <div class="col-lg-7 col-md-12">
-                    <div class="card" style="padding-top:30px; padding-bottom:30px;">
+                    <div class="card pt-3 pb-3 m-2">
                         <table class="text-left">
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>Nama Pemohon</strong></td>
-                                        <td><input style="width:350px;" type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama kepala keluarga"></td>
+                                        <td class="p-3" ><strong>Nama Pemohon</strong></td>
+                                        <td><input style="width:300px;" type="text" name="nama_kepala_keluarga" class="form-control mr-2" placeholder="Isi nama kepala keluarga"></td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3"style="padding-right:50px;"><strong>NIK  </strong><span style="color:red">*sesuai KTP</span></td>
-                                        <td><input style="width:350px;" type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK" maxlength="16" minlength="16"></td>
+                                        <td class="p-3"><strong>NIK  </strong><span style="color:red">*sesuai KTP</span></td>
+                                        <td><input style="width:300px;" type="text" name="nik_kepala_keluarga" class="form-control mr-2" placeholder="Isi NIK" maxlength="16" minlength="16"></td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>Pekerjaan</strong></td>
-                                        <td><input style="width:350px;" type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi pekerjaan"></td>
+                                        <td class="p-3" ><strong>Pekerjaan</strong></td>
+                                        <td><input style="width:300px;"  type="text" name="pekerjaan_kepala_keluarga" class="form-control mr-2" placeholder="Isi pekerjaan"></td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>Alamat</strong></td>
-                                        <td><input style="width:350px;" type="text" name="alamat" class="form-control" placeholder="Isi alamat"></td>
+                                        <td class="p-3" ><strong>Alamat</strong></td>
+                                        <td><input style="width:300px;" type="text" name="alamat" class="form-control mr-2" placeholder="Isi alamat"></td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>No. HP</strong></td>
-                                        <td><input style="width:350px;" type="text" name="no_hp" class="form-control" placeholder="Isi nomor handphone"></td>
+                                        <td class="p-3" ><strong>No. HP</strong></td>
+                                        <td><input style="width:300px;" type="text" name="no_hp" class="form-control mr-2" placeholder="Isi nomor handphone"></td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>Kota</strong></td>
+                                        <td class="p-3" ><strong>Kota</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="id_kota" class="form-control" id="id_kota" onchange="getKecamatan()" >
+                                            <select style="width:300px;" name="id_kota" class="form-control mr-2" id="id_kota" onchange="getKecamatan()" >
                                                 <option value="">-- Pilih Kota --</option>
                                                 @foreach ($kota as $k)
                                                  <option value="{{$k->id_kota}}">{{$k->nama_kota}}</option>   
@@ -118,27 +116,27 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>Kecamatan</strong></td>
+                                        <td class="p-3"><strong>Kecamatan</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="id_kecamatan" class="form-control" id="id_kecamatan" onchange="getKelurahan()" >
+                                            <select style="width:300px;" name="id_kecamatan" class="form-control mr-2" id="id_kecamatan" onchange="getKelurahan()" >
                                                 <option value="">-- Pilih Kecamatan --</option>
                                                 </select>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>Kelurahan</strong></td>
+                                        <td class="p-3" ><strong>Kelurahan</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="id_kelurahan" class="form-control" id="id_kelurahan" >
+                                            <select style="width:300px;" name="id_kelurahan" class="form-control mr-2" id="id_kelurahan" >
                                                 <option value="">-- Pilih Kelurahan --</option>
                                                 </select>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="p-3" style="padding-right:50px;"><strong>Jumlah Anggota Keluarga</strong></td>
+                                        <td class="p-3" ><strong>Jumlah Anggota Keluarga</strong></td>
                                         <td>
-                                            <select style="width:350px;" name="jumlah_anggota_keluarga" class="form-control" id="" >
+                                            <select style="width:300px;" name="jumlah_anggota_keluarga" class="form-control mr-2" id="" >
                                                 <option value="">-- Pilih Jumlah --</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>

@@ -23,7 +23,7 @@
     <!--CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Registrasi</title>
+    <title>Registrasi Akun SIRSAK Kota Banjarmasin</title>
   </head>
 <body>
 
@@ -62,60 +62,60 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Nama Pemohon</strong>
-                                <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)">
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>NIK</strong> (sesuai KTP)
-                                <input type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK">
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Pekerjaan</strong>
-                                <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga">
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Alamat</strong>
-                                <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat">
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Kota</strong>
-                                <select name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()">
-                                    <option value="">---Pilih Kota--</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Kecamatan</strong>
-                                <select name="id_kecamatan" class="form-control" id="id_kecamatan" onchange="getKelurahan()">
-                                    <option value="">---Pilih Kecamatan--</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Kelurahan</strong>
-                                <select name="id_kelurahan" class="form-control" id="id_kecamatan" >
-                                    <option value="">---Pilih Kelurahan--</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
-                                <strong>Jumlah Anggota Keluarga</strong>
-                                <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga">
-                            </div>
-                        </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>Nama Pemohon</strong>
+                                        <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>NIK</strong> (sesuai KTP)
+                                        <input type="text" name="nik_kepala_keluarga" class="form-control" placeholder="Isi NIK">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>Pekerjaan</strong>
+                                        <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>Alamat</strong>
+                                        <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>Kota</strong>
+                                        <select name="id_kota" class="form-control" id="id_kecamatan" onchange="getKecamatan()">
+                                            <option value="">---Pilih Kota--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>Kecamatan</strong>
+                                        <select name="id_kecamatan" class="form-control" id="id_kecamatan" onchange="getKelurahan()">
+                                            <option value="">---Pilih Kecamatan--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>Kelurahan</strong>
+                                        <select name="id_kelurahan" class="form-control" id="id_kecamatan" >
+                                            <option value="">---Pilih Kelurahan--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <strong>Jumlah Anggota Keluarga</strong>
+                                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga">
+                                    </div>
+                                </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
