@@ -5,7 +5,7 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
-                <h2>Data Penghuni</h2>
+                <h2>Data Penghuni</h2>   
             </div>
         </div>
         <div class="col-lg-12 margin-tb">
