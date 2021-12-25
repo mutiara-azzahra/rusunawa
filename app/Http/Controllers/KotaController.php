@@ -54,15 +54,21 @@ class KotaController extends Controller
         $kota->update($request->all());
          
         return redirect()->route('kota.index')
-                        ->with('success','Data kota berhasil ditambahkan!');
+                        ->with('success','Data kota berhasil diubah!');
     }
   
-    public function destroy( $id)
+    public function destroy(Kota $kota)
     {
-        $kota = Kota::destroy($id);
-  
-        return redirect()->route('kota.index')
-                        ->with('success','Data kota berhasil dihapus!');
+        try {
+            $kota->delete();
+
+            return redirect()->route('kota.index')
+                ->with('success','Data kota berhasil dihapus!');
+
+        } catch (\Throwable $th) {
+            return redirect()->route('kota.index')
+                ->with('warning', 'Terjadi kesalahan! Data '.$kota->nama_gedung.' tidak dapat dihapus');
+        }
     }
     
 }

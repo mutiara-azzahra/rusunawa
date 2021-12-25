@@ -19,6 +19,12 @@
     </div>
     @endif
 
+    @if ($message = Session::get('warning'))
+    <div class="alert alert-warning">
+        <p>{{ $message }}</p>
+    </div>
+    @endif
+
     <div class="card" style="padding: 20px;">
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
@@ -33,7 +39,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @php
+                @php
                 $no=1;
                 @endphp
                 @foreach ($gedung as $g)
@@ -59,7 +65,7 @@
                     @endif
                     </td>
                     <td class="text-center">
-                        <form action="{{ route('gedung.destroy',$g->id_gedung) }}" method="POST" id="form_delete">
+                        <form action="{{ route('gedung.destroy',$g->id_gedung) }}" method="POST" id="form_delete{{$g->id_gedung}}">
         
                             <a class="btn btn-info btn-sm" href="{{ route('gedung.show',$g->id_gedung) }}"><i class="fas fa-eye"></i></a>
                             <a class="btn btn-primary btn-sm" href="{{ route('gedung.edit',$g->id_gedung) }}"><i class="fas fa-edit"></i></a>
@@ -67,7 +73,7 @@
                             @csrf
                             @method('DELETE')
                             
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_gedung}}')" data-action="{{ route('gedung.destroy',$g->id_gedung) }}" id="form_delete"><i class="fas fa-trash"></i></a>
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_gedung}}')"><i class="fas fa-trash"></i></a>
                         </form>
                     </td>
                 </tr>
@@ -87,20 +93,15 @@
 <script>
     Hapus = (id_gedung)=>{
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Apa anda yakin menghapus data ini?',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Hapus Data'
             }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                    )
+                if (result.value) {
+                    $(`#form_delete${id_gedung}`).submit();
                 }
         })
     }

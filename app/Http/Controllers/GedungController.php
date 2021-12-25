@@ -9,7 +9,7 @@ use App\Models\Galeri;
 use App\Models\Rusun;
 use App\Models\Fasilitas;
 use App\Models\FasilitasGedung;
-
+use PhpParser\Node\Stmt\TryCatch;
 
 class GedungController extends Controller
 
@@ -79,9 +79,15 @@ class GedungController extends Controller
 
     public function destroy(Gedung $gedung)
     {
-        $gedung->delete();
-  
-        return redirect()->route('gedung.index')
-                        ->with('success','Data gedung berhasil dihapus!');
+        try {
+            $gedung->delete();
+
+            return redirect()->route('gedung.index')
+            ->with('success','Data gedung berhasil dihapus!');
+
+        } catch (\Throwable $th) {
+            return redirect()->route('gedung.index')
+            ->with('warning', 'Terjadi kesalahan! Data '.$gedung->nama_gedung.' tidak dapat dihapus');
+        }
     }
 }

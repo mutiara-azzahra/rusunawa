@@ -19,6 +19,13 @@
     </div>
     @endif
 
+    @if ($message = Session::get('warning'))
+    <div class="alert alert-warning">
+        <p>{{ $message }}</p>
+    </div>
+    @endif
+
+
     <div class="card" style="padding: 20px;">
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
@@ -32,18 +39,18 @@
                     @php
                     $no=1;
                     @endphp
-                    @foreach ($kota as $kc)
+                    @foreach ($kota as $k)
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
-                        <td> {{ $kc->nama_kota }}</td>
+                        <td> {{ $k->nama_kota }}</td>
                         <td class="text-center">
-                            <form action="{{ route('kota.destroy',$kc->id_kota) }}" method="POST" id="form_delete">            
-                                <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$kc->id_kota) }}"><i class="fas fa-edit"></i></a>
+                            <form action="{{ route('kota.destroy',$k->id_kota) }}" method="POST" id="form_delete{{$k->id_kota}}">            
+                                <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$k->id_kota) }}"><i class="fas fa-edit"></i></a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kota }}')" ><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{$k->id_kota}}')"><i class="fas fa-trash"></i></a>
                             </form>
                         </td>
                     </tr>
@@ -63,18 +70,22 @@
     Hapus = (id_kota)=>{
         Swal.fire({
             title: 'Apa anda yakin menghapus data ini?',
-            text:  "menghapus notifikasi" ,
+            icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6' ,
-            cancelButtonColor: 'red' ,
-            confirmButtonText: 'hapus data' ,
-            cancelButtonText: 'batal' ,
-            reverseButtons: false
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Hapus Data'
             }).then((result) => {
                 if (result.value) {
-                    $('#form_delete').submit();
+                    $(`#form_delete${id_kota}`).submit();
                 }
         })
     }
+</script>
+
+<script>
+    $('#myModal').modal({
+  keyboard: false
+})
 </script>
 @endsection
