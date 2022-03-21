@@ -20,6 +20,12 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Gedung</strong><br>
+                    {{ $ruangan->lantai->gedung->nama_gedung  }}<br>
+                </div>
+            </div>  
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Nomor Ruangan</strong><br>
                     {{ $ruangan->no_ruangan }}<br>
                 </div>
@@ -42,12 +48,7 @@
                     Lantai {{ $ruangan->lantai->lantai }}<br>
                 </div>
             </div> 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Gedung</strong><br>
-                    {{ $ruangan->lantai->gedung->nama_gedung  }}<br>
-                </div>
-            </div>   
+             
         </div>
     </div>
 

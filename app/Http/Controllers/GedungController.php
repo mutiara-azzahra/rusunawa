@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Gedung;
 use App\Models\TipeRuangan;
+use App\Models\Ruangan;
 use App\Models\Galeri;
 use App\Models\Rusun;
 use App\Models\Fasilitas;
@@ -50,8 +51,9 @@ class GedungController extends Controller
         $galeri             = Galeri::where('id_gedung', $gedung->id_gedung)->latest()->get();
         $fasilitas          = Fasilitas::all();
         $fasilitas_gedung   = FasilitasGedung::where('id_gedung', $gedung->id_gedung)->latest()->get();
+        $ruangan            = Ruangan::where('id_gedung', $gedung->id_gedung)->latest()->get();
 
-        return view('gedung.show', compact('gedung','galeri', 'fasilitas', 'fasilitas_gedung'));
+        return view('gedung.show', compact('gedung','galeri', 'fasilitas', 'fasilitas_gedung', 'ruangan'));
     }
 
     public function edit(Gedung $gedung)

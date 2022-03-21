@@ -19,60 +19,60 @@
     </div>
     @endif
 
-<div class="card" style="padding: 20px;">
-    <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
-        <thead>
-        <tr>
-            <th>No</th>
-            <th>No Ruangan</th>
-            <th>Harga Ruangan</th>
-            <th>Status Ruangan</th>
-            <th>Gedung</th>
-            <th>Blok</th>
-            <th class="text-center">Aksi</th>
-        </tr>    
-        </thead>
-        <tbody>
-        @php
-        $no=1;
-        @endphp
-        @foreach ($ruangan as $r)
-        <tr>
-            <td class="text-center">{{ $no++ }}</td>
-            <td>Nomor {{ $r->no_ruangan }}</td>
-            <td>@currency($r->harga_ruangan)</td>
-            <td>
-            @if($r->status_ruangan == 'kosong')
-            <div><span class="badge badge-danger">Kosong</span></div>
+    <div class="card" style="padding: 20px;">
+        <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>No Ruangan</th>
+                <th>Harga Ruangan</th>
+                <th>Status Ruangan</th>
+                <th>Gedung</th>
+                <th>Blok</th>
+                <th class="text-center">Aksi</th>
+            </tr>    
+            </thead>
+            <tbody>
+            @php
+            $no=1;
+            @endphp
+            @foreach ($ruangan as $r)
+            <tr>
+                <td class="text-center">{{ $no++ }}</td>
+                <td>Nomor {{ $r->no_ruangan }}</td>
+                <td>@currency($r->harga_ruangan)</td>
+                <td>
+                @if($r->status_ruangan == 'kosong')
+                <div><span class="badge badge-danger">Kosong</span></div>
 
-            @elseif($r->status_ruangan == 'terisi')
-            <div><span class="badge badge-success">Terisi</span></div>
+                @elseif($r->status_ruangan == 'terisi')
+                <div><span class="badge badge-success">Terisi</span></div>
 
-            @elseif($r->status_ruangan == 'rusak')
-            <div><span class="badge badge-secondary">Rusak</span></div>
+                @elseif($r->status_ruangan == 'rusak')
+                <div><span class="badge badge-secondary">Rusak</span></div>
 
-            @endif
-            </td>
-            <td> {{ $r->lantai->gedung->nama_gedung }}</td>
-            <td> {{ $r->lantai->gedung->blok }}</td>
-            <td class="text-center">
-                <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
- 
-                    <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
- 
-                    @csrf
-                    @method('DELETE')
- 
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i></a>
-                </form>
-            </td>
-        </tr>
-        @endforeach    
-        </tbody>   
-    </table>
+                @endif
+                </td>
+                <td> {{ $r->lantai->gedung->nama_gedung }}</td>
+                <td> {{ $r->lantai->gedung->blok }}</td>
+                <td class="text-center">
+                    <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
+    
+                        <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+    
+                        @csrf
+                        @method('DELETE')
+    
+                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i></a>
+                    </form>
+                </td>
+            </tr>
+            @endforeach    
+            </tbody>   
+        </table>
 
-</div>
+    </div>
 
 </div> 
 @endsection

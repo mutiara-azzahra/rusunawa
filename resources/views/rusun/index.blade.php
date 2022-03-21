@@ -24,11 +24,11 @@
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Nama Rusun</th>
-                        <th>Alamat</th>
-                        <th>Foto</th>
-                        <th width="150px"class="text-center">Aksi</th>
+                        <th class="text-center">No</th>
+                        <th class="text-center">Nama Rusun</th>
+                        <th class="text-center">Alamat</th>
+                        <th class="text-center">Foto</th>
+                        <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,9 +44,12 @@
                         <td class="text-center">
                             <form action="{{ route('rusun.destroy',$r->id_rusun) }}" method="POST" id="form_delete">            
                                 @csrf
+
+                                <a class="btn btn-info btn-sm" href="{{ route('rusun.show',$r->id_rusun) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil">Tampil <i class="fas fa-eye"></i></a>
+
                                 @method('DELETE')
-                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$r->id_rusun) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_rusun }}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('rusun.edit',$r->id_rusun) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah">Ubah <i class="fas fa-edit"></i></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_rusun }}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">Hapus <i class="fas fa-trash"></i></a>
                             </form>
                         </td>
                     </tr>

@@ -85,7 +85,7 @@ class PemohonController extends Controller
             'id_gedung'                         => 'required',
             'id_lantai'                         => 'required',
             'id_ruangan'                        => 'required',
-            'foto_ktp'                          => 'required|mimes:jpg,png,jpeg',
+            'foto_ktp'                          => 'required|mimes:jpg,png,jpeg|max:1200',
             'foto_akta_nikah'                   => 'required|mimes:jpg,png,jpeg',
             'foto_surat_keterangan_penghasilan' => 'required|mimes:jpg,png,jpeg',
             'foto_anggota_keluarga'             => 'required|mimes:jpg,png,jpeg',

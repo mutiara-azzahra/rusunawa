@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Rusun;
+use App\Models\Gedung;
 
 
 class RusunController extends Controller
@@ -46,8 +47,10 @@ class RusunController extends Controller
 
     public function show( $id)
     {
-        return view('rusun.show', [
-            'rusun' => Rusun::findOrFail($id)]);
+        $rusun             = Rusun::findOrFail($id);
+        $gedung            = Gedung::where('id_rusun', $rusun->id_rusun)->latest()->get();
+
+        return view('rusun.show', compact ('gedung', 'rusun'));
     }
     
     public function edit( $id)
