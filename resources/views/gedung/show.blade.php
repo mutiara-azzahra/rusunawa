@@ -205,72 +205,6 @@
                     </tbody>
                     @endforeach
                 </table>
-
-                <div class="card" style="padding: 20px;">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="row mt-5 mb-5">
-                            <div class="col-lg-12 margin-tb">
-                                <div class="float-left">
-                                    <h2>Tabel Ruangan Pada Gedung</h2>
-                                </div>
-                                <div class="float-right">
-                                    <a class="btn btn-success" href="" data-toggle="modal"  data-target="#fasilitas" id=""><i class="fas fa-plus"></i>  Tambah Fasilitas Gedung</a>
-                                </div>
-                            </div>
-                        </div>
-                    <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
-                        <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>No Ruangan</th>
-                            <th>Harga Ruangan</th>
-                            <th>Status Ruangan</th>
-                            <th>Gedung</th>
-                            <th>Blok</th>
-                            <th class="text-center">Aksi</th>
-                        </tr>    
-                        </thead>
-                        <tbody>
-                        @php
-                        $no=1;
-                        @endphp
-                        @foreach ($ruangan as $r)
-                        <tr>
-                            <td class="text-center">{{ $no++ }}</td>
-                            <td>Nomor {{ $r->no_ruangan }}</td>
-                            <td>@currency($r->harga_ruangan)</td>
-                            <td>
-                            @if($r->status_ruangan == 'kosong')
-                            <div><span class="badge badge-danger">Kosong</span></div>
-                
-                            @elseif($r->status_ruangan == 'terisi')
-                            <div><span class="badge badge-success">Terisi</span></div>
-                
-                            @elseif($r->status_ruangan == 'rusak')
-                            <div><span class="badge badge-secondary">Rusak</span></div>
-                
-                            @endif
-                            </td>
-                            <td> {{ $r->lantai->gedung->nama_gedung }}</td>
-                            <td> {{ $r->lantai->gedung->blok }}</td>
-                            <td class="text-center">
-                                <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
-                 
-                                    <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
-                                    <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
-                 
-                                    @csrf
-                                    @method('DELETE')
-                 
-                                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i></a>
-                                </form>
-                            </td>
-                        </tr>
-                        @endforeach    
-                        </tbody>   
-                    </table>
-                
-                </div>
     
         <!-- Modal Tambah Fasilitas-->
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="fasilitas">
@@ -333,6 +267,72 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="card" style="padding: 20px;">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-12 margin-tb">
+                <div class="float-left">
+                    <h2>Data Ruangan</h2>
+                </div>
+                <div class="float-right">
+                    <a class="btn btn-success" href="" data-toggle="modal"  data-target="#fasilitas" id=""><i class="fas fa-plus"></i>  Tambah Fasilitas Gedung</a>
+                </div>
+            </div>
+        </div>
+    <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
+        <thead>
+        <tr>
+            <th>No</th>
+            <th>No Ruangan</th>
+            <th>Harga Ruangan</th>
+            <th>Status Ruangan</th>
+            <th>Gedung</th>
+            <th>Blok</th>
+            <th class="text-center">Aksi</th>
+        </tr>    
+        </thead>
+        <tbody>
+        @php
+        $no=1;
+        @endphp
+        @foreach ($ruangan as $r)
+        <tr>
+            <td class="text-center">{{ $no++ }}</td>
+            <td>Nomor {{ $r->no_ruangan }}</td>
+            <td>@currency($r->harga_ruangan)</td>
+            <td>
+            @if($r->status_ruangan == 'kosong')
+            <div><span class="badge badge-danger">Kosong</span></div>
+
+            @elseif($r->status_ruangan == 'terisi')
+            <div><span class="badge badge-success">Terisi</span></div>
+
+            @elseif($r->status_ruangan == 'rusak')
+            <div><span class="badge badge-secondary">Rusak</span></div>
+
+            @endif
+            </td>
+            <td> {{ $r->lantai->gedung->nama_gedung }}</td>
+            <td> {{ $r->lantai->gedung->blok }}</td>
+            <td class="text-center">
+                <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
+ 
+                    <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+ 
+                    @csrf
+                    @method('DELETE')
+ 
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i></a>
+                </form>
+            </td>
+        </tr>
+        @endforeach    
+        </tbody>   
+    </table>
+
 </div>
 
 <div class="modal fade" id="modalImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

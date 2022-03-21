@@ -67,13 +67,13 @@
                     <td class="text-center">
                         <form action="{{ route('gedung.destroy',$g->id_gedung) }}" method="POST" id="form_delete{{$g->id_gedung}}">
         
-                            <a class="btn btn-info btn-sm" href="{{ route('gedung.show',$g->id_gedung) }}"><i class="fas fa-eye"></i></a>
-                            <a class="btn btn-primary btn-sm" href="{{ route('gedung.edit',$g->id_gedung) }}"><i class="fas fa-edit"></i></a>
+                            <a class="btn btn-info btn-sm" href="{{ route('gedung.show',$g->id_gedung) }}"><i class="fas fa-eye"></i> Tampil</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('gedung.edit',$g->id_gedung) }}"><i class="fas fa-edit"></i> Ubah</a>
                             
                             @csrf
                             @method('DELETE')
                             
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_gedung}}')"><i class="fas fa-trash"></i></a>
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$g->id_gedung}}')"><i class="fas fa-trash"></i> Hapus</a>
                         </form>
                     </td>
                 </tr>

@@ -104,7 +104,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Pemohon</strong>
-                        <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)" value="{{ $pemohon->nama_kepala_keluarga }}" readonly>
+                        <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)" value="{{ $pemohon->nama_kepala_keluarga }}">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -116,19 +116,19 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Pekerjaan</strong>
-                        <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga" value="{{ $pemohon->pekerjaan_kepala_keluarga }}" readonly>
+                        <input type="text" name="pekerjaan_kepala_keluarga" class="form-control" placeholder="Isi Pekerjaan Kepala Keluarga" value="{{ $pemohon->pekerjaan_kepala_keluarga }}" >
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Alamat</strong>
-                        <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat" value="{{ $pemohon->alamat }}" readonly>
+                        <input type="text" name="alamat" class="form-control" placeholder="Isi Alamat" value="{{ $pemohon->alamat }}" >
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Jumlah Anggota Keluarga</strong>
-                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="{{ $pemohon->jumlah_anggota_keluarga }}" readonly>
+                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="{{ $pemohon->jumlah_anggota_keluarga }}" >
                     </div>
                 </div>
 

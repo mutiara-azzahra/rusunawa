@@ -37,7 +37,7 @@
                 @if($pemohon->status_pengajuan == 'diverifikasi')
                 <div><h4><span class="badge badge-success">Diverifikasi</span></h4></div>
 
-                @elseif($pemohon->status_pengajuan =='diproses')
+                @elseif($pemohon->status_pengajuan == 'diproses')
                 <div><h4><span class="badge badge-warning">Diproses</span></h4></div>
 
                 @if($pemohon->id_ruangan == null)

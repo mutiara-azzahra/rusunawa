@@ -150,20 +150,20 @@
                       </a>
                     </li> --}}
                     <li class="nav-item">
-                      <a class="nav-link {{ set_active('ruangan.index') }}" href="{{ Route('ruangan.index') }}" class="nav-link">
-                        <p>Ruangan</p>
+                      <a class="nav-link {{ set_active('lantai.index') }}" href="{{ Route('lantai.index') }}" class="nav-link">
+                        <p>Lantai</p>
                       </a>
-                    </li>
+                    </li> 
                     <li class="nav-item">
                       <a class="nav-link {{ set_active('tiperuangan.index') }}" href="{{ Route('tiperuangan.index') }}" class="nav-link">
                         <p>Tipe Ruangan</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link {{ set_active('lantai.index') }}" href="{{ Route('lantai.index') }}" class="nav-link">
-                        <p>Lantai</p>
+                      <a class="nav-link {{ set_active('ruangan.index') }}" href="{{ Route('ruangan.index') }}" class="nav-link">
+                        <p>Ruangan</p>
                       </a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
                       <a class="nav-link {{ set_active('fasilitas.index') }}" href="{{ Route('fasilitas.index') }}" class="nav-link">
                         <p>Fasilitas</p>

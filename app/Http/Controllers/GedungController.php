@@ -8,6 +8,7 @@ use App\Models\TipeRuangan;
 use App\Models\Ruangan;
 use App\Models\Galeri;
 use App\Models\Rusun;
+use App\Models\Lantai;
 use App\Models\Fasilitas;
 use App\Models\FasilitasGedung;
 use PhpParser\Node\Stmt\TryCatch;
@@ -53,6 +54,7 @@ class GedungController extends Controller
         $fasilitas_gedung   = FasilitasGedung::where('id_gedung', $gedung->id_gedung)->latest()->get();
         $ruangan            = Ruangan::where('id_gedung', $gedung->id_gedung)->latest()->get();
 
+        dd($ruangan);
         return view('gedung.show', compact('gedung','galeri', 'fasilitas', 'fasilitas_gedung', 'ruangan'));
     }
 

@@ -44,8 +44,8 @@
   </div>
 @endif
 
-<div class="login">
-    <div class="card card-login shadow-sm p-4 bg-white rounded " style="width: 400px;">
+<div class="login pt-5" >
+    <div class="card card-login shadow-sm p-4 bg-white rounded " style="width: 400px; padding-top:100px;">
       <div class="card-body">
         <h5 class="text-align">Lupa Password</h5>
         <div class="underline-title"></div>

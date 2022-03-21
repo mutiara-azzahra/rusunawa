@@ -50,7 +50,7 @@ class RusunController extends Controller
         $rusun             = Rusun::findOrFail($id);
         $gedung            = Gedung::where('id_rusun', $rusun->id_rusun)->latest()->get();
 
-        return view('rusun.show', compact ('gedung', 'rusun'));
+        return view('rusun.show', compact ('rusun', 'gedung'));
     }
     
     public function edit( $id)

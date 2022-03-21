@@ -7,7 +7,7 @@
                 <h2>Tabel FAQ</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-success" href="{{ route('posts.create') }}"> Create Post</a>
+                <a class="btn btn-success" href="{{ route('posts.create') }}"> Tambahkan Pertanyaan</a>
             </div>
         </div>
     </div>
@@ -21,8 +21,8 @@
     <table class="table table-bordered">
         <tr>
             <th width="20px" class="text-center">No</th>
-            <th>Title</th>
-            <th width="280px"class="text-center">Action</th>
+            <th>Judul</th>
+            <th width="280px"class="text-center">Aksi</th>
         </tr>
         @foreach ($posts as $post)
         <tr>
@@ -31,14 +31,14 @@
             <td class="text-center">
                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$post->id) }}">Show</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$post->id) }}">Tampil</a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$post->id) }}">Edit</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$post->id) }}">Ubah</a>
  
                     @csrf
                     @method('DELETE')
  
-                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
                 </form>
             </td>
         </tr>
