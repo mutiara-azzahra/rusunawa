@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-
+{{-- 
     <div style="padding: 40px;">
       <div class="text-justify bawah" style="font-size: 20px;">
         Fasilitas Ruangan
@@ -126,7 +126,7 @@
           </div>
         </div>          
       </div>
-    </div>
+    </div> --}}
 
     <div style="padding: 40px;">
       <div class="text-justify bawah" style="font-size: 20px;">

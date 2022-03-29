@@ -45,11 +45,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Foto Rusun</strong>
-                        @if($rusun->foto == null)
                         <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1" value="{{ $rusun->foto }}">
-
-                        @else
-                        @endif
+                        <span>isi jika ingin merubah foto</span>
                     </div>                    
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -67,14 +67,16 @@ class RusunController extends Controller
         $request->validate([
             'nama_rusun'    => 'required',
             'alamat'        => 'required',
-            'foto'          => 'required|mimes:jpg,png,jpeg',
+            'foto'          => 'required|mimes:jpg,png,jpeg|max:2000',
         ]);
         
         $input = $request->all();
-
-        $nama_foto_rusun = $input['nama_rusun'].'_'.$request->foto->getClientOriginalName();
-        $input['foto']= $nama_foto_rusun;
-        $request->file('foto')->move('storage/rusun/', $nama_foto_rusun);
+        
+        if(isset($input['foto'])){
+            $nama_foto_rusun = $input['nama_rusun'].'_'.$request->foto->getClientOriginalName();
+            $input['foto']= $nama_foto_rusun;
+            $request->file('foto')->move('storage/rusun/', $nama_foto_rusun);
+        }
 
         $rusun->update($input);
          

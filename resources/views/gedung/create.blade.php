@@ -77,13 +77,6 @@
                     </div>   
                 </div>  
             </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Alamat</strong>
-                    <input type="text" name="alamat_gedung" class="form-control" placeholder="">
-                </div>
-            </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Status Gedung</strong>

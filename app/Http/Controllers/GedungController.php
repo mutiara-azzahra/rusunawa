@@ -34,7 +34,6 @@ class GedungController extends Controller
     {
         $request -> validate([
             'nama_gedung'       => 'required',
-            'alamat_gedung'     => 'required',
             'blok'              => 'required',
             'jumlah_ruangan'    => 'required',
             'status_gedung'     => 'required',
@@ -52,9 +51,9 @@ class GedungController extends Controller
         $galeri             = Galeri::where('id_gedung', $gedung->id_gedung)->latest()->get();
         $fasilitas          = Fasilitas::all();
         $fasilitas_gedung   = FasilitasGedung::where('id_gedung', $gedung->id_gedung)->latest()->get();
-        $ruangan            = Ruangan::where('id_gedung', $gedung->id_gedung)->latest()->get();
+        $lantai            = Lantai::where('id_gedung', $id)->get('id_lantai');
+        $ruangan            = Ruangan::whereIn('id_lantai', $lantai)->get();
 
-        dd($ruangan);
         return view('gedung.show', compact('gedung','galeri', 'fasilitas', 'fasilitas_gedung', 'ruangan'));
     }
 
@@ -69,7 +68,6 @@ class GedungController extends Controller
     {
         $request->validate([
             'nama_gedung'       => 'required',
-            'alamat_gedung'     => 'required',
             'blok'              => 'required',
             'jumlah_ruangan'    => 'required',
             'status_gedung'     => 'required',

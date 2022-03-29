@@ -251,9 +251,6 @@ class PemohonController extends Controller
     {
         $ruangan = Ruangan::where('id_ruangan',$request->id_ruangan)->first();
         $pemohon = Pemohon::where('id_user',Auth::user()->id_user)->first();
-
-        $pemohon->id_gedung     = $ruangan->lantai->gedung->id_gedung;
-        $pemohon->id_lantai     = $ruangan->lantai->id_lantai;
         $pemohon->id_ruangan    = $ruangan->id_ruangan;
 
         $pemohon->update();

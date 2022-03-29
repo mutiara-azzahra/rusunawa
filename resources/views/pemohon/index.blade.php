@@ -68,7 +68,11 @@
                         @csrf 
                         @method('DELETE')
                         </form>
+                        @if ($p->id_ruangan)
                             <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
+                        @else
+                        <span>Pemohon belum memilih ruangan </span>
+                        @endif
                             <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>   
                     </td>
                 </tr>
