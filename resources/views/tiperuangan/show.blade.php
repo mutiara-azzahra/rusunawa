@@ -8,24 +8,27 @@
                 <h2> Daftar Tipe Ruangan</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('tiperuangan.index') }}"> Back</a>
+                <a class="btn btn-success" href="{{ route('tiperuangan.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
  
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Tipe Ruangan</strong><br>
-                {{ $tipe_ruangan->tipe_ruangan }}<br>
-            </div>
-        </div> 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Gedung</strong><br>
-                {{ $tipe_ruangan->id_gedung }}<br>
-            </div>
-        </div>  
+    <div class="card" style="padding:30px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Tipe Ruangan</strong><br>
+                    {{ $tipe_ruangan->tipe_ruangan }}<br>
+                </div>
+            </div> 
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Gedung</strong><br>
+                    {{ $tipe_ruangan->gedung }}<br>
+                </div>
+            </div>  
+        </div>
     </div>
+
 </div>
 @endsection

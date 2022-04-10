@@ -42,21 +42,14 @@
                         <input type="text" name="blok" class="form-control" placeholder="" value="{{ $gedung->blok }}">
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group">
                         <strong>Tipe Ruangan</strong>
-                        <select name="id_tipe_ruangan" class="form-control" >
-                            <option value="">---Pilih Tipe Ruangan--</option>
+                        <select name="id_tipe_ruangan" class="form-control" value="{{ $gedung->tipe_ruangan}}" >
                             @foreach($tipe_ruangan as $tr)
                             <option value="{{ $tr->id_tipe_ruangan }}"> {{ $tr->tipe_ruangan }} </option>
                             @endforeach
                         </select>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Alamat</strong>
-                        <input type="text" name="alamat_gedung" class="form-control" placeholder="" value="{{ $gedung->alamat_gedung }}">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -69,7 +62,6 @@
                     <div class="form-group">
                         <strong>Status Gedung</strong>
                         <select name="status_gedung" class="form-control" >
-                            <option value="">---Pilih Status Gedung--</option>
                             <option>Penuh</option>
                             <option>Masih Tersedia</option>
                         </select> 

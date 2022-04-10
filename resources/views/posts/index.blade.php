@@ -38,14 +38,14 @@
             <td class="text-center">
                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$post->id) }}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$post->id) }}"><i class="fas fa-eye"></i> Tampil</a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$post->id) }}"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$post->id) }}"><i class="fas fa-edit"></i> Ubah</a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i></a>
+                    <a type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="fas fa-trash"></i> Hapus</a>
                 </form>
             </td>
         </tr>

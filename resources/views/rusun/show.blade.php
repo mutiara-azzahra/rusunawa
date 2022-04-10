@@ -40,6 +40,7 @@
     </div>
 
     <div class="card" style="padding: 20px;">
+        <div><h3> Daftar Gedung</h3></div>
         <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
                 <thead>
                     <tr>

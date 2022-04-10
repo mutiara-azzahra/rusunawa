@@ -45,12 +45,12 @@
                         <td> {{ $k->nama_kota }}</td>
                         <td class="text-center">
                             <form action="{{ route('kota.destroy',$k->id_kota) }}" method="POST" id="form_delete{{$k->id_kota}}">            
-                                <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$k->id_kota) }}"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('kota.edit',$k->id_kota) }}"><i class="fas fa-edit"></i> Ubah</a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{$k->id_kota}}')"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{$k->id_kota}}')"><i class="fas fa-trash"></i> Hapus</a>
                             </form>
                         </td>
                     </tr>

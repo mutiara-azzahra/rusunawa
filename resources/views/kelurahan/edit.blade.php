@@ -23,35 +23,37 @@
             </ul>
         </div>
     @endif
- 
-    <form action="{{ route('kelurahan.update',$kelurahan->id_kelurahan) }}" method="POST">
+
+    <div class="card" style="padding: 30px;">
+        <form action="{{ route('kelurahan.update',$kelurahan->id_kelurahan) }}" method="POST">
         @csrf
         @method('PUT')
  
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Kelurahan</strong>
-                    <input type="text" name="nama_kelurahan" class="form-control" placeholder="" value="{{ $kelurahan->nama_kelurahan }}">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Kelurahan</strong>
+                        <input type="text" name="nama_kelurahan" class="form-control" placeholder="" value="{{ $kelurahan->nama_kelurahan }}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Kecamatan</strong>
+                        <select name="id_kecamatan" class="form-control" value="{{$kelurahan->kecamatan->nama_kecamatan}}">
+                            @foreach($kecamatan as $kc)
+                            <option value=" {{ $kc->id_kecamatan }}"> {{ $kc->nama_kecamatan }} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div> 
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>                    
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Kecamatan</strong>
-                    <select name="id_kecamatan" class="form-control" >
-                        <option value="">---Pilih Kecamatan--</option>
-                        @foreach($kecamatan as $kc)
-                        <option value=" {{ $kc->id_kecamatan }}"> {{ $kc->nama_kecamatan }} </option>
-                        @endforeach
-                    </select>
-                </div>
-            </div> 
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <div class="float-right">
-                    <button type="submit" class="btn btn-success"> Simpan Data</button>                    
-                </div>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
 </div>
 @endsection

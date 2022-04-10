@@ -47,7 +47,7 @@ class LantaiController extends Controller
         $lantai = Lantai::findOrFail( $id);
         $gedung = Gedung::all();
 
-        return view('lantai.create',compact('lantai', 'gedung'));
+        return view('lantai.edit',compact('lantai', 'gedung'));
     }
   
     public function update(Request $request, Lantai $lantai)

@@ -39,14 +39,14 @@
             <td class="text-center">
                 <form action="{{ route('role.destroy',$r->id_role) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('role.show',$r->id_role) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-info btn-sm" href="{{ route('role.show',$r->id_role) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i> Tampil</a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('role.edit',$r->id_role) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('role.edit',$r->id_role) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i> Ubah</a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_role }}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_role }}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i> Hapus</a>
                 </form>
             </td>
         </tr>

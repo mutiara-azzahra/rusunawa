@@ -58,13 +58,13 @@
                 <td class="text-center">
                     <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
     
-                        <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
-                        <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+                        <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i> Tampil</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i> Ubah</a>
     
                         @csrf
                         @method('DELETE')
     
-                        <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i></a>
+                        <a class="btn btn-danger btn-sm" title="Hapus" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i> Hapus</a>
                     </form>
                 </td>
             </tr>

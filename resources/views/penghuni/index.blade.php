@@ -54,12 +54,12 @@
                         @csrf 
                         @method('DELETE')
                         </form>
-                            <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
+                            <a class="btn btn-info btn-sm" href="{{ route('pemohon.show',$p->id_pemohon) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i> Tampil</a>
                             @if($p->status_permohonan == 'aktif')
-                            <a class="btn btn-warning btn-sm" href="{{ route('pemohon.nonaktif',$p->id_pemohon) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nonaktif"><i class="fas fa-times-circle"></i></a>
+                            <a class="btn btn-warning btn-sm" href="{{ route('pemohon.nonaktif',$p->id_pemohon) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nonaktif"><i class="fas fa-times-circle"></i> Nonaktifkan</a>
                             @else
                             @endif
-                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i></a>
+                            <a class="btn btn-danger btn-sm" onclick="Hapus('{{$p->id_pemohon}}')" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus"><i class="fas fa-trash"></i> Hapus</a>
                     </td>
                 </tr>
                 @endforeach

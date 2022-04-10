@@ -9,7 +9,7 @@
                     <h2>Ubah Ruangan</h2>
                 </div>
                 <div class="float-right">
-                    <a class="btn btn-success btn-secondary" href="{{ route('ruangan.index') }}"> Kembali</a>
+                    <a class="btn btn-success btn-secondary" href="{{ route('ruangan.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
                 </div>
             </div>
         </div>
@@ -49,8 +49,8 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Status Ruangan</strong>
-                        <select name="status_ruangan" class="form-control" value="{{ $ruangan->status_ruangan }}">
-                            <option value="">---Pilih Status--</option>
+                        <select name="status_ruangan" class="form-control" value="">
+                            <option value="{{ $ruangan->status_ruangan }}">---Pilih Status--</option>
                             <option>Terisi</option>
                             <option>Kosong</option>
                             <option>Rusak</option>
@@ -84,24 +84,18 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Gedung</strong>
-                        <input type="text" name="id_gedung" class="form-control" placeholder="" value="{{ $ruangan->id_gedung }}">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Pengajuan</strong>
-                        <input type="text" name="id_pengajuan" class="form-control" placeholder="" value="{{ $ruangan->id_pengajuan }}">
+                        <input type="text" name="id_gedung" class="form-control" placeholder="" value="{{ $ruangan->lantai->gedung->nama_gedung }}">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Tipe Ruangan</strong>
-                        <input type="text" name="id_tipe_ruangan" class="form-control" placeholder="" value="{{ $ruangan->tipe_ruangan }}">
+                        <input type="text" name="id_tipe_ruangan" class="form-control" placeholder="" value="{{ $ruangan->lantai->gedung->tipe_ruangan->tipe_ruangan }}">
                     </div>
                 </div>  
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <div class="float-right">
-                        <button type="submit" class="btn btn-success btn-primary"> Simpan Data</button>
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
                     </div>
                 </div>
             </div>        

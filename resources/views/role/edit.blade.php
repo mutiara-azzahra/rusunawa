@@ -8,7 +8,7 @@
                 <h2>Ubah Role/Level Pengguna</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('role.index') }}"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('role.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -23,23 +23,27 @@
             </ul>
         </div>
     @endif
- 
-    <form action="{{ route('role.update',$role->id_role) }}" method="POST">
+    <div class="card" style="padding: 30px;">
+        <form action="{{ route('role.update',$role->id_role) }}" method="POST">
         @csrf
         @method('PUT')
  
-        <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nama Role</strong>
-                <input type="text" name="nama_role" class="form-control" placeholder="Isi nama role" value= "{{ $role->nama_role }}">  
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Nama Role</strong>
+                        <input type="text" name="nama_role" class="form-control" placeholder="Isi nama role" value= "{{ $role->nama_role }}">  
+                    </div>
+                </div>        
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
+                </div>
             </div>
-        </div>        
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-primary"> Ubah</button>
-        </div>
-    </div>
  
-    </form>
+        </form>
+    </div>
+
 </div>
 @endsection

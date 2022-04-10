@@ -32,7 +32,7 @@ class PostsController extends Controller
         return redirect()->route('posts.index')->with('success','Data tanya jawab baru berhasil ditambahkan!');
     }
 
-    public function show(Posts $post)
+    public function show(Posts $posts)
     {
 
         return view('posts.show',compact('posts'));
@@ -42,7 +42,7 @@ class PostsController extends Controller
     {
         $posts = Posts::findOrFail($id);
 
-        return view('ruangan.edit',compact('ruangan', 'lantai'));
+        return view('posts.edit',compact('posts'));
     }
   
     public function update(Request $request, Posts $posts)

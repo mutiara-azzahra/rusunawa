@@ -28,7 +28,8 @@
         <thead>
             <tr>
                 <th class="text-center">Lantai</th>
-                <th class="text-center">Gedung</th>
+                <th class="text-center">Gedung - Blok</th>
+                <th class="text-center">Rusun</th>
                 <th class="text-center">Aksi</th>
             </tr>
         </thead>
@@ -39,17 +40,18 @@
         @foreach ($lantai as $l)
         <tr>
             <td>Lantai {{ $l->lantai }}</td>
-            <td >{{ $l->gedung->nama_gedung }} {{ $l->gedung->blok }}</td>
+            <td >{{ $l->gedung->nama_gedung }} - Blok {{ $l->gedung->blok }}</td>
+            <td >{{ $l->gedung->rusun->nama_rusun }}</td>
             <td class="text-center">
                 <form action="{{ route('lantai.destroy',$l->id_lantai) }}" method="POST" id="form_delete{{$l->id_lantai}}">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('lantai.show',$l->id_lantai) }}"><i class="fas fa-eye"></i></a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('lantai.edit',$l->id_lantai) }}"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-info btn-sm" href="{{ route('lantai.show',$l->id_lantai) }}"><i class="fas fa-eye"></i> Tampil</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('lantai.edit',$l->id_lantai) }}"><i class="fas fa-edit"></i> Ubah</a>
 
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $l->id_lantai }}')"><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $l->id_lantai }}')"><i class="fas fa-trash"></i> Hapus</a>
                 </form>
             </td>
         </tr>

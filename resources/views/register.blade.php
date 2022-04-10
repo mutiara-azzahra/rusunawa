@@ -113,7 +113,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <strong>Jumlah Anggota Keluarga</strong>
-                                        <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga">
+                                        <input type="number" min="0" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga">
                                     </div>
                                 </div>
                     </div>

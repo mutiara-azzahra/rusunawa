@@ -8,7 +8,7 @@
                 <h2>Ubah Tanya Jawab</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('posts.index') }}"><i class="fas fa-arrow-left"></i> Back</a>
+                <a class="btn btn-success" href="{{ route('posts.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
     @endif
  
     <div class="card" style="padding:20px;">
-        <form action="{{ route('posts.update',$post->id) }}" method="POST">
+        <form action="{{ route('posts.update',$posts->id) }}" method="POST">
             @csrf
             @method('PUT')
     
@@ -33,17 +33,19 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Pertanyaan</strong>
-                        <input type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder="Title">
+                        <input type="text" name="title" value="{{ $posts->title }}" class="form-control" placeholder="Title">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Jawaban</strong>
-                        <textarea class="form-control" style="height:150px" name="content" placeholder="Content">{{ $post->content }}</textarea>
+                        <textarea class="form-control" style="height:150px" name="content" placeholder="Content">{{ $posts->content }}</textarea>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Update</button>
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
                 </div>
             </div>
     

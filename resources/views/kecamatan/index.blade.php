@@ -24,7 +24,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Kecamatan</th>
+                        <th>Kecamatan</th>
+                        <th>Kota</th>
                         <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
@@ -36,16 +37,17 @@
                     <tr>
                         <td class="text-center">{{ $no++ }}</td>
                         <td>{{ $kc->nama_kecamatan }}</td>
+                        <td>{{ $kc->kota->nama_kota }}</td>
                         <td class="text-center">
                             <form action="{{ route('kecamatan.destroy',$kc->id_kecamatan) }}" method="POST" id="form_delete">
             
-                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_kecamatan) }}"><i class="fas fa-eye"></i></a>
-                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_kecamatan) }}"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-info btn-sm" href="{{ route('kecamatan.show',$kc->id_kecamatan) }}"><i class="fas fa-eye"></i> Tampil</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('kecamatan.edit',$kc->id_kecamatan) }}"><i class="fas fa-edit"></i> Ubah</a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kecamatan }}')"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $kc->id_kecamatan }}')"><i class="fas fa-trash"></i> Hapus</a>
                             </form>
                         </td>
                     </tr>

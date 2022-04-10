@@ -54,7 +54,7 @@
                             <select name="id_lantai" id="id_lantai" class="form-control" onchange="getRuangan()" >
                                 <option value="">--Pilih Lantai--</option>
                             </select>
-                        </div>
+                        </div>`
                         <div class="col-xs-12 col-sm-6 col-md-12 col-lg-4">
                             <div class="form-group">
                                 <strong>Ruangan</strong>
@@ -96,7 +96,7 @@
                         <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="" >
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
+                {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Pemohon</strong>
                         <input type="text" name="nama_kepala_keluarga" class="form-control" placeholder="Isi nama pemohon (kepala keluarga)" value="">
@@ -125,7 +125,7 @@
                         <strong>Jumlah Anggota Keluarga</strong>
                         <input type="text" name="jumlah_anggota_keluarga" class="form-control" placeholder="Pilih Jumlah Anggota Keluarga" value="">
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <div class="col">

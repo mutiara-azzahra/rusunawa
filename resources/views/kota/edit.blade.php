@@ -24,21 +24,26 @@
         </div>
     @endif
  
-    <form action="{{ route('kota.update',$kota->id_kota) }}" method="POST">
+    <div class="card" style="padding: 20px;">
+        <form action="{{ route('kota.update',$kota->id_kota) }}" method="POST">
         @csrf
         @method('PUT')
  
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Kota</strong>
-                    <input type="text" name="nama_kota" class="form-control" placeholder="" value="{{ $kota->nama_kota }}">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Kota</strong>
+                        <input type="text" name="nama_kota" class="form-control" placeholder="" value="{{ $kota->nama_kota }}">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
 </div>
 @endsection

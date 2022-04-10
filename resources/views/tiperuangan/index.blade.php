@@ -39,13 +39,13 @@
             <td class="text-center">
                 <form action="{{ route('tiperuangan.destroy',$tr->id_tipe_ruangan) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('tiperuangan.show',$tr->id_tipe_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('tiperuangan.edit',$tr->id_tipe_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-info btn-sm" href="{{ route('tiperuangan.show',$tr->id_tipe_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i> Tampil</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('tiperuangan.edit',$tr->id_tipe_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i> Ubah</a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $tr->id_tipe_ruangan }}')" ><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $tr->id_tipe_ruangan }}')" ><i class="fas fa-trash"></i> Hapus</a>
                 </form>
             </td>
         </tr>

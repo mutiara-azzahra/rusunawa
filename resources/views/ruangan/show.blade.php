@@ -26,6 +26,12 @@
             </div>  
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>Rusun</strong><br>
+                    {{ $ruangan->lantai->gedung->rusun->nama_rusun  }}<br>
+                </div>
+            </div>  
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Nomor Ruangan</strong><br>
                     {{ $ruangan->no_ruangan }}<br>
                 </div>

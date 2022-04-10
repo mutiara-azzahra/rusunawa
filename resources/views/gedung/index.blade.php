@@ -31,6 +31,7 @@
                     <tr>
                         <th class="text-center">No</th>
                         <th class="text-center">Nama Gedung</th>
+                        <th class="text-center">Rusun</th>
                         <th class="text-center">Blok</th>
                         <th class="text-center">Tipe Ruangan</th>
                         <th class="text-center">Jumlah Ruangan</th>
@@ -46,6 +47,7 @@
                 <tr>
                     <td class="text-center">{{ $no++ }}</td>
                     <td>{{ $g->nama_gedung }}</td>
+                    <td>{{ $g->rusun->nama_rusun }}</td>
                     <td>
                     @if($g->blok == null)
                     -

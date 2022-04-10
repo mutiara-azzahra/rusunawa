@@ -26,7 +26,13 @@
                     <strong>Gedung</strong><br>
                     {{ $lantai->gedung->nama_gedung }}<br>
                 </div>
-            </div>        
+            </div>  
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Rusun</strong><br>
+                    {{ $lantai->gedung->rusun->nama_rusun }}<br>
+                </div>
+            </div>      
         </div>        
     </div>
 

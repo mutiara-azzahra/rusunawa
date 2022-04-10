@@ -35,7 +35,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Lantai</strong>
-                        <input type="number" name="lantai" class="form-control" placeholder="Isi lantai">
+                        <input type="number" min="0" name="lantai" class="form-control" placeholder="Isi lantai">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -44,7 +44,7 @@
                         <select name="id_gedung" class="form-control" >
                             <option value="">---Pilih Gedung--</option>
                             @foreach($gedung as $g)
-                            <option value=" {{ $g->id_gedung }}"> {{ $g->nama_gedung }} - Blok-{{ $g->blok }} </option>
+                            <option value=" {{ $g->id_gedung }}"> {{ $g->nama_gedung }} - Blok-{{ $g->blok }} - Rusun {{ $g->rusun->nama_rusun }}</option>
                             @endforeach
                         </select>
                     </div>

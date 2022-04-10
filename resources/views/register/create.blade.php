@@ -135,15 +135,7 @@
                                     </tr>
                                     <tr>
                                         <td class="p-3" ><strong>Jumlah Anggota Keluarga</strong></td>
-                                        <td>
-                                            <select style="width:300px;" name="jumlah_anggota_keluarga" class="form-control mr-2" id="" >
-                                                <option value="">-- Pilih Jumlah --</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                            </select>
-                                        </td>
+                                        <td><input style="width:300px;" type="number" min="0" name="jumlah_anggota_keluarga" class="form-control mr-2" placeholder="Isi Jumlah Anggota Keluarga"></td>
                                     </tr>
                         </table>                        
                     </div>

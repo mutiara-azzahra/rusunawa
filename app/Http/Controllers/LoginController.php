@@ -86,7 +86,7 @@ class LoginController extends Controller
     public function Beranda()
     {
         $fasilitas          = Fasilitas::all();
-        $gedung             = Gedung::withCount('ruang');
+        $gedung             = Gedung::withCount('ruangan');
         $rusun              = Rusun::all();
         $syarat_mendaftar   = SyaratMendaftar::all();
         $posts              = Posts::paginate(5);

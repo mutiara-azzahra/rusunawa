@@ -21,7 +21,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nama Gedung</strong><br>
-                {{ $gedung->nama_gedung }}<br>
+                {{ $gedung->nama_gedung }} - Blok {{ $gedung->blok }}<br>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -197,7 +197,7 @@
                                     <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete_fasilitas" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <a class="btn btn-danger btn-sm" onclick="HapusFasilitas('{{$f->id_fasilitas_gedung}}')"> Hapus</a>
+                                        <a class="btn btn-danger btn-sm" onclick="HapusFasilitas('{{$f->id_fasilitas_gedung}}')"><i class="fas fa-trash"></i> Hapus</a>
                                     </form>
                             </form>
                         </td>
@@ -276,9 +276,9 @@
                 <div class="float-left">
                     <h2>Data Ruangan</h2>
                 </div>
-                <div class="float-right">
-                    <a class="btn btn-success" href="" data-toggle="modal"  data-target="#fasilitas" id=""><i class="fas fa-plus"></i>  Tambah Fasilitas Gedung</a>
-                </div>
+                {{-- <div class="float-right">
+                    <a class="btn btn-success" href="" data-toggle="modal"  data-target="#fasilitas" id=""><i class="fas fa-plus"></i>  Tambah Ruangan</a>
+                </div> --}}
             </div>
         </div>
     <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
@@ -290,6 +290,7 @@
             <th>Status Ruangan</th>
             <th>Gedung</th>
             <th>Blok</th>
+            <th>Rusun</th>
             <th class="text-center">Aksi</th>
         </tr>    
         </thead>
@@ -316,16 +317,17 @@
             </td>
             <td> {{ $r->lantai->gedung->nama_gedung }}</td>
             <td> {{ $r->lantai->gedung->blok }}</td>
+            <td> {{ $r->lantai->gedung->rusun->nama_rusun }}</td>
             <td class="text-center">
                 <form action="{{ route('ruangan.destroy',$r->id_ruangan) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-info btn-sm" href="{{ route('ruangan.show',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i> Tampil</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('ruangan.edit',$r->id_ruangan) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i> Ubah</a>
  
                     @csrf
                     @method('DELETE')
  
-                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i></a>
+                    <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $r->id_ruangan }}')"><i class="fas fa-trash"></i> Hapus</a>
                 </form>
             </td>
         </tr>

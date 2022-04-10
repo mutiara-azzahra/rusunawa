@@ -44,9 +44,10 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Foto Rusun</strong>
-                        <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1" value="{{ $rusun->foto }}">
-                        <span>isi jika ingin merubah foto</span>
+                        <strong>Foto Rusun</strong><br>
+                        <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1" value="{{ $rusun->foto }}"><br>
+                        <span style="color:red">*Isi jika ingin merubah foto</span><br>
+                        <img class="image" src="{{asset('/storage/rusun/'.$rusun->foto)}}" data-id="{{asset('/storage/rusun/'.$rusun->foto)}}" alt="" width="150px">
                     </div>                    
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">

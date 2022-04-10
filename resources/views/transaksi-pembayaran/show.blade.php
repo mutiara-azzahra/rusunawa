@@ -10,7 +10,7 @@
             </div>
             <div class="float-right">
                 <a class="btn btn-warning" href="{{ route('report.detail-transaksi-pembayaran', $transaksi_pembayaran->id_transaksi_pembayaran) }}" target="_blank"><i class="fas fa-print"></i> Cetak</a>
-                <a class="btn btn-success btn-secondary" href=""><i class="fas fa-arrow-left"></i> Kembali</a>
+                <a class="btn btn-success btn-secondary" href="{{ route('transaksi-pembayaran.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>

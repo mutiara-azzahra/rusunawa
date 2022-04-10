@@ -67,7 +67,6 @@ class RusunController extends Controller
         $request->validate([
             'nama_rusun'    => 'required',
             'alamat'        => 'required',
-            'foto'          => 'required|mimes:jpg,png,jpeg|max:2000',
         ]);
         
         $input = $request->all();

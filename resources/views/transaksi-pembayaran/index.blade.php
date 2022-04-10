@@ -26,8 +26,9 @@
         <tr>
             <th>No</th>
             <th>Nama Penghuni</th>
-            <th>Gedung</th>
             <th>Ruangan</th>
+            <th>Gedung</th>
+            <th>Rusun</th>
             <th class="text-center">Aksi</th>
         </tr>            
         </thead>
@@ -39,18 +40,19 @@
         <tr>
             <td class="text-center">{{ $no++ }}</td>
             <td>{{ $tp->pemohon->nama_kepala_keluarga }}</td>
-            <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }}</td>
             <td>Nomor {{ $tp->ruangan->no_ruangan }}</td>
+            <td>{{ $tp->ruangan->lantai->gedung->nama_gedung }} - Blok {{ $tp->ruangan->lantai->gedung->blok }} </td>
+            <td>{{ $tp->ruangan->lantai->gedung->rusun->nama_rusun }}</td>
             <td class="text-center">
                 <form action="{{ route('transaksi-pembayaran.destroy',$tp->id_transaksi_pembayaran) }}" method="POST" id="form_delete">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('transaksi-pembayaran.show',$tp->id_transaksi_pembayaran) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i></a>
-                    <a class="btn btn-primary btn-sm" href="{{ route('transaksi-pembayaran.edit',$tp->id_transaksi_pembayaran) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a>
+                    <a class="btn btn-info btn-sm" href="{{ route('transaksi-pembayaran.show',$tp->id_transaksi_pembayaran) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tampil"><i class="fas fa-eye"></i> Tampil</a>
+                    {{-- <a class="btn btn-primary btn-sm" href="{{ route('transaksi-pembayaran.edit',$tp->id_transaksi_pembayaran) }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ubah"><i class="fas fa-edit"></i></a> --}}
  
                     @csrf
                     @method('DELETE')
  
-                    <a type="submit" class="btn btn-danger btn-sm" onclick="Hapus('{{ $tp->id_transaksi_pembayaran }}')"><i class="fas fa-trash"></i></button>
+                    <a type="submit" class="btn btn-danger btn-sm" onclick="Hapus('{{ $tp->id_transaksi_pembayaran }}')"><i class="fas fa-trash"></i> Hapus</button>
                 </form>
             </td>
         </tr>
