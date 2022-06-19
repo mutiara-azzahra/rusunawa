@@ -84,7 +84,7 @@
             @else
               <li class="nav-item">
                 <a class="nav-link dropdown" href="{{ route('loginPage')}}">Masuk</a>
-              </li>
+              </li> 
             @endif
           </ul>
         </div>

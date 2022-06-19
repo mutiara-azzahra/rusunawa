@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Pemohon;
 use App\Models\Ruangan;
+use App\Models\Gedung;
 use App\Models\TransaksiPembayaran;
 use App\Models\DetailTransaksiPembayaran;
 use Illuminate\Support\Facades\Auth;
@@ -56,9 +57,37 @@ class AdminController extends Controller
 
             $ruangan_kosong = Ruangan::count() - $ruangan_terisi;
 
+            $gedung_dashboard   = Gedung::all();
+
+            $LabelchartGedung = $gedung_dashboard->map(function($g){
+                $g->ruangan = Ruangan::whereHas('lantai', function($l)use($g){
+                    $l->where('id_gedung',$g->id_gedung);
+                })->with('lantai')->count();
+
+                return  $g->nama_gedung;
+            });
+
+            $ValuechartGedung = $gedung_dashboard->map(function($g){
+                $g->ruangan = Ruangan::whereHas('lantai', function($l)use($g){
+                    $l->where('id_gedung',$g->id_gedung);
+                })->with('lantai')->count();
+
+                return   $g->ruangan;
+            });
+
+            $bulan = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+            
+            $pemasukan = collect($bulan)->map(function($b){
+                            $harga = DetailTransaksiPembayaran::whereMonth('created_at',$b)->whereHas('transaksipembayaran', function($t){
+                                $t->where('tahun',Carbon::now()->format('Y'));
+                            })->sum('harga');
+
+                            return $harga;
+                        });
+    
             return view('beranda.admin', compact('ruangan_terisi','ruangan_kosong',
                 'pemohon_diproses', 'pemohon_aktif', 'detail_transaksi_pembayaran',
-                'bulan_ini', 'pembayaran', 'tunggakan'));
+                'bulan_ini', 'pembayaran', 'tunggakan', 'LabelchartGedung', 'ValuechartGedung', 'pemasukan'));
         }
     }
     public function pemohon()

@@ -8,22 +8,24 @@
                 <h2>Tampilkan FAQ</h2>
             </div>
             <div class="float-right">
-                <a class="btn btn-secondary" href="{{ route('posts.index') }}"> Kembali</a>
+                <a class="btn btn-success" href="{{ route('posts.index') }}"><i class="fas fa-arrow-left"></i> Kembali</a>
             </div>
         </div>
     </div>
  
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Pertanyaan</strong><br>
-                {{ $post->title }}<br>
+    <div class="card" style="padding: 20px;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Pertanyaan</strong><br>
+                    {{ $posts->title }}<br>
+                </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Jawaban</strong><br>
-                {{ $post->content }}<br>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Jawaban</strong><br>
+                    {{ $posts->content }}<br>
+                </div>
             </div>
         </div>
     </div>

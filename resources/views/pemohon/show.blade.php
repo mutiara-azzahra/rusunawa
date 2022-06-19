@@ -5,7 +5,11 @@
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
+                @if(Auth::user()->id_role == 1)
                 <h2> Data Pemohon: {{ $pemohon->nama_kepala_keluarga }}</h2>
+                @else
+                <h2> Data Penghuni: {{ $pemohon->nama_kepala_keluarga }}</h2>
+                @endif
             </div>
             <div class="float-right">
                 <a class="btn btn-success btn-secondary" href="{{ route('beranda') }}"><i class="fas fa-arrow-left"></i>  Kembali</a>
@@ -93,7 +97,7 @@
                             @endif
                         </div>   
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    {{-- <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Lantai</strong><br>
                             @if($pemohon->id_lantai != null )
@@ -104,7 +108,7 @@
 
                             @endif
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Ruangan</strong><br>

@@ -162,7 +162,7 @@
 </div>
 
 <!-- Fasilitas Gedung-->
-<div class="card" style="padding:30px;">
+{{-- <div class="card" style="padding:30px;">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="row mt-5 mb-5">
             <div class="col-lg-12 margin-tb">
@@ -174,37 +174,38 @@
                 </div>
             </div>
         </div>
-                <!-- Tabel Fasilitas -->
-                <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
-                    <thead>
-                        <tr>
-                            <th class="text-center">No</th>
-                            <th class="text-center">Nama Fasilitas</th>
-                            <th class="text-center">Jumlah</th>
-                            <th class="text-center">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @php
-                    $no=1;
-                    @endphp
-                    @foreach ($fasilitas_gedung as $f)
-                    <tr>
-                        <td class="text-center">{{ $no++ }}</td>
-                        <td>{{ $f->fasilitas->nama_fasilitas}}</td>
-                        <td class="text-center">{{ $f->jumlah}}</td>
-                        <td class="text-center">
-                                    <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete_fasilitas" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <a class="btn btn-danger btn-sm" onclick="HapusFasilitas('{{$f->id_fasilitas_gedung}}')"><i class="fas fa-trash"></i> Hapus</a>
-                                    </form>
+        
+        <!-- Tabel Fasilitas -->
+        <table class="table table-hover table-bordered table-sm bg-light" id="dataTable">
+            <thead>
+                <tr>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Fasilitas</th>
+                    <th class="text-center">Jumlah</th>
+                    <th class="text-center">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @php
+            $no=1;
+            @endphp
+            @foreach ($fasilitas_gedung as $f)
+            <tr>
+                <td class="text-center">{{ $no++ }}</td>
+                <td>{{ $f->fasilitas->nama_fasilitas}}</td>
+                <td class="text-center">{{ $f->jumlah}}</td>
+                <td class="text-center">
+                            <form action="{{ route('fasilitas-gedung.destroy',$f->id_fasilitas_gedung) }}" id="form_delete_fasilitas" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <a class="btn btn-danger btn-sm" onclick="HapusFasilitas('{{$f->id_fasilitas_gedung}}')"><i class="fas fa-trash"></i> Hapus</a>
                             </form>
-                        </td>
-                    </tr>
-                    </tbody>
-                    @endforeach
-                </table>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+            @endforeach
+        </table>
     
         <!-- Modal Tambah Fasilitas-->
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="fasilitas">
@@ -266,8 +267,9 @@
                 </div>
             </div>
         </div>
+        
     </div>
-</div>
+</div> --}}
 
 <div class="card" style="padding: 20px;">
     <div class="col-xs-12 col-sm-12 col-md-12">

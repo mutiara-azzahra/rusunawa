@@ -30,17 +30,17 @@
         </tr>
         </thead>
         <tbody>
-        @foreach ($posts as $post)
+        @foreach ($posts as $p)
         <tr>
             <td class="text-center">{{ ++$i }}</td>
-            <td>{{ $post->title }}</td>
-            <td>{{ $post->content }}</td>
+            <td>{{ $p->title }}</td>
+            <td>{{ $p->content }}</td>
             <td class="text-center">
-                <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
+                <form action="{{ route('posts.destroy',$p->id) }}" method="POST">
  
-                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$post->id) }}"><i class="fas fa-eye"></i> Tampil</a>
+                    <a class="btn btn-info btn-sm" href="{{ route('posts.show',$p->id) }}"><i class="fas fa-eye"></i> Tampil</a>
  
-                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$post->id) }}"><i class="fas fa-edit"></i> Ubah</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('posts.edit',$p->id) }}"><i class="fas fa-edit"></i> Ubah</a>
  
                     @csrf
                     @method('DELETE')

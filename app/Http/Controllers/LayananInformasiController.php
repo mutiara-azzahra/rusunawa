@@ -46,12 +46,14 @@ class LayananInformasiController extends Controller
         return view('layanan-informasi.show', [
             'info_rusun' => LayananInformasi::findOrFail($id)]);
     }
+
     
     public function edit( $id)
     {
-        $info_rusun = LayananInformasi::findOrFail($id);
+        $rusun = Rusun::all();
 
-        return view('info_rusun.edit',compact('info_rusun'));
+        return view('layanan-informasi.edit', [
+            'info_rusun' => LayananInformasi::findOrFail($id)]);
     }
   
     public function update(Request $request, LayananInformasi $info_rusun)

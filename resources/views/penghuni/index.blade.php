@@ -7,10 +7,13 @@
             <div class="float-left">
                 <h2>Data Penghuni</h2>   
             </div>
-        </div>
-        <div class="col-lg-12 margin-tb">
-            <div class="float-right">
-                <a class="btn btn-warning" href="{{ route('report.pemohon') }}" target="__blank"><i class="fas fa-print"></i> Cetak PDF</a>
+            <div class="row float-right">
+                <div class="m-1">
+                    <a class="btn btn-warning" href="{{ route('report.pemohon') }}" target="__blank"><i class="fas fa-print"></i> Cetak PDF</a>
+                </div>
+                <div class="m-1">
+                    <a class="btn btn-success" href="{{ route('report.pemohon') }}" target="__blank"><i class="fas fa-print"></i> Export Excel</a>
+                </div>
             </div>
         </div>
     </div>

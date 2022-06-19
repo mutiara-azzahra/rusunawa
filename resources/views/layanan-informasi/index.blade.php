@@ -39,13 +39,13 @@
                         <td class="text-center">
                             <form action="{{ route('layanan-informasi.destroy',$i->id_info_rusun) }}" method="POST" id="form_delete">
             
-                                <a class="btn btn-info btn-sm" href="{{ route('layanan-informasi.show',$i->id_info_rusun) }}"><i class="fas fa-eye"></i></a>
-                                <a class="btn btn-primary btn-sm" href="{{ route('layanan-informasi.edit',$i->id_info_rusun) }}"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-info btn-sm" href="{{ route('layanan-informasi.show',$i->id_info_rusun) }}"><i class="fas fa-eye"></i> Tampil</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('layanan-informasi.edit',$i->id_info_rusun) }}"><i class="fas fa-edit"></i> Ubah</a>
             
                                 @csrf
                                 @method('DELETE')
             
-                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $i->id_info_rusun }}')"><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-danger btn-sm" onclick="Hapus('{{ $i->id_info_rusun }}')"><i class="fas fa-trash"></i> Hapus</a>
                             </form>
                         </td>
                     </tr>

@@ -43,8 +43,10 @@ class SyaratMendaftarController extends Controller
     {
         $syarat_mendaftar = SyaratMendaftar::findOrFail($id);
 
-        return view('syarat_mendaftar.edit',compact('syarat_mendaftar'));
+        return view('syarat-mendaftar.edit',compact('syarat_mendaftar'));
     }
+    
+
   
     public function update(Request $request, SyaratMendaftar $syarat_mendaftar)
     {
@@ -54,7 +56,7 @@ class SyaratMendaftarController extends Controller
          
         $syarat_mendaftar->update($request->all());
          
-        return redirect()->route('syarat_mendaftar.index')
+        return redirect()->route('syarat-mendaftar.index')
                         ->with('success','Data syarat mendaftar berhasil diubah!');
     }
   
@@ -62,7 +64,7 @@ class SyaratMendaftarController extends Controller
     {
         $syarat_mendaftar = SyaratMendaftar::destroy($id);
   
-        return redirect()->route('syarat_mendaftar.index')
+        return redirect()->route('syarat-mendaftar.index')
             ->with('success','Data syarat mendaftar berhasil dihapus!');
     }
     

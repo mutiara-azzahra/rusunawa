@@ -31,13 +31,12 @@ class PostsController extends Controller
 
         return redirect()->route('posts.index')->with('success','Data tanya jawab baru berhasil ditambahkan!');
     }
-
-    public function show(Posts $posts)
-    {
-
-        return view('posts.show',compact('posts'));
-    }
     
+    public function show( $id)
+    {
+        return view('posts.show', ['posts' => Posts::findOrFail($id)]);
+    }
+
     public function edit($id)
     {
         $posts = Posts::findOrFail($id);

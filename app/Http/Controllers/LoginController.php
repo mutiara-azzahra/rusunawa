@@ -27,6 +27,7 @@ class LoginController extends Controller
     {
         return view('login');
     }
+    
     public function LoginStore(Request $request)
     {
         $credentials = $request->only('username', 'password');
@@ -37,8 +38,6 @@ class LoginController extends Controller
         }
 
         return back()->with('danger','Username atau password salah!');
-
-        
     }
 
     public function formRegister()

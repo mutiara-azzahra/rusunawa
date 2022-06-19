@@ -28,15 +28,19 @@
         @csrf
         @method('PUT')
  
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Syarat Mendaftar</strong>
-                    <input type="text" name="syarat_mendaftar" class="form-control" placeholder="" value="{{ $syarat_mendaftar->syarat_mendaftar }}">
+        <div class="card" style="padding:30px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Syarat Mendaftar</strong>
+                        <input type="text" name="syarat_mendaftar" class="form-control" placeholder="" value="{{ $syarat_mendaftar->syarat_mendaftar }}">
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Simpan Data</button>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

@@ -164,11 +164,11 @@
                         <p>Ruangan</p>
                       </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                       <a class="nav-link {{ set_active('fasilitas.index') }}" href="{{ Route('fasilitas.index') }}" class="nav-link">
                         <p>Fasilitas</p>
                       </a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                       <a class="nav-link {{ set_active('layanan-informasi.index') }}" href="{{ Route('layanan-informasi.index') }}" class="nav-link">
                         <p>Layanan Informasi</p>
@@ -306,6 +306,10 @@
 <script src="{{ asset('admin-template/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- Chart js -->
 <script src="{{ asset('admin-template/plugins/chart.js/Chart.min.js') }}"></script>
+
+<!-- Chart Line js --->
+
+<script src="{{ asset('https://cdn.jsdelivr.net/npm/chart.js')}}"></script>
 
 <!-- Axios-->
 <script src="{{ asset('https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')}}"></script>
